@@ -25,7 +25,7 @@ catalog:
   '@tailwindcss/vite': ^4.3.3
   '@terrazzo/cli': ^2.7.1
   '@turbo/gen': ^2.11.7
-  '@types/node': ^26.6.4
+  '@types/node': ^26.6.5
   '@types/react': ^19.3.0
   '@types/react-dom': ^19.3.0
   '@unpunnyfuns/swatchbook-addon': ^2.2.0
