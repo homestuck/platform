@@ -1,0 +1,198 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
+  "patch_pwsh_bleed": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:theme-background",
+          "template": "\u256d",
+          "cache": {
+            "duration": "168h",
+            "strategy": "session"
+          }
+        },
+        {
+          "type": "os",
+          "style": "diamond",
+          "foreground": "p:theme-foreground",
+          "background": "p:theme-background",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} ",
+          "leading_diamond": "\ue0b2",
+          "options": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "cache": {
+            "duration": "168h",
+            "strategy": "session"
+          },
+          "trailing_diamond": "\ue0bc"
+        },
+        {
+          "type": "text",
+          "style": "diamond",
+          "foreground": "p:theme-foreground",
+          "background": "p:theme-secondary",
+          "template": "\uf07b ",
+          "powerline_symbol": "\ue0b0",
+          "cache": {
+            "duration": "168h",
+            "strategy": "session"
+          },
+          "trailing_diamond": "\ue0bc"
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "p:theme-foreground",
+          "background": "p:theme-primary",
+          "template": "{{ .Path }} ",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "style": "folder"
+          },
+          "trailing_diamond": "\ue0d2"
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:util-github-foreground",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:theme-update{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:theme-warn{{ end }}",
+            "{{ if gt .Ahead 0 }}p:theme-success{{ end }}",
+            "{{ if gt .Behind 0 }}p:theme-error{{ end }}"
+          ],
+          "background": "p:util-github",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "branch_template": "{{ trunc 25 .Branch }}"
+          }
+        },
+        {
+          "type": "node",
+          "style": "diamond",
+          "foreground": "p:util-node-foreground",
+          "background": "p:util-node",
+          "template": " [<p:util-node-foreground>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}] ",
+          "leading_diamond": "\ue0d4",
+          "options": {
+            "fetch_version": true
+          },
+          "trailing_diamond": "\ue0bc",
+          "cache": {
+            "duration": "168h",
+            "strategy": "folder"
+          }
+        },
+        {
+          "type": "pnpm",
+          "style": "diamond",
+          "powerline_symbol": "\ue0b0",
+          "template": " [\ue865 {{ .Full }}] ",
+          "cache": {
+            "duration": "168h",
+            "strategy": "folder"
+          },
+          "foreground": "p:util-pnpm-foreground",
+          "background": "p:util-pnpm",
+          "trailing_diamond": "\ue0b0"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "foreground": "p:theme-foreground",
+          "background": "p:theme-background",
+          "template": " \uf017  ",
+          "options": {
+            "style": "austin",
+            "threshold": 150
+          },
+          "leading_diamond": "\ue0b2"
+        },
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "foreground": "p:theme-foreground",
+          "background": "p:theme-secondary",
+          "template": " \ueba2 {{ .FormattedMs }}",
+          "trailing_diamond": "\ue0b0",
+          "options": {
+            "style": "austin",
+            "threshold": 150
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:theme-background",
+          "template": "\u2502"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:theme-background",
+          "template": "\u2570\u2500"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "palette": {
+    "theme-background": "#4169e1",
+    "theme-primary": "#be9ddf",
+    "theme-secondary": "#ffa5d8",
+    "util-github": "#212830",
+    "util-github-foreground": "#d1d7e0",
+    "util-node": "#333333",
+    "util-node-foreground": "#66cc33",
+    "util-pnpm": "#4e4e4e",
+    "util-pnpm-foreground": "#f9ad00",
+    "theme-success": "#00ff00",
+    "theme-error": "#ff0000",
+    "theme-update": "#00ffff",
+    "theme-warn": "#ffff00",
+    "theme-foreground": "#f0ffff"
+  }
+}

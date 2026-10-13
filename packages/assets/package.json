@@ -1,0 +1,50 @@
+{
+  "name": "@homestuck/assets",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "description": "Iconic shapes, symbols, and fonts used and maintained by Homestuck Inc., et al.",
+  "files": [
+    "dist",
+    "public"
+  ],
+  "type": "module",
+  "imports": {
+    "#svg/*": "./src/exports/svg/*",
+    "#utils/*": "./src/utils/*.ts"
+  },
+  "exports": {
+    "./catalog/svg": "./src/data/svg.json",
+    "./svg/react": {
+      "import": "./dist/svg/react/index.js",
+      "types": "./dist/svg/react/types.d.ts"
+    },
+    "./svg/react/*": {
+      "import": "./dist/svg/react/*.js",
+      "types": "./dist/svg/react/*.d.ts"
+    },
+    "./types": "./src/types.ts",
+    "./svg/*": "./public/svg/*"
+  },
+  "publishConfig": {
+    "exports": {
+      "./svg/react": {
+        "import": "./dist/svg/react/index.js",
+        "types": "./dist/svg/react/index.d.ts"
+      },
+      "./svg/*": "./dist/svg/*"
+    }
+  },
+  "scripts": {
+    "build": "tsx src/scripts/build-components.ts",
+    "clean": "rm -rf .turbo node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@homestuck/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@homestuck/types": "workspace:^",
+    "react": "catalog:",
+    "tsx": "catalog:"
+  }
+}

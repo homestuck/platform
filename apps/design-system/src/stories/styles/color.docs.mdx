@@ -1,0 +1,25 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks'
+
+<Meta title="Colors" />
+
+## Color
+
+### Color Palette
+
+## Animated Color
+
+Animated colors rely on `@keyframes` at-rules to define their animations. Since `@keyframes`
+at-rules must explicitly define which CSS attribute to animate, each animated color's name is
+prefixed by a keyword to indicate which CSS attribute is animated. For example: use
+`--animate-bg-<value>` to animate the `background-color` property, or `--animate-text-<value>` to
+animate the `color` property.
+
+<Source language='css' code={`
+.element {
+  animation: var(--animate-bg-example); /** This will animate the \`background-color\` CSS attribute. **/
+}
+
+.element { animation: var(--animate-text-example); /** This will animate the \`color\` CSS
+attribute. **/ } `} />
+
+## Gradient

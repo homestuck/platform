@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "aliases": {
+    "components": "@homestuck/ui/components",
+    "hooks": "@homestuck/ui/hooks",
+    "ui": "@homestuck/ui/components",
+    "utils": "@homestuck/utils"
+  },
+  "rsc": true,
+  "style": "default",
+  "tailwind": {
+    "baseColor": "slate",
+    "config": "",
+    "css": "src/styles/index.css",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "tsx": true
+}

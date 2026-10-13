@@ -1,0 +1,6 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://github.com/homestuck/homestuck-platform",
+  "include": ["packages/ui/registry.json", "packages/styles/registry.json"],
+  "name": "homestuck"
+}

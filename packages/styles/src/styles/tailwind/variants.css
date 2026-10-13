@@ -1,0 +1,101 @@
+/*
+* Variant for setting a Tailwind style when dark mode is enabled.
+* @example 'bg-black dark:bg-white'
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+* Variant for setting a Tailwind style when a collapsable element is open.
+* @example 'bg-black data-open:bg-white'
+*/
+@custom-variant data-open {
+  &:where([data-state='open']),
+  &:where([data-open]:not([data-open='false'])) {
+    @slot;
+  }
+}
+
+/*
+* Variant for setting a Tailwind style when a collapsable element is closed.
+* @example 'bg-black data-closed:bg-white'
+*/
+@custom-variant data-closed {
+  &:where([data-state='closed']),
+  &:where([data-closed]:not([data-closed='false'])) {
+    @slot;
+  }
+}
+
+/*
+* Variant for setting a Tailwind style when a toggleable element is checked.
+* @example 'bg-black data-checked:bg-white'
+*/
+@custom-variant data-checked {
+  &:where([data-state='checked']),
+  &:where([data-checked]:not([data-checked='false'])) {
+    @slot;
+  }
+}
+
+/*
+* Variant for setting a Tailwind style when a toggleable element is unchecked.
+* @example 'bg-black data-unchecked:bg-white'
+*/
+@custom-variant data-unchecked {
+  &:where([data-state='unchecked']),
+  &:where([data-unchecked]:not([data-unchecked='false'])) {
+    @slot;
+  }
+}
+
+/* 
+* Variant for setting a Tailwind style when a pickable element is selected.
+* @example 'bg-black data-selected:bg-white'
+*/
+@custom-variant data-selected {
+  &:where([data-selected='true']) {
+    @slot;
+  }
+}
+
+/* 
+* Variant for setting a Tailwind style when an element is restricted from interaction.
+* @example 'bg-black data-disabled:bg-white'
+*/
+@custom-variant data-disabled {
+  &:where([data-disabled='true']),
+  &:where([data-disabled]:not([data-disabled='false'])) {
+    @slot;
+  }
+}
+
+/* 
+* Variant for setting a Tailwind style when an element is in focus.
+* @example 'bg-black data-active:bg-white'
+*/
+@custom-variant data-active {
+  &:where([data-state='active']),
+  &:where([data-active]:not([data-active='false'])) {
+    @slot;
+  }
+}
+
+/* 
+* Variant for setting a Tailwind style when an element is display horizontally.
+* @example 'w-4 data-horizontal:w-full'
+*/
+@custom-variant data-horizontal {
+  &:where([data-orientation='horizontal']) {
+    @slot;
+  }
+}
+
+/* 
+* Variant for setting a Tailwind style when an element is display vertically.
+* @example 'h-4 data-vertical:h-full'
+*/
+@custom-variant data-vertical {
+  &:where([data-orientation='vertical']) {
+    @slot;
+  }
+}

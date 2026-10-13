@@ -1,0 +1,3048 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "color": {
+    "abundant-cacoethes": {
+      "$description": "Mierfa Durgas [abundantCacoethes]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.286, 1],
+        "hex": "#0049ff"
+      }
+    },
+    "adamant-griftress": {
+      "$description": "Vriska \"Vrissy\" Maryam-Lalonde [adamantGriftress]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "adios-toreador": {
+      "$description": "Tavros Nitram [adiosToreador]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.376, 0],
+        "hex": "#a16000"
+      }
+    },
+    "agamemnons-theory": {
+      "$description": "Swiss Elysi [agamemnonsTheory]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.604, 0.643, 0.69],
+        "hex": "#9aa4b0"
+      }
+    },
+    "alfonz": {
+      "$description": "Alfonz",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.255, 0.4, 0],
+        "hex": "#416600"
+      }
+    },
+    "apocalypse-arisen": {
+      "$root": {
+        "$description": "Aradia Megido [apocalypseArisen]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0, 0],
+          "hex": "#a10000"
+        }
+      },
+      "blue": {
+        "$description": "Aradia Megido [apocalypseArisen] (Blue Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0, 0.337],
+          "hex": "#000056"
+        }
+      }
+    },
+    "arachnids-grip": {
+      "$description": "Vriska Serket [arachnidsGrip]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "aradia": {
+      "$root": {
+        "$description": "Aradia Megido",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0, 0],
+          "hex": "#a10000"
+        }
+      },
+      "blue": {
+        "$description": "Aradia Megido (Blue Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0, 0.337],
+          "hex": "#000056"
+        }
+      }
+    },
+    "aradiasprite": {
+      "$description": "Aradiasprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0, 0],
+        "hex": "#a10000"
+      }
+    },
+    "aranea": {
+      "$description": "Aranea Serket",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "arquiusprite": {
+      "$description": "ARquiusprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.878, 0.027, 0.027],
+        "hex": "#e00707"
+      }
+    },
+    "arsenic-catnip": {
+      "$description": "Nepeta Leijon [arsenicCatnip]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.255, 0.4, 0],
+        "hex": "#416600"
+      }
+    },
+    "augury-aside": {
+      "$description": "[auguryAside]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.502, 0.067, 0.031],
+        "hex": "#801108"
+      }
+    },
+    "aurthoursprite": {
+      "$description": "Aurthoursprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0.337],
+        "hex": "#000056"
+      }
+    },
+    "avril": {
+      "$description": "Avril Thorpe",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.776, 0],
+        "hex": "#ffc600"
+      }
+    },
+    "becsprite": {
+      "$description": "Becsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.122, 0.58, 0],
+        "hex": "#1f9400"
+      }
+    },
+    "bicyclopsprite": {
+      "$description": "Bicyclopsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.631, 0],
+        "hex": "#a1a100"
+      }
+    },
+    "biscuits": {
+      "$description": "Biscuits (⓭)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.377, 0],
+        "hex": "#ff6000"
+      }
+    },
+    "caliborn": {
+      "$root": {
+        "$description": "Caliborn",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.193, 0.193, 0.193],
+          "hex": "#323232"
+        }
+      },
+      "green": {
+        "$description": "Caliborn (Green Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "green-epilogues": {
+        "$description": "Caliborn (\"The Homestuck Epilogues\" Green Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.612, 0.408],
+          "hex": "#009c68"
+        }
+      }
+    },
+    "caligulas-aquarium": {
+      "$root": {
+        "$description": "Eridan Ampora [caligulasAquarium]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.416, 0, 0.416],
+          "hex": "#6a006a"
+        }
+      },
+      "epilogues": {
+        "$description": "Eridan Ampora [caligulasAquarium] (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.494, 0, 0.282],
+          "hex": "#7e0048"
+        }
+      }
+    },
+    "calliope": {
+      "$root": {
+        "$description": "Calliope",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.573, 0.573, 0.573],
+          "hex": "#929292"
+        }
+      },
+      "epilogues": {
+        "$description": "Calliope (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0.639, 0.651],
+          "hex": "#a1a3a6"
+        }
+      },
+      "red": {
+        "$description": "Calliope (Red Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      }
+    },
+    "calsprite": {
+      "$description": "Calsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.946, 0.643, 0],
+        "hex": "#f2a400"
+      }
+    },
+    "cans": {
+      "$description": "Cans (⓯)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.584, 0, 0.082],
+        "hex": "#950015"
+      }
+    },
+    "carcino-geneticist": {
+      "$root": {
+        "$description": "Karkat Vantas [carcinoGeneticist]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.384, 0.384, 0.384],
+          "hex": "#626262"
+        }
+      },
+      "epilogues": {
+        "$description": "Karkat Vantas [carcinoGeneticist] (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.486, 0.494, 0.506],
+          "hex": "#7c7e81"
+        }
+      },
+      "red": {
+        "$description": "Karkat Vantas [carcinoGeneticist] (Red Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      }
+    },
+    "centaurs-testicle": {
+      "$description": "Equius Zahhak [centaursTesticle]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0.337],
+        "hex": "#000056"
+      }
+    },
+    "champions-tirade": {
+      "$description": "[championsTirade]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.506, 0.808, 0.259],
+        "hex": "#81ce42"
+      }
+    },
+    "cherub": {
+      "$root": {
+        "$description": "Cherub",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.043, 0.255, 0],
+          "hex": "#0b4100"
+        }
+      },
+      "green": {
+        "$description": "Cherub (Green)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "red": {
+        "$description": "Cherub (Red)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      }
+    },
+    "cliper": {
+      "$description": "Cliper Borden",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "cloistered-connoisewer": {
+      "$description": "Del'fi, Who Aches to Be [cloisteredConnoisewer]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.004, 0.557, 0.443],
+        "hex": "#018e71"
+      }
+    },
+    "clover": {
+      "$description": "Clover (❹)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.639, 0.341, 1],
+        "hex": "#a357ff"
+      }
+    },
+    "crabsprite": {
+      "$description": "Crabsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.384, 0.384, 0.384],
+        "hex": "#626262"
+      }
+    },
+    "cronus": {
+      "$description": "Cronus Ampora",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.416, 0, 0.416],
+        "hex": "#6a006a"
+      }
+    },
+    "crowbar": {
+      "$description": "Crowbar (❼)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.584, 0, 0.082],
+        "hex": "#950015"
+      }
+    },
+    "crowsprite": {
+      "$description": "Crowsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.946, 0.643, 0],
+        "hex": "#f2a400"
+      }
+    },
+    "cuttlefish-culler": {
+      "$description": "Feferi Peixes [cuttlefishCuller]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.467, 0, 0.235],
+        "hex": "#77003c"
+      }
+    },
+    "damara": {
+      "$description": "Damara Megido",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0, 0],
+        "hex": "#a10000"
+      }
+    },
+    "dave": {
+      "$description": "Dave Strider",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.878, 0.027, 0.027],
+        "hex": "#e00707"
+      }
+    },
+    "davepetasprite": {
+      "$root": {
+        "$description": "Davepetasprite^2",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.946, 0.643, 0],
+          "hex": "#f2a400"
+        }
+      },
+      "prefix": {
+        "$description": "Davepetasprite^2 (Dialogue Prefix)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.29, 0.788, 0.145],
+          "hex": "#4ac925"
+        }
+      }
+    },
+    "davesprite": {
+      "$description": "Davesprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.946, 0.643, 0],
+        "hex": "#f2a400"
+      }
+    },
+    "debonair-corsair": {
+      "$description": "Nektan Whelan [debonairCorsair]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.545, 0, 0.545],
+        "hex": "#8b008b"
+      }
+    },
+    "delfi": {
+      "$description": "Del'fi, Who Aches to Be",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.004, 0.557, 0.443],
+        "hex": "#018e71"
+      }
+    },
+    "derse": {
+      "$root": {
+        "$description": "Derse",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.592, 0, 0.894],
+          "hex": "#9700e4"
+        }
+      },
+      "icon": {
+        "$description": "Derse (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 1],
+          "hex": "#ff00ff"
+        }
+      }
+    },
+    "die": {
+      "$description": "Die (❻)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.251],
+        "hex": "#008140"
+      }
+    },
+    "dirk": {
+      "$root": {
+        "$description": "Dirk Strider",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.946, 0.643, 0],
+          "hex": "#f2a400"
+        }
+      },
+      "red": {
+        "$description": "Dirk Strider (Red Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.878, 0.027, 0.027],
+          "hex": "#e00707"
+        }
+      }
+    },
+    "doc-scratch": {
+      "$description": "Doc Scratch",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 1, 1],
+        "hex": "#ffffff"
+      }
+    },
+
+    "doze": {
+      "$description": "Doze (❷)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.251, 0.251, 0.992],
+        "hex": "#4040fd"
+      }
+    },
+    "dragonsprite": {
+      "$description": "Dragonsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.51, 0.51],
+        "hex": "#008282"
+      }
+    },
+    "ecto-biologist": {
+      "$description": "John Egbert [ectoBiologist]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "eggs": {
+      "$description": "Eggs (⓬)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.639, 0.341, 1],
+        "hex": "#a357ff"
+      }
+    },
+    "eminent-belladonna": {
+      "$description": "Vriska \"Vrissy\" Maryam-Lalonde [eminentBelladonna]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "equius": {
+      "$description": "Equius Zahhak",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0.337],
+        "hex": "#000056"
+      }
+    },
+    "equiusprite": {
+      "$description": "Equiusprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.878, 0.027, 0.027],
+        "hex": "#e00707"
+      }
+    },
+    "eridan": {
+      "$root": {
+        "$description": "Eridan Ampora",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.416, 0, 0.416],
+          "hex": "#6a006a"
+        }
+      },
+      "epilogues": {
+        "$description": "Eridan Ampora (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.494, 0, 0.282],
+          "hex": "#7e0048"
+        }
+      }
+    },
+    "erisolsprite": {
+      "$description": "Erisolsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.29, 0.788, 0.145],
+        "hex": "#4ac925"
+      }
+    },
+    "fedorafreak": {
+      "$description": "[fedorafreak]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.294, 0.294, 0.294],
+        "hex": "#4b4b4b"
+      }
+    },
+    "feferi": {
+      "$description": "Feferi Peixes",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.467, 0, 0.235],
+        "hex": "#77003c"
+      }
+    },
+    "fefetasprite": {
+      "$description": "Fefetasprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.71, 0.212, 0.855],
+        "hex": "#b536da"
+      }
+    },
+    "felt": {
+      "$root": {
+        "$description": "The Felt",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "1": {
+        "$description": "The Felt [1]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.173, 1, 0.294],
+          "hex": "#2cff4b"
+        }
+      },
+      "2": {
+        "$description": "The Felt [2]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "3": {
+        "$description": "The Felt [3]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.086, 0.522, 0],
+          "hex": "#168500"
+        }
+      },
+      "4": {
+        "$description": "The Felt [4]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.055, 0.275, 0.012],
+          "hex": "#0e4603"
+        }
+      },
+      "5": {
+        "$description": "The Felt [5]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.027, 0.235, 0],
+          "hex": "#073c00"
+        }
+      },
+      "6": {
+        "$description": "The Felt [6]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.031, 0.165, 0],
+          "hex": "#082a00"
+        }
+      },
+      "7": {
+        "$description": "The Felt [7]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.016, 0.137, 0],
+          "hex": "#042300"
+        }
+      },
+      "50": {
+        "$description": "The Felt [50]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.173, 1, 0.294],
+          "hex": "#2cff4b"
+        }
+      },
+      "100": {
+        "$description": "The Felt [100]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "200": {
+        "$description": "The Felt [200]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.11, 0.737, 0.106],
+          "hex": "#1cbc1b"
+        }
+      },
+      "300": {
+        "$description": "The Felt [300]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.094, 0.627, 0.043],
+          "hex": "#18a00b"
+        }
+      },
+      "400": {
+        "$description": "The Felt [400]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.086, 0.522, 0],
+          "hex": "#168500"
+        }
+      },
+      "500": {
+        "$description": "The Felt [500]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.078, 0.439, 0.008],
+          "hex": "#147002"
+        }
+      },
+      "600": {
+        "$description": "The Felt [600]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.067, 0.357, 0.012],
+          "hex": "#115b03"
+        }
+      },
+      "700": {
+        "$description": "The Felt [700]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.055, 0.275, 0.012],
+          "hex": "#0e4603"
+        }
+      },
+      "800": {
+        "$description": "The Felt [800]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.027, 0.235, 0],
+          "hex": "#073c00"
+        }
+      },
+      "900": {
+        "$description": "The Felt [900]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.031, 0.165, 0],
+          "hex": "#082a00"
+        }
+      },
+      "950": {
+        "$description": "The Felt [950]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.016, 0.137, 0],
+          "hex": "#042300"
+        }
+      }
+    },
+    "fin": {
+      "$description": "Fin (❺)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.377, 0],
+        "hex": "#ff6000"
+      }
+    },
+    "frogsprite": {
+      "$description": "Frogsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0, 0],
+        "hex": "#a10000"
+      }
+    },
+    "gallows-calibrator": {
+      "$description": "Terezi Pyrope [gallowsCalibrator]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.51, 0.51],
+        "hex": "#008282"
+      }
+    },
+    "gamzee": {
+      "$description": "Gamzee Makara",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.169, 0, 0.341],
+        "hex": "#2b0057"
+      }
+    },
+    "garden-gnostic": {
+      "$description": "Jade Harley [gardenGnostic]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.29, 0.788, 0.145],
+        "hex": "#4ac925"
+      }
+    },
+    "gavage-cunctation": {
+      "$description": "Ly'lac, of the Final Applause [gavageCunctation]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.558, 0.333, 0.58],
+        "hex": "#8e5594"
+      }
+    },
+    "gcatavrosprite": {
+      "$description": "GCatavrosprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "ghosty-trickster": {
+      "$description": "John Egbert [ghostyTrickster]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "glbgolybsprite": {
+      "$description": "Gl'bgolybsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.467, 0, 0.235],
+        "hex": "#77003c"
+      }
+    },
+    "glutinous-gymnast": {
+      "$description": "Tavros \"Tavvy\" Crocker [glutinousGymnast]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.271, 0, 0.467],
+        "hex": "#450077"
+      }
+    },
+    "goatsprite": {
+      "$description": "Goatsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.169, 0, 0.341],
+        "hex": "#2b0057"
+      }
+    },
+    "golgothas-terror": {
+      "$description": "Jake English [golgothasTerror]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.122, 0.58, 0],
+        "hex": "#1f9400"
+      }
+    },
+    "green-sun": {
+      "$description": "The Green Sun",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.929, 0.31],
+        "hex": "#00ed4f"
+      }
+    },
+    "grim-auxiliatrix": {
+      "$description": "Kanaya Maryam [grimAuxiliatrix]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "gutsy-gumshoe": {
+      "$root": {
+        "$description": "Jane Crocker [gutsyGumshoe]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.835, 0.949],
+          "hex": "#00d5f2"
+        }
+      },
+      "epilogues": {
+        "$description": "Jane Crocker [gutsyGumshoe] (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.592, 0.843],
+          "hex": "#0097d7"
+        }
+      }
+    },
+    "harlequinsprite": {
+      "$description": "Harlequinsprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.835, 0.949],
+        "hex": "#00d5f2"
+      }
+    },
+    "harry": {
+      "$description": "Harry Anderson Egbert",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.024, 0.443, 0.804],
+        "hex": "#0671cd"
+      }
+    },
+    "homestuck": {
+      "$description": "Homestuck",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.659, 0.812, 0.251],
+        "hex": "#a8cf40"
+      }
+    },
+    "horuss": {
+      "$description": "Horuss Zahhak",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0.337],
+        "hex": "#000056"
+      }
+    },
+    "ideogramic-dramaturgy": {
+      "$description": "Imode Kurita [ideogramicDramaturgy]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.741, 0.706, 0.612],
+        "hex": "#bdb49c"
+      }
+    },
+    "imode": {
+      "$description": "Imode Kurita",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.741, 0.706, 0.612],
+        "hex": "#bdb49c"
+      }
+    },
+    "itchy": {
+      "$description": "Itchy (❶)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.918, 0],
+        "hex": "#ffea00"
+      }
+    },
+    "jade": {
+      "$description": "Jade Harley",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.29, 0.788, 0.145],
+        "hex": "#4ac925"
+      }
+    },
+    "jadesprite": {
+      "$description": "Jadesprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.122, 0.58, 0],
+        "hex": "#1f9400"
+      }
+    },
+    "jake": {
+      "$description": "Jake English",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.122, 0.58, 0],
+        "hex": "#1f9400"
+      }
+    },
+    "jane": {
+      "$root": {
+        "$description": "Jane Crocker",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.835, 0.949],
+          "hex": "#00d5f2"
+        }
+      },
+      "epilogues": {
+        "$description": "Jane Crocker (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.592, 0.843],
+          "hex": "#0097d7"
+        }
+      }
+    },
+    "jaspersprite": {
+      "$description": "Jaspersprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.945, 0.255, 0.937],
+        "hex": "#f141ef"
+      }
+    },
+    "jasprosesprite": {
+      "$root": {
+        "$description": "Jasprosesprite^2",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.71, 0.212, 0.855],
+          "hex": "#b536da"
+        }
+      },
+      "prefix": {
+        "$description": "Jasprosesprite^2 (Dialogue Prefix)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.945, 0.255, 0.937],
+          "hex": "#f141ef"
+        }
+      }
+    },
+    "joey": {
+      "$description": "Joey Claire",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.443, 0.855, 1],
+        "hex": "#71daff"
+      }
+    },
+    "john": {
+      "$description": "John Egbert",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "jude": {
+      "$description": "Jude Harley",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.827, 1, 0.561],
+        "hex": "#d3ff8f"
+      }
+    },
+    "kanaya": {
+      "$description": "Kanaya Maryam",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "kankri": {
+      "$description": "Kankri Vantas",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0, 0],
+        "hex": "#ff0000"
+      }
+    },
+    "karkat": {
+      "$root": {
+        "$description": "Karkat Vantas",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.384, 0.384, 0.384],
+          "hex": "#626262"
+        }
+      },
+      "epilogues": {
+        "$description": "Karkat Vantas (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.486, 0.494, 0.506],
+          "hex": "#7c7e81"
+        }
+      },
+      "red": {
+        "$description": "Karkat Vantas (Red Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      }
+    },
+    "kurloz": {
+      "$description": "Kurloz Makara",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.169, 0, 0.341],
+        "hex": "#2b0057"
+      }
+    },
+    "latula": {
+      "$description": "Latula Pyrope",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.51, 0.51],
+        "hex": "#008282"
+      }
+    },
+    "lord-english": {
+      "$root": {
+        "$description": "Lord English",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.18, 0.843, 0.227],
+          "hex": "#2ed73a"
+        }
+      },
+      "blue": {
+        "$description": "Lord English (Blue)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.251, 0.251, 0.992],
+          "hex": "#4040fd"
+        }
+      },
+      "dark-red": {
+        "$description": "Lord English (Dark Red)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.584, 0, 0.082],
+          "hex": "#950015"
+        }
+      },
+      "green": {
+        "$description": "Lord English (Green)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.506, 0.251],
+          "hex": "#008140"
+        }
+      },
+      "orange": {
+        "$description": "Lord English (Orange)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.377, 0],
+          "hex": "#ff6000"
+        }
+      },
+      "purple": {
+        "$description": "Lord English (Purple)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.639, 0.341, 1],
+          "hex": "#a357ff"
+        }
+      },
+      "red": {
+        "$description": "Lord English (Red)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.875, 0, 0],
+          "hex": "#df0000"
+        }
+      },
+      "yellow": {
+        "$description": "Lord English (Yellow)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.918, 0],
+          "hex": "#ffea00"
+        }
+      }
+    },
+    "lylac": {
+      "$description": "Ly'lac, of the Final Applause",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.558, 0.333, 0.58],
+        "hex": "#8e5594"
+      }
+    },
+    "matchsticks": {
+      "$description": "Matchsticks (⓫)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.875, 0, 0],
+        "hex": "#df0000"
+      }
+    },
+    "meenah": {
+      "$description": "Meenah Peixes",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.467, 0, 0.235],
+        "hex": "#77003c"
+      }
+    },
+    "meulin": {
+      "$description": "Meulin Leijon",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.255, 0.4, 0],
+        "hex": "#416600"
+      }
+    },
+    "mierfa": {
+      "$description": "Mierfa Durgas",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.286, 1],
+        "hex": "#0049ff"
+      }
+    },
+    "mituna": {
+      "$description": "Mituna Captor",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.631, 0],
+        "hex": "#a1a100"
+      }
+    },
+    "mothersprite": {
+      "$description": "Mothersprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "motter": {
+      "$description": "Motter Ataxia",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0.337],
+        "hex": "#000056"
+      }
+    },
+    "mspa": {
+      "1": {
+        "$description": "MSPaintAdventures [1]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.933, 0.933, 0.933],
+          "hex": "#eeeeee"
+        }
+      },
+      "2": {
+        "$description": "MSPaintAdventures [2]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.878, 0.878, 0.878],
+          "hex": "#e0e0e0"
+        }
+      },
+      "3": {
+        "$description": "MSPaintAdventures [3]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.776, 0.776, 0.776],
+          "hex": "#c6c6c6"
+        }
+      },
+      "4": {
+        "$description": "MSPaintAdventures [4]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.722, 0.722, 0.722],
+          "hex": "#b8b8b8"
+        }
+      },
+      "5": {
+        "$description": "MSPaintAdventures [5]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.482, 0.482, 0.482],
+          "hex": "#7b7b7b"
+        }
+      },
+      "6": {
+        "$description": "MSPaintAdventures [6]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.325, 0.325, 0.325],
+          "hex": "#535353"
+        }
+      },
+      "50": {
+        "$description": "MSPaintAdventures [50]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.969, 0.969, 0.969],
+          "hex": "#f7f7f7"
+        }
+      },
+      "100": {
+        "$description": "MSPaintAdventures [100]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.933, 0.933, 0.933],
+          "hex": "#eeeeee"
+        }
+      },
+      "200": {
+        "$description": "MSPaintAdventures [200]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.878, 0.878, 0.878],
+          "hex": "#e0e0e0"
+        }
+      },
+      "300": {
+        "$description": "MSPaintAdventures [300]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.776, 0.776, 0.776],
+          "hex": "#c6c6c6"
+        }
+      },
+      "400": {
+        "$description": "MSPaintAdventures [400]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.722, 0.722, 0.722],
+          "hex": "#b8b8b8"
+        }
+      },
+      "500": {
+        "$description": "MSPaintAdventures [500]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.604, 0.604, 0.604],
+          "hex": "#9a9a9a"
+        }
+      },
+      "600": {
+        "$description": "MSPaintAdventures [600]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.482, 0.482, 0.482],
+          "hex": "#7b7b7b"
+        }
+      },
+      "700": {
+        "$description": "MSPaintAdventures [700]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.325, 0.325, 0.325],
+          "hex": "#535353"
+        }
+      },
+      "800": {
+        "$description": "MSPaintAdventures [800]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.235, 0.235, 0.235],
+          "hex": "#3c3c3c"
+        }
+      },
+      "900": {
+        "$description": "MSPaintAdventures [900]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.196, 0.196, 0.196],
+          "hex": "#323232"
+        }
+      },
+      "950": {
+        "$description": "MSPaintAdventures [950]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.122, 0.122, 0.122],
+          "hex": "#1f1f1f"
+        }
+      }
+    },
+    "nannasprite": {
+      "$description": "Nannasprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.835, 0.949],
+        "hex": "#00d5f2"
+      }
+    },
+    "nektan": {
+      "$description": "Nektan Whelan",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.545, 0, 0.545],
+        "hex": "#8b008b"
+      }
+    },
+    "nepeta": {
+      "$description": "Nepeta Leijon",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.255, 0.4, 0],
+        "hex": "#416600"
+      }
+    },
+    "nepetasprite": {
+      "$description": "Nepetasprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.29, 0.788, 0.145],
+        "hex": "#4ac925"
+      }
+    },
+    "obama": {
+      "$description": "The 44th President of the United States of America, Barack Hussein Obama II",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0],
+        "hex": "#000000"
+      }
+    },
+    "pesterchum": {
+      "50": {
+        "$description": "Pesterchum [50]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.98, 1, 0.608],
+          "hex": "#faff9b"
+        }
+      },
+      "100": {
+        "$description": "Pesterchum [100]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.969, 0],
+          "hex": "#fff700"
+        }
+      },
+      "200": {
+        "$description": "Pesterchum [200]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.886, 0],
+          "hex": "#ffe200"
+        }
+      },
+      "300": {
+        "$description": "Pesterchum [300]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.796, 0],
+          "hex": "#ffcb00"
+        }
+      },
+      "400": {
+        "$description": "Pesterchum [400]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.765, 0.086],
+          "hex": "#ffc316"
+        }
+      },
+      "500": {
+        "$description": "Pesterchum [500]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.706, 0],
+          "hex": "#ffb400"
+        }
+      },
+      "600": {
+        "$description": "Pesterchum [600]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.647, 0],
+          "hex": "#ffa500"
+        }
+      },
+      "700": {
+        "$description": "Pesterchum [700]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.969, 0.6, 0],
+          "hex": "#f79900"
+        }
+      },
+      "800": {
+        "$description": "Pesterchum [800]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.875, 0.573, 0],
+          "hex": "#df9200"
+        }
+      },
+      "900": {
+        "$description": "Pesterchum [900]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.757, 0.533, 0],
+          "hex": "#c18800"
+        }
+      },
+      "950": {
+        "$description": "Pesterchum [950]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.678, 0.471, 0],
+          "hex": "#ad7800"
+        }
+      }
+    },
+    "porrim": {
+      "$description": "Porrim Maryam",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "pouncesprite": {
+      "$description": "Pouncesprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.255, 0.4, 0],
+        "hex": "#416600"
+      }
+    },
+    "prospit": {
+      "$root": {
+        "$description": "Prospit",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.894, 0.592, 0],
+          "hex": "#e49700"
+        }
+      },
+      "icon": {
+        "$description": "Prospit (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 1, 0],
+          "hex": "#ffff00"
+        }
+      }
+    },
+    "quarters": {
+      "$description": "Quarters (⓮)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.251],
+        "hex": "#008140"
+      }
+    },
+    "recidivous-gainsayer": {
+      "$description": "Ruthie Gold [recidivousGainsayer]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0, 0],
+        "hex": "#a10000"
+      }
+    },
+    "rose": {
+      "$description": "Rose Lalonde",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.71, 0.212, 0.855],
+        "hex": "#b536da"
+      }
+    },
+    "rosesprite": {
+      "$description": "Rosesprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.71, 0.212, 0.855],
+        "hex": "#b536da"
+      }
+    },
+    "roxy": {
+      "$description": "Roxy Lalonde",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.435, 0.949],
+        "hex": "#ff6ff2"
+      }
+    },
+    "rufioh": {
+      "$description": "Rufioh Nitram",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.376, 0],
+        "hex": "#a16000"
+      }
+    },
+    "ruthie": {
+      "$description": "Ruthie Gold",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0, 0],
+        "hex": "#a10000"
+      }
+    },
+    "sawbuck": {
+      "$description": "Sawbuck (❿)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.251, 0.251, 0.992],
+        "hex": "#4040fd"
+      }
+    },
+    "sburb": {
+      "alpha": {
+        "$description": "Sburb (Alpha)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      },
+      "beta": {
+        "$description": "Sburb (Beta)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.298, 0.886, 0.306],
+          "hex": "#4ce24e"
+        }
+      }
+    },
+    "seahorsesprite": {
+      "$description": "Seahorsesprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.416, 0, 0.416],
+        "hex": "#6a006a"
+      }
+    },
+    "sgrub": {
+      "$description": "Sgrub",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.565, 0.059, 1],
+        "hex": "#900fff"
+      }
+    },
+    "shurb": {
+      "$description": "Shurb",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.816, 0.988],
+        "hex": "#07d0fc"
+      }
+    },
+    "silas": {
+      "$description": "Silas P Beauregard III",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.443, 0.839, 0.4],
+        "hex": "#71d666"
+      }
+    },
+    "snowman": {
+      "$description": "Snowman",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0, 0],
+        "hex": "#000000"
+      }
+    },
+    "sollux": {
+      "$description": "Sollux Captor",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.631, 0],
+        "hex": "#a1a100"
+      }
+    },
+    "spidersprite": {
+      "$description": "Spidersprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "steezy-headbanger": {
+      "$description": "Avril Thorpe [steezyHeadbanger]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.776, 0],
+        "hex": "#ffc600"
+      }
+    },
+    "stitch": {
+      "$description": "Stitch (❾)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.918, 0],
+        "hex": "#ffea00"
+      }
+    },
+    "swifer": {
+      "$description": "Swifer Eggmop",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.506, 0.255],
+        "hex": "#008141"
+      }
+    },
+    "swiss": {
+      "$description": "Swiss Elysi",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.604, 0.643, 0.69],
+        "hex": "#9aa4b0"
+      }
+    },
+    "taciturn-tablesetter": {
+      "$description": "Yiffany \"Yiffy\" Longstocking Lalonde Harley [taciturnTablesetter]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.816, 0, 0.035],
+        "hex": "#d00009"
+      }
+    },
+    "tavrisprite": {
+      "$description": "Tavrisprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "tavros": {
+      "$description": "Tavros Nitram",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.376, 0],
+        "hex": "#a16000"
+      }
+    },
+    "tavrosprite": {
+      "$description": "Tavrosprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.027, 0.082, 0.804],
+        "hex": "#0715cd"
+      }
+    },
+    "tavvy": {
+      "$description": "Tavros \"Tavvy\" Crocker",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.271, 0, 0.467],
+        "hex": "#450077"
+      }
+    },
+    "tentacle-therapist": {
+      "$description": "Rose Lalonde [tentacleTherapist]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.71, 0.212, 0.855],
+        "hex": "#b536da"
+      }
+    },
+    "terezi": {
+      "$description": "Terezi Pyrope",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.51, 0.51],
+        "hex": "#008282"
+      }
+    },
+    "terminally-capricious": {
+      "$description": "Gamzee Makara [terminallyCapricious]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.169, 0, 0.341],
+        "hex": "#2b0057"
+      }
+    },
+    "thespians-glamor": {
+      "$description": "Harry Anderson Egbert [thespiansGlamor]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.024, 0.443, 0.804],
+        "hex": "#0671cd"
+      }
+    },
+    "timaeus-testified": {
+      "$root": {
+        "$description": "Dirk Strider [timaeusTestified]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.946, 0.643, 0],
+          "hex": "#f2a400"
+        }
+      },
+      "red": {
+        "$description": "Dirk Strider [timaeusTestified] (Red Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.878, 0.027, 0.027],
+          "hex": "#e00707"
+        }
+      }
+    },
+    "tinkersprite": {
+      "$description": "Tinkersprite",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.376, 0],
+        "hex": "#a16000"
+      }
+    },
+    "tinnitus-chakra": {
+      "$description": "[tinnitusChakra]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.439, 0.114, 1],
+        "hex": "#701dff"
+      }
+    },
+    "tipsy-gnostalgic": {
+      "$description": "Roxy Lalonde [tipsyGnostalgic]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [1, 0.435, 0.949],
+        "hex": "#ff6ff2"
+      }
+    },
+    "trace": {
+      "$description": "Trace (❸)",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.875, 0, 0],
+        "hex": "#df0000"
+      }
+    },
+    "troll": {
+      "$root": {
+        "$description": "Troll Species",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.769, 0.769, 0.769],
+          "hex": "#c4c4c4"
+        }
+      },
+      "1": {
+        "$description": "Troll Horns (Yellow)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.729, 0.161],
+          "hex": "#ffba29"
+        }
+      },
+      "2": {
+        "$description": "Troll Horns (Orange)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.565, 0],
+          "hex": "#ff9000"
+        }
+      },
+      "3": {
+        "$description": "Troll Horns (OrangeRed)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.259, 0],
+          "hex": "#ff4200"
+        }
+      },
+      "blue": {
+        "$description": "Troll Hemospectrum (Blueblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.255, 0.51],
+          "hex": "#004182"
+        }
+      },
+      "bronze": {
+        "$description": "Troll Hemospectrum (Bronzeblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.635, 0.322, 0.012],
+          "hex": "#a25203"
+        }
+      },
+      "fuchsia": {
+        "$description": "Troll Hemospectrum (Fuchsiablood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.6, 0, 0.302],
+          "hex": "#99004d"
+        }
+      },
+      "gold": {
+        "$description": "Troll Hemospectrum (Goldblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0.631, 0],
+          "hex": "#a1a100"
+        }
+      },
+      "indigo": {
+        "$description": "Troll Hemospectrum (Indigoblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.004, 0.129, 0.796],
+          "hex": "#0021cb"
+        }
+      },
+      "jade": {
+        "$description": "Troll Hemospectrum (Jadeblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.027, 0.518, 0.275],
+          "hex": "#078446"
+        }
+      },
+      "lime": {
+        "$description": "Troll Hemospectrum (Limeblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.396, 0.51, 0],
+          "hex": "#658200"
+        }
+      },
+      "olive": {
+        "$description": "Troll Hemospectrum (Oliveblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.255, 0.4, 0],
+          "hex": "#416600"
+        }
+      },
+      "purple": {
+        "$description": "Troll Hemospectrum (Purpleblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.267, 0.039, 0.498],
+          "hex": "#440a7f"
+        }
+      },
+      "red": {
+        "$description": "Troll Hemospectrum (Redblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      },
+      "rust": {
+        "$description": "Troll Hemospectrum (Rustblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0, 0],
+          "hex": "#a10000"
+        }
+      },
+      "teal": {
+        "$description": "Troll Hemospectrum (Tealblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.51, 0.51],
+          "hex": "#008282"
+        }
+      },
+      "violet": {
+        "$description": "Troll Hemospectrum (Violetblood)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.416, 0, 0.416],
+          "hex": "#6a006a"
+        }
+      }
+    },
+    "turntech-godhead": {
+      "$description": "Dave Strider [turntechGodhead]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.878, 0.027, 0.027],
+        "hex": "#e00707"
+      }
+    },
+    "twin-armageddons": {
+      "$description": "Sollux Captor [twinArmageddons]",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.631, 0.631, 0],
+        "hex": "#a1a100"
+      }
+    },
+    "undying-umbrage": {
+      "$root": {
+        "$description": "Caliborn [undyingUmbrage]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.192, 0.192, 0.192],
+          "hex": "#323232"
+        }
+      },
+      "green-epilogues": {
+        "$description": "Caliborn [undyingUmbrage] (\"The Homestuck Epilogues\" Green Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.612, 0.408],
+          "hex": "#009c68"
+        }
+      },
+      "green": {
+        "$root": {
+          "$description": "Caliborn [undyingUmbrage] (Green Alternate)",
+          "$type": "color",
+          "$value": {
+            "alpha": 1,
+            "colorSpace": "srgb",
+            "components": [0.18, 0.843, 0.227],
+            "hex": "#2ed73a"
+          }
+        }
+      }
+    },
+    "uranian-umbra": {
+      "$root": {
+        "$description": "Calliope [uranianUmbra]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.573, 0.573, 0.573],
+          "hex": "#929292"
+        }
+      },
+      "epilogues": {
+        "$description": "Calliope [uranianUmbra] (\"The Homestuck Epilogues\" Alternate)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.631, 0.639, 0.651],
+          "hex": "#a1a3a6"
+        }
+      },
+      "red": {
+        "$root": {
+          "$description": "Calliope [uranianUmbra] (Red Alternate)",
+          "$type": "color",
+          "$value": {
+            "alpha": 1,
+            "colorSpace": "srgb",
+            "components": [1, 0, 0],
+            "hex": "#ff0000"
+          }
+        }
+      }
+    },
+    "vriska": {
+      "$description": "Vriska Serket",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "vrissy": {
+      "$description": "Vriska \"Vrissy\" Varyam-Lalonde",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0, 0.337, 0.51],
+        "hex": "#005682"
+      }
+    },
+    "yiffy": {
+      "$description": "Yiffany \"Yiffy\" Longstocking Lalonde Harley",
+      "$type": "color",
+      "$value": {
+        "alpha": 1,
+        "colorSpace": "srgb",
+        "components": [0.816, 0, 0.035],
+        "hex": "#d00009"
+      }
+    },
+    "trickster": {
+      "blue": {
+        "$description": "Trickster Mode (Blue)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.82, 0.863, 1],
+          "hex": "#d1dcff"
+        }
+      },
+      "cyan": {
+        "$description": "Trickster Mode (Cyan)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.82, 0.976, 1],
+          "hex": "#d1f9ff"
+        }
+      },
+      "green": {
+        "$description": "Trickster Mode (Green)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.82, 1, 0.89],
+          "hex": "#d1ffe3"
+        }
+      },
+      "orange": {
+        "$description": "Trickster Mode (Orange)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.902, 0.82],
+          "hex": "#ffe6d1"
+        }
+      },
+      "purple": {
+        "$description": "Trickster Mode (Purple)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.941, 0.82, 1],
+          "hex": "#f0d1ff"
+        }
+      },
+      "red": {
+        "$description": "Trickster Mode (Red)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.82, 0.82],
+          "hex": "#ffd1d1"
+        }
+      },
+      "violet": {
+        "$description": "Trickster Mode (Violet)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.451, 0.992],
+          "hex": "#ff73fd"
+        }
+      },
+      "yellow": {
+        "$description": "Trickster Mode (Yellow)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.965, 0.82],
+          "hex": "#fff6d1"
+        }
+      }
+    },
+    "blood": {
+      "$root": {
+        "$description": "Blood",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.243, 0.086, 0.004],
+          "hex": "#3e1601"
+        }
+      },
+      "icon": {
+        "$description": "Blood (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.729, 0.063, 0.086],
+          "hex": "#ba1016"
+        }
+      }
+    },
+    "breath": {
+      "$root": {
+        "$description": "Breath",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.263, 0.475, 0.902],
+          "hex": "#4379e6"
+        }
+      },
+      "icon": {
+        "$description": "Breath (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.278, 0.875, 0.976],
+          "hex": "#47dff9"
+        }
+      }
+    },
+    "doom": {
+      "$root": {
+        "$description": "Doom",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.188, 0.408, 0],
+          "hex": "#306800"
+        }
+      },
+      "icon": {
+        "$description": "Doom (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      }
+    },
+    "heart": {
+      "$root": {
+        "$description": "Heart",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.333, 0.078, 0.165],
+          "hex": "#55142a"
+        }
+      },
+      "icon": {
+        "$description": "Heart (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.741, 0.094, 0.392],
+          "hex": "#bd1864"
+        }
+      }
+    },
+    "hope": {
+      "$root": {
+        "$description": "Hope",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.871, 0.333],
+          "hex": "#ffde55"
+        }
+      },
+      "icon": {
+        "$description": "Hope (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.992, 0.992, 0.992],
+          "hex": "#fdfdfd"
+        }
+      }
+    },
+    "life": {
+      "$root": {
+        "$description": "Life",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.643, 0.592, 0.529],
+          "hex": "#a49787"
+        }
+      },
+      "icon": {
+        "$description": "Life (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.447, 0.922, 0.204],
+          "hex": "#72eb34"
+        }
+      }
+    },
+    "light": {
+      "$root": {
+        "$description": "Light",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.941, 0.518, 0.047],
+          "hex": "#f0840c"
+        }
+      },
+      "icon": {
+        "$description": "Light (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.965, 0.98, 0.306],
+          "hex": "#f6fa4e"
+        }
+      }
+    },
+    "mind": {
+      "$root": {
+        "$description": "Mind",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.573, 0.239],
+          "hex": "#00923d"
+        }
+      },
+      "icon": {
+        "$description": "Mind (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.024, 1, 0.788],
+          "hex": "#06ffc9"
+        }
+      }
+    },
+    "rage": {
+      "$root": {
+        "$description": "Rage",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.322, 0.047, 0.38],
+          "hex": "#520c61"
+        }
+      },
+      "icon": {
+        "$description": "Rage (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.612, 0.302, 0.678],
+          "hex": "#9c4dad"
+        }
+      }
+    },
+    "space": {
+      "$root": {
+        "$description": "Space",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      },
+      "icon": {
+        "$description": "Space (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      }
+    },
+    "time": {
+      "$root": {
+        "$description": "Time",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.718, 0.051, 0.055],
+          "hex": "#b70d0e"
+        }
+      },
+      "icon": {
+        "$description": "Time (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [1, 0.129, 0.024],
+          "hex": "#ff2106"
+        }
+      }
+    },
+    "void": {
+      "$root": {
+        "$description": "Void",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0.063, 0.306, 0.635],
+          "hex": "#104ea2"
+        }
+      },
+      "icon": {
+        "$description": "Void (Icon)",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.102, 0.345],
+          "hex": "#001a58"
+        }
+      }
+    },
+    "strife": {
+      "1": {
+        "$description": "Strife [1]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.89, 0.443],
+          "hex": "#00e371"
+        }
+      },
+      "2": {
+        "$description": "Strife [2]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.776, 0.38],
+          "hex": "#00c661"
+        }
+      },
+      "3": {
+        "$description": "Strife [3]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.549, 0.271],
+          "hex": "#008c45"
+        }
+      },
+      "4": {
+        "$description": "Strife [4]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.376, 0.231],
+          "hex": "#00603b"
+        }
+      },
+      "50": {
+        "$description": "Strife [50]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.89, 0.443],
+          "hex": "#00e371"
+        }
+      },
+      "100": {
+        "$description": "Strife [100]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.835, 0.412],
+          "hex": "#00d569"
+        }
+      },
+      "200": {
+        "$description": "Strife [200]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.776, 0.38],
+          "hex": "#00c661"
+        }
+      },
+      "300": {
+        "$description": "Strife [300]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.702, 0.345],
+          "hex": "#00b358"
+        }
+      },
+      "400": {
+        "$description": "Strife [400]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.624, 0.306],
+          "hex": "#009f4e"
+        }
+      },
+      "500": {
+        "$description": "Strife [500]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.549, 0.271],
+          "hex": "#008c45"
+        }
+      },
+      "600": {
+        "$description": "Strife [600]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.49, 0.263],
+          "hex": "#007d43"
+        }
+      },
+      "700": {
+        "$description": "Strife [700]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.435, 0.251],
+          "hex": "#006f40"
+        }
+      },
+      "800": {
+        "$description": "Strife [800]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.376, 0.231],
+          "hex": "#00603b"
+        }
+      },
+      "900": {
+        "$description": "Strife [900]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.286, 0.188],
+          "hex": "#004930"
+        }
+      },
+      "950": {
+        "$description": "Strife [950]",
+        "$type": "color",
+        "$value": {
+          "alpha": 1,
+          "colorSpace": "srgb",
+          "components": [0, 0.2, 0.141],
+          "hex": "#003324"
+        }
+      }
+    }
+  }
+}

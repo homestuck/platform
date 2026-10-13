@@ -1,0 +1,90 @@
+@theme inline {
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height, var(--accordion-panel-height, auto));
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height, var(--accordion-panel-height, auto));
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--collapsible-panel-height, auto);
+    }
+  }
+
+  @keyframes collapsible-up {
+    from {
+      height: var(--collapsible-panel-height, auto);
+    }
+    to {
+      height: 0;
+    }
+  }
+  /* --animate-ultimate-reward: ultimate-reward 5.4s infinite; */
+  /* --animate-text-ultimate-reward: text-ultimate-reward 5.4s steps(9, jump-none) infinite; */
+
+  /* 5.4s total */
+  /* Reusing the --text-shadow-outline text-shadow value here because CSS
+    property values for the shadow color won't resolve properly otherwise. */
+  /* @keyframes text-ultimate-reward {
+    0%,
+    55.5555%,
+    81.4815%,
+    100% {
+      color: initial;
+      --tw-text-shadow-color: transparent;
+      text-shadow:
+        -1px -1px 0 var(--tw-text-shadow-color,),
+        0px -1px 0 var(--tw-text-shadow-color,),
+        1px -1px 0 var(--tw-text-shadow-color,),
+        -1px 0px 0 var(--tw-text-shadow-color,),
+        1px 0px 0 var(--tw-text-shadow-color,),
+        -1px 1px 0 var(--tw-text-shadow-color,),
+        0px 1px 0 var(--tw-text-shadow-color,),
+        1px 1px 0 var(--tw-text-shadow-color,);
+    }
+    72.2222%,
+    74.0741%,
+    75.9259% {
+      color: #fff601;
+      --tw-text-shadow-color: #f70000;
+      text-shadow:
+        -1px -1px 0 var(--tw-text-shadow-color,),
+        0px -1px 0 var(--tw-text-shadow-color,),
+        1px -1px 0 var(--tw-text-shadow-color,),
+        -1px 0px 0 var(--tw-text-shadow-color,),
+        1px 0px 0 var(--tw-text-shadow-color,),
+        -1px 1px 0 var(--tw-text-shadow-color,),
+        0px 1px 0 var(--tw-text-shadow-color,),
+        1px 1px 0 var(--tw-text-shadow-color,);
+    }
+    73.5185%,
+    75.3704% {
+      color: #ffffff;
+      --tw-text-shadow-color: #000000;
+      text-shadow:
+        -1px -1px 0 var(--tw-text-shadow-color,),
+        0px -1px 0 var(--tw-text-shadow-color,),
+        1px -1px 0 var(--tw-text-shadow-color,),
+        -1px 0px 0 var(--tw-text-shadow-color,),
+        1px 0px 0 var(--tw-text-shadow-color,),
+        -1px 1px 0 var(--tw-text-shadow-color,),
+        0px 1px 0 var(--tw-text-shadow-color,),
+        1px 1px 0 var(--tw-text-shadow-color,);
+    }
+  } */
+}

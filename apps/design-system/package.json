@@ -1,0 +1,60 @@
+{
+  "name": "@homestuck/design-system",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#components/*": "./src/components/*.tsx",
+    "#constants/*": "./src/constants/*.ts",
+    "#docs/*": "./src/stories/*.docs.mdx",
+    "#sb/*": "./.storybook/*.ts",
+    "#stories/*": "./src/stories/*.stories.tsx",
+    "#styles/*": "./src/styles/*",
+    "#utils/*": "./src/utils/*.ts"
+  },
+  "scripts": {
+    "build": "storybook build",
+    "chromatic": "dotenvx run --convention=nextjs -- chromatic",
+    "clean": "rm -rf .next .turbo node_modules",
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook",
+    "storybook:doctor": "storybook doctor --package-manager pnpm --config-dir .storybook",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@homestuck/assets": "workspace:^",
+    "@homestuck/env": "workspace:^",
+    "@homestuck/styles": "workspace:^",
+    "@homestuck/tokens": "workspace:^",
+    "@homestuck/ui": "workspace:^",
+    "@homestuck/utils": "workspace:^",
+    "lucide-react": "catalog:",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "remark-gfm": "catalog:",
+    "sonner": "catalog:"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "catalog:",
+    "@homestuck/tsconfig": "workspace:^",
+    "@homestuck/types": "workspace:^",
+    "@storybook-community/storybook-dark-mode": "catalog:",
+    "@storybook/addon-a11y": "catalog:",
+    "@storybook/addon-docs": "catalog:",
+    "@storybook/addon-links": "catalog:",
+    "@storybook/addon-themes": "catalog:",
+    "@storybook/addon-vitest": "catalog:",
+    "@storybook/nextjs-vite": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@unpunnyfuns/swatchbook-addon": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "chromatic": "catalog:",
+    "storybook": "catalog:",
+    "tailwindcss": "catalog:",
+    "tw-animate-css": "catalog:",
+    "typescript": "catalog:typescript-compat",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

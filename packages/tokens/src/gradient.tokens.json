@@ -1,0 +1,109 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "gradient": {
+    "troll": {
+      "hemospectrum": {
+        "$description": "Troll Hemospectrum",
+        "$type": "gradient",
+        "$value": [
+          {
+            "color": "{color.troll.rust}",
+            "position": 0
+          },
+          {
+            "color": "{color.troll.rust}",
+            "position": 0.083
+          },
+          {
+            "color": "{color.troll.bronze}",
+            "position": 0.083
+          },
+          {
+            "color": "{color.troll.bronze}",
+            "position": 0.167
+          },
+          {
+            "color": "{color.troll.gold}",
+            "position": 0.167
+          },
+          {
+            "color": "{color.troll.gold}",
+            "position": 0.25
+          },
+          {
+            "color": "{color.troll.lime}",
+            "position": 0.25
+          },
+          {
+            "color": "{color.troll.lime}",
+            "position": 0.333
+          },
+          {
+            "color": "{color.troll.olive}",
+            "position": 0.333
+          },
+          {
+            "color": "{color.troll.olive}",
+            "position": 0.417
+          },
+          {
+            "color": "{color.troll.jade}",
+            "position": 0.417
+          },
+          {
+            "color": "{color.troll.jade}",
+            "position": 0.5
+          },
+          {
+            "color": "{color.troll.teal}",
+            "position": 0.5
+          },
+          {
+            "color": "{color.troll.teal}",
+            "position": 0.583
+          },
+          {
+            "color": "{color.troll.blue}",
+            "position": 0.583
+          },
+          {
+            "color": "{color.troll.blue}",
+            "position": 0.667
+          },
+          {
+            "color": "{color.troll.indigo}",
+            "position": 0.667
+          },
+          {
+            "color": "{color.troll.indigo}",
+            "position": 0.75
+          },
+          {
+            "color": "{color.troll.purple}",
+            "position": 0.75
+          },
+          {
+            "color": "{color.troll.purple}",
+            "position": 0.833
+          },
+          {
+            "color": "{color.troll.violet}",
+            "position": 0.833
+          },
+          {
+            "color": "{color.troll.violet}",
+            "position": 0.917
+          },
+          {
+            "color": "{color.troll.fuchsia}",
+            "position": 0.917
+          },
+          {
+            "color": "{color.troll.fuchsia}",
+            "position": 1
+          }
+        ]
+      }
+    }
+  }
+}

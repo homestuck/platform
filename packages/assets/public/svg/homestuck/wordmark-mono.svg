@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  width="89" height="24"
+  viewBox="0 0 89 24">
+  <title>Homestuck</title>
+  <defs>
+    <g id="svg-incipisphere-spirograph-arc">
+      <path
+        d="M230.25 177.2Q241.1 126.35 304.75 117.25 368.4 108.1 411.4 161.05 454.35 213.95 451.25 272 448.15 330 415.2 374.2" />
+      <path
+        d="M281.75 177.2Q270.9 126.35 207.25 117.25 143.6 108.1 100.6 161.05 57.65 213.95 60.75 272 63.85 330 96.8 374.2"
+      />
+    </g>
+  </defs>
+  <circle cx="20.5" cy="12" r="4.5" fill="none" stroke-width="0.5" stroke="currentColor" />
+  <path
+    d="M8,8h3v3h2v-3h3v1h-1v6h1v1h-3v-4h-2v4h-3v-1h1v-6h-1v-1m17,0h3v1h1v2h1v-2h1v-1h3v1h-1v6h1v1h-4v-1h1v-3h-1v1h-1v-1h-1v3h1v1h-4v-1h1v-6h-1v-1m10 0h7v3h-1v-2h-3v2h1v-1h1v3h-1v-1h-1v3h3v-2h1v3h-7v-1h1v-6h-1v-1m9 0h5v2h-2v-1h-2v2h2v1h1v1h1v2h-1v1h-5v-2h2v1h2v-2h-2v-1h-1v-1h-1v-2h1v-1m6 0h6v3h-1v-2h-1v6h1v1h-4v-1h1v-6h-1v2h-1v-3m7 0h3v7h2v-7h3v1h-1v6h-1v1h-4v-1h-1v-6h-1v-1m10 0h4v3h-1v-2h-2v1h-1v4h1v1h2v-1h1v1h-1v1h-3v-1h-1v-1h-1v-4h1v-1h1v-1m5 0h4v1h-1v2h1v-1h1v-2h3v1h-1v1h-1v1h-1v1h1v1h1v2h1v1h-2v-1h-1v-2h-2v2h1v1h-4v-1h1v-6h-1v-1z" />
+  <g transform="translate(15 6.5) scale(0.021484375)" fill="none" stroke="currentColor"
+    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="8">
+    <use href="#svg-incipisphere-spirograph-arc" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(36, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(72, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(108, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(144, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(180, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(216, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(252, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(288, 256, 256)" />
+    <use
+      href="#svg-incipisphere-spirograph-arc"
+      transform="rotate(324, 256, 256)" />
+  </g>
+</svg>

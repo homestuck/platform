@@ -1,0 +1,85 @@
+{
+  "compounds": [
+    {
+      "configurations": ["lint", "format", "typecheck"],
+      "name": "CI/CD",
+      "presentation": {
+        "group": "2. CI/CD"
+      },
+      "stopAll": true
+    }
+  ],
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "@homestuck/design-system",
+      "presentation": {
+        "group": "1. Development",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["dev", "--filter", "@homestuck/design-system..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "lint",
+      "presentation": {
+        "group": "2. CI/CD",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["lint"],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "format",
+      "presentation": {
+        "group": "2. CI/CD",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["format"],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "typecheck",
+      "presentation": {
+        "group": "2. CI/CD",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["typecheck"],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "build:assets",
+      "presentation": {
+        "group": "3. Build",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["build", "--filter", "@homestuck/assets..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}

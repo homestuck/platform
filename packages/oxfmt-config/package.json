@@ -1,0 +1,16 @@
+{
+  "name": "@homestuck/oxfmt-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@homestuck/tsconfig": "workspace:^",
+    "oxfmt": "catalog:"
+  }
+}

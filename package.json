@@ -1,0 +1,59 @@
+{
+  "name": "homestuck-platform",
+  "private": true,
+  "description": "A monorepo of shared configurations, published packages, and applications maintained by Homestuck Inc., et al.",
+  "type": "module",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "dev": "turbo dev",
+    "format": "oxfmt --check",
+    "format:fix": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "postinstall": "turbo lint",
+    "precommit": "lint-staged",
+    "preinstall": "pnpm dlx only-allow pnpm",
+    "prepare": "husky",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/config-pnpm-scopes": "catalog:",
+    "@homestuck/oxfmt-config": "workspace:^",
+    "@homestuck/oxlint-config": "workspace:^",
+    "@homestuck/tsconfig": "workspace:^",
+    "@shadcn/lint": "catalog:",
+    "@turbo/gen": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
+    "eslint-plugin-regexp": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
+  },
+  "lint-staged": {
+    "*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{js,jsx,ts,tsx,cjs,mjs}": "pnpm run lint"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-pnpm-scopes"
+    ]
+  },
+  "engines": {
+    "node": ">=24.10.x"
+  },
+  "packageManager": "pnpm@12.10.1"
+}

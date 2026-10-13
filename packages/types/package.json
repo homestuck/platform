@@ -1,0 +1,18 @@
+{
+  "name": "@homestuck/types",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@homestuck/tsconfig": "workspace:^"
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  height="188"
+  shape-rendering="crispEdges"
+  viewBox="0 0 148 188"
+  width="148">
+  <title>Sylladex Captchalogue Card</title>
+  <path
+    d="M0 0h103v1h1v1h1v1h1v1h1v16h16v1h1v1h1v1h1v1h1v17h17v1h1v1h1v1h1v1h1v143H4v-1H3v-1H2v-1H1v-1H0V0Z"
+    fill="#000000" />
+  <path d="M0 0h103v20h20v21h21v143H0V0Z" />
+  <path
+    d="M13 18h62v1h1v1h1v1h1v1h1v7h25v1h1v1h1v1h1v1h1v26h8v1h1v1h1v1h1v1h1v103H17v-1h-1v-1h-1v-1h-2V18Z"
+    fill="color-mix(in oklch, currentColor 100%, contrast-color(currentColor) 50%)" />
+  <path d="M13 18h61v11h29v30h12v103H13V18Z" fill="#ffffff" />
+</svg>

@@ -1,0 +1,32 @@
+{
+  "name": "@homestuck/styles",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "description": "Global CSS and Tailwind CSS styles used and maintained by Homestuck Inc., et al.",
+  "files": [
+    "*.css",
+    "tokens/**/*.json",
+    "fonts/**/*.css",
+    "fonts/**/*.woff2"
+  ],
+  "type": "module",
+  "exports": {
+    "./*.css": "./src/styles/*.css",
+    "./tailwind/*": "./src/styles/tailwind/*"
+  },
+  "scripts": {
+    "build": "pnpm run generate",
+    "clean": "rm -rf .turbo node_modules",
+    "generate": "tsx src/scripts/generate.ts",
+    "precommit": "pnpm run generate",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@homestuck/tokens": "workspace:^"
+  },
+  "devDependencies": {
+    "style-dictionary": "catalog:",
+    "style-dictionary-utils": "catalog:",
+    "tsx": "catalog:"
+  }
+}

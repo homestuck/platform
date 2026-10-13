@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512"
+>
+  <style type="text/css">
+    path {
+      transform-box: fill-box;
+    }
+    .isometric {
+      transform-origin: center;
+      transform: skewY(30deg);
+    }
+    .outline {
+      stroke: #ffffff;
+      stroke-width: 1px;
+      stroke-linejoin: round;
+    }
+    .side {
+      fill: #2d732e;
+      transform-origin: center left;
+      transform: skewY(-45deg);
+    }
+    .top {
+      fill: #349534;
+    }
+    .front {
+      fill: #4be34f;
+    }
+    .animate-bounce {
+      animation: bounce 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(10px);
+      }
+    }
+  </style>
+  <g class="animate-bounce" style="animation-delay: -1.2s;">
+    <ellipse cx="256" cy="376" rx="160" ry="80" fill="#1f1f1f" />
+    <rect x="96" y="366" width="320" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="366" rx="160" ry="80" fill="#3c3c3c" />
+  </g>
+  <g class="animate-bounce" style="animation-delay: -0.8s;">
+    <ellipse cx="256" cy="346" rx="180" ry="90" fill="#1f1f1f" />
+    <rect x="76" y="336" width="360" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="336" rx="180" ry="90" fill="#3c3c3c" />
+  </g>
+  <g class="animate-bounce" style="animation-delay: -0.4s;">
+    <ellipse cx="256" cy="316" rx="200" ry="100" fill="#1f1f1f" />
+    <rect x="56" y="306" width="400" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="306" rx="200" ry="100" fill="#3c3c3c" />
+    <svg
+      preserveAspectRatio="none"
+      fill="none"
+      width="500"
+      height="250"
+      x="6"
+      y="180"
+      stroke="#535353"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-miterlimit="3"
+      stroke-width="4"
+      viewBox="0 0 512 512"
+    >
+      <defs>
+        <g id="svg-incipisphere-spirograph-arc">
+          <path
+            d="M230.25 177.2Q241.1 126.35 304.75 117.25 368.4 108.1 411.4 161.05 454.35 213.95 451.25 272 448.15 330 415.2 374.2" />
+          <path
+            d="M281.75 177.2Q270.9 126.35 207.25 117.25 143.6 108.1 100.6 161.05 57.65 213.95 60.75 272 63.85 330 96.8 374.2" />
+        </g>
+      </defs>
+      <use href="#svg-incipisphere-spirograph-arc" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(36, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(72, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(108, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(144, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(180, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(216, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(252, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(288, 256, 256)" />
+      <use
+        href="#svg-incipisphere-spirograph-arc"
+        transform="rotate(324, 256, 256)" />
+    </svg>
+  </g>
+  <svg preserveAspectRatio="xMidYMid meet" height="75%" viewBox="0 0 562 712">
+    <g class="animate-bounce">
+      <g class="isometric">
+        <path class="top" d="M102 266l50-50h144l-50 50h-144z" /> <!-- tl sq -->
+        <path class="top" d="M102 430l50-50h144l-50 50h-144z" /> <!-- bl sq -->
+        <path class="side" d="M246 430h50v144h-50v-144z" /> <!-- bl sq -->
+        <path class="side" d="M246 266h50v144h-50v-144z" /> <!-- tl sq -->
+        <path class="top" d="M262 342l50-50h72l-50 50h-72z" /> <!-- m sq -->
+        <path class="top" d="M276 256l50-50h144l-50 50h-144z" /> <!-- tr sq -->
+        <path class="top" d="M266 430l50-50h144l-50 50h-144z" /> <!-- br sq -->
+        <path class="side" d="M334 342h50v72h-50v-72z" /> <!-- m sq -->
+        <path class="side" d="M420 256v144h50v-144h-50z" /> <!-- tr sq -->
+        <path class="side" d="M410 430h50v144h-50v-144z" /> <!-- br sq -->
+        <path class="top" d="M256 150l-204 106 50-50 204-106-50 50z" /> <!-- roof -->
+        <path class="top" d="M256 140l50-50 204 106-50 50-204-106z" /> <!-- roof -->
+        <path class="top" d="M134 150l50-50h74l-50 50h-74z" /> <!-- roof -->
+        <path class="side" d="M258 150v25h-50v-25h50z" /> <!-- roof -->
+        <path class="side" d="M256 246h50v10h-50v-10z" /> <!-- roof -->
+        <path class="front" d="M208 150v74h-74v-74h74Z" />
+        <path class="front" d="M208 150v74h-74v-74h74Z M256 150V140L460 246H256V256H52L256 150Z" />
+        <path class="front" d="M262 342h72v72h-72v-72z" />
+        <path class="front" d="M276 256v72h72v72h72v-144h-144z" />
+        <path class="front" d="M102 266h144v144h-144v-144z" />
+        <path class="front" d="M266 430h144v144h-144v-144z" />
+        <path class="front" d="M102 430h144v144h-144v-144z" />
+        <path class="front" d="M208 150v74h-74v-74h74z" />
+      </g>
+    </g>
+  </svg>
+</svg>

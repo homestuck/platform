@@ -1,0 +1,374 @@
+{
+  "aspect-blood": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-blood",
+    "title": "Aspect of Blood",
+    "variants": {
+      "color": "aspect/blood/default.svg",
+      "default": "aspect/blood/default.svg",
+      "mono": "aspect/blood/mono.svg"
+    }
+  },
+  "aspect-breath": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-breath",
+    "title": "Aspect of Breath",
+    "variants": {
+      "color": "aspect/breath/default.svg",
+      "default": "aspect/breath/default.svg",
+      "mono": "aspect/breath/mono.svg"
+    }
+  },
+  "aspect-doom": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-doom",
+    "title": "Aspect of Doom",
+    "variants": {
+      "color": "aspect/doom/default.svg",
+      "default": "aspect/doom/default.svg",
+      "mono": "aspect/doom/mono.svg"
+    }
+  },
+  "aspect-heart": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-heart",
+    "title": "Aspect of Heart",
+    "variants": {
+      "color": "aspect/heart/default.svg",
+      "default": "aspect/heart/default.svg",
+      "mono": "aspect/heart/mono.svg"
+    }
+  },
+  "aspect-hope": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-hope",
+    "title": "Aspect of Hope",
+    "variants": {
+      "color": "aspect/hope/default.svg",
+      "default": "aspect/hope/default.svg",
+      "mono": "aspect/hope/mono.svg"
+    }
+  },
+  "aspect-life": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-life",
+    "title": "Aspect of Life",
+    "variants": {
+      "color": "aspect/life/default.svg",
+      "default": "aspect/life/default.svg",
+      "mono": "aspect/life/mono.svg"
+    }
+  },
+  "aspect-light": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-light",
+    "title": "Aspect of Light",
+    "variants": {
+      "color": "aspect/light/default.svg",
+      "default": "aspect/light/default.svg",
+      "mono": "aspect/light/mono.svg"
+    }
+  },
+  "aspect-mind": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-mind",
+    "title": "Aspect of Mind",
+    "variants": {
+      "color": "aspect/mind/default.svg",
+      "default": "aspect/mind/default.svg",
+      "mono": "aspect/mind/mono.svg"
+    }
+  },
+  "aspect-rage": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-rage",
+    "title": "Aspect of Rage",
+    "variants": {
+      "color": "aspect/rage/default.svg",
+      "default": "aspect/rage/default.svg",
+      "mono": "aspect/rage/mono.svg"
+    }
+  },
+  "aspect-space": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-space",
+    "title": "Aspect of Space",
+    "variants": {
+      "color": "aspect/space/default.svg",
+      "default": "aspect/space/default.svg",
+      "mono": "aspect/space/mono.svg"
+    }
+  },
+  "aspect-time": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-time",
+    "title": "Aspect of Time",
+    "variants": {
+      "color": "aspect/time/default.svg",
+      "default": "aspect/time/default.svg",
+      "mono": "aspect/time/mono.svg"
+    }
+  },
+  "aspect-void": {
+    "aliases": [],
+    "categories": ["Aspects"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "aspect-void",
+    "title": "Aspect of Void",
+    "variants": {
+      "color": "aspect/void/default.svg",
+      "default": "aspect/void/default.svg",
+      "mono": "aspect/void/mono.svg"
+    }
+  },
+  "boondollar": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "boondollar",
+    "title": "Boondollar",
+    "variants": {
+      "light": "boondollar/light.svg",
+      "default": "boondollar/dark.svg",
+      "dark": "boondollar/dark.svg"
+    }
+  },
+  "candy-corn": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "candy-corn",
+    "title": "Candy Corn",
+    "variants": {
+      "default": "candy-corn/default.svg"
+    }
+  },
+  "carapacian-king": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "carapacian-king",
+    "title": "Carapacian King",
+    "variants": {
+      "default": "carapacian/king/default.svg",
+      "derse": "carapacian/king/derse.svg",
+      "mono": "carapacian/king/mono.svg",
+      "prospit": "carapacian/king/prospit.svg"
+    }
+  },
+  "carapacian-queen": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "carapacian-queen",
+    "title": "Carapacian Queen",
+    "variants": {
+      "default": "carapacian/queen/default.svg",
+      "derse": "carapacian/queen/derse.svg",
+      "mono": "carapacian/queen/mono.svg",
+      "prospit": "carapacian/queen/prospit.svg"
+    }
+  },
+  "chat-bubble": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "chat-bubble",
+    "title": "Chat Bubble",
+    "variants": {
+      "dark": "chat-bubble/dark.svg",
+      "default": "chat-bubble/default.svg",
+      "light": "chat-bubble/light.svg"
+    }
+  },
+  "fraf-crab-apple": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "fraf-crab-apple",
+    "title": "Fruity Rumpus Asshole Factory Crab Apple",
+    "variants": {
+      "default": "fraf/crab-apple/default.svg",
+      "pixel": "fraf/crab-apple/pixel.svg"
+    }
+  },
+  "fraf-eureka-lemon": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "fraf-eureka-lemon",
+    "title": "Fruity Rumpus Asshole Factory Eureka Lemon",
+    "variants": {
+      "default": "fraf/eureka-lemon/default.svg",
+      "pixel": "fraf/eureka-lemon/pixel.svg"
+    }
+  },
+  "fraf-key-lime": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "fraf-key-lime",
+    "title": "Fruity Rumpus Asshole Factory Key Lime",
+    "variants": {
+      "default": "fraf/key-lime/default.svg",
+      "pixel": "fraf/key-lime/pixel.svg"
+    }
+  },
+  "fraf-mandarin-orange": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "fraf-mandarin-orange",
+    "title": "Fruity Rumpus Asshole Factory Mandarin Orange",
+    "variants": {
+      "default": "fraf/mandarin-orange/default.svg",
+      "pixel": "fraf/mandarin-orange/pixel.svg"
+    }
+  },
+  "homestuck": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "homestuck",
+    "title": "Homestuck",
+    "variants": {
+      "default": "homestuck/default.svg",
+      "mono": "homestuck/mono.svg",
+      "wordmark": "homestuck/wordmark.svg",
+      "wordmark-mono": "homestuck/wordmark-mono.svg"
+    }
+  },
+  "incipisphere-kernel": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "incipisphere-kernel",
+    "title": "Incipisphere Kernel",
+    "variants": {
+      "default": "incipisphere/kernel/default.svg"
+    }
+  },
+  "incipisphere-spirograph": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "incipisphere-spirograph",
+    "title": "Incipisphere Spirograph",
+    "variants": {
+      "1": "incipisphere/spirograph/1.svg",
+      "2": "incipisphere/spirograph/2.svg",
+      "3": "incipisphere/spirograph/3.svg",
+      "4": "incipisphere/spirograph/4.svg",
+      "5": "incipisphere/spirograph/5.svg",
+      "6": "incipisphere/spirograph/6.svg",
+      "7": "incipisphere/spirograph/7.svg",
+      "8": "incipisphere/spirograph/8.svg",
+      "9": "incipisphere/spirograph/9.svg",
+      "animated": "incipisphere/spirograph/animated.svg",
+      "default": "incipisphere/spirograph/default.svg"
+    }
+  },
+  "mspa-heart": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "mspa-heart",
+    "title": "MSPaintAdventures Aspect of Heart",
+    "variants": {
+      "dark": "mspa/heart/dark.svg",
+      "default": "mspa/heart/default.svg",
+      "light": "mspa/heart/light.svg"
+    }
+  },
+  "mspa-jasprosesprite": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "mspa-jasprosesprite",
+    "title": "MSPaintAdventures Jasprosesprite",
+    "variants": {
+      "dark": "mspa/jasprosesprite/dark.svg",
+      "default": "mspa/jasprosesprite/default.svg",
+      "light": "mspa/jasprosesprite/light.svg"
+    }
+  },
+  "mspa-reader": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "mspa-reader",
+    "title": "MSPaintAdventures Reader",
+    "variants": {
+      "dark": "mspa/reader/dark.svg",
+      "default": "mspa/reader/default.svg",
+      "light": "mspa/reader/light.svg"
+    }
+  },
+  "sburb": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "sburb",
+    "title": "Sburb",
+    "variants": {
+      "alpha": "sburb/alpha.svg",
+      "beta": "sburb/beta.svg",
+      "default": "sburb/default.svg",
+      "mono": "sburb/mono.svg"
+    }
+  },
+  "shurb": {
+    "aliases": [],
+    "categories": [],
+    "copyright": "(c) 2026 Homestuck, Inc. and Furthest Ring Studios LLC",
+    "slug": "shurb",
+    "title": "Shurb",
+    "variants": {
+      "default": "shurb/default.svg",
+      "mono": "shurb/mono.svg"
+    }
+  },
+  "sylladex-captchalogue-card": {
+    "aliases": [],
+    "categories": ["Sylladex"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "sylladex-captchalogue-card",
+    "title": "Sylladex Captchalogue Card",
+    "variants": {
+      "default": "sylladex/captchalogue-card/default.svg",
+      "mono": "sylladex/captchalogue-card/mono.svg"
+    }
+  },
+  "sylladex-strife-deck": {
+    "aliases": [],
+    "categories": ["Sylladex"],
+    "copyright": "(c) 2026 Homestuck, Inc.",
+    "slug": "sylladex-strife-deck",
+    "title": "Sylladex Strife Deck",
+    "variants": {
+      "default": "sylladex/strife-deck/default.svg"
+    }
+  }
+}

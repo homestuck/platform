@@ -1,0 +1,301 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-abundant-cacoethes: #0049ff; /** Mierfa Durgas [abundantCacoethes] */
+  --color-adamant-griftress: #005682; /** Vriska "Vrissy" Maryam-Lalonde [adamantGriftress] */
+  --color-adios-toreador: #a16000; /** Tavros Nitram [adiosToreador] */
+  --color-agamemnons-theory: #9aa4b0; /** Swiss Elysi [agamemnonsTheory] */
+  --color-alfonz: #416600; /** Alfonz */
+  --color-apocalypse-arisen: #a10000; /** Aradia Megido [apocalypseArisen] */
+  --color-apocalypse-arisen-blue: #000056; /** Aradia Megido [apocalypseArisen] (Blue Alternate) */
+  --color-arachnids-grip: #005682; /** Vriska Serket [arachnidsGrip] */
+  --color-aradia: #a10000; /** Aradia Megido */
+  --color-aradia-blue: #000056; /** Aradia Megido (Blue Alternate) */
+  --color-aradiasprite: #a10000; /** Aradiasprite */
+  --color-aranea: #005682; /** Aranea Serket */
+  --color-arquiusprite: #e00707; /** ARquiusprite */
+  --color-arsenic-catnip: #416600; /** Nepeta Leijon [arsenicCatnip] */
+  --color-augury-aside: #801108; /** [auguryAside] */
+  --color-aurthoursprite: #000056; /** Aurthoursprite */
+  --color-avril: #ffc600; /** Avril Thorpe */
+  --color-becsprite: #1f9400; /** Becsprite */
+  --color-bicyclopsprite: #a1a100; /** Bicyclopsprite */
+  --color-biscuits: #ff6000; /** Biscuits (⓭) */
+  --color-blood: #3e1601; /** Blood */
+  --color-blood-icon: #ba1016; /** Blood (Icon) */
+  --color-breath: #4379e6; /** Breath */
+  --color-breath-icon: #47dff9; /** Breath (Icon) */
+  --color-caliborn: #313131; /** Caliborn */
+  --color-caliborn-epilogues-green: #009c68; /** Caliborn (Green "The Homestuck Epilogues" Alternate) */
+  --color-caliborn-green: #2ed73a; /** Caliborn (Green Alternate) */
+  --color-caligulas-aquarium: #6a006a; /** Eridan Ampora [caligulasAquarium] */
+  --color-caligulas-aquarium-epilogues: #7e0048; /** Eridan Ampora [caligulasAquarium] ("The Homestuck Epilogues" Alternate) */
+  --color-calliope: #929292; /** Calliope */
+  --color-calliope-epilogues: #a1a3a6; /** Calliope ("The Homestuck Epilogues" Alternate) */
+  --color-calliope-red: #ff0000; /** Calliope (Red Alternate) */
+  --color-calsprite: #f1a400; /** Calsprite */
+  --color-cans: #950015; /** Cans (⓯) */
+  --color-carcino-geneticist: #626262; /** Karkat Vantas [carcinoGeneticist] */
+  --color-carcino-geneticist-epilogues: #7c7e81; /** Karkat Vantas [carcinoGeneticist] ("The Homestuck Epilogues" Alternate) */
+  --color-carcino-geneticist-red: #ff0000; /** Karkat Vantas [carcinoGeneticist] (Red Alternate) */
+  --color-centaurs-testicle: #000056; /** Equius Zahhak [centaursTesticle] */
+  --color-champions-tirade: #81ce42; /** [championsTirade] */
+  --color-cherub: #0b4100; /** Cherub */
+  --color-cherub-green: #2ed73a; /** Cherub (Green) */
+  --color-cherub-red: #ff0000; /** Cherub (Red) */
+  --color-cliper: #008141; /** Cliper Borden */
+  --color-cloistered-connoisewer: #018e71; /** Del'fi, Who Aches to Be [cloisteredConnoisewer] */
+  --color-clover: #a357ff; /** Clover (❹) */
+  --color-crabsprite: #626262; /** Crabsprite */
+  --color-cronus: #6a006a; /** Cronus Ampora */
+  --color-crowbar: #950015; /** Crowbar (❼) */
+  --color-crowsprite: #f1a400; /** Crowsprite */
+  --color-cuttlefish-culler: #77003c; /** Feferi Peixes [cuttlefishCuller] */
+  --color-damara: #a10000; /** Damara Megido */
+  --color-dave: #e00707; /** Dave Strider */
+  --color-davepetasprite: #f1a400; /** Davepetasprite^2 */
+  --color-davepetasprite-prefix: #4ac925; /** Davepetasprite^2 (Dialogue Prefix) */
+  --color-davesprite: #f1a400; /** Davesprite */
+  --color-debonair-corsair: #8b008b; /** Nektan Whelan [debonairCorsair] */
+  --color-delfi: #018e71; /** Del'fi, Who Aches to Be */
+  --color-derse: #9700e4; /** Derse */
+  --color-derse-icon: #ff00ff; /** Derse (Icon) */
+  --color-die: #008140; /** Die (❻) */
+  --color-dirk: #f1a400; /** Dirk Strider */
+  --color-dirk-red: #e00707; /** Dirk Strider (Red Alternate) */
+  --color-doc-scratch: #ffffff; /** Doc Scratch */
+  --color-doom: #306800; /** Doom */
+  --color-doom-icon: #000000; /** Doom (Icon) */
+  --color-doze: #4040fd; /** Doze (❷) */
+  --color-dragonsprite: #008282; /** Dragonsprite */
+  --color-ecto-biologist: #0715cd; /** John Egbert [ectoBiologist] */
+  --color-eggs: #a357ff; /** Eggs (⓬) */
+  --color-eminent-belladonna: #005682; /** Vriska "Vrissy" Maryam-Lalonde [eminentBelladonna] */
+  --color-equius: #000056; /** Equius Zahhak */
+  --color-equiusprite: #e00707; /** Equiusprite */
+  --color-eridan: #6a006a; /** Eridan Ampora */
+  --color-eridan-epilogues: #7e0048; /** Eridan Ampora ("The Homestuck Epilogues" Alternate) */
+  --color-erisolsprite: #4ac925; /** Erisolsprite */
+  --color-fedorafreak: #4b4b4b; /** [fedorafreak] */
+  --color-feferi: #77003c; /** Feferi Peixes */
+  --color-fefetasprite: #b536da; /** Fefetasprite */
+  --color-felt-1: #2cff4b; /** The Felt [1] */
+  --color-felt-2: #2ed73a; /** The Felt [2] */
+  --color-felt-3: #168500; /** The Felt [3] */
+  --color-felt-4: #0e4603; /** The Felt [4] */
+  --color-felt-5: #073c00; /** The Felt [5] */
+  --color-felt-6: #082a00; /** The Felt [6] */
+  --color-felt-7: #042300; /** The Felt [7] */
+  --color-felt-50: #2cff4b; /** The Felt [50] */
+  --color-felt-100: #2ed73a; /** The Felt [100] */
+  --color-felt-200: #1cbc1b; /** The Felt [200] */
+  --color-felt-300: #18a00b; /** The Felt [300] */
+  --color-felt-400: #168500; /** The Felt [400] */
+  --color-felt-500: #147002; /** The Felt [500] */
+  --color-felt-600: #115b03; /** The Felt [600] */
+  --color-felt-700: #0e4603; /** The Felt [700] */
+  --color-felt-800: #073c00; /** The Felt [800] */
+  --color-felt-900: #082a00; /** The Felt [900] */
+  --color-felt-950: #042300; /** The Felt [950] */
+  --color-felt: #2ed73a; /** The Felt */
+  --color-fin: #ff6000; /** Fin (❺) */
+  --color-frogsprite: #a10000; /** Frogsprite */
+  --color-gallows-calibrator: #008282; /** Terezi Pyrope [gallowsCalibrator] */
+  --color-gamzee: #2b0057; /** Gamzee Makara */
+  --color-garden-gnostic: #4ac925; /** Jade Harley [gardenGnostic] */
+  --color-gavage-cunctation: #8e5594; /** Ly'lac, of the Final Applause [gavageCunctation] */
+  --color-gcatavrosprite: #0715cd; /** GCatavrosprite */
+  --color-ghosty-trickster: #0715cd; /** John Egbert [ghostyTrickster] */
+  --color-glbgolybsprite: #77003c; /** Gl'bgolybsprite */
+  --color-glutinous-gymnast: #450077; /** Tavros "Tavvy" Crocker [glutinousGymnast] */
+  --color-goatsprite: #2b0057; /** Goatsprite */
+  --color-golgothas-terror: #1f9400; /** Jake English [golgothasTerror] */
+  --color-green-sun: #00ed4f; /** The Green Sun */
+  --color-grim-auxiliatrix: #008141; /** Kanaya Maryam [grimAuxiliatrix] */
+  --color-gutsy-gumshoe: #00d5f2; /** Jane Crocker [gutsyGumshoe] */
+  --color-gutsy-gumshoe-epilogues: #0097d7; /** Jane Crocker [gutsyGumshoe] ("The Homestuck Epilogues" Alternate) */
+  --color-harlequinsprite: #00d5f2; /** Harlequinsprite */
+  --color-harry: #0671cd; /** Harry Anderson Egbert */
+  --color-heart: #55142a; /** Heart */
+  --color-heart-icon: #bd1864; /** Heart (Icon) */
+  --color-homestuck: #a8cf40; /** Homestuck */
+  --color-hope: #ffde55; /** Hope */
+  --color-hope-icon: #fdfdfd; /** Hope (Icon) */
+  --color-horuss: #000056; /** Horuss Zahhak */
+  --color-ideogramic-dramaturgy: #bdb49c; /** Imode Kurita [ideogramicDramaturgy] */
+  --color-imode: #bdb49c; /** Imode Kurita */
+  --color-itchy: #ffea00; /** Itchy (❶) */
+  --color-jade: #4ac925; /** Jade Harley */
+  --color-jadesprite: #1f9400; /** Jadesprite */
+  --color-jake: #1f9400; /** Jake English */
+  --color-jane: #00d5f2; /** Jane Crocker */
+  --color-jane-epilogues: #0097d7; /** Jane Crocker ("The Homestuck Epilogues" Alternate) */
+  --color-jaspersprite: #f141ef; /** Jaspersprite */
+  --color-jasprosesprite: #b536da; /** Jasprosesprite^2 */
+  --color-jasprosesprite-prefix: #f141ef; /** Jasprosesprite^2 (Dialogue Prefix) */
+  --color-joey: #71daff; /** Joey Claire */
+  --color-john: #0715cd; /** John Egbert */
+  --color-jude: #d3ff8f; /** Jude Harley */
+  --color-kanaya: #008141; /** Kanaya Maryam */
+  --color-kankri: #ff0000; /** Kankri Vantas */
+  --color-karkat: #626262; /** Karkat Vantas */
+  --color-karkat-epilogues: #7c7e81; /** Karkat Vantas ("The Homestuck Epilogues" Alternate) */
+  --color-karkat-red: #ff0000; /** Karkat Vantas (Red Alternate) */
+  --color-kurloz: #2b0057; /** Kurloz Makara */
+  --color-latula: #008282; /** Latula Pyrope */
+  --color-life: #a49787; /** Life */
+  --color-life-icon: #72eb34; /** Life (Icon) */
+  --color-light: #f0840c; /** Light */
+  --color-light-icon: #f6fa4e; /** Light (Icon) */
+  --color-lord-english: #2ed73a; /** Lord English */
+  --color-lord-english-blue: #4040fd; /** Lord English (Blue) */
+  --color-lord-english-dark-red: #950015; /** Lord English (Dark Red) */
+  --color-lord-english-green: #008140; /** Lord English (Green) */
+  --color-lord-english-orange: #ff6000; /** Lord English (Orange) */
+  --color-lord-english-purple: #a357ff; /** Lord English (Purple) */
+  --color-lord-english-red: #df0000; /** Lord English (Red) */
+  --color-lord-english-yellow: #ffea00; /** Lord English (Yellow) */
+  --color-lylac: #8e5594; /** Ly'lac, of the Final Applause */
+  --color-matchsticks: #df0000; /** Matchsticks (⓫) */
+  --color-meenah: #77003c; /** Meenah Peixes */
+  --color-meulin: #416600; /** Meulin Leijon */
+  --color-mierfa: #0049ff; /** Mierfa Durgas */
+  --color-mind: #00923d; /** Mind */
+  --color-mind-icon: #06ffc9; /** Mind (Icon) */
+  --color-mituna: #a1a100; /** Mituna Captor */
+  --color-mothersprite: #008141; /** Mothersprite */
+  --color-motter: #000056; /** Motter Ataxia */
+  --color-mspa-1: #eeeeee; /** MSPaintAdventures [1] */
+  --color-mspa-2: #e0e0e0; /** MSPaintAdventures [2] */
+  --color-mspa-3: #c6c6c6; /** MSPaintAdventures [3] */
+  --color-mspa-4: #b8b8b8; /** MSPaintAdventures [4] */
+  --color-mspa-5: #7b7b7b; /** MSPaintAdventures [5] */
+  --color-mspa-6: #535353; /** MSPaintAdventures [6] */
+  --color-mspa-50: #f7f7f7; /** MSPaintAdventures [50] */
+  --color-mspa-100: #eeeeee; /** MSPaintAdventures [100] */
+  --color-mspa-200: #e0e0e0; /** MSPaintAdventures [200] */
+  --color-mspa-300: #c6c6c6; /** MSPaintAdventures [300] */
+  --color-mspa-400: #b8b8b8; /** MSPaintAdventures [400] */
+  --color-mspa-500: #9a9a9a; /** MSPaintAdventures [500] */
+  --color-mspa-600: #7b7b7b; /** MSPaintAdventures [600] */
+  --color-mspa-700: #535353; /** MSPaintAdventures [700] */
+  --color-mspa-800: #3c3c3c; /** MSPaintAdventures [800] */
+  --color-mspa-900: #323232; /** MSPaintAdventures [900] */
+  --color-mspa-950: #1f1f1f; /** MSPaintAdventures [950] */
+  --color-nannasprite: #00d5f2; /** Nannasprite */
+  --color-nektan: #8b008b; /** Nektan Whelan */
+  --color-nepeta: #416600; /** Nepeta Leijon */
+  --color-nepetasprite: #4ac925; /** Nepetasprite */
+  --color-obama: #000000; /** The 44th President of the United States of America, Barack Hussein Obama II */
+  --color-pesterchum-50: #faff9b; /** Pesterchum [50] */
+  --color-pesterchum-100: #fff700; /** Pesterchum [100] */
+  --color-pesterchum-200: #ffe200; /** Pesterchum [200] */
+  --color-pesterchum-300: #ffcb00; /** Pesterchum [300] */
+  --color-pesterchum-400: #ffc316; /** Pesterchum [400] */
+  --color-pesterchum-500: #ffb400; /** Pesterchum [500] */
+  --color-pesterchum-600: #ffa500; /** Pesterchum [600] */
+  --color-pesterchum-700: #f79900; /** Pesterchum [700] */
+  --color-pesterchum-800: #df9200; /** Pesterchum [800] */
+  --color-pesterchum-900: #c18800; /** Pesterchum [900] */
+  --color-pesterchum-950: #ad7800; /** Pesterchum [950] */
+  --color-porrim: #008141; /** Porrim Maryam */
+  --color-pouncesprite: #416600; /** Pouncesprite */
+  --color-prospit: #e49700; /** Prospit */
+  --color-prospit-icon: #ffff00; /** Prospit (Icon) */
+  --color-quarters: #008140; /** Quarters (⓮) */
+  --color-rage: #520c61; /** Rage */
+  --color-rage-icon: #9c4dad; /** Rage (Icon) */
+  --color-recidivous-gainsayer: #a10000; /** Ruthie Gold [recidivousGainsayer] */
+  --color-rose: #b536da; /** Rose Lalonde */
+  --color-rosesprite: #b536da; /** Rosesprite */
+  --color-roxy: #ff6ff2; /** Roxy Lalonde */
+  --color-rufioh: #a16000; /** Rufioh Nitram */
+  --color-ruthie: #a10000; /** Ruthie Gold */
+  --color-sawbuck: #4040fd; /** Sawbuck (❿) */
+  --color-sburb-alpha: #ff0000; /** Sburb (Alpha) */
+  --color-sburb-beta: #4ce24e; /** Sburb (Beta) */
+  --color-seahorsesprite: #6a006a; /** Seahorsesprite */
+  --color-sgrub: #900fff; /** Sgrub */
+  --color-silas: #71d666; /** Silas P Beauregard III */
+  --color-snowman: #000000; /** Snowman */
+  --color-sollux: #a1a100; /** Sollux Captor */
+  --color-space: #000000; /** Space */
+  --color-space-icon: #ffffff; /** Space (Icon) */
+  --color-spidersprite: #005682; /** Spidersprite */
+  --color-steezy-headbanger: #ffc600; /** Avril Thorpe [steezyHeadbanger] */
+  --color-stitch: #ffea00; /** Stitch (❾) */
+  --color-swifer: #008141; /** Swifer Eggmop */
+  --color-swiss: #9aa4b0; /** Swiss Elysi */
+  --color-taciturn-tablesetter: #d00009; /** Yiffany "Yiffy" Longstocking Lalonde Harley [taciturnTablesetter] */
+  --color-tavrisprite: #0715cd; /** Tavrisprite */
+  --color-tavros: #a16000; /** Tavros Nitram */
+  --color-tavrosprite: #0715cd; /** Tavrosprite */
+  --color-tavvy: #450077; /** Tavros "Tavvy" Crocker */
+  --color-tentacle-therapist: #b536da; /** Rose Lalonde [tentacleTherapist] */
+  --color-terezi: #008282; /** Terezi Pyrope */
+  --color-terminally-capricious: #2b0057; /** Gamzee Makara [terminallyCapricious] */
+  --color-thespians-glamor: #0671cd; /** Harry Anderson Egbert [thespiansGlamor] */
+  --color-timaeus-testified: #f1a400; /** Dirk Strider [timaeusTestified] */
+  --color-timaeus-testified-red: #e00707; /** Dirk Strider [timaeusTestified] (Red Alternate) */
+  --color-time: #b70d0e; /** Time */
+  --color-time-icon: #ff2106; /** Time (Icon) */
+  --color-tinkersprite: #a16000; /** Tinkersprite */
+  --color-tinnitus-chakra: #701dff; /** [tinnitusChakra] */
+  --color-tipsy-gnostalgic: #ff6ff2; /** Roxy Lalonde [tipsyGnostalgic] */
+  --color-trace: #df0000; /** Trace (❸) */
+  --color-troll-1: #ffba29; /** Troll Horns (Yellow) */
+  --color-troll-2: #ff9000; /** Troll Horns (Orange) */
+  --color-troll-3: #ff4200; /** Troll Horns (OrangeRed) */
+  --color-troll: #c4c4c4; /** Troll Species */
+  --color-troll-blue: #004182; /** Troll Hemospectrum (Blueblood) */
+  --color-troll-bronze: #a25203; /** Troll Hemospectrum (Bronzeblood) */
+  --color-troll-fuchsia: #99004d; /** Troll Hemospectrum (Fuchsiablood) */
+  --color-troll-gold: #a1a100; /** Troll Hemospectrum (Goldblood) */
+  --color-troll-indigo: #0121cb; /** Troll Hemospectrum (Indigoblood) */
+  --color-troll-jade: #078446; /** Troll Hemospectrum (Jadeblood) */
+  --color-troll-lime: #658200; /** Troll Hemospectrum (Limeblood) */
+  --color-troll-olive: #416600; /** Troll Hemospectrum (Oliveblood) */
+  --color-troll-purple: #440a7f; /** Troll Hemospectrum (Purpleblood) */
+  --color-troll-red: #ff0000; /** Troll Hemospectrum (Redblood) */
+  --color-troll-rust: #a10000; /** Troll Hemospectrum (Rustblood) */
+  --color-troll-teal: #008282; /** Troll Hemospectrum (Tealblood) */
+  --color-troll-violet: #6a006a; /** Troll Hemospectrum (Violetblood) */
+  --color-turntech-godhead: #e00707; /** Dave Strider [turntechGodhead] */
+  --color-twin-armageddons: #a1a100; /** Sollux Captor [twinArmageddons] */
+  --color-undying-umbrage: #313131; /** Caliborn [undyingUmbrage] */
+  --color-undying-umbrage-epilogues-green: #009c68; /** Caliborn [undyingUmbrage] (Green "The Homestuck Epilogues" Green Alternate) */
+  --color-undying-umbrage-green: #2ed73a; /** Caliborn [undyingUmbrage] (Green Alternate) */
+  --color-uranian-umbra: #929292; /** Calliope [uranianUmbra] */
+  --color-uranian-umbra-epilogues: #a1a3a6; /** Calliope [uranianUmbra] ("The Homestuck Epilogues" Alternate) */
+  --color-uranian-umbra-red: #ff0000; /** Calliope [uranianUmbra] (Red Alternate) */
+  --color-void: #104ea2; /** Void */
+  --color-void-icon: #001a58; /** Void (Icon) */
+  --color-vriska: #005682; /** Vriska Serket */
+  --color-vrissy: #005682; /** Vriska "Vrissy" Varyam-Lalonde */
+  --color-yiffy: #d00009; /** Yiffany "Yiffy" Longstocking Lalonde Harley */
+  --color-trickster-blue: #d1dcff; /** Trickster Mode (Blue) */
+  --color-trickster-cyan: #d1f9ff; /** Trickster Mode (Cyan) */
+  --color-trickster-green: #d1ffe3; /** Trickster Mode (Green) */
+  --color-trickster-orange: #ffe6d1; /** Trickster Mode (Orange) */
+  --color-trickster-purple: #f0d1ff; /** Trickster Mode (Purple) */
+  --color-trickster-red: #ffd1d1; /** Trickster Mode (Red) */
+  --color-trickster-violet: #ff73fd; /** Trickster Mode (Violet) */
+  --color-trickster-yellow: #fff6d1; /** Trickster Mode (Yellow) */
+  --color-strife-1: #00e371; /** Strife [1] */
+  --color-strife-2: #00c661; /** Strife [2] */
+  --color-strife-3: #008c45; /** Strife [3] */
+  --color-strife-4: #00603b; /** Strife [4] */
+  --color-strife-50: #00e371; /** Strife [50] */
+  --color-strife-100: #00d569; /** Strife [100] */
+  --color-strife-200: #00c661; /** Strife [200] */
+  --color-strife-300: #00b358; /** Strife [300] */
+  --color-strife-400: #009f4e; /** Strife [400] */
+  --color-strife-500: #008c45; /** Strife [500] */
+  --color-strife-600: #007d43; /** Strife [600] */
+  --color-strife-700: #006f40; /** Strife [700] */
+  --color-strife-800: #00603b; /** Strife [800] */
+  --color-strife-900: #004930; /** Strife [900] */
+  --color-strife-950: #003324; /** Strife [950] */
+}

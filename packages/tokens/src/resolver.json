@@ -1,0 +1,13 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/resolver.json",
+  "resolutionOrder": [{ "$ref": "#/sets/color" }, { "$ref": "#/sets/gradient" }],
+  "sets": {
+    "color": {
+      "sources": [{ "$ref": "color.tokens.json" }]
+    },
+    "gradient": {
+      "sources": [{ "$ref": "gradient.tokens.json" }]
+    }
+  },
+  "version": "2025.10"
+}

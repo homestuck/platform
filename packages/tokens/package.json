@@ -1,0 +1,19 @@
+{
+  "name": "@homestuck/tokens",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "description": "Design Token Community Group specification-compliant tokens used and maintained by Homestuck Inc., et al.",
+  "exports": {
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@homestuck/tsconfig": "workspace:^",
+    "@terrazzo/cli": "catalog:"
+  }
+}

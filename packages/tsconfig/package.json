@@ -1,0 +1,7 @@
+{
+  "name": "@homestuck/tsconfig",
+  "private": true,
+  "files": [
+    "*.json"
+  ]
+}

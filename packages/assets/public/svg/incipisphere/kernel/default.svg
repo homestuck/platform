@@ -1,0 +1,48 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Incipisphere Kernel</title>
+  <defs>
+    <g id="svg-incipisphere-kernel-arc">
+      <path d="M256 173.1Q281.14 129.37 341.38 138.49" />
+      <path
+        d="M256 173.1Q281.14 129.37 341.38 138.49"
+        transform="scale(-1,1) translate(-512, 0)" />
+    </g>
+    <radialGradient id="svg-incipisphere-kernel-gradient">
+      <stop offset="0%" stop-color="rgb(255 255 255 / 0%)" />
+      <stop offset="10%" stop-color="rgb(255 255 255 / 0%)" />
+      <stop offset="25%" stop-color="rgb(0 0 0)" />
+      <stop offset="40%" stop-color="rgb(128 128 128)" />
+      <stop offset="55%" stop-color="rgb(255 255 255)" />
+      <stop offset="80%" stop-color="rgb(255 255 255)" />
+      <stop offset="90%" stop-color="rgb(128 128 128 / 50%)" />
+      <stop offset="100%" stop-color="rgb(255 255 255 / 0%)" />
+    </radialGradient>
+  </defs>
+  <circle
+    cx="256"
+    cy="256"
+    fill="url(#svg-incipisphere-kernel-gradient)"
+    r="250"
+    stroke="none" />
+  <g stroke="#000000"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-miterlimit="3"
+    stroke-width="4">
+    <use href="#svg-incipisphere-kernel-arc" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(36, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(72, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(108, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(144, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(180, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(216, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(252, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(288, 256, 256)" />
+    <use href="#svg-incipisphere-kernel-arc" transform="rotate(324, 256, 256)" />
+  </g>
+</svg>

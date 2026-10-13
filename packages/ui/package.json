@@ -1,0 +1,47 @@
+{
+  "name": "@homestuck/ui",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "description": "UI components, hooks, and styles used and maintained by Homestuck Inc., et al.",
+  "type": "module",
+  "imports": {
+    "#components/*": "./src/components/*.tsx",
+    "#hooks/*": "./src/hooks/*.ts",
+    "#ui/*": "./src/components/*.tsx"
+  },
+  "exports": {
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts",
+    "./styles/globals.css": "./src/styles/globals.css"
+  },
+  "scripts": {
+    "add": "pnpm dlx shadcn-ui add",
+    "clean": "rm -rf .turbo node_modules",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@base-ui/react": "catalog:",
+    "@homestuck/styles": "workspace:^",
+    "class-variance-authority": "catalog:",
+    "cmdk": "catalog:",
+    "cn": "catalog:",
+    "date-fns": "catalog:",
+    "lucide-react": "catalog:",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-day-picker": "catalog:",
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:",
+    "sonner": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@homestuck/oxlint-config": "workspace:^",
+    "@homestuck/tsconfig": "workspace:^",
+    "next": "catalog:",
+    "tailwindcss": "catalog:",
+    "tw-animate-css": "catalog:"
+  }
+}

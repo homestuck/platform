@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+@import './themes/index.css';
+@import '@homestuck/styles/tailwind/globals.css';
+@import '@homestuck/ui/styles/globals.css';
+/* @import '@homestuck/ui/components/styles.css'; */
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground flex min-h-screen flex-col;
+  }
+} */
+
+.docs-story,
+#storybook-preview-wrapper {
+  @apply bg-background text-foreground;
+}
+
+.docblock-icongallery {
+  @apply text-foreground;
+
+  .svg-gallery & {
+    @apply auto-rows-auto;
+    & svg {
+      @apply size-32;
+    }
+    & > div {
+      @apply flex-col;
+
+      & > div:first-child {
+        @apply size-36;
+      }
+
+      & > div:last-child {
+        @apply m-0 mt-1;
+      }
+    }
+  }
+}
+
+.docblock-colorpalette {
+  white-space: break-spaces;
+}
+
+.sbdocs-content {
+  max-width: 1280px !important;
+}

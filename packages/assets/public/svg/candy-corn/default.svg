@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  height="16"
+  shape-rendering="crispEdges"
+  viewBox="0 0 16 16"
+  width="16">
+  <title>Candy Corn</title>
+  <path
+    d="M8 2h2V3h1V4h1V5h1V6h1V9H13v1H11v1H9v1H7v1H5v1H3V13H2V10H3V8H4V6H5V5H6V4H7V3H8Z"
+    fill="#000000" />
+  <path d="M8 3h2V4h1V5h1V6h1V9H10V8H9V7H8V6H7V4H8Z" fill="#ff8040" />
+  <path d="M9 3h1V4h1V5h1V6h1V9H11V8h1V6H11V5H10V4H9Z" fill="#d24400" />
+  <path d="M8 3H9V4H8V5H7V4H8Z" fill="#ffa477" />
+  <path
+    d="M7 5V6H8V7H9V8h1V9h1v1H9v1H7v1H6V10H5V9H4V8H5V6H6V5Z"
+    fill="#fede01" />
+  <path d="M9 9v1H7v1H6v1H7V11H9V10h2V9Z" fill="#cbb101" />
+  <path d="M7 5V6H6V8H5V9H4V8H5V6H6V5Z" fill="#fee849" />
+  <path d="M5 9v1H6v2H5v1H3V10H4V9Z" fill="#ffffff" />
+  <path d="M6 11H5v1H3v1H5V12H6Z" fill="#d7d7d7" />
+</svg>

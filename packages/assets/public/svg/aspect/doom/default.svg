@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="#000000"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Aspect Doom</title>
+  <defs>
+    <mask id="aspect-doom-mask">
+      <rect fill="white" height="512" width="512" />
+      <circle cx="164" cy="252" fill="black" r="82" />
+      <circle cx="348" cy="252" fill="black" r="82" />
+      <path
+        d="M162 348c25 3 59 27 58 62-1 23-23 45-40 29-24 0-72-58-54-82 10-12 23-11 36-9Z"
+        fill="black" />
+      <path
+        d="M350 348C363 346 376 345 386 357 404 381 356 439 332 439 315 455 293 433 292 410 291 375 325 351 350 348Z"
+        fill="black" />
+    </mask>
+  </defs>
+  <rect fill="#306800" height="512" width="512" />
+  <circle cx="256" cy="256" mask="url(#aspect-doom-mask)" r="192" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(45 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(90 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(135 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(180 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(225 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(270 256 256)" />
+  <path
+    d="M256 65H237s8-10 12-20a110 110 0 007-21 110 110 0 007 21c4 10 12 20 12 20H256Z"
+    transform="rotate(315 256 256)" />
+</svg>

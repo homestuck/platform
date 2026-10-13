@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="#323232"
+  height="13"
+  shape-rendering="crispEdges"
+  viewBox="0 0 13 16"
+  width="16">
+  <title>Chat Bubble</title>
+  <path
+    d="M3 0h7v1h1v1h1v1h1v7h-1v1h-1v1h-1v1H6v2H5v1H4v-1H3v-2H2v-2H1v-1H0V3h1V2h1V1h1V0Z" />
+  <path
+    d="M3 1h7v1h1v1h1v7h-1v1h-1v1H6v1H5v2H4v-2H3v-2H2v-1H1V3h1V2h1V1Z"
+    fill="#3c3c3c" />
+  <path
+    d="M4 1h5v1h1v1h1v1h1v5h-1v1h-1v1H9v1H5v2H4v-2H3v-2H2V9H1V4h1V3h1V2h1V1Z"
+    fill="#000000" />
+</svg>

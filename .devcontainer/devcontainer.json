@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "formulahendry.auto-rename-tag",
+        "streetsidesoftware.code-spell-checker",
+        "kamikillerto.vscode-colorize",
+        "ms-azuretools.vscode-containers",
+        "ms-vscode-remote.remote-containers",
+        "mikestead.dotenv",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "PKief.material-icon-theme",
+        "unifiedjs.vscode-mdx",
+        "oxc.oxc-vscode",
+        "ms-playwright.playwright",
+        "YoavBls.pretty-ts-errors",
+        "foxundermoon.shell-format",
+        "jock.svg",
+        "bradlc.vscode-tailwindcss",
+        "meganrogge.template-string-converter",
+        "pflannery.vscode-versionlens",
+        "redhat.vscode-xml"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono"
+      }
+    }
+  },
+  // Configure tool-specific properties.
+  "dockerComposeFile": ["docker-compose.yaml"],
+  "features": {
+    "ghcr.io/devcontainers-extra/features/act:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+      "plugins": "ssh-agent",
+      "username": "vscode"
+    },
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+  },
+  "forwardPorts": [6006],
+  "mounts": ["source=pnpm-store-cache,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"],
+  "name": "Node.js & pnpm v12",
+  "postCreateCommand": "pnpm install",
+  "service": "app",
+  "waitFor": "postCreateCommand",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="var(--svg-background, currentColor)"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Carapacian Queen</title>
+  <style type="text/css">
+svg[data-variant='prospit'] {
+  --svg-background: #ffff00;
+  --svg-foreground: #000000;
+}
+svg[data-variant='derse'] {
+  --svg-background: #ff00ff;
+  --svg-foreground: #ffffff;
+}
+  </style>
+  <path d="M256 494 6 313 101 19H411L506 313Z" />
+  <path
+    d="M190 284H322V323H190V284ZM190 271 118 175 208 236 188 122 256 215 324 122 304 236 394 175 322 271H190Z"
+    fill="var(--svg-foreground, contrast-color(currentColor))" />
+</svg>

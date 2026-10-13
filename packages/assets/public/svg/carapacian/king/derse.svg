@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="#ff00ff"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Carapacian King</title>
+  <path d="M256 494 6 313 101 19H411L506 313Z" />
+  <path
+    d="M229 104H284V160H358V215H284V280H358V336H155V280H229V215H155V160H229V104Z"
+    fill="#ffffff" />
+</svg>

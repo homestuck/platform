@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="#ffffff"
+  height="33"
+  shape-rendering="crispEdges"
+  viewBox="0 0 33 36"
+  width="36">
+  <title>Boondollar</title>
+  <path
+    d="M12 0h2V1h1V2h1V0h2V1h1V2h1V4h6V5h1V6h4V7h1V8h1v7H28v1h3v1h1v1h1v7H28v2H20v9H18V35H17V34H16v2H14V35H13V34H2V33H1V32H0V6H5V4h7V0Zm8 8v5h1V8H20Zm0 10v5h1V18H20Z"
+    fill="#000000" />
+  <path
+    d="M12 0h2V4h2V0h2V4h8V6h5v7H26v3h5v7H26v2H18v9H16V25H14v9H12V25H10v7H0V6H5V4h7V0ZM10 6V23h2V6H10Zm4 0V23h2V6H14Zm4 0v7h3V6H18Zm0 10v7h3V16H18Z" />
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="var(--svg-primary, #008c45)"
+  height="188"
+  shape-rendering="crispEdges"
+  viewBox="0 0 148 188"
+  width="148">
+  <title>Sylladex Strife Deck</title>
+  <style type="text/css">
+svg,
+svg[data-variant='default'] {
+  --svg-background: #ffffff;
+  --svg-foreground: #000000;
+  --svg-primary: #008c45;
+  --svg-primary-foreground: #00603b;
+  --svg-secondary: #00e371;
+  --svg-secondary-foreground: #00c661;
+}
+svg[data-variant='grayscale'] {
+  --svg-background: #ffffff;
+  --svg-foreground: #000000;
+  --svg-primary: #7b7b7b;
+  --svg-primary-foreground: #3c3c3c;
+  --svg-secondary: #e0e0e0;
+  --svg-secondary-foreground: #b8b8b8;
+}
+svg[data-variant='unallocated'] {
+  --svg-background: #afafaf;
+  --svg-foreground: #000000;
+  --svg-primary: #434343;
+  --svg-primary-foreground: #000000;
+  --svg-secondary: #afafaf;
+  --svg-secondary-foreground: #afafaf;
+}
+  </style>
+  <path
+    d="M0 0h103v1h1v1h1v1h1v1h1v16h16v1h1v1h1v1h1v1h1v17h17v1h1v1h1v1h1v1h1v143H4v-1H3v-1H2v-1H1v-1H0V0Z"
+    fill="var(--svg-foreground, #000000)" />
+  <path d="M0 0h103v20h20v21h21v143H0V0Z" />
+  <path
+    d="M10 21h62v1h1v1h1v1h1v1h1v7h27v1h1v1h1v1h1v1h1v96H14v-1h-1v-1h-1v-1h-2V21Zm96 30h27v1h1v1h1v1h1v1h1v24h-27v-1h-1v-1h-1v-1h-2V51Zm0 26h26v1h1v1h1v1h1v1h1v25h-25v-1h-1v-1h-1v-1h-1v-1h-2V78Zm0 26h26v1h1v1h1v1h1v1h1v25h-25v-1h-1v-1h-1v-1h-1v-1h-2v-24Zm-96 27h122v1h1v1h1v1h1v1h1v30H14v-1h-1v-1h-1v-1h-2v-31Z"
+    fill="var(--svg-primary-foreground, #00603b)" />
+  <path d="M10 21h61v11h31v96H10V21Z" fill="var(--svg-background, #ffffff)" />
+  <path
+    d="M106 51h26v24h-26V51Zm0 26h25v24h-25V77Zm0 26h25v24h-25v-24Zm-96 27h121v30H10v-30Z"
+    fill="var(--svg-secondary, #00e371)" />
+  <path
+    d="M10 130h121v6H10v-6Z"
+    fill="var(--svg-secondary-foreground, #00c661)" />
+</svg>

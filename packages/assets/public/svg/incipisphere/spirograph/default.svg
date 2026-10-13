@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  height="512"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-miterlimit="3"
+  stroke-width="4"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Incipisphere Spirograph</title>
+  <style type="text/css">
+svg,
+svg[data-variant='1'] {
+  --svg-path: path(
+    'M230.25 177.2Q241.1 126.35 304.75 117.25 368.4 108.1 411.4 161.05 454.35 213.95 451.25 272 448.15 330 415.2 374.2'
+  );
+}
+svg[data-variant='2'] {
+  --svg-path: path(
+    'M236.75 197.7Q251.1469 126.35 314.75 117.225 378.3523 108.1 416.35 161.025 454.3521 213.95 436.65 271.975 418.9543 330 433.65 385.2'
+  );
+}
+svg[data-variant='3'] {
+  --svg-path: path(
+    'M255.75 256.2Q293.5381 211.0416 334.125 194.8 374.7127 178.5451 412.15 200.175 449.5926 221.8109 448.875 275.9 448.1516 329.9953 415.2 374.2'
+  );
+}
+svg[data-variant='4'] {
+  --svg-path: path(
+    'M244.25 218.7Q294.8838 217.0271 337.625 182.8 380.3637 148.5619 414.975 185.175 449.5889 221.8023 448.875 275.9 448.1516 329.9953 415.2 374.2'
+  );
+}
+svg[data-variant='5'] {
+  --svg-path: path(
+    'M223.25 157.2Q235.1086 125.8871 284.7 118.65 347.11 107.017 380.575 133.325 452.153 188.31 448.775 268.725 446.3377 328.1891 375.7 343.7'
+  );
+}
+svg[data-variant='6'] {
+  --svg-path: path(
+    'M227.75 169.7Q240.0551 122.2064 297.75 114.575 355.4424 106.9301 351.05 169.575 346.6572 232.2273 396.25 281.15 445.8457 330.0738 410.7 369.2'
+  );
+}
+svg[data-variant='7'] {
+  --svg-path: path(
+    'M238.25 204.2Q240.0541 122.2119 302.375 113.05 364.6984 103.8895 402.725 137.775 440.7508 171.657 441.125 239.175 441.4975 306.6959 390.7 355.7'
+  );
+}
+svg[data-variant='8'] {
+  --svg-path: path(
+    'M280.75 333.2Q271.6305 168.8197 329.25 151.225 386.8645 133.6352 420.6 173.8 454.3447 213.9553 451.25 272 448.15 330 396.2 360.2'
+  );
+}
+svg[data-variant='9'] {
+  --svg-path: path(
+    'M256.25 256.2Q249.7254 166.4684 318.3 150.05 355.026 141.232 383.25 149.125 455.409 177.07 440.75 252.475 431.49 299.9207 344.7 321.2'
+  );
+}
+  </style>
+  <defs>
+    <g id="svg-incipisphere-spirograph-arc">
+      <path style="d: var(--svg-path);" />
+      <path
+        style="d: var(--svg-path);"
+        transform="scale(-1,1) translate(-512, 0)" />
+    </g>
+  </defs>
+  <use href="#svg-incipisphere-spirograph-arc" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(36, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(72, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(108, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(144, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(180, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(216, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(252, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(288, 256, 256)" />
+  <use
+    href="#svg-incipisphere-spirograph-arc"
+    transform="rotate(324, 256, 256)" />
+</svg>

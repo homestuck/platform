@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: ['*']
+  push:
+    branches: ['main']
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+# You can leverage Vercel Remote Caching with Turbo to speed up your builds
+# @link https://turborepo.org/docs/core-concepts/remote-caching#remote-caching-on-vercel-builds
+env:
+  FORCE_COLOR: 3
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Copy .env.example to .env
+        shell: bash
+        run: find . -name ".env.example" -type f -execdir cp -v {} .env \;
+
+      - name: Lint
+        run: pnpm lint
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Format
+        run: pnpm format
+
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Typecheck
+        run: pnpm typecheck

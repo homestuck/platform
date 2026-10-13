@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo.json",
+    "types": ["vite/client", "node"]
+  },
+  "exclude": ["node_modules", "storybook_static"],
+  "extends": "@homestuck/tsconfig/react.json",
+  "include": [
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".storybook/**/*",
+    "src/**/*",
+    "*.mjs",
+    "*.d.ts",
+    "*.ts",
+    "*.tsx"
+  ]
+}
