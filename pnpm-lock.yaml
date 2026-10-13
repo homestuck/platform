@@ -186,8 +186,8 @@ catalogs:
       specifier: ^2.33.0
       version: 2.33.0
     '@shadcn/lint':
-      specifier: ^0.2.0
-      version: 0.2.0
+      specifier: ^0.2.1
+      version: 0.2.1
     '@storybook-community/storybook-dark-mode':
       specifier: ^7.1.4
       version: 7.1.4
@@ -376,7 +376,7 @@ importers:
         version: link:packages/tsconfig
       '@shadcn/lint':
         specifier: 'catalog:'
-        version: 0.2.0(eslint@10.12.0(jiti@2.7.0))
+        version: 0.2.1(eslint@10.12.0(jiti@2.7.0))
       '@turbo/gen':
         specifier: 'catalog:'
         version: 2.11.7(@types/node@26.6.4)
@@ -571,7 +571,7 @@ importers:
         version: link:../tsconfig
       '@shadcn/lint':
         specifier: 'catalog:'
-        version: 0.2.0(eslint@10.12.0(jiti@2.7.0))
+        version: 0.2.1(eslint@10.12.0(jiti@2.7.0))
       eslint-plugin-react-you-might-not-need-an-effect:
         specifier: 'catalog:'
         version: 1.0.2(eslint@10.12.0(jiti@2.7.0))
@@ -2833,8 +2833,8 @@ packages:
       rollup:
         optional: true
 
-  '@shadcn/lint@0.2.0':
-    resolution: {integrity: sha512-DTYr427BR8cDc0J0Y++u1Uh12NAYGmdPiqgy4wKSogi7RNEhFanIcfBMPRPUvkunt9QiJUfI7B28TW39MrPCFA==}
+  '@shadcn/lint@0.2.1':
+    resolution: {integrity: sha512-sDgmh/lb4yiPJMJZe5/jE6Vq5mgBzaIvKcdQ98faZk4c99WKTqASEhUqR6XCp7DDc29LwqTRIsula7kfhhDQnQ==}
     engines: {node: '>=20.19'}
     peerDependencies:
       '@typescript-eslint/parser': '>=8.40.0'
@@ -3700,11 +3700,6 @@ packages:
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
       react-dom: ^18 || ^19 || ^19.0.0-rc
-
-  cn@0.3.2:
-    resolution: {integrity: sha512-RKzY5Edavc8B2Ka6tjJecKFC4nm0p7lADY72xzICmiJSf4TkaxWXt0fHsib2P2G4FkFyXfSDi9oDtIBuCZvY2g==}
-    engines: {node: '>=20'}
-    hasBin: true
 
   cn@0.4.0:
     resolution: {integrity: sha512-qOAeUhPwPzBxx6jaeQdo646XIKliKHc2j1ZF7Ngb1o0pJZKH5gq8FkA0aVdUdPFUDXNXyUCXpCtoJISo6dhizg==}
@@ -7546,10 +7541,10 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.7
 
-  '@shadcn/lint@0.2.0(eslint@10.12.0(jiti@2.7.0))':
+  '@shadcn/lint@0.2.1(eslint@10.12.0(jiti@2.7.0))':
     dependencies:
       '@eslint/core': 0.17.0
-      cn: 0.3.2
+      cn: 0.4.0
     optionalDependencies:
       eslint: 10.12.0(jiti@2.7.0)
       oxc-parser: 0.148.0
@@ -8395,8 +8390,6 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
-
-  cn@0.3.2: {}
 
   cn@0.4.0: {}
 

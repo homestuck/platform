@@ -9,7 +9,7 @@ catalog:
   '@commitlint/config-conventional': ^21.2.3
   '@commitlint/config-pnpm-scopes': ^21.2.2
   '@dotenvx/dotenvx': ^2.33.0
-  '@shadcn/lint': ^0.2.0
+  '@shadcn/lint': ^0.2.1
   '@storybook-community/storybook-dark-mode': ^7.1.4
   '@storybook/addon-a11y': ^10.6.1
   '@storybook/addon-designs': ^11.1.4
