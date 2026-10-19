@@ -19,6 +19,7 @@
     "meganrogge.template-string-converter",
     "pflannery.vscode-versionlens",
     "redhat.vscode-xml",
-    "TypeScriptTeam.native-preview"
+    "TypeScriptTeam.native-preview",
+    "VoidZero.vite-plus-extension-pack"
   ]
 }

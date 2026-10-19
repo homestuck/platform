@@ -1,8 +1,8 @@
 <div align="center">
 
-![homestuck-platform](packages/assets/public/svg/platform/default.svg)
+![@homestuck/platform](packages/assets/public/svg/platform/default.svg)
 
-# Homestuck Platform
+# @homestuck/platform
 
 <img alt="GitHub License" src="https://img.shields.io/github/license/homestuck/platform?style=flat-square">
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci?style=flat-square">
@@ -14,7 +14,7 @@
 
 ## About This Repository
 
-The `homestuck-platform` repository is a monorepo workspace for shared configurations, published
+The `@homestuck/platform` repository is a monorepo workspace for shared configurations, published
 packages, and applications maintained by Homestuck Inc., et al. It provides reusable assets, styles,
 UI components, and configuration for projects within the _Homestuck_ and broader _MSPaintAdventures_
 ecosystems.

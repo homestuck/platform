@@ -19,8 +19,7 @@ rightsholders.
 ## Important Restrictions For Contributors And Users
 
 - **Not Covered By MIT:** The MIT License applied to the source code of this project DOES NOT extend
-  or apply to the copyrighted media, assets, characters, or universe elements belonging to their
-  respective rightsholders.
+  or apply to the copyrighted and assets belonging to their respective rightsholders.
 
 - **No Implied License:** Inclusion of these assets in this repository does not grant contributors
   or downstream users any license to redistribute, modify, commercialize, or use these proprietary

@@ -17,8 +17,8 @@
   "scripts": {
     "add": "pnpm dlx shadcn-ui add",
     "clean": "rm -rf .turbo node_modules",
-    "format": "oxfmt",
-    "lint": "oxlint",
+    "format": "vp fmt",
+    "lint": "vp lint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {

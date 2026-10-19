@@ -17,6 +17,5 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FO
 OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Portions of this program may contain material subject to copyright and not subject to the MIT
-License, including the copyrights associated with the properties owned and distributed by Homestuck,
-Inc. and Andrew Hussie.
+Portions of this program may contain material not subject to the MIT License. See the
+[`DISCLAIMER`](/DISCLAIMER.md) file in the root directory for details.

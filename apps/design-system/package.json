@@ -50,11 +50,13 @@
     "@vitest/browser-playwright": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "chromatic": "catalog:",
+    "playwright": "*",
     "storybook": "catalog:",
     "tailwindcss": "catalog:",
     "tw-animate-css": "catalog:",
     "typescript": "catalog:typescript-compat",
     "vite": "catalog:",
+    "vite-plus": "catalog:",
     "vitest": "catalog:"
   }
 }
