@@ -4,11 +4,11 @@
   "description": "A monorepo of shared configurations, published packages, and applications maintained by Homestuck Inc., et al.",
   "type": "module",
   "scripts": {
-    "build": "turbo build",
+    "build": "vp build",
     "check": "vp check",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "dev": "turbo dev",
+    "dev": "vp dev",
     "format": "vp fmt --check",
     "format:fix": "vp fmt",
     "lint": "vp lint",

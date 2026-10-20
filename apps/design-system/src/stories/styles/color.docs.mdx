@@ -1,10 +1,100 @@
-import { Meta, Source } from '@storybook/addon-docs/blocks'
+import { ColorItem, ColorPalette, Meta, Source, Unstyled } from "@storybook/addon-docs/blocks";
 
-<Meta title="Colors" />
+import { COLORS } from "#utils/colors";
+
+<Meta title="Color" />
 
 ## Color
 
-### Color Palette
+### Players
+
+#### Earth Session (Pre- and Post-Scratch)
+
+<ColorPalette>
+  {COLORS.PLAYERS.EARTH.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+#### Alternia Session
+
+<ColorPalette>
+  {COLORS.PLAYERS.ALTERNIA.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+#### Beforus Session
+
+<ColorPalette>
+  {COLORS.PLAYERS.BEFORUS.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+#### Earth C (Cherub) Session
+
+<ColorPalette>
+  {COLORS.PLAYERS["EARTH C"].map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+#### Deltritus Session
+
+<ColorPalette>
+  {COLORS.PLAYERS.DELTRITUS.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### Humankind / Other Named Humans
+
+<ColorPalette>
+  {COLORS.HUMANS.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### Trollkind / Other Named Trolls
+
+<ColorPalette>
+  {COLORS.TROLLS.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### The Felt
+
+<ColorPalette>
+  {COLORS.FELT.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### Sprites
+
+<ColorPalette>
+  {COLORS.SPRITES.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### Sprites^2
+
+<ColorPalette>
+  {COLORS["SPRITES^2"].map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
+
+### God Tier Aspects
+
+<ColorPalette>
+  {COLORS.ASPECTS.map(([title, subtitle, colors]) => (
+    <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
+  ))}
+</ColorPalette>
 
 ## Animated Color
 
@@ -14,12 +104,30 @@ prefixed by a keyword to indicate which CSS attribute is animated. For example: 
 `--animate-bg-<value>` to animate the `background-color` property, or `--animate-text-<value>` to
 animate the `color` property.
 
-<Source language='css' code={`
-.element {
-  animation: var(--animate-bg-example); /** This will animate the \`background-color\` CSS attribute. **/
-}
+<Source
+  language="css"
+  code={`
+  .element {
+    animation: var(--animate-bg-example);     /** This will animate the \`background-color\` CSS attribute. **/
+  }
+  .element {
+    animation: var(--animate-text-example);   /** This will animate the \`color\` CSS attribute. **/
+  }
+`}
+/>
 
-.element { animation: var(--animate-text-example); /** This will animate the \`color\` CSS
-attribute. **/ } `} />
+#### Green Sun
+
+#### Lord English
+
+#### Ultimate Reward
+
+## Palette
+
+### Standard
+
+### Tailwind
+
+# Color Palette
 
 ## Gradient

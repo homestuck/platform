@@ -1,13 +1,13 @@
-import type { SVGComponentProps } from '@homestuck/assets/svg/react'
-import * as svg from '@homestuck/assets/svg/react'
-import type { SVGKey } from '@homestuck/assets/types'
+import type { SVGComponentProps } from "@homestuck/assets/svg/react";
+import * as svg from "@homestuck/assets/svg/react";
+import type { SVGKey } from "@homestuck/assets/types";
 
-import { SVG_CATALOG } from '#constants/svg'
-import preview from '#sb/preview'
+import { SVG_CATALOG } from "#constants/svg";
+import preview from "#sb/preview";
 
-const { ASPECT } = SVG_CATALOG
+const { ASPECT } = SVG_CATALOG;
 
-type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svg)[K] }
+type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svg)[K] };
 
 // const svgCatalog = Object.keys(svg).reduce<SVGCatalog>((acc, key) => {
 //   if (ASPECT.includes(key) && key in svg) {
@@ -19,18 +19,18 @@ type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svg)[K] }
 const svgCatalog = Object.keys(svg).reduce<SVGCatalog>((acc, key) => {
   // @ts-expect-error -- SVGKey is not string
   if (ASPECT.includes(key as SVGKey) && key in svg) {
-    acc[key as SVGKey] = (svg as Record<SVGKey, svg.SVGComponent>)[key as SVGKey]
+    acc[key as SVGKey] = (svg as Record<SVGKey, svg.SVGComponent>)[key as SVGKey];
   }
-  return acc
-}, {} as SVGCatalog)
+  return acc;
+}, {} as SVGCatalog);
 
 const meta = preview.meta({
   argTypes: {
     color: {
-      control: 'color',
+      control: "color",
       if: {
-        arg: 'variant',
-        eq: 'mono',
+        arg: "variant",
+        eq: "mono",
       },
     },
     height: {
@@ -39,13 +39,13 @@ const meta = preview.meta({
       },
     },
     name: {
-      control: 'select',
+      control: "select",
       options: ASPECT,
-      type: { name: 'string', required: true },
+      type: { name: "string", required: true },
     },
     variant: {
-      control: 'select',
-      options: ['color', 'default', 'mono'],
+      control: "select",
+      options: ["color", "default", "mono"],
     },
     width: {
       table: {
@@ -53,98 +53,98 @@ const meta = preview.meta({
       },
     },
   },
-  args: { height: 'auto', width: 'auto' },
+  args: { height: "auto", width: "auto" },
   render: ({ name, ...args }: SVGComponentProps & { name: SVGKey; variant?: never }) => {
-    if (!(name in svgCatalog)) return <></>
-    const SVGComponent = svgCatalog[name]
-    return <SVGComponent {...args} />
+    if (!(name in svgCatalog)) return <></>;
+    const SVGComponent = svgCatalog[name];
+    return <SVGComponent {...args} />;
   },
-  tags: ['!autodocs'],
-  title: 'SVG Catalog/God Tier Aspects',
-})
+  tags: ["!autodocs"],
+  title: "SVG/God Tier Aspects",
+});
 
-export default meta
+export default meta;
 
 export const AspectBlood = meta.story({
   args: {
-    name: 'AspectBlood',
+    name: "AspectBlood",
   },
-  name: 'Blood',
-})
+  name: "Blood",
+});
 
 export const AspectBreath = meta.story({
   args: {
-    name: 'AspectBreath',
+    name: "AspectBreath",
   },
-  name: 'Breath',
-})
+  name: "Breath",
+});
 
 export const AspectDoom = meta.story({
   args: {
-    name: 'AspectDoom',
+    name: "AspectDoom",
   },
-  name: 'Doom',
-})
+  name: "Doom",
+});
 
 export const AspectHeart = meta.story({
   args: {
-    name: 'AspectHeart',
+    name: "AspectHeart",
   },
-  name: 'Heart',
-})
+  name: "Heart",
+});
 
 export const AspectHope = meta.story({
   args: {
-    name: 'AspectHope',
+    name: "AspectHope",
   },
-  name: 'Hope',
-})
+  name: "Hope",
+});
 
 export const AspectLife = meta.story({
   args: {
-    name: 'AspectLife',
+    name: "AspectLife",
   },
-  name: 'Life',
-})
+  name: "Life",
+});
 
 export const AspectLight = meta.story({
   args: {
-    name: 'AspectLight',
+    name: "AspectLight",
   },
-  name: 'Light',
-})
+  name: "Light",
+});
 
 export const AspectMind = meta.story({
   args: {
-    name: 'AspectMind',
+    name: "AspectMind",
   },
-  name: 'Mind',
-})
+  name: "Mind",
+});
 
 export const AspectRage = meta.story({
   args: {
-    name: 'AspectRage',
+    name: "AspectRage",
   },
-  name: 'Rage',
-})
+  name: "Rage",
+});
 
 export const AspectSpace = meta.story({
   args: {
-    name: 'AspectSpace',
+    name: "AspectSpace",
   },
-  name: 'Space',
-})
+  name: "Space",
+});
 
 export const AspectTime = meta.story({
   args: {
-    name: 'AspectTime',
+    name: "AspectTime",
   },
-  name: 'Time',
-})
+  name: "Time",
+});
 
 export const AspectVoid = meta.story({
   args: {
-    name: 'AspectVoid',
+    name: "AspectVoid",
   },
-  name: 'Void',
-})
+  name: "Void",
+});
