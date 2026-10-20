@@ -40,10 +40,6 @@
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },
-  "lint-staged": {
-    "*": "oxfmt --no-error-on-unmatched-pattern",
-    "*.{js,jsx,ts,tsx,cjs,mjs}": "pnpm run lint"
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional",
