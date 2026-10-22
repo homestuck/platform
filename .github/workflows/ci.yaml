@@ -20,9 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          path: .
+        uses: actions/checkout@v7.0.1
 
       - name: Setup Vite+
         uses: voidzero-dev/setup-vp@v1.21.2
@@ -32,7 +30,7 @@ jobs:
 
       - name: Restore Vite+ task cache
         id: vite-task-cache
-        uses: actions/cache/restore@v6
+        uses: actions/cache/restore@v6.1.0
         with:
           path: node_modules/.vite/task-cache
           key:
@@ -49,7 +47,7 @@ jobs:
 
       - name: Save Vite+ task cache
         if: success()
-        uses: actions/cache/save@v6
+        uses: actions/cache/save@v6.1.0
         with:
           path: node_modules/.vite/task-cache
           key: ${{ steps.vite-task-cache.outputs.cache-primary-key }}
