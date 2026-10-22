@@ -4,12 +4,12 @@
 
 # @homestuck/platform
 
-<a href="/LICENSE" target="_blank"><img alt="GitHub License" src="https://img.shields.io/github/license/homestuck/platform?style=flat-square"></a>
-<a href="https://github.com/homestuck/platform/actions/workflows/ci.yaml" target="_blank"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci.yaml?style=flat-square"></a>
+[![GitHub License](https://img.shields.io/github/license/homestuck/platform?style=flat-square)](/LICENSE)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci.yaml?style=flat-square)](https://github.com/homestuck/platform/actions/workflows/ci.yaml)
 
-<a href="https://discord.gg/homestuck" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/1404836696909938820?style=flat-square&logo=discord&logoColor=white&label=&color=5865F2"></a>
-<a href="https://x.com/homestuck" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Follow%20on%20X-black?style=flat-square&logo=x"></a>
-<a href="https://bsky.app/profile/homestuck.com" target="_blank"><img alt="Bluesky" src="https://img.shields.io/badge/Follow%20on%20Bluesky-black?style=flat-square&logo=bluesky&logoColor=white&label=&color=1185FE"></a>
+[![Discord](https://img.shields.io/discord/1404836696909938820?style=flat-square&logo=discord&logoColor=white&label=&color=5865F2)](https://discord.gg/homestuck)
+[![X](https://img.shields.io/badge/Follow%20on%20X-black?style=flat-square&logo=x)](https://x.com/homestuck)
+[![Bluesky](https://img.shields.io/badge/Follow%20on%20Bluesky-black?style=flat-square&logo=bluesky&logoColor=white&label=&color=1185FE)](https://bsky.app/profile/homestuck.com)
 </div>
 
 ## About This Repository
