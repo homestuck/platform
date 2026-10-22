@@ -5,7 +5,7 @@
 # @homestuck/platform
 
 <img alt="GitHub License" src="https://img.shields.io/github/license/homestuck/platform?style=flat-square">
-<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci?style=flat-square">
+<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci.yaml?style=flat-square">
 
 <a href="https://discord.gg/homestuck" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/1404836696909938820?style=flat-square&logo=discord&logoColor=white&label=&color=5865F2"></a>
 <a href="https://x.com/homestuck" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Follow%20on%20X-black?style=flat-square&logo=x"></a>
