@@ -2,6 +2,7 @@
   "name": "@homestuck/platform",
   "private": true,
   "description": "A monorepo of shared configurations, published packages, and applications maintained by Homestuck Inc., et al.",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "vp build",
