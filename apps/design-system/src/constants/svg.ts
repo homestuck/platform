@@ -1,6 +1,4 @@
-import type * as svgr from '@homestuck/assets/svg/react'
-
-type SVGKey = keyof typeof svgr
+import type { SVGKey } from '@homestuck/assets/types'
 
 export const SVG_CATALOG = {
   ASPECT: [

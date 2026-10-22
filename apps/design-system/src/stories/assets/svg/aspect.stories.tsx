@@ -1,13 +1,12 @@
-import type { SVGComponentProps } from '@homestuck/assets/svg/react'
-import * as svg from '@homestuck/assets/svg/react'
-import type { SVGKey } from '@homestuck/assets/types'
+import { svgCatalog as svgReactCatalog } from '@homestuck/assets/svg/react'
+import type { SVGKey, SVGComponentProps } from '@homestuck/assets/types'
 
 import { SVG_CATALOG } from '#constants/svg'
 import preview from '#sb/preview'
 
 const { ASPECT } = SVG_CATALOG
 
-type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svg)[K] }
+type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svgReactCatalog)[K] }
 
 // const svgCatalog = Object.keys(svg).reduce<SVGCatalog>((acc, key) => {
 //   if (ASPECT.includes(key) && key in svg) {
@@ -16,10 +15,11 @@ type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svg)[K] }
 //   return acc
 // }, {} as SVGCatalog)
 
-const svgCatalog = Object.keys(svg).reduce<SVGCatalog>((acc, key) => {
+const catalog = Object.keys(svgReactCatalog).reduce<SVGCatalog>((acc, key) => {
   // @ts-expect-error -- SVGKey is not string
-  if (ASPECT.includes(key as SVGKey) && key in svg) {
-    acc[key as SVGKey] = (svg as Record<SVGKey, svg.SVGComponent>)[key as SVGKey]
+  if (ASPECT.includes(key as SVGKey) && key in svgReactCatalog) {
+    acc[key as SVGKey] = svgReactCatalog[key as SVGKey]
+    // acc[key as SVGKey] = (svgReactCatalog as Record<SVGKey, svgCatalog.SVGComponent>)[key as SVGKey]
   }
   return acc
 }, {} as SVGCatalog)
@@ -55,8 +55,8 @@ const meta = preview.meta({
   },
   args: { height: 'auto', width: 'auto' },
   render: ({ name, ...args }: SVGComponentProps & { name: SVGKey; variant?: never }) => {
-    if (!(name in svgCatalog)) return <></>
-    const SVGComponent = svgCatalog[name]
+    if (!(name in catalog)) return <></>
+    const SVGComponent = catalog[name]
     return <SVGComponent {...args} />
   },
   tags: ['!autodocs'],

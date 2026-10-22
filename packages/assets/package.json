@@ -14,14 +14,7 @@
   },
   "exports": {
     "./catalog/svg": "./src/data/svg.json",
-    "./svg/react": {
-      "import": "./dist/svg/react/index.js",
-      "types": "./dist/svg/react/types.d.ts"
-    },
-    "./svg/react/*": {
-      "import": "./dist/svg/react/*.js",
-      "types": "./dist/svg/react/*.d.ts"
-    },
+    "./svg/react": "./src/svg/react.ts",
     "./types": "./src/types.ts",
     "./svg/*": "./public/svg/*"
   },
@@ -31,7 +24,11 @@
         "import": "./dist/svg/react/index.js",
         "types": "./dist/svg/react/index.d.ts"
       },
-      "./svg/*": "./dist/svg/*"
+      "./svg/*": "./dist/svg/*",
+      "./svg/react/*": {
+        "import": "./dist/svg/react/*.js",
+        "types": "./dist/svg/react/*.d.ts"
+      }
     }
   },
   "scripts": {

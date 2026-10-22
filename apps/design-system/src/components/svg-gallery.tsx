@@ -3,8 +3,8 @@ import React from 'react'
 import { IconGallery, IconItem } from '@storybook/addon-docs/blocks'
 import { ExternalLink } from 'lucide-react'
 
-import type { SVGComponent } from '@homestuck/assets/svg/react'
-import * as svg from '@homestuck/assets/svg/react'
+import { svgCatalog } from '@homestuck/assets/svg/react'
+import type { SVGComponent, SVGKey } from '@homestuck/assets/types'
 import { toKebabCase } from '@homestuck/utils/toKebabCase'
 
 const SVGGalleryItem = (props: { args?: unknown; Element: SVGComponent; name: string }) => {
@@ -46,18 +46,18 @@ const SVGGalleryItem = (props: { args?: unknown; Element: SVGComponent; name: st
 }
 
 export type SVGGalleryProps = {
-  StoryKeys: string[]
+  StoryKeys: SVGKey[]
 }
 
 export const SVGGallery = ({ StoryKeys }: SVGGalleryProps) => {
-  const SVGItems = Object.entries(svg).filter(
-    ([Key, _]) => Key !== 'default' && StoryKeys.includes(Key),
+  const svgKeys = Object.keys(svgCatalog).filter(
+    (Key) => Key !== 'default' && StoryKeys.includes(Key as SVGKey),
   )
   return (
     <div className="svg-gallery">
       <IconGallery>
-        {SVGItems.map(([Key, Element]) => (
-          <SVGGalleryItem Element={Element} key={Key} name={Key} />
+        {svgKeys.map((Key) => (
+          <SVGGalleryItem Element={svgCatalog[Key as SVGKey]} key={Key} name={Key} />
         ))}
       </IconGallery>
     </div>

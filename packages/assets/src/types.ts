@@ -52,7 +52,7 @@ export type RawSVGVariants = {
   light?: string
 }
 
-export type SVGReactComponent<T extends SVGComponentProps = SVGComponentProps> = (
+export type SVGComponent<T extends SVGComponentProps = SVGComponentProps> = (
   args: SVGComponentProps & T,
 ) => React.ReactSVGElement
 
@@ -75,6 +75,6 @@ export type SVGSlug = keyof typeof svgData
 
 export type SVGKey = PascalCase<SVGSlug>
 
-export type SVGReactCatalog = Record<SVGKey, SVGReactComponent>
+export type SVGReactCatalog = Record<SVGKey, SVGComponent>
 
 export default SVGReactCatalog
