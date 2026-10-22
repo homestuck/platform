@@ -4,7 +4,7 @@
 
 # @homestuck/platform
 
-<a href="/LICENSE.md" target="_blank"><img alt="GitHub License" src="https://img.shields.io/github/license/homestuck/platform?style=flat-square"></a>
+<a href="/LICENSE" target="_blank"><img alt="GitHub License" src="https://img.shields.io/github/license/homestuck/platform?style=flat-square"></a>
 <a href="https://github.com/homestuck/platform/actions/workflows/ci.yaml" target="_blank"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/homestuck/platform/ci.yaml?style=flat-square"></a>
 
 <a href="https://discord.gg/homestuck" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/1404836696909938820?style=flat-square&logo=discord&logoColor=white&label=&color=5865F2"></a>
