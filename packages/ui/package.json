@@ -41,6 +41,7 @@
     "@homestuck/oxlint-config": "workspace:^",
     "@homestuck/tsconfig": "workspace:^",
     "next": "catalog:",
+    "oxlint": "catalog:",
     "tailwindcss": "catalog:",
     "tw-animate-css": "catalog:"
   }
