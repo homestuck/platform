@@ -20,8 +20,25 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Setup
-        uses: ./.github/actions/setup
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      - name: Setup Vite+
+        uses: voidzero-dev/setup-vp@v1.21.2
+        with:
+          node-version: '24'
+          cache: true
+
+      - name: Restore Vite+ task cache
+        id: vite-task-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: node_modules/.vite/task-cache
+          key:
+            vite-task-${{ runner.os }}-${{ runner.arch }}-${{ github.run_id }}-${{
+            github.run_attempt }}
+          restore-keys: |
+            vite-task-${{ runner.os }}-${{ runner.arch }}-
 
       - name: Create version
-        uses: changesets/action@v2
+        uses: changesets/action@v2.1.2

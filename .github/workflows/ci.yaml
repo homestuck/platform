@@ -39,9 +39,6 @@ jobs:
           restore-keys: |
             vite-task-${{ runner.os }}-${{ runner.arch }}-
 
-      - name: Install dependencies
-        run: vp install
-
       - name: Vite+ check
         run: vp check
 
