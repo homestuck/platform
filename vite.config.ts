@@ -9,6 +9,11 @@ export default defineConfig({
     ...lint,
     options: { reportUnusedDisableDirectives: 'warn', typeAware: true, typeCheck: true },
   },
+  run: {
+    tasks: {
+      check: 'vp check',
+    },
+  },
   staged: {
     '*': 'vp check --fix',
   },
