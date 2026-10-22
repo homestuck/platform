@@ -1,6 +1,6 @@
-import { ColorItem, ColorPalette, Meta, Source, Unstyled } from "@storybook/addon-docs/blocks";
+import { ColorItem, ColorPalette, Meta, Source, Unstyled } from '@storybook/addon-docs/blocks'
 
-import { COLORS } from "#utils/colors";
+import { COLORS } from '#utils/colors'
 
 <Meta title="Color" />
 
@@ -35,7 +35,7 @@ import { COLORS } from "#utils/colors";
 #### Earth C (Cherub) Session
 
 <ColorPalette>
-  {COLORS.PLAYERS["EARTH C"].map(([title, subtitle, colors]) => (
+  {COLORS.PLAYERS['EARTH C'].map(([title, subtitle, colors]) => (
     <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
   ))}
 </ColorPalette>
@@ -83,7 +83,7 @@ import { COLORS } from "#utils/colors";
 ### Sprites^2
 
 <ColorPalette>
-  {COLORS["SPRITES^2"].map(([title, subtitle, colors]) => (
+  {COLORS['SPRITES^2'].map(([title, subtitle, colors]) => (
     <ColorItem title={title} subtitle={subtitle} colors={Object.fromEntries(colors)} />
   ))}
 </ColorPalette>
