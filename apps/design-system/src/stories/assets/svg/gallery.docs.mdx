@@ -2,12 +2,19 @@ import { IconGallery, IconItem, Meta, Title } from '@storybook/addon-docs/blocks
 
 import * as SVG from '@homestuck/assets/svg/react'
 
-import * as SVGAspectStories from './aspect.stories'
+import { SVGGallery } from '#components/svg-gallery'
 
-import AspectDocs from './aspect.docs.mdx'
+import * as SVGAspectStories from './aspect.stories'
+import * as SVGFRAFStories from './fraf.stories'
 
 <Meta title="SVG/Gallery" />
 
 <Title>Gallery</Title>
 
-<AspectDocs />
+## Fruity Rumpus Asshole Factory
+
+<SVGGallery StoryKeys={Object.keys(SVGFRAFStories)} />
+
+## God Tier Aspects
+
+<SVGGallery StoryKeys={Object.keys(SVGAspectStories)} />

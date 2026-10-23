@@ -81,7 +81,7 @@ export default definePreview({
           '@homestuck∕styles',
           ['About', 'Colors', ['Gallery'], 'Gradients', ['Gallery'], '*'],
           '@homestuck∕assets',
-          ['About', 'Gallery', '*'],
+          ['About', 'SVG', ['Gallery', '*'], '*'],
           '@homestuck∕ui',
           'About',
           'Gallery',

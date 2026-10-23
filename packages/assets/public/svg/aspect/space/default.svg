@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="#ffffff"
   height="512"
   viewBox="0 0 512 512"
   width="512">
-  <title>Aspect Space</title>
+  <title>Aspect of Space</title>
   <rect fill="#000000" height="512" width="512" />
   <path
     d="M324 32s-111-4-141 98c-28 117 74 124 74 124l-1 3s-135 8-106-132C188-7 324 32 324 32Z" />

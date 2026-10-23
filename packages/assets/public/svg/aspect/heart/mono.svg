@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   height="512"
   viewBox="0 0 512 512"
   width="512">
-  <title>Aspect Heart</title>
+  <title>Aspect of Heart</title>
   <path
     d="M361 322c74-54 107-101 107-160 0-48-44-113-111-113-66 0-96 43-97 49v85s67-90 128-38c30 29 10 79-62 148-58 59-65 136-66 162v8s20-83 101-141ZM252 98c-1-6-31-49-97-49C88 49 44 114 44 162c0 59 33 106 107 160 81 58 101 141 101 141V98Z" />
 </svg>

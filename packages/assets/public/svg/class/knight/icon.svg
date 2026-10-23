@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Knight Class</title>
+  <path d="M236 484v-80h-72v-32h56v-280l36-64 36 64v280h56v32h-72v80h-40z" />
+</svg>

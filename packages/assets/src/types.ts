@@ -39,7 +39,7 @@ export type RawSVG = {
   aliases: string[]
   categories: string[]
   copyright: string
-  license: string
+  license?: string
   slug: string
   title: string
   variants: RawSVGVariants

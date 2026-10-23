@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  height="512"
+  viewBox="0 0 512 512"
+  width="512">
+  <title>Page Class</title>
+  <path d="M236 28h40v80h72v32h-56v280l-36 64-36-64v-280h-56v-32h72v-80z" />
+</svg>

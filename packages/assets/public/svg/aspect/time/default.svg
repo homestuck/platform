@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="#ff2106"
   height="512"
   viewBox="0 0 512 512"
   width="512">
-  <title>Aspect Time</title>
+  <title>Aspect of Time</title>
   <rect fill="#b70d0e" height="512" width="512" />
   <circle cx="256" cy="256" r="182" />
   <path d="M273 17l15 60H224l15-60h34Z" />

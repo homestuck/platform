@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   height="512"
   viewBox="0 0 512 512"
   width="512">
-  <title>Aspect Light</title>
+  <title>Aspect of Light</title>
   <defs>
     <mask id="aspect-light-mask">
       <rect fill="white" height="512" width="512" />

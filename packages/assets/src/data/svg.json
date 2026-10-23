@@ -205,7 +205,7 @@
   },
   "fraf-crab-apple": {
     "aliases": [],
-    "categories": [],
+    "categories": ["FRAF"],
     "copyright": "(c) 2026 Homestuck, Inc.",
     "slug": "fraf-crab-apple",
     "title": "Fruity Rumpus Asshole Factory Crab Apple",
@@ -216,7 +216,7 @@
   },
   "fraf-eureka-lemon": {
     "aliases": [],
-    "categories": [],
+    "categories": ["FRAF"],
     "copyright": "(c) 2026 Homestuck, Inc.",
     "slug": "fraf-eureka-lemon",
     "title": "Fruity Rumpus Asshole Factory Eureka Lemon",
@@ -227,7 +227,7 @@
   },
   "fraf-key-lime": {
     "aliases": [],
-    "categories": [],
+    "categories": ["FRAF"],
     "copyright": "(c) 2026 Homestuck, Inc.",
     "slug": "fraf-key-lime",
     "title": "Fruity Rumpus Asshole Factory Key Lime",
@@ -238,7 +238,7 @@
   },
   "fraf-mandarin-orange": {
     "aliases": [],
-    "categories": [],
+    "categories": ["FRAF"],
     "copyright": "(c) 2026 Homestuck, Inc.",
     "slug": "fraf-mandarin-orange",
     "title": "Fruity Rumpus Asshole Factory Mandarin Orange",

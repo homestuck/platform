@@ -19,8 +19,8 @@
         "hidden": false
       },
       "request": "launch",
-      "runtimeArgs": ["dev", "--filter", "@homestuck/design-system..."],
-      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["@homestuck/design-system#dev"],
+      "runtimeExecutable": "vpr",
       "skipFiles": ["<node_internals>/**"],
       "type": "node"
     },

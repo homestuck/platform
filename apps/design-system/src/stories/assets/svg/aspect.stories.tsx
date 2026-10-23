@@ -1,12 +1,22 @@
+import svgData from '@homestuck/assets/catalog/svg'
 import { svgCatalog as svgReactCatalog } from '@homestuck/assets/svg/react'
-import type { SVGKey, SVGComponentProps } from '@homestuck/assets/types'
+import type { SVGKey, SVGComponentProps, RawSVG } from '@homestuck/assets/types'
+import { toPascalCase } from '@homestuck/utils/toPascalCase'
 
-import { SVG_CATALOG } from '#constants/svg'
 import preview from '#sb/preview'
 
-const { ASPECT } = SVG_CATALOG
+const catalog = Object.fromEntries(
+  Object.entries(svgData as Record<string, RawSVG>)
+    .filter(([_Key, value]) => value.categories.includes('Aspects'))
+    .map(([Key, value]) => [
+      toPascalCase(Key),
+      { ...value, Element: svgReactCatalog[Key as SVGKey] },
+    ]),
+)
 
-type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svgReactCatalog)[K] }
+// const { ASPECT } = SVG_CATALOG
+
+// type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svgReactCatalog)[K] }
 
 // const svgCatalog = Object.keys(svg).reduce<SVGCatalog>((acc, key) => {
 //   if (ASPECT.includes(key) && key in svg) {
@@ -15,14 +25,14 @@ type SVGCatalog<T extends SVGKey = SVGKey> = { [K in T]: (typeof svgReactCatalog
 //   return acc
 // }, {} as SVGCatalog)
 
-const catalog = Object.keys(svgReactCatalog).reduce<SVGCatalog>((acc, key) => {
-  // @ts-expect-error -- SVGKey is not string
-  if (ASPECT.includes(key as SVGKey) && key in svgReactCatalog) {
-    acc[key as SVGKey] = svgReactCatalog[key as SVGKey]
-    // acc[key as SVGKey] = (svgReactCatalog as Record<SVGKey, svgCatalog.SVGComponent>)[key as SVGKey]
-  }
-  return acc
-}, {} as SVGCatalog)
+// const catalog = Object.keys(svgReactCatalog).reduce<SVGCatalog>((acc, key) => {
+//   // @ts-expect-error -- SVGKey is not string
+//   if (ASPECT.includes(key as SVGKey) && key in svgReactCatalog) {
+//     acc[key as SVGKey] = svgReactCatalog[key as SVGKey]
+//     // acc[key as SVGKey] = (svgReactCatalog as Record<SVGKey, svgCatalog.SVGComponent>)[key as SVGKey]
+//   }
+//   return acc
+// }, {} as SVGCatalog)
 
 const meta = preview.meta({
   argTypes: {
@@ -40,7 +50,7 @@ const meta = preview.meta({
     },
     name: {
       control: 'select',
-      options: ASPECT,
+      options: Object.keys(catalog),
       type: { name: 'string', required: true },
     },
     variant: {
@@ -56,7 +66,8 @@ const meta = preview.meta({
   args: { height: 'auto', width: 'auto' },
   render: ({ name, ...args }: SVGComponentProps & { name: SVGKey; variant?: never }) => {
     if (!(name in catalog)) return <></>
-    const SVGComponent = catalog[name]
+    const SVGComponent = catalog[name]?.Element
+    if (!SVGComponent) return <></>
     return <SVGComponent {...args} />
   },
   tags: ['!autodocs'],

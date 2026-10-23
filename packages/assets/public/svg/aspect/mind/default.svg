@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="#06ffc9"
   height="512"
   viewBox="0 0 512 512"
   width="512">
-  <title>Aspect Mind</title>
+  <title>Aspect of Mind</title>
   <rect fill="#00923d" height="512" width="512" />
   <circle cx="256" cy="279" r="141" />
   <path
