@@ -19,24 +19,24 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@changesets/cli": "catalog:",
-    "@commitlint/cli": "catalog:",
-    "@commitlint/config-conventional": "catalog:",
-    "@commitlint/config-pnpm-scopes": "catalog:",
+    "@changesets/cli": "^3.0.3",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@commitlint/config-pnpm-scopes": "^21.2.2",
     "@homestuck/oxfmt-config": "workspace:^",
     "@homestuck/oxlint-config": "workspace:^",
     "@homestuck/tsconfig": "workspace:^",
     "@shadcn/lint": "catalog:",
-    "@turbo/gen": "catalog:",
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
+    "@turbo/gen": "^2.11.10",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
     "eslint-plugin-regexp": "catalog:",
     "eslint-plugin-turbo": "catalog:",
     "husky": "catalog:",
-    "lint-staged": "catalog:",
-    "turbo": "catalog:",
+    "lint-staged": "^17.6.0",
+    "turbo": "^2.11.10",
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },
@@ -47,7 +47,7 @@
     ]
   },
   "engines": {
-    "node": ">=24.10.x"
+    "node": ">=24.22.1"
   },
   "packageManager": "pnpm@12.15.0"
 }

@@ -1,37 +1,19 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
   "[svg]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
-  "debug.console.closeOnEnd": true,
-  "editor.defaultFormatter": "oxc.oxc-vscode",
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "files.exclude": {
-    "**/.DS_Store": true,
-    "**/.cache": true,
-    "**/.git": true,
-    "**/.husky/_": true,
-    "**/.next": true,
-    "**/.parcel-cache": true,
-    "**/.turbo": true,
-    "**/Thumbs.db": true,
-    "**/node_modules": true
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "files.insertFinalNewline": true,
-  "js/ts.experimental.useTsgo": true,
-  "js/ts.tsdk.path": "node_modules/typescript",
-  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
-  "tailwindCSS.classFunctions": ["clsx", "cn", "cva", "tw", "twMerge"],
-  "tailwindCSS.experimental.configFile": {
-    "apps/design-system/src/styles/globals.css": "packages/design-system/**",
-    "packages/styles/src/styles/tailwind/globals.css": "packages/styles/src/**",
-    "packages/ui/src/styles/globals.css": "packages/ui/src/**"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "oxc.requireConfig": true,
-  "oxc.trace.server": "verbose",
-  "oxc.enable.oxfmt": true,
-  "oxc.enable.oxlint": true,
   "cSpell.words": [
     "Alternian",
     "cmdk",
@@ -54,25 +36,45 @@
     "tsgolint",
     "unpunnyfuns",
     "vite",
+    "voidzero",
     "vrissy"
   ],
-  "oxc.enable": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
-  "oxc.disableNestedConfig": true,
-  "oxc.fmt.disableNestedConfig": true,
-  "editor.formatOnSaveMode": "file",
+  "debug.console.closeOnEnd": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
+  },
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.cache": true,
+    "**/.git": true,
+    "**/.husky/_": true,
+    "**/.next": true,
+    "**/.parcel-cache": true,
+    "**/.turbo": true,
+    "**/.vite-hooks/_": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.tsdk.path": "node_modules/typescript",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "oxc.disableNestedConfig": true,
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": true,
+  "oxc.enable": true,
+  "oxc.fmt.disableNestedConfig": true,
+  "oxc.requireConfig": true,
+  "oxc.trace.server": "verbose",
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
+  "tailwindCSS.classFunctions": ["clsx", "cn", "cva", "tw", "twMerge"],
+  "tailwindCSS.experimental.configFile": {
+    "apps/design-system/src/styles/globals.css": "packages/design-system/**",
+    "packages/styles/src/styles/tailwind/globals.css": "packages/styles/src/**",
+    "packages/ui/src/styles/globals.css": "packages/ui/src/**"
   }
 }

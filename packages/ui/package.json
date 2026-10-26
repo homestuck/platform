@@ -22,12 +22,12 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@base-ui/react": "catalog:",
+    "@base-ui/react": "^1.9.0",
     "@homestuck/styles": "workspace:^",
-    "class-variance-authority": "catalog:",
-    "cmdk": "catalog:",
-    "cn": "catalog:",
-    "date-fns": "catalog:",
+    "class-variance-authority": "^0.7.1",
+    "cmdk": "^1.1.1",
+    "cn": "^0.5.0",
+    "date-fns": "^4.4.0",
     "lucide-react": "catalog:",
     "next-themes": "catalog:",
     "react": "catalog:",
