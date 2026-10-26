@@ -18,45 +18,46 @@
     }
   </style>
   <g style="animation: 3s ease-in-out -1.2s infinite alternate bounce;">
-    <ellipse cx="256" cy="376" rx="160" ry="80" fill="#1f1f1f" />
-    <rect x="96" y="366" width="320" height="10" fill="#1f1f1f" />
-    <ellipse cx="256" cy="366" rx="160" ry="80" fill="#323232" />
+    <ellipse cx="256" cy="400" rx="160" ry="80" fill="#1f1f1f" />
+    <rect x="96" y="390" width="320" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="390" rx="160" ry="80" fill="#323232" />
   </g>
   <g style="animation: 3s ease-in-out -0.8s infinite alternate bounce;">
-    <ellipse cx="256" cy="346" rx="180" ry="90" fill="#1f1f1f" />
-    <rect x="76" y="336" width="360" height="10" fill="#1f1f1f" />
-    <ellipse cx="256" cy="336" rx="180" ry="90" fill="#323232" />
+    <ellipse cx="256" cy="370" rx="180" ry="90" fill="#1f1f1f" />
+    <rect x="76" y="360" width="360" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="360" rx="180" ry="90" fill="#323232" />
   </g>
   <g style="animation: 3s ease-in-out -0.4s infinite alternate bounce;">
-    <ellipse cx="256" cy="316" rx="200" ry="100" fill="#1f1f1f" />
-    <rect x="56" y="306" width="400" height="10" fill="#1f1f1f" />
-    <ellipse cx="256" cy="306" rx="200" ry="100" fill="#323232" />
-    <g style="transform-box:fill-box;transform-origin:center;transform:rotate(30deg) skewX(-30deg);">
-      <svg
-        preserveAspectRatio="xMidYMid meet"
-        width="200"
-        style="transform:scale(1, 0.86062);"
-        x="156" y="100"
-        viewBox="0 0 200 116"
-      >
-        <path
-          d="M105,0h27V2h9V4h6V5h5V7h4V9h4v2h4v2h2v2h2v2h2v2h2v2h2v4h2v4h1v5h2V47h-2v4h-3v1h-2v2h-2v2h-3v2h-4v4h2v9h-2v3h-2v2h-2v4h-2v1h-1v4h-2v2h-2v2h-4v1h-1v2h-2v2h2V92h3v2h6v2h5v2h4v2h5v5h-3v2h-4v2h-7v1h-6v2H138v-2h-8v-1h-5v-2h-4v-2h-7v-2h-5v2H76v2H60v2H58v-2H51v2H49v1H45v2H40v4H38v-2H29v-2H24v-2H18v-1H13v-2H5v-2H2v-2H0v-3H5V98H16V96h8V94h3V92h2V90h2V89H29V87H25V85h2V83H25V81H24V80H22V76H20V74H18V71H16V69H14V63H13V42h1V40h2V38h2V36h4V34H38v2h2v2h2v2h1v2h2v1h2v2h2v2h2v2h1v2h2v1h2v2h2V51h2V45h2V43h1V38h2V34h2V31h2V27h2V24h3V20h2V16h2V13h2V11h2V9h2V7h3V5h3V4h6V2h9V0Z"
-          fill="#1f1f1f" />
-        <path
-          d="M110 7h17V9h9v2h5v2h6v2h6v2h4v2h4v2h2v2h2v2h3v4h2v5h2v6H92v2h80v1h-2v2h-2v2h-1v2h-2v2h-4v1h-4v2h-1v2h-4v2h-4v2h-3v2h-2v1h-2v2h-2v4h-1v3h-2v2h-2v4h-2v3h2V80h2V78h2V74h3V71h2V69h4V67h1V65h2V63h2V62h2v1h2v9h-2v2h-2v4h-2v3h-2v2h-1v2h-2v2h-2v2h-2v1h-2v2h-1v2h-4v2h7v2h6v2h7v1h5v2h-7v2h-5v2h-8v2h-1v-2h-6v-2h-5v-2h-4v-2h-5v-1h-4v1H51v2H49v2H43v2H40v2H31v-2H25v-2H20v-2H14v-3H24V98h3V96h2v2h2V96h7v4h5V94H42V92H40V89H38V87H36V85H34V80H33V78H31V74H29V71H27V69H25V65H24V63H22V58H20V47h2V45h2V43h3V42h4v1h2v2h3v2h2v2h2v2h2v1h1v4h2v2h4v2h2v3h3v4h2v2h4V67h2V62h1V58h2V54h2V51h2V47h2V43h1V40h2V34h2V31h2V29h2V25h2V21h2V19h2V17h4V15h6V13h4V11h6V9h4V7ZM11 101h2v2H11v-2Z"
-          fill="#3c3c3c" />
-        <path
-          d="M152 7V9h-5v7h1v2h4v2h5v2h6v2h7V22h7V13h-1V9h-6V7H152ZM81 7v4H80v2H78v9h2v2h1v1h4v2h15V25h7V24h2V20h1V11h-1V9h-4V7H81"
-          fill="#535353" />
-      </svg>
-    </g>
+    <ellipse cx="256" cy="340" rx="200" ry="100" fill="#1f1f1f" />
+    <rect x="56" y="330" width="400" height="10" fill="#1f1f1f" />
+    <ellipse cx="256" cy="330" rx="200" ry="100" fill="#323232" />
+    <svg
+      preserveAspectRatio="xMidYMid meet"
+      width="200"
+      style="transform-box:fill-box;transform-origin:center;transform: scale(1, 0.86062) rotate(30deg) skewX(-30deg);"
+      x="410" y="-10"
+      viewBox="0 0 200 116"
+    >
+      <path
+        d="M105,0h27V2h9V4h6V5h5V7h4V9h4v2h4v2h2v2h2v2h2v2h2v2h2v4h2v4h1v5h2V47h-2v4h-3v1h-2v2h-2v2h-3v2h-4v4h2v9h-2v3h-2v2h-2v4h-2v1h-1v4h-2v2h-2v2h-4v1h-1v2h-2v2h2V92h3v2h6v2h5v2h4v2h5v5h-3v2h-4v2h-7v1h-6v2H138v-2h-8v-1h-5v-2h-4v-2h-7v-2h-5v2H76v2H60v2H58v-2H51v2H49v1H45v2H40v4H38v-2H29v-2H24v-2H18v-1H13v-2H5v-2H2v-2H0v-3H5V98H16V96h8V94h3V92h2V90h2V89H29V87H25V85h2V83H25V81H24V80H22V76H20V74H18V71H16V69H14V63H13V42h1V40h2V38h2V36h4V34H38v2h2v2h2v2h1v2h2v1h2v2h2v2h2v2h1v2h2v1h2v2h2V51h2V45h2V43h1V38h2V34h2V31h2V27h2V24h3V20h2V16h2V13h2V11h2V9h2V7h3V5h3V4h6V2h9V0Z"
+        fill="#1f1f1f" />
+      <path
+        d="M110
+  7h17V9h9v2h5v2h6v2h6v2h4v2h4v2h2v2h2v2h3v4h2v5h2v6H92v2h80v1h-2v2h-2v2h-1v2h-2v2h-4v1h-4v2h-1v2h-4v2h-4v2h-3v2h-2v1h-2v2h-2v4h-1v3h-2v2h-2v4h-2v3h2V80h2V78h2V74h3V71h2V69h4V67h1V65h2V63h2V62h2v1h2v9h-2v2h-2v4h-2v3h-2v2h-1v2h-2v2h-2v2h-2v1h-2v2h-1v2h-4v2h7v2h6v2h7v1h5v2h-7v2h-5v2h-8v2h-1v-2h-6v-2h-5v-2h-4v-2h-5v-1h-4v1H51v2H49v2H43v2H40v2H31v-2H25v-2H20v-2H14v-3H24V98h3V96h2v2h2V96h7v4h5V94H42V92H40V89H38V87H36V85H34V80H33V78H31V74H29V71H27V69H25V65H24V63H22V58H20V47h2V45h2V43h3V42h4v1h2v2h3v2h2v2h2v2h2v1h1v4h2v2h4v2h2v3h3v4h2v2h4V67h2V62h1V58h2V54h2V51h2V47h2V43h1V40h2V34h2V31h2V29h2V25h2V21h2V19h2V17h4V15h6V13h4V11h6V9h4V7ZM11
+  101h2v2H11v-2Z"
+        fill="#3c3c3c" />
+      <path
+        d="M152 7V9h-5v7h1v2h4v2h5v2h6v2h7V22h7V13h-1V9h-6V7H152ZM81
+  7v4H80v2H78v9h2v2h1v1h4v2h15V25h7V24h2V20h1V11h-1V9h-4V7H81"
+        fill="#535353" />
+    </svg>
     <svg
       preserveAspectRatio="none"
       fill="none"
       width="500"
       height="250"
       x="6"
-      y="180"
+      y="204"
       stroke="#535353"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -67,9 +68,11 @@
       <defs>
         <g id="svg-incipisphere-spirograph-arc">
           <path
-            d="M256 88.495Q287.62 77.636 325.911 87.842 391.7522 105.3936 423.3651 154.1792 454.9487 202.9243 454.2717 258.0504" />
+            d="M256 88.495Q287.62 77.636 325.911 87.842 391.7522 105.3936 423.3651 154.1792 454.9487 202.9243
+  454.2717 258.0504" />
           <path
-            d="M256 88.495Q224.38 77.636 186.089 87.842 120.2478 105.3936 88.6349 154.1792 57.0513 202.9243 57.7283 258.0504" />
+            d="M256 88.495Q224.38 77.636 186.089 87.842 120.2478 105.3936 88.6349 154.1792 57.0513 202.9243
+  57.7283 258.0504" />
         </g>
       </defs>
       <use href="#svg-incipisphere-spirograph-arc" />
@@ -102,54 +105,55 @@
         transform="rotate(324, 256, 256)" />
     </svg>
   </g>
-  <svg style="animation: 3s ease-in-out 0s infinite alternate bounce;"
-    preserveAspectRatio="xMidYMid meet" height="75%" viewBox="0 0 562 712">
-    <g transform-origin="center" transform="skewY(30)">
-      <path fill="#349534" d="M102 266l50-50h144l-50 50h-144z" /> <!-- tl sq -->
-      <path fill="#349534" d="M102 430l50-50h144l-50 50h-144z" /> <!-- bl sq -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M246 430h50v144h-50v-144z" /> <!--
+  <g style="animation: 3s ease-in-out 0s infinite alternate bounce;">
+    <svg preserveAspectRatio="xMidYMid meet" height="75%" viewBox="0 0 562 712">
+      <g transform-origin="center" transform="skewY(30)">
+        <path fill="#349534" d="M102 266l50-50h144l-50 50h-144z" /> <!-- tl sq -->
+        <path fill="#349534" d="M102 430l50-50h144l-50 50h-144z" /> <!-- bl sq -->
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M246 430h50v144h-50v-144z" /> <!--
       bl sq -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M246 266h50v144h-50v-144z" /> <!--
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M246 266h50v144h-50v-144z" /> <!--
       tl sq -->
-      <path fill="#349534" d="M262 342l50-50h72l-50 50h-72z" /> <!-- m sq -->
-      <path fill="#349534" d="M276 256l50-50h144l-50 50h-144z" /> <!-- tr sq -->
-      <path fill="#349534" d="M266 430l50-50h144l-50 50h-144z" /> <!-- br sq -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M334 342h50v72h-50v-72z" /> <!--
+        <path fill="#349534" d="M262 342l50-50h72l-50 50h-72z" /> <!-- m sq -->
+        <path fill="#349534" d="M276 256l50-50h144l-50 50h-144z" /> <!-- tr sq -->
+        <path fill="#349534" d="M266 430l50-50h144l-50 50h-144z" /> <!-- br sq -->
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M334 342h50v72h-50v-72z" /> <!--
       m sq -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M420 256v144h50v-144h-50z" /> <!--
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M420 256v144h50v-144h-50z" /> <!--
       tr sq -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M410 430h50v144h-50v-144z" /> <!--
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M410 430h50v144h-50v-144z" /> <!--
       br sq -->
-      <path fill="#349534" class="top" d="M256 150l-204 106 50-50 204-106-50 50z" /> <!-- roof -->
-      <path fill="#349534" class="top" d="M256 140l50-50 204 106-50 50-204-106z" /> <!-- roof -->
-      <path fill="#349534" class="top" d="M134 150l50-50h74l-50 50h-74z" /> <!-- roof -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M258 150v25h-50v-25h50z" /> <!--
+        <path fill="#349534" class="top" d="M256 150l-204 106 50-50 204-106-50 50z" /> <!-- roof -->
+        <path fill="#349534" class="top" d="M256 140l50-50 204 106-50 50-204-106z" /> <!-- roof -->
+        <path fill="#349534" class="top" d="M134 150l50-50h74l-50 50h-74z" /> <!-- roof -->
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M258 150v25h-50v-25h50z" /> <!--
       roof -->
-      <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
-        transform="skewY(-45)"
-        d="M256 246h50v10h-50v-10z" /> <!--
+        <path fill="#2d732e" style="transform-box: fill-box;" transform-origin="center left"
+          transform="skewY(-45)"
+          d="M256 246h50v10h-50v-10z" /> <!--
       roof -->
-      <path fill="#4be34f" d="M208 150v74h-74v-74h74Z" />
-      <path fill="#4be34f"
-        d="M208 150v74h-74v-74h74Z M256 150V140L460 246H256V256H52L256 150Z" />
-      <path fill="#4be34f" d="M262 342h72v72h-72v-72z" />
-      <path fill="#4be34f" d="M276 256v72h72v72h72v-144h-144z" />
-      <path fill="#4be34f" d="M102 266h144v144h-144v-144z" />
-      <path fill="#4be34f" d="M266 430h144v144h-144v-144z" />
-      <path fill="#4be34f" d="M102 430h144v144h-144v-144z" />
-      <path fill="#4be34f" d="M208 150v74h-74v-74h74z" />
-    </g>
-  </svg>
+        <path fill="#4be34f" d="M208 150v74h-74v-74h74Z" />
+        <path fill="#4be34f"
+          d="M208 150v74h-74v-74h74Z M256 150V140L460 246H256V256H52L256 150Z" />
+        <path fill="#4be34f" d="M262 342h72v72h-72v-72z" />
+        <path fill="#4be34f" d="M276 256v72h72v72h72v-144h-144z" />
+        <path fill="#4be34f" d="M102 266h144v144h-144v-144z" />
+        <path fill="#4be34f" d="M266 430h144v144h-144v-144z" />
+        <path fill="#4be34f" d="M102 430h144v144h-144v-144z" />
+        <path fill="#4be34f" d="M208 150v74h-74v-74h74z" />
+      </g>
+    </svg>
+  </g>
 </svg>
