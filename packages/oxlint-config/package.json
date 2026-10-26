@@ -14,7 +14,6 @@
     "@shadcn/lint": "catalog:",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
     "eslint-plugin-regexp": "catalog:",
-    "oxlint": "catalog:",
-    "vite-plus": "catalog:"
+    "oxlint": "catalog:"
   }
 }

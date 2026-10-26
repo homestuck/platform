@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite-plus'
 
-import fmt from '@homestuck/oxfmt-config'
-import lint from '@homestuck/oxlint-config'
+import oxfmtConfig from '@homestuck/oxfmt-config'
+import oxlintConfig from '@homestuck/oxlint-config'
 
 export default defineConfig({
-  fmt,
+  fmt: oxfmtConfig,
   lint: {
-    ...lint,
+    ...oxlintConfig,
     options: { reportUnusedDisableDirectives: 'warn', typeAware: true, typeCheck: true },
   },
   run: {

@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "inflection": "catalog:"
+    "inflection": "^3.0.2"
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",

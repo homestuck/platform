@@ -51,7 +51,6 @@
     "**/.DS_Store": true,
     "**/.cache": true,
     "**/.git": true,
-    "**/.husky/_": true,
     "**/.next": true,
     "**/.parcel-cache": true,
     "**/.turbo": true,

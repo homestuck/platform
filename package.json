@@ -15,7 +15,6 @@
     "lint:fix": "vp lint --fix",
     "precommit": "lint-staged",
     "preinstall": "pnpm dlx only-allow pnpm",
-    "prepare": "husky",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
@@ -33,8 +32,6 @@
     "@types/react-dom": "^19.3.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
     "eslint-plugin-regexp": "catalog:",
-    "eslint-plugin-turbo": "catalog:",
-    "husky": "catalog:",
     "lint-staged": "^17.6.0",
     "turbo": "^2.11.10",
     "typescript": "catalog:",

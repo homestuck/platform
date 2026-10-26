@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
-    "oxfmt": "catalog:",
+    "oxfmt": "^0.74.0",
     "vite-plus": "catalog:"
   }
 }
