@@ -21,10 +21,11 @@ updates:
       - 'pr: chore'
       - 'source: dependencies'
     groups:
-      patterns:
-        - '*'
-      update-types:
-        - 'patch'
-        - 'minor'
+      patch-and-minor:
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
+          - 'minor'
     commit-message:
       prefix: 'chore({{package-name}})'
