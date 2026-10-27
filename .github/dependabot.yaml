@@ -12,3 +12,19 @@ updates:
     labels:
       - 'pr: chore'
       - 'source: dependencies'
+
+  - package-ecosystem: 'npm'
+    directory: '/packages/*'
+    schedule:
+      interval: 'daily'
+    labels:
+      - 'pr: chore'
+      - 'source: dependencies'
+    groups:
+      patterns:
+        - '*'
+      update-types:
+        - 'patch'
+        - 'minor'
+    commit-message:
+      prefix: 'chore({{package-name}})'
