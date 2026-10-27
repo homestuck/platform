@@ -12,6 +12,15 @@
       <path
         d="M281.75 177.2Q270.9 126.35 207.25 117.25 143.6 108.1 100.6 161.05 57.65 213.95 60.75 272 63.85 330 96.8 374.2" />
     </g>
+    <radialGradient id="svg-homestuck-radial-gradient" r="75%" cx="50%" cy="25%" fx="50%" fy="25%"
+      fr="25%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#b8b8b8" />
+    </radialGradient>
+    <linearGradient id="svg-homestuck-linear-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#b8b8b8" />
+    </linearGradient>
   </defs>
   <rect width="89" height="240" fill="#7b7b7b" />
   <path
@@ -23,7 +32,22 @@
   <circle cx="20.5" cy="12" r="4.5" fill="#ffffff" stroke-width="0.5" stroke="#ffffff" />
   <path
     d="M8,8h3v3h2v-3h3v1h-1v6h1v1h-3v-4h-2v4h-3v-1h1v-6h-1v-1m17,0h3v1h1v2h1v-2h1v-1h3v1h-1v6h1v1h-4v-1h1v-3h-1v1h-1v-1h-1v3h1v1h-4v-1h1v-6h-1v-1m10 0h7v3h-1v-2h-3v2h1v-1h1v3h-1v-1h-1v3h3v-2h1v3h-7v-1h1v-6h-1v-1m9 0h5v2h-2v-1h-2v2h2v1h1v1h1v2h-1v1h-5v-2h2v1h2v-2h-2v-1h-1v-1h-1v-2h1v-1m6 0h6v3h-1v-2h-1v6h1v1h-4v-1h1v-6h-1v2h-1v-3m7 0h3v7h2v-7h3v1h-1v6h-1v1h-4v-1h-1v-6h-1v-1m10 0h4v3h-1v-2h-2v1h-1v4h1v1h2v-1h1v1h-1v1h-3v-1h-1v-1h-1v-4h1v-1h1v-1m5 0h4v1h-1v2h1v-1h1v-2h3v1h-1v1h-1v1h-1v1h1v1h1v2h1v1h-2v-1h-1v-2h-2v2h1v1h-4v-1h1v-6h-1v-1z"
-    fill="#ffffff" />
+    fill="url(#svg-homestuck-radial-gradient)"
+  />
+  <g>
+    <path
+      d="M8 8h3v3h1v1h-.8l-2.2-2.75v-.25h-.2l-.8-1m5 0h3v1h-1v1.5l-2-2.5z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    />
+    <path
+      d="M11 11h2l2 2.5v1l-2 -2.5h-1.2l-.8 -1z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    />
+    <path
+      d="M8 15h1l.8 1h-1l-.8 -1m7 0h1v1h-.2l-.8 -1z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    />
+  </g>
   <g transform="translate(15 6.5) scale(0.021484375)" fill="none" stroke="#4BE34F"
     stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="8">
     <use href="#svg-incipisphere-spirograph-arc" />

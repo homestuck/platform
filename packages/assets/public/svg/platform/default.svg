@@ -105,7 +105,8 @@
         transform="rotate(324, 256, 256)" />
     </svg>
   </g>
-  <g style="animation: 3s ease-in-out 0s infinite alternate bounce;">
+  <g style="animation: 3s ease-in-out 0s infinite alternate bounce;"
+  >
     <svg preserveAspectRatio="xMidYMid meet" height="75%" viewBox="0 0 562 712">
       <g transform-origin="center" transform="skewY(30)">
         <path fill="#349534" d="M102 266l50-50h144l-50 50h-144z" /> <!-- tl sq -->
