@@ -36,17 +36,48 @@
   />
   <g>
     <path
-      d="M8 8h3v3h1v1h-.8l-2.2-2.75v-.25h-.2l-.8-1m5 0h3v1h-1v1.5l-2-2.5z"
+      d="M8 8h3v3h1v1h-.8l-2.2-2.75v-.25h-.2l-.8-1m5 0h3v1h-1v1.5l-2-2.5z
+      M25 8h3v1h1v2h1v2h-.4l-.6-1h-1v.333l-2-3.333h-.4l-.6 -1
+      m6 0h3v1h-1v2.333z
+      M35 8h7v3h-.2l-.8 -2h-3v2h1v1h-1v2l-2 -5h-.6z
+      M44 8h5l-.4 2h-1.6v-1h-2v2h1v2h-.8l-.2 -1h-.2"
       fill="url(#svg-homestuck-linear-gradient)"
-    />
+    /> <!-- y=0 -->
     <path
-      d="M11 11h2l2 2.5v1l-2 -2.5h-1.2l-.8 -1z"
-      fill="url(#svg-homestuck-linear-gradient)"
-    />
+      d="M28 9h1v1.667l-1 -1.667m2 0h1l2 3.333v1.667l-3-5z
+    M43 9h1l.6 3h-.4l-.2-1h-.6l-.4 -2z"
+      fill="url(#svg-homestuck-linear-gradient)" /> <!--
+    y=1 -->
+    <path d="M39 10h1v2.5l-1-2.5z"
+      fill="url(#svg-homestuck-linear-gradient)" /> <!--
+    y=2 -->
     <path
-      d="M8 15h1l.8 1h-1l-.8 -1m7 0h1v1h-.2l-.8 -1z"
+      d="M11 11h2l2 2.5v1l-2 -2.5h-1.2l-.8 -1z
+      M29 11h1l.6 1h-.6v.667l-1 -1.667z
+      M38 11h1l.8 2h-.4l-.4 -1h-.6l-.4 -1z
+      M45 11h2l-.4 2h-1.2l-.4 -2z"
       fill="url(#svg-homestuck-linear-gradient)"
-    />
+    /> <!-- y=3 -->
+    <path
+      d="M47 12h1l-.8 4h-1.2v-1h1v-2h-.2l.2 -1z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    /> <!-- y=4 -->
+    <path
+      d="M41 13h1v2.5l-.8 -2z
+      M48 13h1l-.4 2h-.6v1h-.6l.6-3z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    /> <!-- y=5 -->
+    <path
+      d="M43 14h2v1h1v1h-2.6l-.4-2z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    /> <!-- y=6 -->
+    <path
+      d="M8 15h1l.8 1h-1l-.8 -1m7 0h1v1h-.2l-.8 -1z
+      M25 15h1l.6 1h-1l-.6 -1m3 0h1v1h-.4l-.6 -1m2 0h1l.6 1h-1l-.6 -1m3 0h1v1h-.4l-.6 -1z
+      M35 15h1l.4 1h-1l-.4 -1m3 0h3l.4 1h-3l-.4 -1z
+      M45 15h2l-.2 1h-1.6l-.2-1z"
+      fill="url(#svg-homestuck-linear-gradient)"
+    /> <!-- y=7 -->
   </g>
   <g transform="translate(15 6.5) scale(0.021484375)" fill="none" stroke="#4BE34F"
     stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="8">
