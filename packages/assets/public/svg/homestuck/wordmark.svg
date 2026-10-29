@@ -2,9 +2,18 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-  width="890" height="240"
-  viewBox="0 0 89 24">
+  width="880" height="240"
+  viewBox="0 0 88 24">
   <title>Homestuck</title>
+  <style type="text/css">
+    :root {
+      --text-primary: #ffffff;
+      --primary: #4be34f;
+      --secondary: #38a83b;
+      --tertiary: #2d732e;
+      --background: #535353;
+    }
+  </style>
   <defs>
     <g id="svg-incipisphere-spirograph-arc">
       <path
@@ -12,23 +21,28 @@
       <path
         d="M281.75 177.2Q270.9 126.35 207.25 117.25 143.6 108.1 100.6 161.05 57.65 213.95 60.75 272 63.85 330 96.8 374.2" />
     </g>
-    <radialGradient id="svg-homestuck-radial-gradient" r="75%" cx="50%" cy="25%" fx="50%" fy="25%"
-      fr="25%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#b8b8b8" />
+    <radialGradient id="svg-homestuck-radial-gradient" cy="100%" r="200%">
+      <stop offset="0%" stop-color="#c6c6c6" />
+      <stop offset="100%" stop-color="#ffffff" />
     </radialGradient>
-    <linearGradient id="svg-homestuck-linear-gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#b8b8b8" />
+    <linearGradient id="svg-homestuck-gradient-horizontal" gradientUnits="userSpaceOnUse"
+      spreadMethod="reflect" x1="0%"
+      x2="25%" y1="0%" y2="50%">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </linearGradient>
+    <linearGradient id="svg-homestuck-gradient-vertical" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eeeeee" />
+      <stop offset="100%" stop-color="#7b7b7b" />
     </linearGradient>
   </defs>
-  <rect width="89" height="240" fill="#7b7b7b" />
+  <rect height="24" width="88" fill="var(--background)" />
   <path
     d="M7 7h10v.5a6 6 0 017 0v-.5h5v1h1v-1h51v3l-2 2h1v2h1v3l-1 1h-57a6 6 0 01-5 0h-10l-1-1v-3h1v-3l-1-1v-3z"
-    fill="#38A83B" />
+    fill="#2d732e" />
   <path
-    d="M7 17h11a6 6 0 00 5 0h58l-1 1h-57a6 6 0 01-5 0h-10l-1-1m0 -7l1 1v-1h-1m74 0l-2 2v-1h1v-1h1z"
-    fill="#2D732E" />
+    d="M7 7h10v.5a6 6 0 017 0v-.5h5v1h1v-1h51v3h-1v1h-1v1h1v2h1v3h-58a6 6 0 01-5 0h-11v-3h1v-4h-1v-3z"
+    fill="#38a83b" />
   <circle cx="20.5" cy="12" r="4.5" fill="#ffffff" stroke-width="0.5" stroke="#ffffff" />
   <path
     d="M8,8h3v3h2v-3h3v1h-1v6h1v1h-3v-4h-2v4h-3v-1h1v-6h-1v-1m17,0h3v1h1v2h1v-2h1v-1h3v1h-1v6h1v1h-4v-1h1v-3h-1v1h-1v-1h-1v3h1v1h-4v-1h1v-6h-1v-1m10 0h7v3h-1v-2h-3v2h1v-1h1v3h-1v-1h-1v3h3v-2h1v3h-7v-1h1v-6h-1v-1m9 0h5v2h-2v-1h-2v2h2v1h1v1h1v2h-1v1h-5v-2h2v1h2v-2h-2v-1h-1v-1h-1v-2h1v-1m6 0h6v3h-1v-2h-1v6h1v1h-4v-1h1v-6h-1v2h-1v-3m7 0h3v7h2v-7h3v1h-1v6h-1v1h-4v-1h-1v-6h-1v-1m10 0h4v3h-1v-2h-2v1h-1v4h1v1h2v-1h1v1h-1v1h-3v-1h-1v-1h-1v-4h1v-1h1v-1m5 0h4v1h-1v2h1v-1h1v-2h3v1h-1v1h-1v1h-1v1h1v1h1v2h1v1h-2v-1h-1v-2h-2v2h1v1h-4v-1h1v-6h-1v-1z"
@@ -36,47 +50,61 @@
   />
   <g>
     <path
-      d="M8 8h3v3h1v1h-.8l-2.2-2.75v-.25h-.2l-.8-1m5 0h3v1h-1v1.5l-2-2.5z
-      M25 8h3v1h1v2h1v2h-.4l-.6-1h-1v.333l-2-3.333h-.4l-.6 -1
-      m6 0h3v1h-1v2.333z
+      d="M8 8h3v3l-3-3m5 0h3v1h-1v1l-2-2z
+      M25 8h3v1h1v2h1v2h-.4l-.6-1h-1v.333l-2-3.333h-.4l-.6 -1 m6 0h3v1h-1v2.333z
       M35 8h7v3h-.2l-.8 -2h-3v2h1v1h-1v2l-2 -5h-.6z
-      M44 8h5l-.4 2h-1.6v-1h-2v2h1v2h-.8l-.2 -1h-.2"
-      fill="url(#svg-homestuck-linear-gradient)"
+      M44 8h5l-.4 2h-1.6v-1h-2v2h1v2h-.8l-.2 -1h-.2z
+      M50 8h6l-1 2.5v-1.5h-1l-2 5v-5h-1l-.8 2h-.2v-3z
+      M57 8h3l-2 3.333v-2.333h-1v-1m5 0h3l-.6 1h-.4l-2 3.333v-4.333z
+      M67 8h4l-1 1.25v-.25h-2l-.8 1h-.2l-2 2.5v-2.5h1v-1h1v-1z
+      M72 8h4l-3 3v-2h-1v-1m5 0h3l-7 7v-1l3 -3v-1h1v-2z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=0 -->
     <path
       d="M28 9h1v1.667l-1 -1.667m2 0h1l2 3.333v1.667l-3-5z
-    M43 9h1l.6 3h-.4l-.2-1h-.6l-.4 -2z"
-      fill="url(#svg-homestuck-linear-gradient)" /> <!--
+      M43 9h1l.6 3h-.4l-.2-1h-.6l-.4 -2z
+      M66 9h1l-2 2.5v-1.5h1v-1z"
+      fill="url(#svg-homestuck-gradient-vertical)" /> <!--
     y=1 -->
-    <path d="M39 10h1v2.5l-1-2.5z"
-      fill="url(#svg-homestuck-linear-gradient)" /> <!--
+    <path d="M39 10h1v2.5l-1-2.5z
+    M65 10h1l-1 1.25v-1.25z
+    M76 10h1l-1 1v-1z"
+      fill="url(#svg-homestuck-gradient-vertical)" /> <!--
     y=2 -->
     <path
-      d="M11 11h2l2 2.5v1l-2 -2.5h-1.2l-.8 -1z
+      d="M11 11h2l2 2v1l-2-2h-1l-1-1z
       M29 11h1l.6 1h-.6v.667l-1 -1.667z
       M38 11h1l.8 2h-.4l-.4 -1h-.6l-.4 -1z
-      M45 11h2l-.4 2h-1.2l-.4 -2z"
-      fill="url(#svg-homestuck-linear-gradient)"
+      M45 11h2l-.4 2h-1.2l-.4 -2z
+      M75 11h1l-3 3v-1l2 -2z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=3 -->
     <path
-      d="M47 12h1l-.8 4h-1.2v-1h1v-2h-.2l.2 -1z"
-      fill="url(#svg-homestuck-linear-gradient)"
+      d="M47 12h1l-.8 4h-1.2v-1h1v-2h-.2l.2 -1z
+      M77 12h1l-1 1h-1l1 -1z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=4 -->
     <path
       d="M41 13h1v2.5l-.8 -2z
-      M48 13h1l-.4 2h-.6v1h-.6l.6-3z"
-      fill="url(#svg-homestuck-linear-gradient)"
+      M48 13h1l-.4 2h-.6v1h-.6l.6-3z
+      M78 13h1l-2 2v-1l1 -1z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=5 -->
     <path
-      d="M43 14h2v1h1v1h-2.6l-.4-2z"
-      fill="url(#svg-homestuck-linear-gradient)"
+      d="M43 14h2v1h1v1h-2.6l-.4-2z
+      M67 14h1l-1 1.25v-.25h-.8l.8 -1m3 0h1l-.8 1h-.2v-1z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=6 -->
     <path
-      d="M8 15h1l.8 1h-1l-.8 -1m7 0h1v1h-.2l-.8 -1z
+      d="M8 15h1l1 1h-1l-1-1m7 0h1v1l-1-1z
       M25 15h1l.6 1h-1l-.6 -1m3 0h1v1h-.4l-.6 -1m2 0h1l.6 1h-1l-.6 -1m3 0h1v1h-.4l-.6 -1z
       M35 15h1l.4 1h-1l-.4 -1m3 0h3l.4 1h-3l-.4 -1z
-      M45 15h2l-.2 1h-1.6l-.2-1z"
-      fill="url(#svg-homestuck-linear-gradient)"
+      M45 15h2l-.2 1h-1.6l-.2-1z
+      M51 15h1l-.4 1h-.6v-1m3 0h1l-.4 1h-1l.4 -1z
+      M60 15h2l-.6 1h-2l.6 -1z
+      M68 15 h2l-.8 1h-2z
+      M72 15h1l-1 1v-1m3 0h1l-1 1h-1l1 -1m4 0h1l-1 1h-1l1 -1z"
+      fill="url(#svg-homestuck-gradient-vertical)"
     /> <!-- y=7 -->
   </g>
   <g transform="translate(15 6.5) scale(0.021484375)" fill="none" stroke="#4BE34F"
