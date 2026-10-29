@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo.json",
+    "plugins": [{ "name": "@payloadcms/typescript-plugin" }]
+  },
+  "extends": "@homestuck/tsconfig/next.json"
+}

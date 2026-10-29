@@ -14,7 +14,7 @@ export default defineConfig({
   endOfLine: 'lf',
   experimentalOperatorPosition: 'end',
   htmlWhitespaceSensitivity: 'css',
-  ignorePatterns: [],
+  ignorePatterns: ['payload.types.ts'],
   insertFinalNewline: true,
   jsdoc: {
     addDefaultToDescription: true,

@@ -1,0 +1,50 @@
+{
+  "name": "@homestuck/cms",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "type": "module",
+  "imports": {
+    "#payload.types": "./src/payload.types.ts",
+    "#payload.config": "./src/payload.config.ts"
+  },
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "vp fmt",
+    "generate:types": "payload generate:types",
+    "lint": "vp lint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@homestuck/env": "workspace:^",
+    "@payloadcms/db-mongodb": "catalog:payload",
+    "@payloadcms/graphql": "catalog:payload",
+    "@payloadcms/next": "catalog:payload",
+    "@payloadcms/ui": "catalog:payload",
+    "payload": "catalog:payload",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@homestuck/tsconfig": "workspace:^",
+    "@payloadcms/typescript-plugin": "catalog:payload"
+  },
+  "peerDependencies": {
+    "@payloadcms/db-mongodb": "catalog:payload",
+    "@payloadcms/ui": "catalog:payload",
+    "payload": "catalog:payload",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "watch": {
+    "generate:types": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts,tsx",
+      "quiet": false
+    }
+  }
+}

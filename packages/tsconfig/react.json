@@ -5,7 +5,5 @@
     "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo.json",
     "types": ["node", "react", "react-dom"]
   },
-  "exclude": ["node_modules"],
-  "extends": "@homestuck/tsconfig/base.json",
-  "include": ["*.mjs", "*.d.ts", "*.ts", "*.tsx"]
+  "extends": "@homestuck/tsconfig/base.json"
 }

@@ -8,8 +8,8 @@ catalog:
   '@vitest/coverage-v8': ^5.0.5
   'class-variance-authority': ^0.7.1
   'eslint-plugin-react-you-might-not-need-an-effect': ^1.0.2
-  'eslint-plugin-regexp': ^3.3.1
-  'lucide-react': ^1.62.0
+  'eslint-plugin-regexp': ^3.3.2
+  'lucide-react': ^1.64.0
   'next': ^16.4.3
   'oxlint': ^1.90.0
   'postcss': ^8.5.32
@@ -26,6 +26,13 @@ catalog:
   'vite-plus': 1.4.0
 
 catalogs:
+  payload:
+    '@payloadcms/db-mongodb': 'beta'
+    '@payloadcms/graphql': 'beta'
+    '@payloadcms/next': 'beta'
+    '@payloadcms/typescript-plugin': 'beta'
+    '@payloadcms/ui': 'beta'
+    'payload': 'beta'
   typescript-compat:
     '@typescript/native': 'npm:typescript@^7.0.2'
     'typescript': 'npm:@typescript/typescript6@^6.0.2'
@@ -60,7 +67,8 @@ minimumReleaseAgeExclude:
   - '@vitest/spy@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3'
   - '@vitest/utils@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3'
   - chromatic@18.5.0 || 18.6.0 || 18.7.2 || 18.9.0 || 18.9.4 || 18.11.0 || 18.13.3
-  - lucide-react@1.32.0 || 1.38.0 || 1.40.0 || 1.41.0 || 1.43.0 || 1.47.0 || 1.49.0 || 1.53.0 || 1.60.0 || 1.62.0
+  - lucide-react@1.32.0 || 1.38.0 || 1.40.0 || 1.41.0 || 1.43.0 || 1.47.0 || 1.49.0 || 1.53.0 ||
+    1.60.0 || 1.62.0 || 1.64.0
   - storybook@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5
   - turbo@2.10.11 || 2.10.12 || 2.11.10
   - vitest@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3
@@ -87,7 +95,7 @@ minimumReleaseAgeExclude:
   - '@base-ui/react@1.8.0'
   - '@base-ui/utils@0.4.0'
   - cn@0.2.5 || 0.2.6 || 0.4.0
-  - eslint-plugin-regexp@3.3.0 || 3.3.1
+  - eslint-plugin-regexp@3.3.0 || 3.3.1 || 3.3.2
   - '@storybook-community/storybook-dark-mode@7.1.4'
   - style-dictionary@5.5.3 || 5.5.5
   - '@shadcn/lint@0.1.1 || 0.1.3 || 0.2.0 || 0.2.3'

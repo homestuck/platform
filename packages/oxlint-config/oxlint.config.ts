@@ -649,6 +649,7 @@ export default defineConfig({
     '**/node_modules/',
     '**/next-env.d.ts',
     '**/pnpm-lock.yaml',
+    'payload.types.ts',
   ],
   jsPlugins: [
     'eslint-plugin-regexp',

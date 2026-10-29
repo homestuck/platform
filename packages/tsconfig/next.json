@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }]
+  },
+  "exclude": ["node_modules", "dist", ".next"],
+  "extends": "@homestuck/tsconfig/react.json"
+}
