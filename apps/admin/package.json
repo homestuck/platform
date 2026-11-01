@@ -1,0 +1,42 @@
+{
+  "name": "@homestuck/admin",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#payload.types": "./src/payload.types.ts",
+    "#payload.config": "./src/payload.config.ts"
+  },
+  "scripts": {
+    "build": "payload build",
+    "dev": "next dev",
+    "devsafe": "rm -rf .next && next dev",
+    "generate:importmap": "payload generate:importmap",
+    "generate:types": "payload generate:types",
+    "payload": "payload",
+    "start": "next start",
+    "test": "pnpm run test:int && pnpm run test:e2e",
+    "test:e2e": "playwright test --config=playwright.config.ts",
+    "test:int": "vitest run --config ./vitest.config.mts"
+  },
+  "dependencies": {
+    "@homestuck/cms": "workspace:^",
+    "@homestuck/env": "workspace:^",
+    "@payloadcms/db-mongodb": "catalog:payload",
+    "@payloadcms/graphql": "catalog:payload",
+    "@payloadcms/next": "catalog:payload",
+    "@payloadcms/richtext-lexical": "catalog:payload",
+    "@payloadcms/ui": "catalog:payload",
+    "@tailwindcss/turbopack": "catalog:",
+    "graphql": "catalog:",
+    "next": "catalog:",
+    "payload": "catalog:payload",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@homestuck/tsconfig": "workspace:^",
+    "@payloadcms/typescript-plugin": "catalog:payload",
+    "babel-plugin-react-compiler": "catalog:"
+  }
+}

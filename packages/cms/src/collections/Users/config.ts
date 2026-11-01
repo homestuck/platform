@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-export const Users: CollectionConfig = {
+export const Users = {
   access: {
     // admin: LoggedInAccess,
     // create: EveryoneAccess,
@@ -24,7 +24,7 @@ export const Users: CollectionConfig = {
       type: 'checkbox',
     },
   ],
-  slug: 'users',
+  slug: 'users' as const,
   timestamps: true,
   versions: false,
-}
+} satisfies CollectionConfig

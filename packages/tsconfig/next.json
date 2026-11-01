@@ -3,5 +3,15 @@
     "plugins": [{ "name": "next" }]
   },
   "exclude": ["node_modules", "dist", ".next"],
-  "extends": "@homestuck/tsconfig/react.json"
+  "extends": "@homestuck/tsconfig/react.json",
+  "include": [
+    "*.d.ts",
+    "*.js",
+    "*.jsx",
+    "*.mjs",
+    "*.ts",
+    "*.tsx",
+    "./.next/types/**/*.ts",
+    "./.next/dev/types/**/*.ts"
+  ]
 }

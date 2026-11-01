@@ -9,7 +9,6 @@ export function useIsMobile(mobileBreakpoint = 768) {
       setIsMobile(window.innerWidth < mobileBreakpoint)
     }
     mql.addEventListener('change', onChange)
-    // eslint-disable-next-line react-you-might-not-need-an-effect/no-external-store-subscription
     onChange()
     return () => {
       mql.removeEventListener('change', onChange)
