@@ -5,7 +5,7 @@ import { skipValidation } from './helpers/skipValidation'
 
 export const env = createEnv({
   emptyStringAsUndefined: true,
-  runtimeEnv: {},
+  runtimeEnv: process.env,
   server: {
     S3_ACCESS_KEY_ID: z.string(),
     S3_BUCKET: z.string(),

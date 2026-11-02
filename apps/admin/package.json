@@ -24,6 +24,8 @@
     "@payloadcms/db-mongodb": "catalog:payload",
     "@payloadcms/graphql": "catalog:payload",
     "@payloadcms/next": "catalog:payload",
+    "@payloadcms/plugin-form-builder": "catalog:payload",
+    "@payloadcms/plugin-search": "catalog:payload",
     "@payloadcms/richtext-lexical": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
     "@tailwindcss/turbopack": "catalog:",

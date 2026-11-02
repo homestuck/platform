@@ -1,6 +1,8 @@
 import type { CollectionConfig } from 'payload'
 
+import { publishedAtField } from '#fields/publishedAt'
+
 export const Stories = {
-  fields: [],
+  fields: [publishedAtField()],
   slug: 'stories',
 } satisfies CollectionConfig

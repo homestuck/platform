@@ -1,1 +1,3 @@
-export { default } from '@homestuck/cms/payload.config'
+import { payloadConfig } from '@homestuck/cms/payload.config'
+
+export default payloadConfig()

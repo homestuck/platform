@@ -24,6 +24,7 @@ export default defineConfig({
                 kebabCase: true,
                 pascalCase: true,
               },
+              ignore: ['^.*DOM.*$', '^.*URL.*$'],
             },
           ],
         },

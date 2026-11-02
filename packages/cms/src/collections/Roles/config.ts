@@ -14,15 +14,15 @@ export const Roles = {
       type: 'text',
       unique: true,
     },
-    {
-      admin: {
-        description: 'The Permissions assigned to this Role.',
-      },
-      hasMany: true,
-      name: 'permissions',
-      relationTo: 'permissions',
-      type: 'relationship',
-    },
+    // {
+    //   admin: {
+    //     description: 'The Permissions assigned to this Role.',
+    //   },
+    //   hasMany: true,
+    //   name: 'permissions',
+    //   relationTo: 'permissions',
+    //   type: 'relationship',
+    // },
   ],
   slug: 'roles' as const,
 } satisfies CollectionConfig

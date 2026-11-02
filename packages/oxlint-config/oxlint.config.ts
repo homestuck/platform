@@ -506,6 +506,7 @@ const rulesets = {
           camelCase: true,
           kebabCase: true,
         },
+        ignore: ['^.*DOM.*$', '^.*URL.*$'],
       },
     ],
     'unicorn/no-array-method-this-argument': 'error',

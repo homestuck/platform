@@ -4,8 +4,19 @@
   "private": false,
   "type": "module",
   "imports": {
+    "#access/*": "./src/access/*.ts",
+    "#collections/*": "./src/collections/*.ts",
+    "#editor/*": "./src/editor/*.ts",
+    "#fields/*": "./src/fields/*/index.ts",
+    "#globals/*": "./src/globals/*.ts",
+    "#jobs/*": "./src/jobs/*.ts",
     "#payload.types": "./src/payload.types.ts",
-    "#payload.config": "./src/payload.config.ts"
+    "#payload.config": "./src/payload.config.ts",
+    "#plugins/*": "./src/plugins/*.ts",
+    "#i18n": "./src/i18n/index.ts",
+    "#i18n/*": "./src/i18n/*.ts",
+    "#storage/*": "./src/storage/*.ts",
+    "#utils/*": "./src/utils/*.ts"
   },
   "exports": {
     "./*": "./src/*.ts"
@@ -19,10 +30,19 @@
   },
   "dependencies": {
     "@homestuck/env": "workspace:^",
+    "@homestuck/utils": "workspace:^",
+    "@payloadcms/admin-bar": "catalog:payload",
     "@payloadcms/db-mongodb": "catalog:payload",
     "@payloadcms/graphql": "catalog:payload",
     "@payloadcms/next": "catalog:payload",
+    "@payloadcms/plugin-form-builder": "catalog:payload",
+    "@payloadcms/plugin-search": "catalog:payload",
+    "@payloadcms/richtext-lexical": "catalog:payload",
+    "@payloadcms/storage-s3": "catalog:payload",
+    "@payloadcms/translations": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
+    "cn": "catalog:",
+    "next": "catalog:",
     "payload": "catalog:payload",
     "react": "catalog:",
     "react-dom": "catalog:"
