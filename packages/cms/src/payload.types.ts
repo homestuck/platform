@@ -68,6 +68,7 @@ export interface Config {
   blocks: {};
   collections: {
     pages: Page;
+    permissions: Permission;
     roles: Role;
     stories: Story;
     users: User;
@@ -75,11 +76,11 @@ export interface Config {
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
-    'payload-llm-instructions': PayloadLlmInstruction;
   };
   collectionsJoins: {};
   collectionsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
+    permissions: PermissionsSelect<false> | PermissionsSelect<true>;
     roles: RolesSelect<false> | RolesSelect<true>;
     stories: StoriesSelect<false> | StoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -87,7 +88,6 @@ export interface Config {
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
-    'payload-llm-instructions': PayloadLlmInstructionsSelect<false> | PayloadLlmInstructionsSelect<true>;
   };
   db: {
     defaultIDType: string;
@@ -181,10 +181,35 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "permissions".
+ */
+export interface Permission {
+  id: string;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "roles".
  */
 export interface Role {
   id: string;
+  /**
+   * The unique name of this role (e.g., "Admin", "Editor", "Viewer").
+   */
+  name: string;
+  /**
+   * The Permissions assigned to this Role.
+   */
+  permissions?: (string | Permission)[] | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -242,6 +267,10 @@ export interface PayloadLockedDocument {
         value: string | Page;
       } | null)
     | ({
+        relationTo: 'permissions';
+        value: string | Permission;
+      } | null)
+    | ({
         relationTo: 'roles';
         value: string | Role;
       } | null)
@@ -297,28 +326,6 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "payload-llm-instructions".
- */
-export interface PayloadLlmInstruction {
-  id: string;
-  entitySlug: string;
-  title?: string | null;
-  entityType: 'collection' | 'global';
-  additionalInstructions?: string | null;
-  systemInstructions?: string | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
@@ -329,9 +336,21 @@ export interface PagesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "permissions_select".
+ */
+export interface PermissionsSelect<T extends boolean = true> {
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "roles_select".
  */
 export interface RolesSelect<T extends boolean = true> {
+  name?: T;
+  permissions?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -416,22 +435,6 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "payload-llm-instructions_select".
- */
-export interface PayloadLlmInstructionsSelect<T extends boolean = true> {
-  id?: T;
-  entitySlug?: T;
-  title?: T;
-  entityType?: T;
-  additionalInstructions?: T;
-  systemInstructions?: T;
-  createdBy?: T;
-  updatedBy?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "welcome_widget".
  */
 export interface WelcomeWidget {
@@ -457,7 +460,7 @@ export interface CollectionsWidget {
 export interface CollectionQueryWidget {
   data?: {
     title?: string | null;
-    relatedCollection: 'pages' | 'roles' | 'stories' | 'users';
+    relatedCollection: 'pages' | 'permissions' | 'roles' | 'stories' | 'users';
     where?:
       | {
           [k: string]: unknown;
@@ -479,7 +482,7 @@ export interface CollectionQueryWidget {
  */
 export interface ActivityWidget {
   data?: {
-    excludedCollections?: ('pages' | 'roles' | 'stories' | 'users')[] | null;
+    excludedCollections?: ('pages' | 'permissions' | 'roles' | 'stories' | 'users')[] | null;
   };
   width: 'small' | 'medium' | 'large' | 'x-large' | 'full';
 }

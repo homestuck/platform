@@ -20,6 +20,7 @@ export default buildConfig({
   db: mongooseAdapter({
     url: payloadEnv.PAYLOAD_PRIVATE_DATABASE_URI ?? '',
   }),
+  llmInstructions: false,
   secret: payloadEnv.PAYLOAD_PRIVATE_SECRET ?? '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload.types.ts'),
