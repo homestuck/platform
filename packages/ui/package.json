@@ -26,7 +26,7 @@
     "@homestuck/styles": "workspace:^",
     "class-variance-authority": "^0.7.1",
     "cmdk": "^1.1.1",
-    "cn": "^0.5.0",
+    "cn": "^0.5.1",
     "date-fns": "^4.4.0",
     "lucide-react": "catalog:",
     "next-themes": "^0.4.6",
