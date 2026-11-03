@@ -27,7 +27,7 @@
     "@homestuck/tsconfig": "workspace:^",
     "@shadcn/lint": "catalog:",
     "@turbo/gen": "^2.11.10",
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
