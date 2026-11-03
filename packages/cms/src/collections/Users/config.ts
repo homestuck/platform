@@ -1,6 +1,8 @@
 import type { CollectionConfig } from 'payload'
 
-export const Users = {
+import { t } from '#i18n'
+
+export const Users: CollectionConfig<'users'> = {
   access: {
     // admin: LoggedInAccess,
     // create: EveryoneAccess,
@@ -10,6 +12,7 @@ export const Users = {
   },
   admin: {
     defaultColumns: ['displayName', 'email'],
+    group: 'Access Control',
     useAsTitle: 'displayName',
   },
   auth: true,
@@ -24,7 +27,11 @@ export const Users = {
       type: 'checkbox',
     },
   ],
+  labels: {
+    plural: t('collections:users:labelPlural'),
+    singular: t('collections:users:labelSingular'),
+  },
   slug: 'users' as const,
   timestamps: true,
   versions: false,
-} satisfies CollectionConfig
+} as const

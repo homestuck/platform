@@ -5,6 +5,7 @@
   "type": "module",
   "imports": {
     "#access/*": "./src/access/*.ts",
+    "#blocks/*": "./src/blocks/*.ts",
     "#collections/*": "./src/collections/*.ts",
     "#editor/*": "./src/editor/*.ts",
     "#fields/*": "./src/fields/*/index.ts",

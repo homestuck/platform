@@ -62,20 +62,23 @@ export type SupportedTimezones =
   | 'Pacific/Fiji';
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "LexicalNodes_56203167".
+ * via the `definition` "LexicalNodes_5A52E5F7".
  */
-export type LexicalNodes_56203167 =
+export type LexicalNodes_5A52E5F7 =
   | SerializedTextNode
   | SerializedTabNode
   | SerializedLineBreakNode
-  | SerializedParagraphNode<LexicalNodes_56203167>
+  | SerializedParagraphNode<LexicalNodes_5A52E5F7>
   | SerializedHorizontalRuleNode
   | SerializedUploadNode<'assets'>
-  | SerializedQuoteNode<LexicalNodes_56203167>
+  | SerializedQuoteNode<LexicalNodes_5A52E5F7>
   | SerializedRelationshipNode<
       | 'pages'
+      | 'permissions'
       | 'posts'
+      | 'roles'
       | 'stories'
+      | 'story-pages'
       | 'users'
       | 'payload-kv'
       | 'payload-jobs'
@@ -83,11 +86,11 @@ export type LexicalNodes_56203167 =
       | 'payload-preferences'
       | 'payload-migrations'
     >
-  | SerializedAutoLinkNode<LexicalNodes_56203167, LexicalLinkFields>
-  | SerializedLinkNode<LexicalNodes_56203167, LexicalLinkFields>
-  | SerializedListNode<LexicalNodes_56203167>
-  | SerializedListItemNode<LexicalNodes_56203167>
-  | SerializedHeadingNode<LexicalNodes_56203167>;
+  | SerializedAutoLinkNode<LexicalNodes_5A52E5F7, LexicalLinkFields>
+  | SerializedLinkNode<LexicalNodes_5A52E5F7, LexicalLinkFields>
+  | SerializedListNode<LexicalNodes_5A52E5F7>
+  | SerializedListItemNode<LexicalNodes_5A52E5F7>
+  | SerializedHeadingNode<LexicalNodes_5A52E5F7>;
 
 export interface Config {
   auth: {
@@ -97,8 +100,11 @@ export interface Config {
   collections: {
     assets: Asset;
     pages: Page;
+    permissions: Permission;
     posts: Post;
+    roles: Role;
     stories: Story;
+    'story-pages': StoryPage;
     users: User;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -113,8 +119,11 @@ export interface Config {
   collectionsSelect: {
     assets: AssetsSelect<false> | AssetsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    permissions: PermissionsSelect<false> | PermissionsSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
+    roles: RolesSelect<false> | RolesSelect<true>;
     stories: StoriesSelect<false> | StoriesSelect<true>;
+    'story-pages': StoryPagesSelect<false> | StoryPagesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -128,7 +137,7 @@ export interface Config {
   db: {
     defaultIDType: string;
   };
-  fallbackLocale: null;
+  fallbackLocale: ('false' | 'none' | 'null') | false | null | 'en-US' | 'en-US'[];
   globals: {
     'site-footer': SiteFooter;
     'site-header': SiteHeader;
@@ -139,7 +148,7 @@ export interface Config {
     'site-header': SiteHeaderSelect<false> | SiteHeaderSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
-  locale: null;
+  locale: 'en-US';
   widgets: {
     welcome: WelcomeWidget;
     collections: CollectionsWidget;
@@ -259,8 +268,10 @@ export interface User {
  */
 export interface Page {
   id: string;
+  parent?: (string | null) | Page;
   title: string;
   slug: string;
+  layout?: unknown[] | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -272,6 +283,25 @@ export interface Page {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "permissions".
+ */
+export interface Permission {
+  id: string;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -290,14 +320,18 @@ export interface Post {
   } | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "stories".
+ * via the `definition` "roles".
  */
-export interface Story {
+export interface Role {
   id: string;
-  publishedAt?: string | null;
+  /**
+   * The unique name of this role (e.g., "Admin", "Editor", "Viewer").
+   */
+  name: string;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -311,6 +345,47 @@ export interface Story {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "stories".
+ */
+export interface Story {
+  id: string;
+  parent?: (string | null) | Story;
+  publishedAt?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-pages".
+ */
+export interface StoryPage {
+  id: string;
+  publishedAt?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "forms".
  */
 export interface Form {
@@ -319,7 +394,7 @@ export interface Form {
   fields?: (Checkbox | Country | Email | Message | Number | Select | State | Text | Textarea)[] | null;
   submitButtonLabel?: string | null;
   confirmationType?: ('message' | 'redirect') | null;
-  confirmationMessage?: LexicalRichText<LexicalNodes_56203167>;
+  confirmationMessage?: LexicalRichText<LexicalNodes_5A52E5F7>;
   redirect?: {
     url: string;
   };
@@ -331,7 +406,7 @@ export interface Form {
         replyTo?: string | null;
         emailFrom?: string | null;
         subject: string;
-        message?: LexicalRichText<LexicalNodes_56203167> | null;
+        message?: LexicalRichText<LexicalNodes_5A52E5F7> | null;
         id?: string | null;
       }[]
     | null;
@@ -391,7 +466,7 @@ export interface Email {
  * via the `definition` "Message".
  */
 export interface Message {
-  message?: LexicalRichText<LexicalNodes_56203167> | null;
+  message?: LexicalRichText<LexicalNodes_5A52E5F7> | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'message';
@@ -663,12 +738,24 @@ export interface PayloadLockedDocument {
         value: string | Page;
       } | null)
     | ({
+        relationTo: 'permissions';
+        value: string | Permission;
+      } | null)
+    | ({
         relationTo: 'posts';
         value: string | Post;
       } | null)
     | ({
+        relationTo: 'roles';
+        value: string | Role;
+      } | null)
+    | ({
         relationTo: 'stories';
         value: string | Story;
+      } | null)
+    | ({
+        relationTo: 'story-pages';
+        value: string | StoryPage;
       } | null)
     | ({
         relationTo: 'users';
@@ -767,13 +854,27 @@ export interface AssetsSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  parent?: T;
   title?: T;
   slug?: T;
+  layout?: T | {};
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+  _h_slugPath?: T;
+  _h_titlePath?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "permissions_select".
+ */
+export interface PermissionsSelect<T extends boolean = true> {
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -785,17 +886,45 @@ export interface PostsSelect<T extends boolean = true> {
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "roles_select".
+ */
+export interface RolesSelect<T extends boolean = true> {
+  name?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "stories_select".
  */
 export interface StoriesSelect<T extends boolean = true> {
+  parent?: T;
   publishedAt?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
+  _h_slugPath?: T;
+  _h_titlePath?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-pages_select".
+ */
+export interface StoryPagesSelect<T extends boolean = true> {
+  publishedAt?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1179,7 +1308,18 @@ export interface CollectionsWidget {
 export interface CollectionQueryWidget {
   data?: {
     title?: string | null;
-    relatedCollection: 'assets' | 'pages' | 'posts' | 'stories' | 'users' | 'forms' | 'form-submissions' | 'search';
+    relatedCollection:
+      | 'assets'
+      | 'pages'
+      | 'permissions'
+      | 'posts'
+      | 'roles'
+      | 'stories'
+      | 'story-pages'
+      | 'users'
+      | 'forms'
+      | 'form-submissions'
+      | 'search';
     where?:
       | {
           [k: string]: unknown;
@@ -1202,7 +1342,20 @@ export interface CollectionQueryWidget {
 export interface ActivityWidget {
   data?: {
     excludedCollections?:
-      ('assets' | 'pages' | 'posts' | 'stories' | 'users' | 'forms' | 'form-submissions' | 'search')[] | null;
+      | (
+          | 'assets'
+          | 'pages'
+          | 'permissions'
+          | 'posts'
+          | 'roles'
+          | 'stories'
+          | 'story-pages'
+          | 'users'
+          | 'forms'
+          | 'form-submissions'
+          | 'search'
+        )[]
+      | null;
   };
   width: 'small' | 'medium' | 'large' | 'x-large' | 'full';
 }
@@ -1240,6 +1393,18 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'pages';
           value: string | Page;
+        } | null)
+      | ({
+          relationTo: 'posts';
+          value: string | Post;
+        } | null)
+      | ({
+          relationTo: 'stories';
+          value: string | Story;
+        } | null)
+      | ({
+          relationTo: 'story-pages';
+          value: string | StoryPage;
         } | null);
     global?: string | null;
     user?: {

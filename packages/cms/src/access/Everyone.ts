@@ -1,4 +1,5 @@
-import type { User } from '#payload.types'
-import type { FieldAccess, TypeWithID } from 'payload'
+import type { Access } from 'payload'
 
-export const EveryoneAccess: FieldAccess<TypeWithID, User> = () => true
+export type EveryoneAccess = Access
+
+export const everyoneAccess: Access = () => true

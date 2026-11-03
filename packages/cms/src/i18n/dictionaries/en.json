@@ -1,8 +1,58 @@
 {
+  "blocks": {
+    "archive": {
+      "labelPlural": "Archives",
+      "labelSingular": "Archive"
+    }
+  },
   "collections": {
+    "assets": {
+      "labelPlural": "Assets",
+      "labelSingular": "Asset"
+    },
     "pages": {
-      "labelSingular": "Page",
-      "labelPlural": "Pages"
+      "labelPlural": "Pages",
+      "labelSingular": "Page"
+    },
+    "permissions": {
+      "labelPlural": "Permissions",
+      "labelSingular": "Permission"
+    },
+    "posts": {
+      "labelPlural": "Posts",
+      "labelSingular": "Post"
+    },
+    "roles": {
+      "labelPlural": "Roles",
+      "labelSingular": "Role"
+    },
+    "stories": {
+      "labelPlural": "Stories",
+      "labelSingular": "Story"
+    },
+    "story-pages": {
+      "labelPlural": "Story Pages",
+      "labelSingular": "Story Page"
+    },
+    "users": {
+      "labelPlural": "Users",
+      "labelSingular": "User"
+    }
+  },
+  "fields": {
+    "publishedAt": {
+      "label": "Published At"
+    },
+    "title": {
+      "label": "Title"
+    }
+  },
+  "globals": {
+    "site-footer": {
+      "label": "Site Footer"
+    },
+    "site-header": {
+      "label": "Site Header"
     }
   }
 }

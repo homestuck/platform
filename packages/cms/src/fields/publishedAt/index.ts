@@ -2,6 +2,8 @@ import type { DateField } from 'payload'
 
 import { deepMerge } from 'payload'
 
+import { t } from '#i18n'
+
 import { populatePublishedAt } from './hooks/populatePublishedAt'
 
 export type PublishedAtField = (args?: Args) => DateField
@@ -24,7 +26,7 @@ export const publishedAtField: PublishedAtField = ({ overrides = {} } = {}) =>
       hooks: {
         beforeChange: [populatePublishedAt],
       },
-      label: 'Published At',
+      label: t('fields:publishedAt:label'),
       name: 'publishedAt',
       required: false,
       type: 'date',

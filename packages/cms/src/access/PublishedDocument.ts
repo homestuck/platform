@@ -1,8 +1,10 @@
 import type { Access } from 'payload'
 
-import { isGlobalAdmin } from './GlobalAdmin'
+import { isGlobalAdmin } from './globalAdmin'
 
-export const PublishedDocumentAccess: Access = ({ req: { user } }) =>
+export type PublishedDocumentAccess = Access
+
+export const publishedDocumentAccess: PublishedDocumentAccess = ({ req: { user } }) =>
   isGlobalAdmin(user) ?? {
     _status: {
       equals: 'published',

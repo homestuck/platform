@@ -1,9 +1,15 @@
 import type { CollectionConfig } from 'payload'
 
-export const Permissions = {
+import { t } from '#i18n'
+
+export const Permissions: CollectionConfig<'permissions'> = {
   admin: {
     group: 'Access Control',
   },
   fields: [],
+  labels: {
+    plural: t('collections:permissions:labelPlural'),
+    singular: t('collections:permissions:labelSingular'),
+  },
   slug: 'permissions' as const,
-} satisfies CollectionConfig
+} as const

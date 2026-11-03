@@ -1,4 +1,4 @@
-import type { TaskConfig, TaskSlug } from 'payload'
+import type { TaskConfig } from 'payload'
 
 export const createHomePage = {
   handler: async ({ req }) => {
@@ -16,5 +16,5 @@ export const createHomePage = {
       },
     }
   },
-  slug: 'createHomePage' as TaskSlug,
+  slug: 'createHomePage',
 } satisfies TaskConfig

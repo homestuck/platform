@@ -1,6 +1,8 @@
 import type { CollectionConfig } from 'payload'
 
-export const Roles = {
+import { t } from '#i18n'
+
+export const Roles: CollectionConfig<'roles'> = {
   admin: {
     group: 'Access Control',
   },
@@ -24,5 +26,9 @@ export const Roles = {
     //   type: 'relationship',
     // },
   ],
+  labels: {
+    plural: t('collections:roles:labelPlural'),
+    singular: t('collections:roles:labelSingular'),
+  },
   slug: 'roles' as const,
-} satisfies CollectionConfig
+} as const

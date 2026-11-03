@@ -1,5 +1,6 @@
 import type { CustomTranslationsObject } from './types'
 import type { I18nOptions } from '@payloadcms/translations'
+import type { LocalizationConfig } from 'payload'
 
 import { en } from '@payloadcms/translations/languages/en'
 
@@ -7,6 +8,17 @@ import enDict from './dictionaries/en.json'
 
 export const translations = {
   en: enDict as CustomTranslationsObject,
+} as const
+
+export const localization: LocalizationConfig = {
+  defaultLocale: 'en-US',
+  fallback: true,
+  locales: [
+    {
+      code: 'en-US',
+      label: 'English',
+    },
+  ],
 }
 
 export const i18nConfig: I18nOptions<CustomTranslationsObject> = {

@@ -1,12 +1,17 @@
 import type { CollectionConfig } from 'payload'
 
-import { PublishedDocumentAccess } from '#access/PublishedDocument'
+import { publishedDocumentAccess } from '#access/publishedDocument'
+import { t } from '#i18n'
 
-export const Assets = {
+export const Assets: CollectionConfig<'assets'> = {
   access: {
-    read: PublishedDocumentAccess,
+    read: publishedDocumentAccess,
   },
   fields: [],
+  labels: {
+    plural: t('collections:assets:labelPlural'),
+    singular: t('collections:assets:labelSingular'),
+  },
   slug: 'assets',
   upload: {
     disableLocalStorage: true,
@@ -18,4 +23,4 @@ export const Assets = {
       validate: true,
     },
   },
-} satisfies CollectionConfig
+} as const
