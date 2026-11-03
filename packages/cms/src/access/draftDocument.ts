@@ -1,7 +1,7 @@
 import type { Access } from 'payload'
 
-import { isAuthenticated } from './authenticatedAccess'
-import { isGlobalAdmin } from './globalAdminAccess'
+import { isAuthenticated } from './authenticated'
+import { isGlobalAdmin } from './globalAdmin'
 
 export type DraftDocumentAccess = Access
 

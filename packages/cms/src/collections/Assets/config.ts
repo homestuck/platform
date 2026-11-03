@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-import { publishedDocumentAccess } from '#access/publishedDocumentAccess'
+import { publishedDocumentAccess } from '#access/publishedDocument'
 import { t } from '#i18n'
 
 export const Assets: CollectionConfig<'assets'> = {

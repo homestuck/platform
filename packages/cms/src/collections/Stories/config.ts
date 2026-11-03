@@ -1,7 +1,7 @@
 import type { CollectionConfig, UnnamedGroupField } from 'payload'
 
-import { draftDocumentAccess } from '#access/draftDocumentAccess'
-import { everyoneAccess } from '#access/everyoneAccess'
+import { draftDocumentAccess } from '#access/draftDocument'
+import { everyoneAccess } from '#access/everyone'
 import { publishedAtField } from '#fields/publishedAt'
 import { titleField } from '#fields/title'
 import { t } from '#i18n'
