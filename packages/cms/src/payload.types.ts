@@ -351,6 +351,7 @@ export interface Story {
   id: string;
   parent?: (string | null) | Story;
   publishedAt?: string | null;
+  title?: string | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -906,6 +907,7 @@ export interface RolesSelect<T extends boolean = true> {
 export interface StoriesSelect<T extends boolean = true> {
   parent?: T;
   publishedAt?: T;
+  title?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;

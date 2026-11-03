@@ -9,17 +9,6 @@ import { Stories } from './Stories/config'
 import { StoryPages } from './StoryPages/config'
 import { Users } from './Users/config'
 
-const collections = {
-  Assets,
-  Pages,
-  Permissions,
-  Posts,
-  Roles,
-  Stories,
-  StoryPages,
-  Users,
-}
-
 export const collectionConfigs = [
   Assets,
   Pages,
@@ -30,5 +19,3 @@ export const collectionConfigs = [
   StoryPages,
   Users,
 ] as CollectionConfig[]
-
-const collectionSlugs = Object.values(collections).map(({ slug }) => slug)

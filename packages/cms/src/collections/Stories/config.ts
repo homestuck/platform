@@ -1,8 +1,9 @@
 import type { CollectionConfig, UnnamedGroupField } from 'payload'
 
-import { draftDocumentAccess } from '#access/draftDocument'
-import { everyoneAccess } from '#access/everyone'
+import { draftDocumentAccess } from '#access/draftDocumentAccess'
+import { everyoneAccess } from '#access/everyoneAccess'
 import { publishedAtField } from '#fields/publishedAt'
+import { titleField } from '#fields/title'
 import { t } from '#i18n'
 
 const sidebarGroupFields = () =>
@@ -20,7 +21,7 @@ export const Stories: CollectionConfig<'stories'> = {
     read: everyoneAccess,
     update: draftDocumentAccess,
   },
-  fields: [sidebarGroupFields()],
+  fields: [sidebarGroupFields(), titleField()],
   hierarchy: {
     admin: {
       injectSidebarTab: false,

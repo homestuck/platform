@@ -10,7 +10,7 @@ type Args = {
   overrides?: Partial<TextField>
 }
 
-export const publishedAtField: TitleField = ({ overrides = {} } = {}) =>
+export const titleField: TitleField = ({ overrides = {} } = {}) =>
   deepMerge<TextField>(
     {
       label: t('fields:title:label'),

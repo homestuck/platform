@@ -1,6 +1,6 @@
 import type { Access } from 'payload'
 
-import { isGlobalAdmin } from './globalAdmin'
+import { isGlobalAdmin } from './globalAdminAccess'
 
 export type PublishedDocumentAccess = Access
 

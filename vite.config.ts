@@ -14,14 +14,35 @@ export default defineConfig({
     options: { reportUnusedDisableDirectives: 'warn', typeAware: true, typeCheck: true },
     overrides: [
       {
-        files: ['packages/cms/src/**'],
+        files: [
+          'packages/cms/src/access/**',
+          'packages/cms/src/fields/**',
+          'packages/cms/src/utils/**',
+        ],
         rules: {
           'unicorn/filename-case': [
             'error',
             {
               cases: {
                 camelCase: true,
-                kebabCase: true,
+              },
+              ignore: ['^.*DOM.*$', '^.*URL.*$'],
+            },
+          ],
+        },
+      },
+      {
+        files: [
+          'packages/cms/src/blocks/**',
+          'packages/cms/src/collections/**',
+          'packages/cms/src/globals/**',
+        ],
+        rules: {
+          'unicorn/filename-case': [
+            'error',
+            {
+              cases: {
+                camelCase: true,
                 pascalCase: true,
               },
               ignore: ['^.*DOM.*$', '^.*URL.*$'],
