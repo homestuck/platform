@@ -17,7 +17,7 @@
   "scripts": {
     "build": "pnpm run generate",
     "clean": "rm -rf .turbo node_modules",
-    "generate": "tsx src/scripts/generate.ts",
+    "generate": "vpx src/scripts/generate.ts",
     "precommit": "pnpm run generate",
     "typecheck": "tsc --noEmit"
   },
@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "style-dictionary": "^5.7.1",
-    "style-dictionary-utils": "^6.0.1",
-    "tsx": "catalog:"
+    "style-dictionary-utils": "^6.0.1"
   }
 }

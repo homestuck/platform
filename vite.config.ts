@@ -28,13 +28,14 @@ export default defineConfig({
         },
       },
       {
-        files: ['packages/cms/src/components/**'],
+        files: ['packages/cms/src/blocks/**', 'packages/cms/src/components/**'],
         rules: {
           'unicorn/filename-case': [
             'error',
             {
               cases: {
                 kebabCase: true,
+                pascalCase: true,
               },
               ignore: ['^.*DOM.*$', '^.*URL.*$'],
             },
@@ -42,11 +43,7 @@ export default defineConfig({
         },
       },
       {
-        files: [
-          'packages/cms/src/blocks/**',
-          'packages/cms/src/collections/**',
-          'packages/cms/src/globals/**',
-        ],
+        files: ['packages/cms/src/collections/**', 'packages/cms/src/globals/**'],
         rules: {
           'unicorn/filename-case': [
             'error',

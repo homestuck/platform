@@ -17,7 +17,7 @@
     "start": "next start",
     "test": "pnpm run test:int && pnpm run test:e2e",
     "test:e2e": "playwright test --config=playwright.config.ts",
-    "test:int": "vitest run --config ./vitest.config.mts"
+    "test:int": "vp test run --config ./vitest.config.mts"
   },
   "dependencies": {
     "@homestuck/cms": "workspace:^",

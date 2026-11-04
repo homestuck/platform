@@ -5,23 +5,16 @@
   "type": "module",
   "imports": {
     "#access/*": "./src/access/*.ts",
-    "#blocks/*": "./src/blocks/*.ts",
-    "#collections/*": "./src/collections/*.ts",
-    "#editor/*": "./src/editor/*.ts",
     "#fields/*": "./src/fields/*/index.ts",
-    "#globals/*": "./src/globals/*.ts",
-    "#jobs/*": "./src/jobs/*.ts",
     "#payload.types": "./src/payload.types.ts",
     "#payload.config": "./src/payload.config.ts",
-    "#plugins/*": "./src/plugins/*.ts",
     "#i18n": "./src/i18n/index.ts",
-    "#i18n/*": "./src/i18n/*.ts",
-    "#storage/*": "./src/storage/*.ts",
     "#utils/*": "./src/utils/*.ts"
   },
   "exports": {
     "./*": "./src/*.ts",
-    "./components/*": "./src/components/*.tsx"
+    "./components/*": "./src/components/*.tsx",
+    "./blocks/*": "./src/blocks/*.tsx"
   },
   "scripts": {
     "clean": "rm -rf .turbo node_modules",

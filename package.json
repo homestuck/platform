@@ -15,6 +15,7 @@
     "lint:fix": "vp lint --fix",
     "precommit": "lint-staged",
     "preinstall": "pnpm dlx only-allow pnpm",
+    "prepare": "vp config",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {

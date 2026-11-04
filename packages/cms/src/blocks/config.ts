@@ -1,3 +1,5 @@
 import type { Block } from 'payload'
 
-export const blockConfigs: Block[] = []
+import { Archive } from './Archive/config'
+
+export const blockConfigs: Block[] = [Archive]

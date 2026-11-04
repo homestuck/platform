@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "build": "tsx src/scripts/build-components.ts",
+    "build": "vpx src/scripts/build-components.ts",
     "clean": "rm -rf .turbo node_modules",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@homestuck/types": "workspace:^",
-    "react": "catalog:",
-    "tsx": "catalog:"
+    "react": "catalog:"
   }
 }
