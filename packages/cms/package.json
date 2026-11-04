@@ -20,7 +20,8 @@
     "#utils/*": "./src/utils/*.ts"
   },
   "exports": {
-    "./*": "./src/*.ts"
+    "./*": "./src/*.ts",
+    "./components/*": "./src/components/*.tsx"
   },
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
