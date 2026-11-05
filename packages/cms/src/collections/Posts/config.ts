@@ -3,7 +3,7 @@ import type { CollectionConfig } from 'payload'
 import { publishedAtField } from '#fields/publishedAt'
 import { t } from '#i18n'
 
-export const Posts: CollectionConfig<'posts'> = {
+export const Posts = {
   fields: [publishedAtField()],
   labels: {
     plural: t('collections:posts:labelPlural'),
@@ -16,4 +16,4 @@ export const Posts: CollectionConfig<'posts'> = {
       validate: true,
     },
   },
-} as const
+} as const satisfies CollectionConfig<'posts'>

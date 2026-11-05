@@ -1,6 +1,6 @@
-import { searchPlugin } from '@payloadcms/plugin-search'
+import { searchPlugin as search } from '@payloadcms/plugin-search'
 
-export const search = () =>
-  searchPlugin({
+export const searchPlugin = () =>
+  search({
     collections: ['pages', 'posts'],
   })

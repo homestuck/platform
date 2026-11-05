@@ -3,7 +3,8 @@ import type { CollectionConfig } from 'payload'
 import { publishedAtField } from '#fields/publishedAt'
 import { t } from '#i18n'
 
-export const StoryPages: CollectionConfig<'story-pages'> = {
+export const StoryPages = {
+  admin: {},
   fields: [publishedAtField()],
   labels: {
     plural: t('collections:story-pages:labelPlural'),
@@ -16,4 +17,4 @@ export const StoryPages: CollectionConfig<'story-pages'> = {
       validate: true,
     },
   },
-} as const
+} as const satisfies CollectionConfig<'story-pages'>

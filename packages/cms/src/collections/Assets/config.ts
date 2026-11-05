@@ -3,7 +3,7 @@ import type { CollectionConfig } from 'payload'
 import { publishedDocumentAccess } from '#access/publishedDocument'
 import { t } from '#i18n'
 
-export const Assets: CollectionConfig<'assets'> = {
+export const Assets = {
   access: {
     read: publishedDocumentAccess,
   },
@@ -23,4 +23,4 @@ export const Assets: CollectionConfig<'assets'> = {
       validate: true,
     },
   },
-} as const
+} as const satisfies CollectionConfig<'assets'>

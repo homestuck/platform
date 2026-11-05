@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { t } from '#i18n'
 
-export const Users: CollectionConfig<'users'> = {
+export const Users: CollectionConfig = {
   access: {
     // admin: LoggedInAccess,
     // create: EveryoneAccess,
@@ -31,7 +31,7 @@ export const Users: CollectionConfig<'users'> = {
     plural: t('collections:users:labelPlural'),
     singular: t('collections:users:labelSingular'),
   },
-  slug: 'users' as const,
+  slug: 'users',
   timestamps: true,
   versions: false,
-} as const
+} as const satisfies CollectionConfig<'users'>

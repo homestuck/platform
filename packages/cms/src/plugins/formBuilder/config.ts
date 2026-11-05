@@ -1,3 +1,3 @@
-import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
+import { formBuilderPlugin as formBuilder } from '@payloadcms/plugin-form-builder'
 
-export const formBuilder = () => formBuilderPlugin({})
+export const formBuilderPlugin = () => formBuilder({})

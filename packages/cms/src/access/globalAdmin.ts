@@ -1,7 +1,7 @@
 import type { User } from '#payload.types'
-import type { FieldAccess, TypeWithID } from 'payload'
+import type { Access, TypeWithID } from 'payload'
 
-export type GlobalAdminAccess = FieldAccess<TypeWithID, User>
+export type GlobalAdminAccess = Access<TypeWithID>
 
 export const isGlobalAdmin: (user: null | User) => boolean = (user) => Boolean(user?.isGlobalAdmin)
 

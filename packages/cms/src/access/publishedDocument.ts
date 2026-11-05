@@ -1,8 +1,8 @@
-import type { Access } from 'payload'
+import type { Access, TypeWithID } from 'payload'
 
 import { isGlobalAdmin } from './globalAdmin'
 
-export type PublishedDocumentAccess = Access
+export type PublishedDocumentAccess = Access<TypeWithID>
 
 export const publishedDocumentAccess: PublishedDocumentAccess = ({ req: { user } }) =>
   isGlobalAdmin(user) ?? {

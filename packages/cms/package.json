@@ -12,7 +12,9 @@
     "#utils/*": "./src/utils/*.ts"
   },
   "exports": {
-    "./*": "./src/*.ts",
+    "./payload.config": "./src/payload.config.ts",
+    "./payload.types": "./src/payload.types.ts",
+    "./components/admin": "./src/components/admin/index.ts",
     "./components/*": "./src/components/*.tsx",
     "./blocks/*": "./src/blocks/*.tsx"
   },
@@ -32,11 +34,13 @@
     "@payloadcms/next": "catalog:payload",
     "@payloadcms/plugin-form-builder": "catalog:payload",
     "@payloadcms/plugin-search": "catalog:payload",
+    "@payloadcms/plugin-seo": "catalog:payload",
     "@payloadcms/richtext-lexical": "catalog:payload",
     "@payloadcms/storage-s3": "catalog:payload",
     "@payloadcms/translations": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
     "cn": "catalog:",
+    "lucide-react": "catalog:",
     "next": "catalog:",
     "payload": "catalog:payload",
     "react": "catalog:",

@@ -3,6 +3,10 @@
     "archive": {
       "labelPlural": "Archives",
       "labelSingular": "Archive"
+    },
+    "form": {
+      "labelPlural": "Forms",
+      "labelSingular": "Form"
     }
   },
   "collections": {
@@ -42,6 +46,9 @@
   "fields": {
     "publishedAt": {
       "label": "Published At"
+    },
+    "slug": {
+      "label": "Slug"
     },
     "title": {
       "label": "Title"

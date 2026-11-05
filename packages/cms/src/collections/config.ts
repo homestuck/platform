@@ -9,7 +9,7 @@ import { Stories } from './Stories/config'
 import { StoryPages } from './StoryPages/config'
 import { Users } from './Users/config'
 
-export const collectionConfigs = [
+export const collectionConfigs: CollectionConfig[] = [
   Assets,
   Pages,
   Permissions,
@@ -18,4 +18,4 @@ export const collectionConfigs = [
   Stories,
   StoryPages,
   Users,
-] as CollectionConfig[]
+] as const

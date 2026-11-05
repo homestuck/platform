@@ -1,7 +1,7 @@
 import type { User } from '#payload.types'
-import type { FieldAccess, TypeWithID } from 'payload'
+import type { Access, TypeWithID } from 'payload'
 
-export type AuthenticatedAccess = FieldAccess<TypeWithID, User>
+export type AuthenticatedAccess = Access<TypeWithID>
 
 export const isAuthenticated: (user: null | User) => boolean = Boolean
 

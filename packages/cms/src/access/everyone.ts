@@ -1,5 +1,5 @@
-import type { Access } from 'payload'
+import type { Access, TypeWithID } from 'payload'
 
-export type EveryoneAccess = Access
+export type EveryoneAccess = Access<TypeWithID>
 
 export const everyoneAccess: EveryoneAccess = () => true

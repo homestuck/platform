@@ -62,35 +62,25 @@ export type SupportedTimezones =
   | 'Pacific/Fiji';
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "LexicalNodes_5A52E5F7".
+ * via the `definition` "LexicalNodes_7262A34B".
  */
-export type LexicalNodes_5A52E5F7 =
+export type LexicalNodes_7262A34B =
   | SerializedTextNode
   | SerializedTabNode
   | SerializedLineBreakNode
-  | SerializedParagraphNode<LexicalNodes_5A52E5F7>
-  | SerializedHorizontalRuleNode
-  | SerializedUploadNode<'assets'>
-  | SerializedQuoteNode<LexicalNodes_5A52E5F7>
-  | SerializedRelationshipNode<
-      | 'pages'
-      | 'permissions'
-      | 'posts'
-      | 'roles'
-      | 'stories'
-      | 'story-pages'
-      | 'users'
-      | 'payload-kv'
-      | 'payload-jobs'
-      | 'payload-locked-documents'
-      | 'payload-preferences'
-      | 'payload-migrations'
-    >
-  | SerializedAutoLinkNode<LexicalNodes_5A52E5F7, LexicalLinkFields>
-  | SerializedLinkNode<LexicalNodes_5A52E5F7, LexicalLinkFields>
-  | SerializedListNode<LexicalNodes_5A52E5F7>
-  | SerializedListItemNode<LexicalNodes_5A52E5F7>
-  | SerializedHeadingNode<LexicalNodes_5A52E5F7>;
+  | SerializedParagraphNode<LexicalNodes_7262A34B>
+  | SerializedHeadingNode<LexicalNodes_7262A34B>;
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LexicalNodes_C680EDD9".
+ */
+export type LexicalNodes_C680EDD9 =
+  | SerializedTextNode
+  | SerializedTabNode
+  | SerializedLineBreakNode
+  | SerializedParagraphNode<LexicalNodes_C680EDD9>
+  | SerializedBlockNode<ArchiveBlock_90444DB9>
+  | SerializedHeadingNode<LexicalNodes_C680EDD9>;
 
 export interface Config {
   auth: {
@@ -98,6 +88,8 @@ export interface Config {
   };
   blocks: {
     archive: ArchiveBlock;
+    formBlock: FormBlock;
+    richText: RichTextBlock;
   };
   collections: {
     assets: Asset;
@@ -194,18 +186,51 @@ export interface UserAuthOperations {
  * via the `definition` "ArchiveBlock".
  */
 export interface ArchiveBlock {
+  /**
+   * The method to use to populate this Archive.
+   */
+  populateBy?: ('collection' | 'selection') | null;
+  /**
+   * The collection(s) documents to display in this Archive.
+   */
+  relationTo?: ('stories' | 'story-pages' | 'pages') | null;
+  /**
+   * How many documents to display in this Archive. (Set to 0 to display all documents.)
+   */
+  limit?: number | null;
+  /**
+   * Which documents to display in this Archive.
+   */
+  selectedDocs?:
+    | (
+        | {
+            relationTo: 'stories';
+            value: string | Story;
+          }
+        | {
+            relationTo: 'story-pages';
+            value: string | StoryPage;
+          }
+        | {
+            relationTo: 'pages';
+            value: string | Page;
+          }
+      )[]
+    | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'archive';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "assets".
+ * via the `definition` "stories".
  */
-export interface Asset {
+export interface Story {
   id: string;
-  prefix?: string | null;
-  _objectKey?: string | null;
+  parent?: (string | null) | Story;
+  slug: string;
+  publishedAt?: string | null;
+  title?: string | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -217,25 +242,9 @@ export interface Asset {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  original?: {
-    filename?: string | null;
-    url?: string | null;
-    mimeType?: string | null;
-    filesize?: number | null;
-    width?: number | null;
-    height?: number | null;
-    prefix?: string | null;
-    _objectKey?: string | null;
-  };
-  focalX?: number | null;
-  focalY?: number | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+  hierarchyType?: string[] | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -275,110 +284,6 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
- */
-export interface Page {
-  id: string;
-  parent?: (string | null) | Page;
-  title: string;
-  slug: string;
-  layout?: unknown[] | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-  _h_slugPath?: string | null;
-  _h_titlePath?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "permissions".
- */
-export interface Permission {
-  id: string;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "posts".
- */
-export interface Post {
-  id: string;
-  publishedAt?: string | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "roles".
- */
-export interface Role {
-  id: string;
-  /**
-   * The unique name of this role (e.g., "Admin", "Editor", "Viewer").
-   */
-  name: string;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "stories".
- */
-export interface Story {
-  id: string;
-  parent?: (string | null) | Story;
-  publishedAt?: string | null;
-  title?: string | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-  _h_slugPath?: string | null;
-  _h_titlePath?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "story-pages".
  */
 export interface StoryPage {
@@ -398,6 +303,41 @@ export interface StoryPage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: string;
+  parent?: (string | null) | Page;
+  title: string;
+  slug: string;
+  layout?: ArchiveBlock[] | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+  hierarchyType?: string[] | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FormBlock".
+ */
+export interface FormBlock {
+  form: string | Form;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'formBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "forms".
  */
 export interface Form {
@@ -406,7 +346,7 @@ export interface Form {
   fields?: (Checkbox | Country | Email | Message | Number | Select | State | Text | Textarea)[] | null;
   submitButtonLabel?: string | null;
   confirmationType?: ('message' | 'redirect') | null;
-  confirmationMessage?: LexicalRichText<LexicalNodes_5A52E5F7>;
+  confirmationMessage?: LexicalRichText<LexicalNodes_7262A34B>;
   redirect?: {
     url: string;
   };
@@ -418,7 +358,7 @@ export interface Form {
         replyTo?: string | null;
         emailFrom?: string | null;
         subject: string;
-        message?: LexicalRichText<LexicalNodes_5A52E5F7> | null;
+        message?: LexicalRichText<LexicalNodes_7262A34B> | null;
         id?: string | null;
       }[]
     | null;
@@ -478,7 +418,7 @@ export interface Email {
  * via the `definition` "Message".
  */
 export interface Message {
-  message?: LexicalRichText<LexicalNodes_5A52E5F7> | null;
+  message?: LexicalRichText<LexicalNodes_7262A34B> | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'message';
@@ -559,6 +499,112 @@ export interface Textarea {
   id?: string | null;
   blockName?: string | null;
   blockType: 'textarea';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "RichTextBlock".
+ */
+export interface RichTextBlock {
+  richText?: LexicalRichText<LexicalNodes_C680EDD9> | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'richText';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "assets".
+ */
+export interface Asset {
+  id: string;
+  prefix?: string | null;
+  _objectKey?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  original?: {
+    filename?: string | null;
+    url?: string | null;
+    mimeType?: string | null;
+    filesize?: number | null;
+    width?: number | null;
+    height?: number | null;
+    prefix?: string | null;
+    _objectKey?: string | null;
+  };
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "permissions".
+ */
+export interface Permission {
+  id: string;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "posts".
+ */
+export interface Post {
+  id: string;
+  publishedAt?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "roles".
+ */
+export interface Role {
+  id: string;
+  /**
+   * The unique name of this role (e.g., "Admin", "Editor", "Viewer").
+   */
+  name: string;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -877,6 +923,7 @@ export interface PagesSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
+  hierarchyType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -917,6 +964,7 @@ export interface RolesSelect<T extends boolean = true> {
  */
 export interface StoriesSelect<T extends boolean = true> {
   parent?: T;
+  slug?: T;
   publishedAt?: T;
   title?: T;
   createdBy?: T;
@@ -926,6 +974,7 @@ export interface StoriesSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
+  hierarchyType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1428,6 +1477,48 @@ export interface TaskSchedulePublish {
   output?: unknown;
 }
 /**
+ * Multiple blocks resolve to the `ArchiveBlock` interface with different fields, so a content hash is appended to keep the generated types stable and unambiguous. Set a unique `interfaceName` on the block to choose the name yourself. See https://payloadcms.com/docs/typescript/generating-types#block-interface-name-collisions
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ArchiveBlock_90444DB9".
+ */
+export interface ArchiveBlock_90444DB9 {
+  id: string;
+  blockType: 'archive';
+  /**
+   * The method to use to populate this Archive.
+   */
+  populateBy?: ('collection' | 'selection') | null;
+  /**
+   * The collection(s) documents to display in this Archive.
+   */
+  relationTo?: ('stories' | 'story-pages' | 'pages') | null;
+  /**
+   * How many documents to display in this Archive. (Set to 0 to display all documents.)
+   */
+  limit?: number | null;
+  /**
+   * Which documents to display in this Archive.
+   */
+  selectedDocs?:
+    | (
+        | {
+            relationTo: 'stories';
+            value: string | Story;
+          }
+        | {
+            relationTo: 'story-pages';
+            value: string | StoryPage;
+          }
+        | {
+            relationTo: 'pages';
+            value: string | Page;
+          }
+      )[]
+    | null;
+  blockName?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "auth".
  */
@@ -1486,76 +1577,6 @@ export interface SerializedParagraphNode<TChildren> extends SerializedLexicalEle
   textStyle: string;
 }
 
-export interface SerializedHorizontalRuleNode {
-  type: 'horizontalrule';
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-}
-
-export type SerializedUploadNode<TSlugs extends keyof Config['collections'], TFields = { [k: string]: unknown }> = {
-  type: 'upload';
-  format: LexicalElementFormat;
-  id: string;
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-  fields: TFields;
-} & {
-  [TSlug in TSlugs]: {
-    relationTo: TSlug;
-    value: Config['collections'][TSlug]['id'] | Config['collections'][TSlug];
-  };
-}[TSlugs];
-
-export interface SerializedQuoteNode<TChildren> extends SerializedLexicalElementBase<TChildren> {
-  type: 'quote';
-}
-
-export type SerializedRelationshipNode<TSlugs extends keyof Config['collections']> = {
-  type: 'relationship';
-  format: LexicalElementFormat;
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-} & {
-  [TSlug in TSlugs]: {
-    relationTo: TSlug;
-    value: Config['collections'][TSlug]['id'] | Config['collections'][TSlug];
-  };
-}[TSlugs];
-
-export interface LexicalLinkFields {
-  [k: string]: unknown;
-  doc?: {
-    relationTo: string;
-    value: Config['db']['defaultIDType'] | { [k: string]: unknown; id: Config['db']['defaultIDType'] };
-  } | null;
-  linkType: 'custom' | 'internal';
-  newTab: boolean;
-  url?: string;
-}
-export interface SerializedLinkNode<TChildren, TFields = LexicalLinkFields> extends SerializedLexicalElementBase<TChildren> {
-  type: 'link';
-  fields: TFields;
-  id?: string;
-}
-export interface SerializedAutoLinkNode<TChildren, TFields = LexicalLinkFields> extends SerializedLexicalElementBase<TChildren> {
-  type: 'autolink';
-  fields: TFields;
-}
-
-export interface SerializedListNode<TChildren> extends SerializedLexicalElementBase<TChildren> {
-  type: 'list';
-  checked?: boolean;
-  listType: 'number' | 'bullet' | 'check';
-  start: number;
-  tag: 'ul' | 'ol';
-}
-
-export interface SerializedListItemNode<TChildren> extends SerializedLexicalElementBase<TChildren> {
-  type: 'listitem';
-  checked?: boolean;
-  value: number;
-}
-
 export interface SerializedHeadingNode<
   TChildren,
   TTag extends 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
@@ -1576,6 +1597,20 @@ export interface LexicalRichText<TNode> {
     version: number;
   };
 }
+
+export type SerializedBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
+  type: 'block';
+  format: LexicalElementFormat;
+  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
+  version: number;
+  fields: { id: string; blockName?: string | null } & Omit<TFields, 'id' | 'blockName'>;
+} : never;
+export type SerializedInlineBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
+  type: 'inlineBlock';
+  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
+  version: number;
+  fields: { id: string } & Omit<TFields, 'id'>;
+} : never;
 
 
 declare module 'payload' {

@@ -2,7 +2,9 @@ import type { CollectionConfig } from 'payload'
 
 import { t } from '#i18n'
 
-export const Pages: CollectionConfig<'pages'> = {
+import { PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
+
+export const Pages = {
   admin: {
     useAsTitle: 'title',
   },
@@ -18,27 +20,31 @@ export const Pages: CollectionConfig<'pages'> = {
       useAsSlug: 'title',
     },
     {
-      blocks: [],
+      blocks: ['archive'],
       name: 'layout',
       type: 'blocks',
     },
   ],
   hierarchy: {
     admin: {
-      injectSidebarTab: false,
+      components: {
+        Icon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
+      },
     },
     allowHasMany: false,
+    collectionSpecific: true,
     parentFieldName: 'parent',
   },
   labels: {
     plural: t('collections:pages:labelPlural'),
     singular: t('collections:pages:labelSingular'),
   },
-  slug: 'pages' as const,
+
+  slug: 'pages',
   versions: {
     drafts: {
       schedulePublish: true,
       validate: true,
     },
   },
-} as const
+} as const satisfies CollectionConfig<'pages'>
