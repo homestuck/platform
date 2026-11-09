@@ -3,4 +3,4 @@ import type { GlobalConfig } from 'payload'
 import { SiteFooter } from './SiteFooter/config'
 import { SiteHeader } from './SiteHeader/config'
 
-export const globalConfigs: GlobalConfig[] = [SiteFooter, SiteHeader]
+export const globalConfigs = [SiteFooter, SiteHeader] as const satisfies GlobalConfig[]

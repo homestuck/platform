@@ -102,6 +102,7 @@ export interface Config {
     users: User;
     forms: Form;
     'form-submissions': FormSubmission;
+    redirects: Redirect;
     search: Search;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
@@ -121,6 +122,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
+    redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     search: SearchSelect<false> | SearchSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
@@ -227,10 +229,13 @@ export interface ArchiveBlock {
  */
 export interface Story {
   id: string;
-  parent?: (string | null) | Story;
+  parent?: {
+    relationTo: 'stories';
+    value: string | Story;
+  } | null;
+  title: string;
   slug: string;
   publishedAt?: string | null;
-  title?: string | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -277,6 +282,8 @@ export interface User {
         id: string;
         createdAt?: string | null;
         expiresAt: string;
+        refreshCount?: number | null;
+        refreshedAt?: string | null;
       }[]
     | null;
   password?: string | null;
@@ -288,6 +295,8 @@ export interface User {
  */
 export interface StoryPage {
   id: string;
+  title?: string | null;
+  slug: string;
   publishedAt?: string | null;
   createdBy?: {
     relationTo: 'users';
@@ -324,7 +333,6 @@ export interface Page {
   _status?: ('draft' | 'published') | null;
   _h_slugPath?: string | null;
   _h_titlePath?: string | null;
-  hierarchyType?: string[] | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -632,6 +640,32 @@ export interface FormSubmission {
   createdAt: string;
 }
 /**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects".
+ */
+export interface Redirect {
+  id: string;
+  from: string;
+  to?: {
+    type?: ('reference' | 'custom') | null;
+    reference?: {
+      relationTo: 'pages';
+      value: string | Page;
+    } | null;
+    url?: string | null;
+  };
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This is a collection of automatically created search results. These results are used by the global site search and will be updated automatically as documents in the CMS are created or updated.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -828,6 +862,10 @@ export interface PayloadLockedDocument {
         value: string | FormSubmission;
       } | null)
     | ({
+        relationTo: 'redirects';
+        value: string | Redirect;
+      } | null)
+    | ({
         relationTo: 'search';
         value: string | Search;
       } | null);
@@ -923,7 +961,6 @@ export interface PagesSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
-  hierarchyType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -964,9 +1001,9 @@ export interface RolesSelect<T extends boolean = true> {
  */
 export interface StoriesSelect<T extends boolean = true> {
   parent?: T;
+  title?: T;
   slug?: T;
   publishedAt?: T;
-  title?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -981,6 +1018,8 @@ export interface StoriesSelect<T extends boolean = true> {
  * via the `definition` "story-pages_select".
  */
 export interface StoryPagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
   publishedAt?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1013,6 +1052,8 @@ export interface UsersSelect<T extends boolean = true> {
         id?: T;
         createdAt?: T;
         expiresAt?: T;
+        refreshCount?: T;
+        refreshedAt?: T;
       };
 }
 /**
@@ -1162,6 +1203,24 @@ export interface FormSubmissionsSelect<T extends boolean = true> {
         field?: T;
         value?: T;
         id?: T;
+      };
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects_select".
+ */
+export interface RedirectsSelect<T extends boolean = true> {
+  from?: T;
+  to?:
+    | T
+    | {
+        type?: T;
+        reference?: T;
+        url?: T;
       };
   createdBy?: T;
   updatedBy?: T;
@@ -1381,6 +1440,7 @@ export interface CollectionQueryWidget {
       | 'users'
       | 'forms'
       | 'form-submissions'
+      | 'redirects'
       | 'search';
     where?:
       | {
@@ -1415,6 +1475,7 @@ export interface ActivityWidget {
           | 'users'
           | 'forms'
           | 'form-submissions'
+          | 'redirects'
           | 'search'
         )[]
       | null;

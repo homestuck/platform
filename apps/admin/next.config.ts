@@ -8,7 +8,7 @@ import { env } from '@homestuck/env/payload'
 import { redirects } from './redirects'
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
+  //cacheComponents: true,
   images: {
     qualities: [100],
     remotePatterns: [env.NEXT_PUBLIC_PAYLOAD_URL].map((item) => {
@@ -19,8 +19,8 @@ const nextConfig: NextConfig = {
       } as URL
     }),
   },
-  partialPrefetching: true,
-  reactCompiler: true,
+  //partialPrefetching: true,
+  //reactCompiler: true,
   reactStrictMode: true,
   redirects,
   turbopack: {

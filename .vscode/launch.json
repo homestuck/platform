@@ -13,6 +13,20 @@
     {
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/",
+      "name": "@homestuck/admin",
+      "presentation": {
+        "group": "1. Development",
+        "hidden": false
+      },
+      "request": "launch",
+      "runtimeArgs": ["@homestuck/admin#dev"],
+      "runtimeExecutable": "vpr",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
       "name": "@homestuck/design-system",
       "presentation": {
         "group": "1. Development",

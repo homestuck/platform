@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
+import { slugField } from '#fields/slug'
+import { titleField } from '#fields/title'
 import { t } from '#i18n'
 
 import { PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
@@ -9,16 +11,12 @@ export const Pages = {
     useAsTitle: 'title',
   },
   fields: [
-    {
-      name: 'title',
-      required: true,
-      type: 'text',
-    },
-    {
-      name: 'slug',
-      type: 'slug',
-      useAsSlug: 'title',
-    },
+    titleField({
+      overrides: {
+        required: true,
+      },
+    }),
+    slugField(),
     {
       blocks: ['archive'],
       name: 'layout',
@@ -29,17 +27,15 @@ export const Pages = {
     admin: {
       components: {
         Icon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
+        SmallIcon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
       },
     },
-    allowHasMany: false,
-    collectionSpecific: true,
     parentFieldName: 'parent',
   },
   labels: {
     plural: t('collections:pages:labelPlural'),
     singular: t('collections:pages:labelSingular'),
   },
-
   slug: 'pages',
   versions: {
     drafts: {

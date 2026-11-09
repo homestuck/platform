@@ -6,6 +6,7 @@
   "imports": {
     "#access/*": "./src/access/*.ts",
     "#fields/*": "./src/fields/*/index.ts",
+    "#hooks/*": "./src/hooks/*.ts",
     "#payload.types": "./src/payload.types.ts",
     "#payload.config": "./src/payload.config.ts",
     "#i18n": "./src/i18n/index.ts",
@@ -33,6 +34,7 @@
     "@payloadcms/graphql": "catalog:payload",
     "@payloadcms/next": "catalog:payload",
     "@payloadcms/plugin-form-builder": "catalog:payload",
+    "@payloadcms/plugin-redirects": "catalog:payload",
     "@payloadcms/plugin-search": "catalog:payload",
     "@payloadcms/plugin-seo": "catalog:payload",
     "@payloadcms/richtext-lexical": "catalog:payload",

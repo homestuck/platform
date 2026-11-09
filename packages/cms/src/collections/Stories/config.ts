@@ -6,6 +6,7 @@ import { globalAdminAccess } from '#access/globalAdmin'
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
+import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
 
 import { STORIES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
@@ -15,7 +16,20 @@ const sidebarGroupFields = () =>
     admin: {
       position: 'sidebar',
     },
-    fields: [slugField(), publishedAtField()],
+    fields: [
+      slugField(),
+      publishedAtField(),
+      {
+        admin: {
+          position: 'sidebar',
+        },
+        hasMany: false,
+        name: 'parent',
+        relationTo: ['stories'],
+        type: 'relationship',
+        validate: validateIsNotSelf,
+      },
+    ],
     type: 'group',
   }) as UnnamedGroupField
 
@@ -26,16 +40,27 @@ export const Stories = {
     read: everyoneAccess,
     update: draftDocumentAccess,
   },
-  fields: [sidebarGroupFields(), titleField()],
+  admin: {
+    useAsTitle: 'title',
+  },
+  fields: [
+    titleField({
+      overrides: {
+        required: true,
+      },
+    }),
+
+    sidebarGroupFields(),
+  ],
   hierarchy: {
     admin: {
       components: {
         Icon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
+        SmallIcon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
       },
-      injectSidebarTab: false,
     },
     allowHasMany: false,
-    collectionSpecific: { fieldName: 'hierarchyType' },
+    collectionSpecific: true,
     parentFieldName: 'parent',
   },
   labels: {

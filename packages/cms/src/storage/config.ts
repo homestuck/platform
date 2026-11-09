@@ -4,7 +4,7 @@ import { s3Storage } from '@payloadcms/storage-s3'
 
 import { env } from '@homestuck/env/s3'
 
-export const storageConfigs: StorageAdapter[] = [
+export const storageConfigs = [
   s3Storage({
     acl: 'private',
     bucket: env.S3_BUCKET,
@@ -22,4 +22,4 @@ export const storageConfigs: StorageAdapter[] = [
       region: env.S3_REGION,
     },
   }),
-]
+] as const satisfies StorageAdapter[]
