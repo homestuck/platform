@@ -93,12 +93,14 @@ export interface Config {
   };
   collections: {
     assets: Asset;
+    contributors: Contributor;
     pages: Page;
     permissions: Permission;
     posts: Post;
     roles: Role;
     stories: Story;
     'story-pages': StoryPage;
+    tags: Tag;
     users: User;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -110,15 +112,21 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {};
+  collectionsJoins: {
+    stories: {
+      'navigation.pages': 'story-pages';
+    };
+  };
   collectionsSelect: {
     assets: AssetsSelect<false> | AssetsSelect<true>;
+    contributors: ContributorsSelect<false> | ContributorsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     permissions: PermissionsSelect<false> | PermissionsSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     roles: RolesSelect<false> | RolesSelect<true>;
     stories: StoriesSelect<false> | StoriesSelect<true>;
     'story-pages': StoryPagesSelect<false> | StoryPagesSelect<true>;
+    tags: TagsSelect<false> | TagsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -229,13 +237,23 @@ export interface ArchiveBlock {
  */
 export interface Story {
   id: string;
-  parent?: {
-    relationTo: 'stories';
-    value: string | Story;
-  } | null;
+  image?: (string | null) | Asset;
   title: string;
+  description?: string | null;
+  navigation?: {
+    pages?: {
+      docs?: (string | StoryPage)[];
+      hasNextPage?: boolean;
+      totalDocs?: number;
+    };
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+  };
   slug: string;
   publishedAt?: string | null;
+  parent?: (string | null) | Story;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -247,9 +265,44 @@ export interface Story {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
-  _h_slugPath?: string | null;
-  _h_titlePath?: string | null;
-  hierarchyType?: string[] | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "assets".
+ */
+export interface Asset {
+  id: string;
+  alt?: string | null;
+  prefix?: string | null;
+  _objectKey?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  original?: {
+    filename?: string | null;
+    url?: string | null;
+    mimeType?: string | null;
+    filesize?: number | null;
+    width?: number | null;
+    height?: number | null;
+    prefix?: string | null;
+    _objectKey?: string | null;
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -295,9 +348,16 @@ export interface User {
  */
 export interface StoryPage {
   id: string;
-  title?: string | null;
+  layout?: {};
+  navigation?: {};
+  title: string;
   slug: string;
   publishedAt?: string | null;
+  story: {
+    relationTo: 'stories';
+    value: string | Story;
+  };
+  pageNumber: number;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -520,12 +580,11 @@ export interface RichTextBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "assets".
+ * via the `definition` "contributors".
  */
-export interface Asset {
+export interface Contributor {
   id: string;
-  prefix?: string | null;
-  _objectKey?: string | null;
+  user?: (string | null) | User;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -536,26 +595,6 @@ export interface Asset {
   } | null;
   updatedAt: string;
   createdAt: string;
-  _status?: ('draft' | 'published') | null;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  original?: {
-    filename?: string | null;
-    url?: string | null;
-    mimeType?: string | null;
-    filesize?: number | null;
-    width?: number | null;
-    height?: number | null;
-    prefix?: string | null;
-    _objectKey?: string | null;
-  };
-  focalX?: number | null;
-  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -613,6 +652,29 @@ export interface Role {
   } | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tags".
+ */
+export interface Tag {
+  id: string;
+  parent?: (string | null) | Tag;
+  title: string;
+  publishedAt?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -826,6 +888,10 @@ export interface PayloadLockedDocument {
         value: string | Asset;
       } | null)
     | ({
+        relationTo: 'contributors';
+        value: string | Contributor;
+      } | null)
+    | ({
         relationTo: 'pages';
         value: string | Page;
       } | null)
@@ -848,6 +914,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'story-pages';
         value: string | StoryPage;
+      } | null)
+    | ({
+        relationTo: 'tags';
+        value: string | Tag;
       } | null)
     | ({
         relationTo: 'users';
@@ -916,6 +986,7 @@ export interface PayloadMigration {
  * via the `definition` "assets_select".
  */
 export interface AssetsSelect<T extends boolean = true> {
+  alt?: T;
   prefix?: T;
   _objectKey?: T;
   createdBy?: T;
@@ -942,8 +1013,17 @@ export interface AssetsSelect<T extends boolean = true> {
         prefix?: T;
         _objectKey?: T;
       };
-  focalX?: T;
-  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contributors_select".
+ */
+export interface ContributorsSelect<T extends boolean = true> {
+  user?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1000,9 +1080,54 @@ export interface RolesSelect<T extends boolean = true> {
  * via the `definition` "stories_select".
  */
 export interface StoriesSelect<T extends boolean = true> {
+  image?: T;
+  title?: T;
+  description?: T;
+  navigation?:
+    | T
+    | {
+        pages?: T;
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
+  slug?: T;
+  publishedAt?: T;
   parent?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-pages_select".
+ */
+export interface StoryPagesSelect<T extends boolean = true> {
+  layout?: T | {};
+  navigation?: T | {};
   title?: T;
   slug?: T;
+  publishedAt?: T;
+  story?: T;
+  pageNumber?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "tags_select".
+ */
+export interface TagsSelect<T extends boolean = true> {
+  parent?: T;
+  title?: T;
   publishedAt?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1011,21 +1136,6 @@ export interface StoriesSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
-  hierarchyType?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "story-pages_select".
- */
-export interface StoryPagesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  publishedAt?: T;
-  createdBy?: T;
-  updatedBy?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1431,12 +1541,14 @@ export interface CollectionQueryWidget {
     title?: string | null;
     relatedCollection:
       | 'assets'
+      | 'contributors'
       | 'pages'
       | 'permissions'
       | 'posts'
       | 'roles'
       | 'stories'
       | 'story-pages'
+      | 'tags'
       | 'users'
       | 'forms'
       | 'form-submissions'
@@ -1466,12 +1578,14 @@ export interface ActivityWidget {
     excludedCollections?:
       | (
           | 'assets'
+          | 'contributors'
           | 'pages'
           | 'permissions'
           | 'posts'
           | 'roles'
           | 'stories'
           | 'story-pages'
+          | 'tags'
           | 'users'
           | 'forms'
           | 'form-submissions'
@@ -1528,6 +1642,10 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'story-pages';
           value: string | StoryPage;
+        } | null)
+      | ({
+          relationTo: 'tags';
+          value: string | Tag;
         } | null);
     global?: string | null;
     user?: {

@@ -15,6 +15,7 @@ export const titleField: TitleField = ({ overrides = {} } = {}) =>
     {
       label: t('fields:title:label'),
       name: 'title',
+      required: true,
       type: 'text',
     },
     overrides,

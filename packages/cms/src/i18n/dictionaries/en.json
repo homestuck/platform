@@ -14,6 +14,10 @@
       "labelPlural": "Assets",
       "labelSingular": "Asset"
     },
+    "contributors": {
+      "labelPlural": "Contributors",
+      "labelSingular": "Contributor"
+    },
     "pages": {
       "labelPlural": "Pages",
       "labelSingular": "Page"
@@ -38,12 +42,25 @@
       "labelPlural": "Story Pages",
       "labelSingular": "Story Page"
     },
+    "tags": {
+      "labelPlural": "Tags",
+      "labelSingular": "Tag"
+    },
     "users": {
       "labelPlural": "Users",
       "labelSingular": "User"
     }
   },
   "fields": {
+    "alt": {
+      "label": "Alternate Text"
+    },
+    "description": {
+      "label": "Description"
+    },
+    "parentType": {
+      "label": "Parent Collection Type(s)"
+    },
     "publishedAt": {
       "label": "Published At"
     },
@@ -60,6 +77,20 @@
     },
     "site-header": {
       "label": "Site Header"
+    }
+  },
+  "tabs": {
+    "overview": {
+      "label": "📋 Overview"
+    },
+    "layout": {
+      "label": "📰 Layout"
+    },
+    "meta": {
+      "label": "🏷️ Metadata & SEO"
+    },
+    "navigation": {
+      "label": "🗺️ Navigation"
     }
   }
 }
