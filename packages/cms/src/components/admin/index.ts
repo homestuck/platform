@@ -1,3 +1,3 @@
-export * from './PageIcon'
-export * from './StoryPageIcon'
-export * from './StoryIcon'
+export { PageIcon } from './PageIcon'
+export { StoryPageIcon } from './StoryPageIcon'
+export { StoryIcon } from './StoryIcon'

@@ -46,14 +46,156 @@
       "labelPlural": "Tags",
       "labelSingular": "Tag"
     },
+    "themes": {
+      "labelPlural": "Themes",
+      "labelSingular": "Theme"
+    },
     "users": {
       "labelPlural": "Users",
       "labelSingular": "User"
     }
   },
   "fields": {
+    "theme": {
+      "accent": {
+        "description": "A highlight color for active, focused, or hover states.",
+        "label": "Accent Color"
+      },
+      "accentForeground": {
+        "description": "The text and icon color used on top of accent colored elements.",
+        "label": "Accent Foreground"
+      },
+      "background": {
+        "description": "The main canvas color for the entire application or component's background.",
+        "label": "Background Color"
+      },
+      "border": {
+        "description": "The default color for component borders.",
+        "label": "Border Color"
+      },
+      "card": {
+        "description": "The background color for `Card` components and similar containers (e.g., `DropdownMenu`, `HoverCard`, `Popover`).",
+        "label": "Card Color"
+      },
+      "cardForeground": {
+        "description": "The text and icon color for content within `Card` components.",
+        "label": "Card Foreground"
+      },
+      "chart1": {
+        "description": "",
+        "label": "Chart 1 Color"
+      },
+      "chart2": {
+        "description": "",
+        "label": "Chart 2 Color"
+      },
+      "chart3": {
+        "description": "",
+        "label": "Chart 3 Color"
+      },
+      "chart4": {
+        "description": "",
+        "label": "Chart 4 Color"
+      },
+      "chart5": {
+        "description": "",
+        "label": "Chart 5 Color"
+      },
+      "dataGroup": {
+        "description": "A palette of color tokens designed for charts and graphs.",
+        "label": "Data Visualization Tokens"
+      },
+      "destructive": {
+        "description": "The color for error states and destructive actions, such as delete buttons.",
+        "label": "Destructive Color"
+      },
+      "destructiveForeground": {
+        "description": "The text and icon color on top of destructive colored elements.",
+        "label": "Destructive Foreground"
+      },
+      "foreground": {
+        "description": "The default text and icon color used on top of the main background.",
+        "label": "Foreground Color"
+      },
+      "input": {
+        "description": "The border color specifically for form input elements like Input, Select, and Textarea.",
+        "label": "Input Color"
+      },
+      "muted": {
+        "description": "A subtle background color used for components requiring less attention, such as TabsList, Skeleton, or Switch backgrounds.",
+        "label": "Muted Color"
+      },
+      "mutedForeground": {
+        "description": "De-emphasized text color, often used for captions, labels, or placeholders.",
+        "label": "Muted Foreground"
+      },
+      "outlineGroup": {
+        "description": "Single-value tokens used to define layout boundaries and interactive states.",
+        "label": "Outline Tokens"
+      },
+      "popover": {
+        "description": "The background color for popovers, select menus, and similar temporary overlays.",
+        "label": "Popover Color"
+      },
+      "popoverForeground": {
+        "description": "The text and icon color for content within popovers.",
+        "label": "Popover Foreground"
+      },
+      "primary": {
+        "description": "The main brand/accent color, typically used for primary buttons and key interactive elements.",
+        "label": "Primary Color"
+      },
+      "primaryForeground": {
+        "description": "The text and icon color on top of primary colored elements to ensure readability and contrast.",
+        "label": "Primary Foreground"
+      },
+      "radius": {
+        "description": "Defines the global border radius for all components.",
+        "label": "Border Radius"
+      },
+      "ring": {
+        "description": "The color used for the focus indicator (outline ring) when an element is focused.",
+        "label": "Ring Color"
+      },
+      "secondary": {
+        "description": "A secondary brand color or a light variant used for less prominent elements or secondary buttons.",
+        "label": "Secondary Color"
+      },
+      "secondaryForeground": {
+        "description": "The text and icon color on top of secondary colored elements.",
+        "label": "Secondary Foreground"
+      },
+      "semanticGroup": {
+        "description": "Tokens that follow a background / foreground pairing convention, which communicate component hierarchy, state, and intent.",
+        "label": "Semantic Tokens"
+      },
+      "surfaceGroup": {
+        "description": "Tokens that follow a background / foreground pairing convention, where the base token defines the container fill and the -foreground variant defines the text and icon color inside it.",
+        "label": "Surface Tokens"
+      },
+      "sidebar": {
+        "description": " ",
+        "label": "Sidebar Color"
+      },
+      "sidebarAccent": {
+        "description": " ",
+        "label": "Sidebar Accent"
+      },
+      "sidebarAccentForeground": {
+        "description": "",
+        "label": "Sidebar Accent Foreground"
+      },
+      "sidebarBorder": { "description": "", "label": "Sidebar Border" },
+      "sidebarForeground": { "description": "", "label": "Sidebar Foreground" },
+      "sidebarPrimary": { "description": "", "label": "Sidebar Primary" },
+      "sidebarPrimaryForeground": { "description": "", "label": "Sidebar Primary Foreground" },
+      "sidebarRing": { "description": "", "label": "Sidebar Ring" }
+    },
     "alt": {
       "label": "Alternate Text"
+    },
+    "color": {
+      "label": "Color"
     },
     "description": {
       "label": "Description"
@@ -65,6 +207,7 @@
       "label": "Published At"
     },
     "slug": {
+      "description": "A unique, indexed, URL-friendly string that identifies a particular document, often used to construct the URL of a webpage.",
       "label": "Slug"
     },
     "title": {
@@ -72,6 +215,12 @@
     }
   },
   "globals": {
+    "site-appearance": {
+      "label": "Site Appearance"
+    },
+    "site-configuration": {
+      "label": "Site Configuration"
+    },
     "site-footer": {
       "label": "Site Footer"
     },
@@ -80,17 +229,26 @@
     }
   },
   "tabs": {
-    "overview": {
-      "label": "📋 Overview"
+    "darkMode": {
+      "label": "🌙 Dark Mode"
     },
     "layout": {
       "label": "📰 Layout"
+    },
+    "lightMode": {
+      "label": "☀️ Light Mode"
     },
     "meta": {
       "label": "🏷️ Metadata & SEO"
     },
     "navigation": {
       "label": "🗺️ Navigation"
+    },
+    "overview": {
+      "label": "📋 Overview"
+    },
+    "theme": {
+      "label": "🖼️ Theme Settings"
     }
   }
 }

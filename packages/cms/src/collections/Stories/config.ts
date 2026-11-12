@@ -58,7 +58,17 @@ const navigationFieldsTab: NamedTab = {
 } as const
 
 const metaFieldsTab: NamedTab = {
-  fields: [MetaTitleField({}), MetaDescriptionField({}), OverviewField({})],
+  fields: [
+    MetaTitleField({
+      hasGenerateFn: true,
+    }),
+    MetaDescriptionField({}),
+    OverviewField({
+      descriptionPath: 'meta.description',
+      // imagePath: 'meta.image',
+      titlePath: 'meta.title',
+    }),
+  ],
   label: t('tabs:meta:label'),
   name: 'meta',
 } as const

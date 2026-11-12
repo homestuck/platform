@@ -16,6 +16,7 @@
     "./payload.config": "./src/payload.config.ts",
     "./payload.types": "./src/payload.types.ts",
     "./components/admin": "./src/components/admin/index.ts",
+    "./components/admin/client": "./src/components/admin/client/index.ts",
     "./components/*": "./src/components/*.tsx",
     "./blocks/*": "./src/blocks/*.tsx"
   },

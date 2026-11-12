@@ -13,6 +13,9 @@ type Args = {
 export const slugField: SlugField = ({ overrides = {} } = {}) =>
   deepMerge<PayloadSlugField>(
     {
+      admin: {
+        description: t('fields:slug:description'),
+      },
       label: t('fields:slug:label'),
       name: 'slug',
       type: 'slug',

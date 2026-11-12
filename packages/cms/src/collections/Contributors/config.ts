@@ -5,6 +5,11 @@ import { t } from '#i18n'
 export const Contributors = {
   fields: [
     {
+      name: 'dispayName',
+      required: true,
+      type: 'text',
+    },
+    {
       hasMany: false,
       name: 'user',
       relationTo: 'users',

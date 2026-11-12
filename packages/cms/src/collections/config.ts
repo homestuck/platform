@@ -9,6 +9,7 @@ import { Roles } from './Roles/config'
 import { Stories } from './Stories/config'
 import { StoryPages } from './StoryPages/config'
 import { Tags } from './Tags/config'
+import { Themes } from './Themes/config'
 import { Users } from './Users/config'
 
 export const collectionConfigs = [
@@ -21,5 +22,6 @@ export const collectionConfigs = [
   Stories,
   StoryPages,
   Tags,
+  Themes,
   Users,
 ] as const satisfies CollectionConfig[]

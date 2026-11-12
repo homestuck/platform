@@ -33,7 +33,7 @@
     "react": "catalog:",
     "react-day-picker": "^10.0.2",
     "react-dom": "catalog:",
-    "react-hook-form": "^7.91.0",
+    "react-hook-form": "^7.92.0",
     "sonner": "catalog:",
     "zod": "catalog:"
   },

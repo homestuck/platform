@@ -7,6 +7,83 @@
  */
 
 /**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "UploadTransforms".
+ */
+export type UploadTransforms = {
+  /**
+   * Time range on the original, in milliseconds. Start inclusive, end exclusive.
+   */
+  clip?: {
+    endMs: number;
+    startMs: number;
+  };
+  /**
+   * Rectangle in original-file pixels, applied before resize and encoding.
+   */
+  crop?: {
+    height: number;
+    width: number;
+    x: number;
+    y: number;
+  };
+  /**
+   * Encoding settings for the output format. Does not select the format.
+   */
+  encoding?: {
+    [k: string]: unknown;
+  };
+  /**
+   * Mirror the image on one or both axes.
+   */
+  flip?: {
+    horizontal?: boolean;
+    vertical?: boolean;
+  };
+  /**
+   * Preferred point as percentages of the original, from 0 to 100.
+   */
+  focalPoint?: {
+    x: number;
+    y: number;
+  };
+  /**
+   * Keep or remove metadata embedded in the output file.
+   */
+  metadataPolicy?: {
+    mode: 'preserve' | 'strip';
+  };
+  /**
+   * One-based, inclusive page range on the original document.
+   */
+  pageRange?: {
+    endPage: number;
+    startPage: number;
+  };
+  /**
+   * Video frame to use as the poster, in milliseconds on the original.
+   */
+  posterFrame?: {
+    timestampMs: number;
+  };
+  /**
+   * Target size for visual media.
+   */
+  resize?: {
+    fit?: 'contain' | 'cover' | 'fill' | 'inside' | 'outside';
+    height?: number;
+    width?: number;
+    withoutEnlargement?: boolean;
+  };
+  /**
+   * Clockwise rotation in degrees.
+   */
+  rotate?: {
+    angle: number;
+  };
+  [k: string]: unknown;
+} | null;
+/**
  * Supported timezones in IANA format.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -101,6 +178,7 @@ export interface Config {
     stories: Story;
     'story-pages': StoryPage;
     tags: Tag;
+    themes: Theme;
     users: User;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -127,6 +205,7 @@ export interface Config {
     stories: StoriesSelect<false> | StoriesSelect<true>;
     'story-pages': StoryPagesSelect<false> | StoryPagesSelect<true>;
     tags: TagsSelect<false> | TagsSelect<true>;
+    themes: ThemesSelect<false> | ThemesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -143,13 +222,17 @@ export interface Config {
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | 'en-US' | 'en-US'[];
   globals: {
-    'site-footer': SiteFooter;
+    'site-configuration': SiteConfiguration;
+    'site-appearance': SiteAppearance;
     'site-header': SiteHeader;
+    'site-footer': SiteFooter;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
-    'site-footer': SiteFooterSelect<false> | SiteFooterSelect<true>;
+    'site-configuration': SiteConfigurationSelect<false> | SiteConfigurationSelect<true>;
+    'site-appearance': SiteAppearanceSelect<false> | SiteAppearanceSelect<true>;
     'site-header': SiteHeaderSelect<false> | SiteHeaderSelect<true>;
+    'site-footer': SiteFooterSelect<false> | SiteFooterSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: 'en-US';
@@ -293,6 +376,8 @@ export interface Asset {
   filesize?: number | null;
   width?: number | null;
   height?: number | null;
+  _stored?: boolean | null;
+  _transforms?: UploadTransforms;
   original?: {
     filename?: string | null;
     url?: string | null;
@@ -302,6 +387,7 @@ export interface Asset {
     height?: number | null;
     prefix?: string | null;
     _objectKey?: string | null;
+    _stored?: boolean | null;
   };
 }
 /**
@@ -584,6 +670,7 @@ export interface RichTextBlock {
  */
 export interface Contributor {
   id: string;
+  dispayName: string;
   user?: (string | null) | User;
   createdBy?: {
     relationTo: 'users';
@@ -620,6 +707,8 @@ export interface Permission {
 export interface Post {
   id: string;
   publishedAt?: string | null;
+  title: string;
+  slug: string;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -675,6 +764,79 @@ export interface Tag {
   _status?: ('draft' | 'published') | null;
   _h_slugPath?: string | null;
   _h_titlePath?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "themes".
+ */
+export interface Theme {
+  id: string;
+  title: string;
+  slug: string;
+  publishedAt?: string | null;
+  lightMode?: {
+    background?: string | null;
+    foreground?: string | null;
+    card?: string | null;
+    cardForeground?: string | null;
+    popover?: string | null;
+    popoverForeground?: string | null;
+    primary?: string | null;
+    primaryForeground?: string | null;
+    secondary?: string | null;
+    secondaryForeground?: string | null;
+    muted?: string | null;
+    mutedForeground?: string | null;
+    accent?: string | null;
+    accentForeground?: string | null;
+    destructive?: string | null;
+    destructiveForeground?: string | null;
+    border?: string | null;
+    input?: string | null;
+    ring?: string | null;
+    chart1?: string | null;
+    chart2?: string | null;
+    chart3?: string | null;
+    chart4?: string | null;
+    chart5?: string | null;
+  };
+  darkMode?: {
+    background?: string | null;
+    foreground?: string | null;
+    card?: string | null;
+    cardForeground?: string | null;
+    popover?: string | null;
+    popoverForeground?: string | null;
+    primary?: string | null;
+    primaryForeground?: string | null;
+    secondary?: string | null;
+    secondaryForeground?: string | null;
+    muted?: string | null;
+    mutedForeground?: string | null;
+    accent?: string | null;
+    accentForeground?: string | null;
+    destructive?: string | null;
+    destructiveForeground?: string | null;
+    border?: string | null;
+    input?: string | null;
+    ring?: string | null;
+    chart1?: string | null;
+    chart2?: string | null;
+    chart3?: string | null;
+    chart4?: string | null;
+    chart5?: string | null;
+  };
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -920,6 +1082,10 @@ export interface PayloadLockedDocument {
         value: string | Tag;
       } | null)
     | ({
+        relationTo: 'themes';
+        value: string | Theme;
+      } | null)
+    | ({
         relationTo: 'users';
         value: string | User;
       } | null)
@@ -1001,6 +1167,8 @@ export interface AssetsSelect<T extends boolean = true> {
   filesize?: T;
   width?: T;
   height?: T;
+  _stored?: T;
+  _transforms?: T;
   original?:
     | T
     | {
@@ -1012,6 +1180,7 @@ export interface AssetsSelect<T extends boolean = true> {
         height?: T;
         prefix?: T;
         _objectKey?: T;
+        _stored?: T;
       };
 }
 /**
@@ -1019,6 +1188,7 @@ export interface AssetsSelect<T extends boolean = true> {
  * via the `definition` "contributors_select".
  */
 export interface ContributorsSelect<T extends boolean = true> {
+  dispayName?: T;
   user?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1058,6 +1228,8 @@ export interface PermissionsSelect<T extends boolean = true> {
  */
 export interface PostsSelect<T extends boolean = true> {
   publishedAt?: T;
+  title?: T;
+  slug?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1136,6 +1308,76 @@ export interface TagsSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "themes_select".
+ */
+export interface ThemesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  publishedAt?: T;
+  lightMode?:
+    | T
+    | {
+        background?: T;
+        foreground?: T;
+        card?: T;
+        cardForeground?: T;
+        popover?: T;
+        popoverForeground?: T;
+        primary?: T;
+        primaryForeground?: T;
+        secondary?: T;
+        secondaryForeground?: T;
+        muted?: T;
+        mutedForeground?: T;
+        accent?: T;
+        accentForeground?: T;
+        destructive?: T;
+        destructiveForeground?: T;
+        border?: T;
+        input?: T;
+        ring?: T;
+        chart1?: T;
+        chart2?: T;
+        chart3?: T;
+        chart4?: T;
+        chart5?: T;
+      };
+  darkMode?:
+    | T
+    | {
+        background?: T;
+        foreground?: T;
+        card?: T;
+        cardForeground?: T;
+        popover?: T;
+        popoverForeground?: T;
+        primary?: T;
+        primaryForeground?: T;
+        secondary?: T;
+        secondaryForeground?: T;
+        muted?: T;
+        mutedForeground?: T;
+        accent?: T;
+        accentForeground?: T;
+        destructive?: T;
+        destructiveForeground?: T;
+        border?: T;
+        input?: T;
+        ring?: T;
+        chart1?: T;
+        chart2?: T;
+        chart3?: T;
+        chart4?: T;
+        chart5?: T;
+      };
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1430,10 +1672,87 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-footer".
+ * via the `definition` "site-configuration".
  */
-export interface SiteFooter {
+export interface SiteConfiguration {
   id: string;
+  title: string;
+  description?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+  };
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-appearance".
+ */
+export interface SiteAppearance {
+  id: string;
+  theme: {
+    lightMode: {
+      background: string;
+      foreground: string;
+      card: string;
+      cardForeground: string;
+      popover: string;
+      popoverForeground: string;
+      primary: string;
+      primaryForeground: string;
+      secondary: string;
+      secondaryForeground: string;
+      muted: string;
+      mutedForeground: string;
+      accent: string;
+      accentForeground: string;
+      destructive: string;
+      destructiveForeground: string;
+      border: string;
+      input: string;
+      ring: string;
+      chart1: string;
+      chart2: string;
+      chart3: string;
+      chart4: string;
+      chart5: string;
+    };
+    darkMode: {
+      background: string;
+      foreground: string;
+      card: string;
+      cardForeground: string;
+      popover: string;
+      popoverForeground: string;
+      primary: string;
+      primaryForeground: string;
+      secondary: string;
+      secondaryForeground: string;
+      muted: string;
+      mutedForeground: string;
+      accent: string;
+      accentForeground: string;
+      destructive: string;
+      destructiveForeground: string;
+      border: string;
+      input: string;
+      ring: string;
+      chart1: string;
+      chart2: string;
+      chart3: string;
+      chart4: string;
+      chart5: string;
+    };
+  };
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -1450,6 +1769,23 @@ export interface SiteFooter {
  * via the `definition` "site-header".
  */
 export interface SiteHeader {
+  id: string;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-footer".
+ */
+export interface SiteFooter {
   id: string;
   createdBy?: {
     relationTo: 'users';
@@ -1482,9 +1818,88 @@ export interface PayloadJobsStat {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-footer_select".
+ * via the `definition` "site-configuration_select".
  */
-export interface SiteFooterSelect<T extends boolean = true> {
+export interface SiteConfigurationSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-appearance_select".
+ */
+export interface SiteAppearanceSelect<T extends boolean = true> {
+  theme?:
+    | T
+    | {
+        lightMode?:
+          | T
+          | {
+              background?: T;
+              foreground?: T;
+              card?: T;
+              cardForeground?: T;
+              popover?: T;
+              popoverForeground?: T;
+              primary?: T;
+              primaryForeground?: T;
+              secondary?: T;
+              secondaryForeground?: T;
+              muted?: T;
+              mutedForeground?: T;
+              accent?: T;
+              accentForeground?: T;
+              destructive?: T;
+              destructiveForeground?: T;
+              border?: T;
+              input?: T;
+              ring?: T;
+              chart1?: T;
+              chart2?: T;
+              chart3?: T;
+              chart4?: T;
+              chart5?: T;
+            };
+        darkMode?:
+          | T
+          | {
+              background?: T;
+              foreground?: T;
+              card?: T;
+              cardForeground?: T;
+              popover?: T;
+              popoverForeground?: T;
+              primary?: T;
+              primaryForeground?: T;
+              secondary?: T;
+              secondaryForeground?: T;
+              muted?: T;
+              mutedForeground?: T;
+              accent?: T;
+              accentForeground?: T;
+              destructive?: T;
+              destructiveForeground?: T;
+              border?: T;
+              input?: T;
+              ring?: T;
+              chart1?: T;
+              chart2?: T;
+              chart3?: T;
+              chart4?: T;
+              chart5?: T;
+            };
+      };
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1496,6 +1911,17 @@ export interface SiteFooterSelect<T extends boolean = true> {
  * via the `definition` "site-header_select".
  */
 export interface SiteHeaderSelect<T extends boolean = true> {
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-footer_select".
+ */
+export interface SiteFooterSelect<T extends boolean = true> {
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1549,6 +1975,7 @@ export interface CollectionQueryWidget {
       | 'stories'
       | 'story-pages'
       | 'tags'
+      | 'themes'
       | 'users'
       | 'forms'
       | 'form-submissions'
@@ -1586,6 +2013,7 @@ export interface ActivityWidget {
           | 'stories'
           | 'story-pages'
           | 'tags'
+          | 'themes'
           | 'users'
           | 'forms'
           | 'form-submissions'
@@ -1646,6 +2074,10 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'tags';
           value: string | Tag;
+        } | null)
+      | ({
+          relationTo: 'themes';
+          value: string | Theme;
         } | null);
     global?: string | null;
     user?: {

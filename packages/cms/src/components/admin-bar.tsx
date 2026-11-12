@@ -9,7 +9,7 @@ import { PayloadAdminBar } from '@payloadcms/admin-bar'
 import { cn } from 'cn'
 
 import { translations } from '#i18n'
-import { getClientSideURL } from '#utils/getURL'
+import { getClientURL } from '#utils/getClientURL'
 
 const baseClass = 'admin-bar'
 
@@ -46,7 +46,7 @@ export const AdminBar: React.FC<{
             // logo: 'text-primary-foreground',
             // user: 'text-primary-foreground',
           }}
-          cmsURL={getClientSideURL()}
+          cmsURL={getClientURL()}
           collectionLabels={{
             plural: collectionLabels[collection].labelPlural,
             singular: collectionLabels[collection].labelSingular,

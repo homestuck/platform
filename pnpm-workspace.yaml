@@ -12,9 +12,9 @@ catalog:
   'cn': ^0.5.2
   'eslint-plugin-react-you-might-not-need-an-effect': ^1.2.0
   'eslint-plugin-regexp': ^3.3.3
-  'graphql': ^17.1.0
-  'lucide-react': ^1.70.0
-  'next': ^16.4.5
+  'graphql': ^16.15.0
+  'lucide-react': ^1.72.0
+  'next': ^16.4.6
   'next-sitemap': ^4.2.3
   'postcss': ^8.5.32
   'react': ^19.3.1
@@ -24,36 +24,36 @@ catalog:
   'tsx': ^4.23.15
   'tw-animate-css': ^1.4.0
   'typescript': ^7.0.2
-  'vite': npm:@voidzero-dev/vite-plus-core@1.5.1
+  'vite': npm:@voidzero-dev/vite-plus-core@1.6.0
   'vitest': 5.1.0
   'zod': ^4.6.7
-  'vite-plus': 1.5.1
+  'vite-plus': 1.6.0
 
 catalogs:
   payload:
-    '@payloadcms/admin-bar': 'beta'
-    '@payloadcms/db-mongodb': 'beta'
-    '@payloadcms/graphql': 'beta'
-    '@payloadcms/next': 'beta'
-    '@payloadcms/richtext-lexical': 'beta'
-    '@payloadcms/plugin-form-builder': 'beta'
-    '@payloadcms/plugin-redirects': 'beta'
-    '@payloadcms/plugin-search': 'beta'
-    '@payloadcms/plugin-seo': 'beta'
-    '@payloadcms/storage-s3': 'beta'
-    '@payloadcms/translations': 'beta'
-    '@payloadcms/typescript-plugin': 'beta'
-    '@payloadcms/ui': 'beta'
-    'payload': 'beta'
+    '@payloadcms/admin-bar': '4.0.0-beta.8'
+    '@payloadcms/db-mongodb': '4.0.0-beta.8'
+    '@payloadcms/graphql': '4.0.0-beta.8'
+    '@payloadcms/next': '4.0.0-beta.8'
+    '@payloadcms/richtext-lexical': '4.0.0-beta.8'
+    '@payloadcms/plugin-form-builder': '4.0.0-beta.8'
+    '@payloadcms/plugin-redirects': '4.0.0-beta.8'
+    '@payloadcms/plugin-search': '4.0.0-beta.8'
+    '@payloadcms/plugin-seo': '4.0.0-beta.8'
+    '@payloadcms/storage-s3': '4.0.0-beta.8'
+    '@payloadcms/translations': '4.0.0-beta.8'
+    '@payloadcms/typescript-plugin': '4.0.0-beta.8'
+    '@payloadcms/ui': '4.0.0-beta.8'
+    'payload': '4.0.0-beta.8'
   storybook:
     '@storybook-community/storybook-dark-mode': '^7.1.4'
-    '@storybook/addon-a11y': '^10.6.6'
-    '@storybook/addon-docs': '^10.6.6'
-    '@storybook/addon-links': '^10.6.6'
-    '@storybook/addon-themes': '^10.6.6'
-    '@storybook/addon-vitest': '^10.6.6'
-    '@storybook/nextjs-vite': '^10.6.6'
-    'storybook': '^10.6.6'
+    '@storybook/addon-a11y': '^10.6.7'
+    '@storybook/addon-docs': '^10.6.7'
+    '@storybook/addon-links': '^10.6.7'
+    '@storybook/addon-themes': '^10.6.7'
+    '@storybook/addon-vitest': '^10.6.7'
+    '@storybook/nextjs-vite': '^10.6.7'
+    'storybook': '^10.6.7'
   typescript-compat:
     '@typescript/native': 'npm:typescript@^7.0.2'
     'typescript': 'npm:@typescript/typescript6@^6.0.2'
@@ -70,13 +70,13 @@ minimumReleaseAgeExclude:
   - '@storybook/react-dom-shim@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5'
   - '@storybook/react-vite@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5'
   - '@storybook/react@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5'
-  - '@turbo/darwin-64@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/darwin-arm64@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/gen@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/linux-64@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/linux-arm64@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/windows-64@2.10.11 || 2.10.12 || 2.11.10'
-  - '@turbo/windows-arm64@2.10.11 || 2.10.12 || 2.11.10'
+  - '@turbo/darwin-64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/darwin-arm64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/gen@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/linux-64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/linux-arm64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/windows-64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
+  - '@turbo/windows-arm64@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11'
   - '@vitest/browser-playwright@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3 || 5.1.0'
   - '@vitest/browser@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3 || 5.1.0'
   - '@vitest/coverage-v8@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3 || 5.1.0'
@@ -92,7 +92,7 @@ minimumReleaseAgeExclude:
   - lucide-react@1.32.0 || 1.38.0 || 1.40.0 || 1.41.0 || 1.43.0 || 1.47.0 || 1.49.0 || 1.53.0 ||
     1.60.0 || 1.62.0 || 1.64.0 || 1.66.0 || 1.67.0 || 1.68.0 || 1.69.0
   - storybook@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5
-  - turbo@2.10.11 || 2.10.12 || 2.11.10
+  - turbo@2.10.11 || 2.10.12 || 2.11.10 || 2.11.11
   - vitest@4.1.11 || 5.0.0 || 5.0.1 || 5.0.3 || 5.1.0
   - '@next/env@16.3.3 || 16.3.4 || 16.3.7 || 16.3.8 || 16.4.4'
   - '@next/swc-darwin-arm64@16.3.3 || 16.3.4 || 16.3.7 || 16.3.8 || 16.4.4'
@@ -205,6 +205,7 @@ packages:
   - 'packages/*'
 
 overrides:
+  'storybook@10.6.7>vite-plus:peer': 'catalog:'
   'vite-tsconfig-paths': next
   vite@*: 'catalog:'
   vitest@*: 'catalog:'
