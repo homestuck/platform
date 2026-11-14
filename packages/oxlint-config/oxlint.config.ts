@@ -1,6 +1,6 @@
-import type { OxlintConfig } from 'oxlint'
+import type { UserConfig } from 'vite-plus'
 
-import { defineConfig } from 'oxlint'
+type OxlintConfig = NonNullable<UserConfig['lint']>
 
 const rulesets = {
   eslint: {
@@ -634,7 +634,7 @@ const jsPlugins = {
   vitePlus: { 'vite-plus/prefer-vite-plus-imports': 'error' },
 } as const satisfies Record<string, NonNullable<OxlintConfig['rules']>>
 
-export default defineConfig({
+export default {
   env: {
     browser: true,
     builtin: true,
@@ -696,4 +696,4 @@ export default defineConfig({
       variantFunctions: ['variants'],
     },
   },
-})
+} as const satisfies OxlintConfig

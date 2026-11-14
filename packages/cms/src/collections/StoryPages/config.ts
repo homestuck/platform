@@ -1,14 +1,25 @@
-import type { CollectionConfig, Field, NamedTab, NumberField, RelationshipField } from 'payload'
+import type {
+  CollectionConfig,
+  NamedTab,
+  NumberField,
+  RelationshipField,
+  UnnamedGroupField,
+} from 'payload'
 
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
+import { validateIsInteger } from '#hooks/validateIsInteger'
 import { t } from '#i18n'
 
 // import { STORY_PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
 
 const layoutFieldsTab = {
-  fields: [],
+  fields: [
+    { blocks: ['richText'], name: 'header', type: 'blocks' },
+    { blocks: ['richText'], name: 'content', type: 'blocks' },
+    { blocks: ['richText'], name: 'footer', type: 'blocks' },
+  ],
   label: t('tabs:layout:label'),
   name: 'layout',
 } as const satisfies NamedTab
@@ -19,29 +30,45 @@ const navigationFieldsTab = {
   name: 'navigation',
 } as const satisfies NamedTab
 
-const sidebarFields = [
-  titleField(),
-  slugField(),
-  publishedAtField(),
-  {
-    fields: [
-      {
-        hasMany: false,
-        name: 'story',
-        relationTo: ['stories'],
-        required: true,
-        type: 'relationship',
-      } satisfies RelationshipField,
-      {
-        min: 1,
-        name: 'pageNumber',
-        required: true,
-        type: 'number',
-      } satisfies NumberField,
-    ],
-    type: 'row',
+const sidebarFieldsGroup: UnnamedGroupField = {
+  admin: {
+    position: 'sidebar',
   },
-] as Field[]
+  fields: [
+    titleField(),
+    slugField(),
+    publishedAtField(),
+    {
+      fields: [
+        {
+          admin: {
+            allowCreate: false,
+            allowEdit: false,
+            width: '60%',
+          },
+          hasMany: false,
+          name: 'story',
+          relationTo: ['stories'],
+          required: true,
+          type: 'relationship',
+        } satisfies RelationshipField,
+        {
+          admin: {
+            step: 1,
+            width: '40%',
+          },
+          min: 1,
+          name: 'pageNumber',
+          required: true,
+          type: 'number',
+          validate: validateIsInteger,
+        } satisfies NumberField,
+      ],
+      type: 'row',
+    },
+  ],
+  type: 'group',
+} as const
 
 export const StoryPages = {
   admin: {
@@ -52,7 +79,7 @@ export const StoryPages = {
       tabs: [layoutFieldsTab, navigationFieldsTab],
       type: 'tabs',
     },
-    ...sidebarFields,
+    sidebarFieldsGroup,
   ],
   labels: {
     plural: t('collections:story-pages:labelPlural'),

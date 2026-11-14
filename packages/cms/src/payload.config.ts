@@ -16,6 +16,7 @@ import { localization, i18nConfig as i18n } from './i18n/config'
 import { jobsConfig as jobs } from './jobs/config'
 import { pluginConfigs as plugins } from './plugins/config'
 import { storageConfigs as storage } from './storage/config'
+import { getServerURL } from './utils/getServerURL'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -29,6 +30,7 @@ export const payloadConfig = (overrides: Partial<Config> = {}) =>
         },
         blocks,
         collections,
+        cors: [getServerURL()].filter(Boolean),
         db: mongooseAdapter({
           url: payloadEnv.PAYLOAD_PRIVATE_DATABASE_URI,
         }),

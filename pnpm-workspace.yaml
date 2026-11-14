@@ -31,32 +31,32 @@ catalog:
 
 catalogs:
   payload:
-    '@payloadcms/admin-bar': '4.0.0-beta.8'
-    '@payloadcms/db-mongodb': '4.0.0-beta.8'
-    '@payloadcms/graphql': '4.0.0-beta.8'
-    '@payloadcms/next': '4.0.0-beta.8'
-    '@payloadcms/richtext-lexical': '4.0.0-beta.8'
-    '@payloadcms/plugin-form-builder': '4.0.0-beta.8'
-    '@payloadcms/plugin-redirects': '4.0.0-beta.8'
-    '@payloadcms/plugin-search': '4.0.0-beta.8'
-    '@payloadcms/plugin-seo': '4.0.0-beta.8'
-    '@payloadcms/storage-s3': '4.0.0-beta.8'
-    '@payloadcms/translations': '4.0.0-beta.8'
-    '@payloadcms/typescript-plugin': '4.0.0-beta.8'
-    '@payloadcms/ui': '4.0.0-beta.8'
-    'payload': '4.0.0-beta.8'
+    '@payloadcms/admin-bar': 4.0.0-beta.8
+    '@payloadcms/db-mongodb': 4.0.0-beta.8
+    '@payloadcms/graphql': 4.0.0-beta.8
+    '@payloadcms/next': 4.0.0-beta.8
+    '@payloadcms/richtext-lexical': 4.0.0-beta.8
+    '@payloadcms/plugin-form-builder': 4.0.0-beta.8
+    '@payloadcms/plugin-redirects': 4.0.0-beta.8
+    '@payloadcms/plugin-search': 4.0.0-beta.8
+    '@payloadcms/plugin-seo': 4.0.0-beta.8
+    '@payloadcms/storage-s3': 4.0.0-beta.8
+    '@payloadcms/translations': 4.0.0-beta.8
+    '@payloadcms/typescript-plugin': 4.0.0-beta.8
+    '@payloadcms/ui': 4.0.0-beta.8
+    'payload': 4.0.0-beta.8
   storybook:
-    '@storybook-community/storybook-dark-mode': '^7.1.4'
-    '@storybook/addon-a11y': '^10.6.7'
-    '@storybook/addon-docs': '^10.6.7'
-    '@storybook/addon-links': '^10.6.7'
-    '@storybook/addon-themes': '^10.6.7'
-    '@storybook/addon-vitest': '^10.6.7'
-    '@storybook/nextjs-vite': '^10.6.7'
-    'storybook': '^10.6.7'
+    '@storybook-community/storybook-dark-mode': ^7.1.4
+    '@storybook/addon-a11y': ^10.6.7
+    '@storybook/addon-docs': ^10.6.7
+    '@storybook/addon-links': ^10.6.7
+    '@storybook/addon-themes': ^10.6.7
+    '@storybook/addon-vitest': ^10.6.7
+    '@storybook/nextjs-vite': ^10.6.7
+    'storybook': ^10.6.7
   typescript-compat:
-    '@typescript/native': 'npm:typescript@^7.0.2'
-    'typescript': 'npm:@typescript/typescript6@^6.0.2'
+    '@typescript/native': npm:typescript@^7.0.2
+    'typescript': npm:@typescript/typescript6@^6.0.2
 
 minimumReleaseAgeExclude:
   - '@storybook/addon-a11y@10.5.9 || 10.6.0 || 10.6.1 || 10.6.3 || 10.6.4 || 10.6.5'

@@ -1,25 +1,47 @@
-import type { GlobalConfig, NamedTab, UnnamedTab } from 'payload'
+import type { GlobalConfig, NamedTab } from 'payload'
 
-import { MetaDescriptionField, MetaTitleField, OverviewField } from '@payloadcms/plugin-seo/fields'
+import {
+  MetaDescriptionField,
+  MetaImageField,
+  MetaTitleField,
+  OverviewField,
+  PreviewField,
+} from '@payloadcms/plugin-seo/fields'
 
-import { descriptionField } from '#fields/description'
-import { titleField } from '#fields/title'
+import { everyoneAccess } from '#access/everyone'
 import { t } from '#i18n'
-
-const overviewFieldsTab: UnnamedTab = {
-  fields: [titleField(), descriptionField()],
-  label: t('tabs:overview:label'),
-} as const
 
 const metaFieldsTab: NamedTab = {
   fields: [
     MetaTitleField({
-      hasGenerateFn: true,
+      hasGenerateFn: false,
+      overrides: {
+        minLength: 1,
+      },
     }),
-    MetaDescriptionField({}),
+    MetaDescriptionField({
+      hasGenerateFn: false,
+    }),
+    MetaImageField({
+      hasGenerateFn: false,
+      overrides: {
+        admin: {
+          description: t('plugin-seo:imageDescription'),
+        },
+      },
+      relationTo: 'assets',
+    }),
+    PreviewField({
+      descriptionPath: 'meta.description',
+      hasGenerateFn: true,
+      titlePath: 'meta.title',
+    }),
     OverviewField({
       descriptionPath: 'meta.description',
-      // imagePath: 'meta.image',
+      imagePath: 'meta.image',
+      titleOverrides: {
+        minLength: 1,
+      },
       titlePath: 'meta.title',
     }),
   ],
@@ -28,12 +50,15 @@ const metaFieldsTab: NamedTab = {
 } as const
 
 export const SiteConfiguration = {
+  access: {
+    read: everyoneAccess,
+  },
   admin: {
     group: 'Site Settings',
   },
   fields: [
     {
-      tabs: [overviewFieldsTab, metaFieldsTab],
+      tabs: [metaFieldsTab],
       type: 'tabs',
     },
   ],

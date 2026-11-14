@@ -8,6 +8,7 @@ export const Users: CollectionConfig = {
     // create: EveryoneAccess,
     // delete: LoggedInAccess,
     // read: LoggedInAccess,
+    read: () => true,
     // update: (args) => GlobalAdminAccess(args) || SelfAccess(args),
   },
   admin: {

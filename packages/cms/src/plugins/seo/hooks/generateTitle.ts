@@ -1,7 +1,7 @@
 import type { Post, SiteConfiguration, Story } from '#payload.types'
 import type { GenerateTitle } from '@payloadcms/plugin-seo/types'
 
-type DataWithSEO = Story | Post | SiteConfiguration
+type DataWithSEO = Story | Post
 
 export const generateTitle: GenerateTitle<DataWithSEO> = async ({ doc, req }) => {
   const docTitle = doc?.title ?? null

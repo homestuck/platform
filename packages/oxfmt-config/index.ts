@@ -1,4 +1,6 @@
-import { defineConfig } from 'oxfmt'
+import type { UserConfig } from 'vite-plus'
+
+type OxfmtConfig = NonNullable<UserConfig['fmt']>
 
 /**
  * @todo Add 'prettier-plugin-sort-json' compatibility when available
@@ -6,7 +8,7 @@ import { defineConfig } from 'oxfmt'
  * @todo Add '@prettier/plugin-xml' compatibility when available
  *   {@link https://github.com/oxc-project/oxc/issues/18035}
  */
-export default defineConfig({
+export default {
   arrowParens: 'always',
   bracketSameLine: true,
   bracketSpacing: true,
@@ -88,4 +90,4 @@ export default defineConfig({
   trailingComma: 'all',
   useTabs: false,
   vueIndentScriptAndStyle: false,
-})
+} as const satisfies OxfmtConfig

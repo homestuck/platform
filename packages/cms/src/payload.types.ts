@@ -139,16 +139,6 @@ export type SupportedTimezones =
   | 'Pacific/Fiji';
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "LexicalNodes_7262A34B".
- */
-export type LexicalNodes_7262A34B =
-  | SerializedTextNode
-  | SerializedTabNode
-  | SerializedLineBreakNode
-  | SerializedParagraphNode<LexicalNodes_7262A34B>
-  | SerializedHeadingNode<LexicalNodes_7262A34B>;
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "LexicalNodes_C680EDD9".
  */
 export type LexicalNodes_C680EDD9 =
@@ -158,6 +148,16 @@ export type LexicalNodes_C680EDD9 =
   | SerializedParagraphNode<LexicalNodes_C680EDD9>
   | SerializedBlockNode<ArchiveBlock_90444DB9>
   | SerializedHeadingNode<LexicalNodes_C680EDD9>;
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LexicalNodes_7262A34B".
+ */
+export type LexicalNodes_7262A34B =
+  | SerializedTextNode
+  | SerializedTabNode
+  | SerializedLineBreakNode
+  | SerializedParagraphNode<LexicalNodes_7262A34B>
+  | SerializedHeadingNode<LexicalNodes_7262A34B>;
 
 export interface Config {
   auth: {
@@ -434,7 +434,11 @@ export interface User {
  */
 export interface StoryPage {
   id: string;
-  layout?: {};
+  layout?: {
+    header?: RichTextBlock[] | null;
+    content?: RichTextBlock[] | null;
+    footer?: RichTextBlock[] | null;
+  };
   navigation?: {};
   title: string;
   slug: string;
@@ -458,11 +462,20 @@ export interface StoryPage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "RichTextBlock".
+ */
+export interface RichTextBlock {
+  richText?: LexicalRichText<LexicalNodes_C680EDD9> | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'richText';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
   id: string;
-  parent?: (string | null) | Page;
   title: string;
   slug: string;
   layout?: ArchiveBlock[] | null;
@@ -477,8 +490,6 @@ export interface Page {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
-  _h_slugPath?: string | null;
-  _h_titlePath?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -656,21 +667,11 @@ export interface Textarea {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "RichTextBlock".
- */
-export interface RichTextBlock {
-  richText?: LexicalRichText<LexicalNodes_C680EDD9> | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'richText';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contributors".
  */
 export interface Contributor {
   id: string;
-  dispayName: string;
+  displayName: string;
   user?: (string | null) | User;
   createdBy?: {
     relationTo: 'users';
@@ -1188,7 +1189,7 @@ export interface AssetsSelect<T extends boolean = true> {
  * via the `definition` "contributors_select".
  */
 export interface ContributorsSelect<T extends boolean = true> {
-  dispayName?: T;
+  displayName?: T;
   user?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1200,7 +1201,6 @@ export interface ContributorsSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
-  parent?: T;
   title?: T;
   slug?: T;
   layout?: T | {};
@@ -1209,8 +1209,6 @@ export interface PagesSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
-  _h_slugPath?: T;
-  _h_titlePath?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1280,7 +1278,13 @@ export interface StoriesSelect<T extends boolean = true> {
  * via the `definition` "story-pages_select".
  */
 export interface StoryPagesSelect<T extends boolean = true> {
-  layout?: T | {};
+  layout?:
+    | T
+    | {
+        header?: T | {};
+        content?: T | {};
+        footer?: T | {};
+      };
   navigation?: T | {};
   title?: T;
   slug?: T;
@@ -1676,11 +1680,10 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface SiteConfiguration {
   id: string;
-  title: string;
-  description?: string | null;
   meta?: {
     title?: string | null;
     description?: string | null;
+    image?: (string | null) | Asset;
   };
   createdBy?: {
     relationTo: 'users';
@@ -1821,13 +1824,12 @@ export interface PayloadJobsStat {
  * via the `definition` "site-configuration_select".
  */
 export interface SiteConfigurationSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
   meta?:
     | T
     | {
         title?: T;
         description?: T;
+        image?: T;
       };
   createdBy?: T;
   updatedBy?: T;
@@ -2188,6 +2190,20 @@ export interface SerializedParagraphNode<TChildren> extends SerializedLexicalEle
   textStyle: string;
 }
 
+export type SerializedBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
+  type: 'block';
+  format: LexicalElementFormat;
+  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
+  version: number;
+  fields: { id: string; blockName?: string | null } & Omit<TFields, 'id' | 'blockName'>;
+} : never;
+export type SerializedInlineBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
+  type: 'inlineBlock';
+  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
+  version: number;
+  fields: { id: string } & Omit<TFields, 'id'>;
+} : never;
+
 export interface SerializedHeadingNode<
   TChildren,
   TTag extends 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
@@ -2208,20 +2224,6 @@ export interface LexicalRichText<TNode> {
     version: number;
   };
 }
-
-export type SerializedBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
-  type: 'block';
-  format: LexicalElementFormat;
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-  fields: { id: string; blockName?: string | null } & Omit<TFields, 'id' | 'blockName'>;
-} : never;
-export type SerializedInlineBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
-  type: 'inlineBlock';
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-  fields: { id: string } & Omit<TFields, 'id'>;
-} : never;
 
 
 declare module 'payload' {

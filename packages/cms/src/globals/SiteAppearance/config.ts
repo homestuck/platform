@@ -1,5 +1,6 @@
 import type { GlobalConfig, NamedTab } from 'payload'
 
+import { everyoneAccess } from '#access/everyone'
 import { themeField } from '#fields/theme'
 import { t } from '#i18n'
 
@@ -38,6 +39,9 @@ const themeFieldsTab: NamedTab = {
 } as const
 
 export const SiteAppearance = {
+  access: {
+    read: everyoneAccess,
+  },
   admin: {
     group: 'Site Settings',
   },

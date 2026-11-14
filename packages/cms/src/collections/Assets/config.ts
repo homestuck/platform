@@ -1,12 +1,19 @@
 import type { Asset } from '#payload.types'
 import type { CollectionConfig, Condition } from 'payload'
 
+import { authenticatedAccess } from '#access/authenticated'
 import { publishedDocumentAccess } from '#access/publishedDocument'
 import { t } from '#i18n'
 
 export const Assets = {
   access: {
+    create: authenticatedAccess,
+    delete: authenticatedAccess,
     read: publishedDocumentAccess,
+    readVersions: authenticatedAccess,
+    unlock: authenticatedAccess,
+    update: authenticatedAccess,
+    validate: authenticatedAccess,
   },
   fields: [
     {

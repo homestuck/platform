@@ -6,11 +6,11 @@ import oxlintConfig from '@homestuck/oxlint-config'
 export default defineConfig({
   fmt: {
     ...oxfmtConfig,
-    ignorePatterns: [...oxfmtConfig.ignorePatterns, 'apps/admin/src/app/(payload)/**'],
+    ignorePatterns: [...oxfmtConfig.ignorePatterns, 'apps/web/src/app/(payload)/**'],
   },
   lint: {
     ...oxlintConfig,
-    ignorePatterns: [...oxlintConfig.ignorePatterns, 'apps/admin/src/app/(payload)/**'],
+    ignorePatterns: [...oxlintConfig.ignorePatterns, 'apps/web/src/app/(payload)/**'],
     options: { reportUnusedDisableDirectives: 'warn', typeAware: true, typeCheck: true },
     overrides: [
       {

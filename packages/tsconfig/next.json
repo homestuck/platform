@@ -1,17 +1,19 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "plugins": [{ "name": "next" }]
   },
   "exclude": ["node_modules", "dist", ".next"],
   "extends": "@homestuck/tsconfig/react.json",
   "include": [
+    "next-env.d.ts",
     "*.d.ts",
     "*.js",
     "*.jsx",
     "*.mjs",
     "*.ts",
     "*.tsx",
-    "./.next/types/**/*.ts",
-    "./.next/dev/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ]
 }
