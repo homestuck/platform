@@ -13,7 +13,7 @@ import {
 } from './helpers'
 
 const ThemeContext = React.createContext<UseThemeProps | undefined>(undefined)
-const defaultContext: UseThemeProps = { setTheme: (_) => null, themeModes: [] }
+const defaultContext: UseThemeProps = { setThemeMode: (_) => null, themeModes: [] }
 
 const Theme = ({
   forcedTheme,
@@ -30,16 +30,16 @@ const Theme = ({
   // oxlint-disable-next-line no-unused-vars
   scriptProps,
 }: ThemeProviderProps) => {
-  const [theme, setThemeState] = React.useState<ThemeType>(
+  const [themeMode, setThemeModeState] = React.useState<ThemeType>(
     () => getFromLocalStorage(storageKey, defaultTheme) ?? 'light',
   )
   const [resolvedTheme, setResolvedTheme] = React.useState(() =>
-    theme === 'system' ? getSystemTheme() : theme,
+    themeMode === 'system' ? getSystemTheme() : themeMode,
   )
 
   const attrs = value ? Object.values(value) : themeModes
 
-  const applyTheme = React.useCallback(
+  const applyThemeMode = React.useCallback(
     (theme?: ThemeType) => {
       let resolved = theme
       if (!resolved) return
@@ -88,31 +88,34 @@ const Theme = ({
     [nonce],
   )
 
-  const setTheme = React.useCallback((value: ThemeType | ((prevState: ThemeType) => ThemeType)) => {
-    if (typeof value === 'function') {
-      setThemeState((prevTheme) => {
-        const newTheme = value(prevTheme)
+  const setThemeMode = React.useCallback(
+    (value: ThemeType | ((prevState: ThemeType) => ThemeType)) => {
+      if (typeof value === 'function') {
+        setThemeModeState((prevTheme) => {
+          const newTheme = value(prevTheme)
 
-        saveToLocalStorage(storageKey, newTheme ?? '')
+          saveToLocalStorage(storageKey, newTheme ?? '')
 
-        return newTheme
-      })
-    } else {
-      setThemeState(value)
-      saveToLocalStorage(storageKey, value ?? '')
-    }
-  }, [])
+          return newTheme
+        })
+      } else {
+        setThemeModeState(value)
+        saveToLocalStorage(storageKey, value ?? '')
+      }
+    },
+    [],
+  )
 
   const handleMediaQuery = React.useCallback(
     (e: MediaQueryListEvent | MediaQueryList) => {
       const resolved = getSystemTheme(e)
       setResolvedTheme(resolved)
 
-      if (theme === 'system' && enableSystem && !forcedTheme) {
-        applyTheme('system')
+      if (themeMode === 'system' && enableSystem && !forcedTheme) {
+        applyThemeMode('system')
       }
     },
-    [theme, forcedTheme],
+    [themeMode, forcedTheme],
   )
 
   // Always listen to System preference
@@ -137,9 +140,9 @@ const Theme = ({
 
       // If default theme set, use it if localstorage === null (happens on local storage manual deletion)
       if (e.newValue) {
-        setThemeState(e.newValue) // Direct state update to avoid loops
+        setThemeModeState(e.newValue) // Direct state update to avoid loops
       } else {
-        setTheme(defaultTheme)
+        setThemeMode(defaultTheme)
       }
     }
 
@@ -147,23 +150,23 @@ const Theme = ({
     return () => {
       globalThis.window.removeEventListener('storage', handleStorage)
     }
-  }, [setTheme])
+  }, [setThemeMode])
 
   // Whenever theme or forcedTheme changes, apply it
   React.useEffect(() => {
-    applyTheme(forcedTheme ?? theme)
-  }, [forcedTheme, theme])
+    applyThemeMode(forcedTheme ?? themeMode)
+  }, [forcedTheme, themeMode])
 
   const providerValue = React.useMemo(
     () => ({
       forcedTheme,
-      resolvedTheme: theme === 'system' ? resolvedTheme : theme,
-      setTheme,
+      resolvedTheme: themeMode === 'system' ? resolvedTheme : themeMode,
+      setThemeMode,
       systemTheme: (enableSystem ? resolvedTheme : undefined) as 'light' | 'dark' | undefined,
-      theme,
+      themeMode,
       themeModes: enableSystem ? [...themeModes, 'system'] : themeModes,
     }),
-    [theme, setTheme, forcedTheme, resolvedTheme, enableSystem, themeModes],
+    [themeMode, setThemeMode, forcedTheme, resolvedTheme, enableSystem, themeModes],
   )
 
   return (

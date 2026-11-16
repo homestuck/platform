@@ -1,1 +1,1 @@
-@source '../{components}/**/*.{js,jsx,ts,tsx}';
+@source '../{blocks,components}/**/*.{js,jsx,ts,tsx}';

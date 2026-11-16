@@ -1,37 +1,32 @@
 import type { GlobalConfig, NamedTab } from 'payload'
 
+import { createCreatedByField, createUpdatedByField } from 'payload'
+
+import { authenticatedAccess } from '#access/authenticated'
 import { everyoneAccess } from '#access/everyone'
-import { themeField } from '#fields/theme'
 import { t } from '#i18n'
+
+import { validateDefaultTheme } from './hooks/validateDefaultTheme'
 
 const themeFieldsTab: NamedTab = {
   fields: [
     {
-      tabs: [
-        {
-          fields: [
-            themeField({
-              isRequired: true,
-              themeMode: 'light',
-              withDefaults: true,
-            }),
-          ],
-          label: t('tabs:lightMode:label'),
-          name: 'lightMode',
-        },
-        {
-          fields: [
-            themeField({
-              isRequired: true,
-              themeMode: 'dark',
-              withDefaults: true,
-            }),
-          ],
-          label: t('tabs:darkMode:label'),
-          name: 'darkMode',
-        },
-      ],
-      type: 'tabs',
+      hasMany: false,
+      name: 'defaultTheme',
+      relationTo: 'themes',
+      required: true,
+      type: 'relationship',
+      validate: validateDefaultTheme,
+    },
+    {
+      admin: {
+        appearance: 'drawer',
+        isSortable: true,
+      },
+      hasMany: true,
+      name: 'userThemes',
+      relationTo: 'themes',
+      type: 'relationship',
     },
   ],
   label: t('tabs:theme:label'),
@@ -41,6 +36,9 @@ const themeFieldsTab: NamedTab = {
 export const SiteAppearance = {
   access: {
     read: everyoneAccess,
+    readVersions: everyoneAccess,
+    update: authenticatedAccess,
+    validate: authenticatedAccess,
   },
   admin: {
     group: 'Site Settings',
@@ -50,6 +48,20 @@ export const SiteAppearance = {
       tabs: [themeFieldsTab],
       type: 'tabs',
     },
+    createCreatedByField({
+      overrides: {
+        access: {
+          read: authenticatedAccess,
+        },
+      },
+    }),
+    createUpdatedByField({
+      overrides: {
+        access: {
+          read: authenticatedAccess,
+        },
+      },
+    }),
   ],
   label: t('globals:site-appearance:label'),
   slug: 'site-appearance',

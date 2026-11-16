@@ -34,6 +34,7 @@ export const payloadConfig = (overrides: Partial<Config> = {}) =>
         db: mongooseAdapter({
           url: payloadEnv.PAYLOAD_PRIVATE_DATABASE_URI,
         }),
+        defaultDepth: 1,
         editor,
         globals,
         i18n,

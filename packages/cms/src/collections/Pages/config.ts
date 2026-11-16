@@ -1,11 +1,38 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, RelationshipField, UnnamedGroupField } from 'payload'
 
 import { everyoneAccess } from '#access/everyone'
+import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
+import { revalidateCollection } from '#hooks/revalidateCollection'
+import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
 
 // import { PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
+
+const sidebarFieldsGroup: UnnamedGroupField = {
+  admin: {
+    position: 'sidebar',
+  },
+  fields: [
+    titleField({
+      overrides: {
+        required: true,
+      },
+    }),
+    slugField(),
+    publishedAtField(),
+    {
+      filterOptions: ({ id }) => ({ id: { not_equals: id } }),
+      hasMany: false,
+      name: 'parent',
+      relationTo: 'pages',
+      type: 'relationship',
+      validate: validateIsNotSelf,
+    } as const satisfies RelationshipField,
+  ],
+  type: 'group',
+} as const
 
 export const Pages = {
   access: {
@@ -15,17 +42,12 @@ export const Pages = {
     useAsTitle: 'title',
   },
   fields: [
-    titleField({
-      overrides: {
-        required: true,
-      },
-    }),
-    slugField(),
     {
       blocks: ['archive'],
       name: 'layout',
       type: 'blocks',
     },
+    sidebarFieldsGroup,
   ],
   // hierarchy: {
   //   admin: {
@@ -36,6 +58,9 @@ export const Pages = {
   //   },
   //   parentFieldName: 'parent',
   // },
+  hooks: {
+    afterChange: [revalidateCollection],
+  },
   labels: {
     plural: t('collections:pages:labelPlural'),
     singular: t('collections:pages:labelSingular'),

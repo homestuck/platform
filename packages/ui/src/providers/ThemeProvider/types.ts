@@ -1,16 +1,18 @@
 import type * as CONSTANTS from './constants'
 
+import type React from 'react'
+
 export type Theme = string
 
 export type ThemeMode = (typeof CONSTANTS.THEME_MODES)[keyof typeof CONSTANTS.THEME_MODES]
 
-export type ThemeContext = {
-  forcedTheme?: string
-  theme?: Theme
-  setTheme: (theme?: Theme) => void
-  themeMode?: ThemeMode
-  setThemeMode: (themeMode: ThemeMode) => void
-}
+// export type ThemeContext = {
+//   forcedTheme?: string
+//   theme?: Theme
+//   setTheme: (theme?: Theme) => void
+//   themeMode?: ThemeMode
+//   setThemeMode: (themeMode: ThemeMode) => void
+// }
 
 type ValueObject = Record<string, string>
 
@@ -31,7 +33,7 @@ export type UseThemeProps = {
   /**
    * Update the theme
    */
-  setTheme: React.Dispatch<React.SetStateAction<string>>
+  setThemeMode: React.Dispatch<React.SetStateAction<string>>
   /**
    * Active theme name
    */

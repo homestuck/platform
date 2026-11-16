@@ -1,23 +1,27 @@
-// import type { BlockCatalog, BlockData, BlockElement } from './types'
+import type { BlockCatalog, BlockData, BlockElement } from './types'
 
-// import React from 'react'
+import { Archive } from './Archive/Component'
+import { Form } from './Form/Component'
+import { RichText } from './RichText/Component'
 
-// export const blockCatalog: BlockCatalog = {}
+const blockCatalog: BlockCatalog = {
+  archive: Archive,
+  formBlock: Form,
+  richText: RichText,
+}
 
-// export const BlocksRenderer: React.FC<{
-//   blocks: BlockData[]
-// }> = ({ blocks }) => {
-//   if (blocks.length === 0) return null
-
-//   return (
-//     <>
-//       {blocks.map((block) => {
-//         const { blockType, id } = block
-//         const Block = blockCatalog[blockType] as BlockElement<typeof blockType>
-
-//         return <Block {...block} key={id} />
-//       })}
-//     </>
-//   )
-// }
-export const BlocksRenderer = () => <></>
+export const BlocksRenderer: React.FC<{
+  blocks?: BlockData[]
+}> = ({ blocks = [] }) => {
+  const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
+  if (!hasBlocks) return null
+  return (
+    <>
+      {blocks.map((block) => {
+        const { blockType } = block
+        const Block = blockCatalog[blockType] as BlockElement<BlockData<typeof blockType>>
+        return <Block {...block} />
+      })}
+    </>
+  )
+}

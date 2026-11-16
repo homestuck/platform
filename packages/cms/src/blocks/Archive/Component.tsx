@@ -1,7 +1,6 @@
+import type { BlockElement } from '#blocks/types'
 import type { ArchiveBlock } from '#payload.types'
 
-type Props = ArchiveBlock
-
-export const Archive: React.FC<Props> = () => {
+export const Archive: BlockElement<ArchiveBlock> = () => {
   return <div></div>
 }

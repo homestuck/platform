@@ -1,14 +1,12 @@
 import type { Config } from '#payload.types'
-import type { Block, BlockSlug } from 'payload'
+import type { BlockSlug } from 'payload'
 
 export type BlockCatalog = {
-  [K in BlockSlug]: BlockElement<K>
+  [K in BlockSlug]: BlockElement<BlockData<K>>
 }
 
-export type BlockConfig = Record<string, Block>
+export type BlockConfig<TSlug extends BlockSlug = BlockSlug> = Config['blocks'][TSlug]
 
-export type BlockData = DataFromBlockSlug<BlockSlug>
+export type BlockData<TSlug extends BlockSlug = BlockSlug> = BlockConfig<TSlug>
 
-export type BlockElement<TSlug extends BlockSlug> = React.FC<DataFromBlockSlug<TSlug>>
-
-export type DataFromBlockSlug<TSlug extends BlockSlug> = Config['blocks'][TSlug]
+export type BlockElement<TData extends BlockData = BlockData> = React.FC<TData>

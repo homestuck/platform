@@ -3,34 +3,37 @@ import { cache } from 'react'
 
 import { getPayload } from 'payload'
 
+import { BlocksRenderer } from '@homestuck/cms/blocks/blocks-renderer'
+
 import configPromise from '#payload.config'
 
-export async function generateStaticParams() {
-  const payload = await getPayload({ config: configPromise })
+// export async function generateStaticParams() {
+//   const payload = await getPayload({ config: configPromise })
 
-  const pages = await payload.find({
-    collection: 'pages',
-    draft: false,
-    limit: 1000,
-    overrideAccess: false,
-    pagination: false,
-    select: {
-      slug: true,
-    },
-  })
+//   const pages = await payload.find({
+//     collection: 'pages',
+//     draft: false,
+//     limit: 1000,
+//     overrideAccess: false,
+//     pagination: false,
+//     select: {
+//       slug: true,
+//     },
+//   })
 
-  const params = pages.docs
-    ?.filter((doc) => {
-      return doc.slug !== 'home'
-    })
-    .map(({ slug }) => {
-      return { slug: slug.split('/') }
-    })
+//   const params = pages.docs
+//     ?.filter((doc) => {
+//       return doc.slug !== 'home'
+//     })
+//     .map(({ slug }) => {
+//       return { slug: slug.split('/') }
+//     })
 
-  return params
-}
+//   return [['home'], ...params]
+// }
 
 const getPageBySlug = cache(async ({ slug }: { slug: string }) => {
+  'use cache'
   const { isEnabled: draft } = await draftMode()
 
   const payload = await getPayload({ config: configPromise })
@@ -66,7 +69,7 @@ export default async function Page({ params: paramsPromise }: Props) {
 
   const slug = decodeURIComponent(encodedSlug)
 
-  const _page = await getPageBySlug({ slug })
+  const page = await getPageBySlug({ slug })
 
-  return <main></main>
+  return <BlocksRenderer blocks={page?.layout ?? []} />
 }

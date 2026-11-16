@@ -1,59 +1,78 @@
-import type { CollectionConfig, UnnamedGroupField } from 'payload'
+import type { CollectionConfig, NamedTab, UnnamedGroupField } from 'payload'
 
-import { publishedAtField } from '#fields/publishedAt'
+import { authenticatedAccess } from '#access/authenticated'
+import { everyoneAccess } from '#access/everyone'
 import { slugField } from '#fields/slug'
-import { themeField } from '#fields/theme'
 import { titleField } from '#fields/title'
 import { t } from '#i18n'
+
+import { defaultTheme } from './defaults'
+import { themeModeField } from './fields/themeMode'
+import { generateHasAllThemeTokens } from './hooks/generateHasAllThemeTokens'
 
 const sidebarFieldsGroup: UnnamedGroupField = {
   admin: {
     position: 'sidebar',
   },
-  fields: [titleField(), slugField(), publishedAtField()],
+  fields: [
+    titleField(),
+    slugField(),
+    {
+      admin: {
+        hidden: true,
+      },
+      defaultValue: false,
+      hooks: {
+        afterRead: [generateHasAllThemeTokens],
+      },
+      name: 'hasAllThemeTokens',
+      type: 'checkbox',
+      virtual: true,
+    },
+  ],
   type: 'group',
 } as const
 
+const lightModeFieldsTab: NamedTab = {
+  fields: [themeModeField({ defaultValues: defaultTheme.light })],
+  label: t('tabs:lightMode:label'),
+  name: 'lightMode',
+}
+
+const darkModeFieldsTab: NamedTab = {
+  fields: [themeModeField({ defaultValues: defaultTheme.dark })],
+  label: t('tabs:darkMode:label'),
+  name: 'darkMode',
+}
+
 export const Themes = {
+  access: {
+    create: authenticatedAccess,
+    delete: authenticatedAccess,
+    read: everyoneAccess,
+    unlock: authenticatedAccess,
+    update: authenticatedAccess,
+    validate: authenticatedAccess,
+  },
+  admin: {
+    useAsTitle: 'title',
+  },
+  defaultPopulate: {
+    darkMode: true,
+    hasAllThemeTokens: true,
+    lightMode: true,
+    slug: true,
+  },
   fields: [
-    sidebarFieldsGroup,
     {
-      tabs: [
-        {
-          fields: [
-            themeField({
-              isRequired: false,
-              themeMode: 'light',
-              withDefaults: false,
-            }),
-          ],
-          label: t('tabs:lightMode:label'),
-          name: 'lightMode',
-        },
-        {
-          fields: [
-            themeField({
-              isRequired: false,
-              themeMode: 'dark',
-              withDefaults: false,
-            }),
-          ],
-          label: t('tabs:darkMode:label'),
-          name: 'darkMode',
-        },
-      ],
+      tabs: [lightModeFieldsTab, darkModeFieldsTab],
       type: 'tabs',
     },
+    sidebarFieldsGroup,
   ],
   labels: {
     plural: t('collections:themes:labelPlural'),
     singular: t('collections:themes:labelSingular'),
   },
   slug: 'themes',
-  versions: {
-    drafts: {
-      schedulePublish: true,
-      validate: true,
-    },
-  },
 } as const satisfies CollectionConfig<'themes'>

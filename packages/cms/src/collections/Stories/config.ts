@@ -48,6 +48,7 @@ const pagesFieldTab: UnnamedTab = {
   fields: [
     {
       admin: {
+        allowCreate: true,
         defaultColumns: ['pageNumber', 'title', 'slug', 'publishedAt'],
       },
       collection: 'story-pages',

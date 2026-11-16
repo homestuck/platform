@@ -421,6 +421,17 @@ export interface User {
         expiresAt: string;
         refreshCount?: number | null;
         refreshedAt?: string | null;
+        label?: string | null;
+        type?: string | null;
+        metadata?:
+          | {
+              [k: string]: unknown;
+            }
+          | unknown[]
+          | string
+          | number
+          | boolean
+          | null;
       }[]
     | null;
   password?: string | null;
@@ -475,9 +486,11 @@ export interface RichTextBlock {
  */
 export interface Page {
   id: string;
+  layout?: ArchiveBlock[] | null;
   title: string;
   slug: string;
-  layout?: ArchiveBlock[] | null;
+  publishedAt?: string | null;
+  parent?: (string | null) | Page;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -771,9 +784,6 @@ export interface Tag {
  */
 export interface Theme {
   id: string;
-  title: string;
-  slug: string;
-  publishedAt?: string | null;
   lightMode?: {
     background?: string | null;
     foreground?: string | null;
@@ -826,6 +836,9 @@ export interface Theme {
     chart4?: string | null;
     chart5?: string | null;
   };
+  title: string;
+  slug: string;
+  hasAllThemeTokens?: boolean | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -836,7 +849,6 @@ export interface Theme {
   } | null;
   updatedAt: string;
   createdAt: string;
-  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1200,9 +1212,11 @@ export interface ContributorsSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  layout?: T | {};
   title?: T;
   slug?: T;
-  layout?: T | {};
+  publishedAt?: T;
+  parent?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1314,9 +1328,6 @@ export interface TagsSelect<T extends boolean = true> {
  * via the `definition` "themes_select".
  */
 export interface ThemesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  publishedAt?: T;
   lightMode?:
     | T
     | {
@@ -1373,11 +1384,13 @@ export interface ThemesSelect<T extends boolean = true> {
         chart4?: T;
         chart5?: T;
       };
+  title?: T;
+  slug?: T;
+  hasAllThemeTokens?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
-  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1406,6 +1419,9 @@ export interface UsersSelect<T extends boolean = true> {
         expiresAt?: T;
         refreshCount?: T;
         refreshedAt?: T;
+        label?: T;
+        type?: T;
+        metadata?: T;
       };
 }
 /**
@@ -1699,58 +1715,8 @@ export interface SiteConfiguration {
 export interface SiteAppearance {
   id: string;
   theme: {
-    lightMode: {
-      background: string;
-      foreground: string;
-      card: string;
-      cardForeground: string;
-      popover: string;
-      popoverForeground: string;
-      primary: string;
-      primaryForeground: string;
-      secondary: string;
-      secondaryForeground: string;
-      muted: string;
-      mutedForeground: string;
-      accent: string;
-      accentForeground: string;
-      destructive: string;
-      destructiveForeground: string;
-      border: string;
-      input: string;
-      ring: string;
-      chart1: string;
-      chart2: string;
-      chart3: string;
-      chart4: string;
-      chart5: string;
-    };
-    darkMode: {
-      background: string;
-      foreground: string;
-      card: string;
-      cardForeground: string;
-      popover: string;
-      popoverForeground: string;
-      primary: string;
-      primaryForeground: string;
-      secondary: string;
-      secondaryForeground: string;
-      muted: string;
-      mutedForeground: string;
-      accent: string;
-      accentForeground: string;
-      destructive: string;
-      destructiveForeground: string;
-      border: string;
-      input: string;
-      ring: string;
-      chart1: string;
-      chart2: string;
-      chart3: string;
-      chart4: string;
-      chart5: string;
-    };
+    defaultTheme: string | Theme;
+    userThemes?: (string | Theme)[] | null;
   };
   createdBy?: {
     relationTo: 'users';
@@ -1769,6 +1735,7 @@ export interface SiteAppearance {
  */
 export interface SiteHeader {
   id: string;
+  layout?: ArchiveBlock[] | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -1786,6 +1753,7 @@ export interface SiteHeader {
  */
 export interface SiteFooter {
   id: string;
+  layout?: ArchiveBlock[] | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -1841,62 +1809,8 @@ export interface SiteAppearanceSelect<T extends boolean = true> {
   theme?:
     | T
     | {
-        lightMode?:
-          | T
-          | {
-              background?: T;
-              foreground?: T;
-              card?: T;
-              cardForeground?: T;
-              popover?: T;
-              popoverForeground?: T;
-              primary?: T;
-              primaryForeground?: T;
-              secondary?: T;
-              secondaryForeground?: T;
-              muted?: T;
-              mutedForeground?: T;
-              accent?: T;
-              accentForeground?: T;
-              destructive?: T;
-              destructiveForeground?: T;
-              border?: T;
-              input?: T;
-              ring?: T;
-              chart1?: T;
-              chart2?: T;
-              chart3?: T;
-              chart4?: T;
-              chart5?: T;
-            };
-        darkMode?:
-          | T
-          | {
-              background?: T;
-              foreground?: T;
-              card?: T;
-              cardForeground?: T;
-              popover?: T;
-              popoverForeground?: T;
-              primary?: T;
-              primaryForeground?: T;
-              secondary?: T;
-              secondaryForeground?: T;
-              muted?: T;
-              mutedForeground?: T;
-              accent?: T;
-              accentForeground?: T;
-              destructive?: T;
-              destructiveForeground?: T;
-              border?: T;
-              input?: T;
-              ring?: T;
-              chart1?: T;
-              chart2?: T;
-              chart3?: T;
-              chart4?: T;
-              chart5?: T;
-            };
+        defaultTheme?: T;
+        userThemes?: T;
       };
   createdBy?: T;
   updatedBy?: T;
@@ -1909,6 +1823,7 @@ export interface SiteAppearanceSelect<T extends boolean = true> {
  * via the `definition` "site-header_select".
  */
 export interface SiteHeaderSelect<T extends boolean = true> {
+  layout?: T | {};
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1920,6 +1835,7 @@ export interface SiteHeaderSelect<T extends boolean = true> {
  * via the `definition` "site-footer_select".
  */
 export interface SiteFooterSelect<T extends boolean = true> {
+  layout?: T | {};
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -2072,10 +1988,6 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'tags';
           value: string | Tag;
-        } | null)
-      | ({
-          relationTo: 'themes';
-          value: string | Theme;
         } | null);
     global?: string | null;
     user?: {

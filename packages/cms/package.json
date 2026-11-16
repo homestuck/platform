@@ -5,7 +5,11 @@
   "type": "module",
   "imports": {
     "#access/*": "./src/access/*.ts",
+    "#blocks": "./src/blocks/blocks-renderer.tsx",
+    "#blocks/*": "./src/blocks/*.ts",
+    "#collections/*": "./src/collections/*.ts",
     "#fields/*": "./src/fields/*/index.ts",
+    "#globals/*": "./src/globals/*.ts",
     "#hooks/*": "./src/hooks/*.ts",
     "#payload.types": "./src/payload.types.ts",
     "#payload.config": "./src/payload.config.ts",

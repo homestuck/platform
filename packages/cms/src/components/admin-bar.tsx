@@ -34,17 +34,17 @@ export const AdminBar: React.FC<{
 
   return (
     <div
-      className={cn(baseClass, 'bg-primary text-primary-foreground border-border border-b-2 py-2', {
-        block: show,
-        hidden: !show,
-      })}>
+      className={cn(
+        baseClass,
+        'bg-primary text-primary-foreground border-border w-full border-b-2 py-2',
+        show ? 'block' : 'hidden',
+      )}>
       <div className="@container px-2 lg:px-16">
         <PayloadAdminBar
           {...adminBarProps}
           classNames={{
             controls: 'font-medium',
-            // logo: 'text-primary-foreground',
-            // user: 'text-primary-foreground',
+            user: 'text-accent-foreground',
           }}
           cmsURL={getClientURL()}
           collectionLabels={{

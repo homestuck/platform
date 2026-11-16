@@ -1,7 +1,6 @@
+import type { BlockElement } from '#blocks/types'
 import type { FormBlock } from '#payload.types'
 
-type Props = FormBlock
-
-export const Form: React.FC<Props> = () => {
+export const Form: BlockElement<FormBlock> = () => {
   return <div></div>
 }

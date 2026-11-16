@@ -1,6 +1,3 @@
 {
-  "compilerOptions": {
-    "plugins": [{ "name": "@payloadcms/typescript-plugin" }]
-  },
-  "extends": "@homestuck/tsconfig/next.json"
+  "extends": "@homestuck/tsconfig/payload.json"
 }

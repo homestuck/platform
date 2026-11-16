@@ -13,10 +13,10 @@ catalog:
   'eslint-plugin-react-you-might-not-need-an-effect': ^1.2.0
   'eslint-plugin-regexp': ^3.3.3
   'graphql': ^16.15.0
-  'lucide-react': ^1.72.0
+  'lucide-react': ^1.73.0
   'next': ^16.4.6
   'next-sitemap': ^4.2.3
-  'postcss': ^8.5.32
+  'postcss': ^8.5.33
   'react': ^19.3.1
   'react-dom': ^19.3.1
   'sonner': ^2.0.8
@@ -31,20 +31,20 @@ catalog:
 
 catalogs:
   payload:
-    '@payloadcms/admin-bar': 4.0.0-beta.8
-    '@payloadcms/db-mongodb': 4.0.0-beta.8
-    '@payloadcms/graphql': 4.0.0-beta.8
-    '@payloadcms/next': 4.0.0-beta.8
-    '@payloadcms/richtext-lexical': 4.0.0-beta.8
-    '@payloadcms/plugin-form-builder': 4.0.0-beta.8
-    '@payloadcms/plugin-redirects': 4.0.0-beta.8
-    '@payloadcms/plugin-search': 4.0.0-beta.8
-    '@payloadcms/plugin-seo': 4.0.0-beta.8
-    '@payloadcms/storage-s3': 4.0.0-beta.8
-    '@payloadcms/translations': 4.0.0-beta.8
-    '@payloadcms/typescript-plugin': 4.0.0-beta.8
-    '@payloadcms/ui': 4.0.0-beta.8
-    'payload': 4.0.0-beta.8
+    '@payloadcms/admin-bar': 4.0.0-beta.9
+    '@payloadcms/db-mongodb': 4.0.0-beta.9
+    '@payloadcms/graphql': 4.0.0-beta.9
+    '@payloadcms/next': 4.0.0-beta.9
+    '@payloadcms/richtext-lexical': 4.0.0-beta.9
+    '@payloadcms/plugin-form-builder': 4.0.0-beta.9
+    '@payloadcms/plugin-redirects': 4.0.0-beta.9
+    '@payloadcms/plugin-search': 4.0.0-beta.9
+    '@payloadcms/plugin-seo': 4.0.0-beta.9
+    '@payloadcms/storage-s3': 4.0.0-beta.9
+    '@payloadcms/translations': 4.0.0-beta.9
+    '@payloadcms/typescript-plugin': 4.0.0-beta.9
+    '@payloadcms/ui': 4.0.0-beta.9
+    'payload': 4.0.0-beta.9
   storybook:
     '@storybook-community/storybook-dark-mode': ^7.1.4
     '@storybook/addon-a11y': ^10.6.7
