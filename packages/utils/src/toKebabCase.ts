@@ -1,4 +1,4 @@
-import { dasherize } from 'inflection'
+import { transform } from 'inflection'
 
 import type { KebabCase } from '@homestuck/types'
 
@@ -12,4 +12,4 @@ import type { KebabCase } from '@homestuck/types'
  * @returns {string} The given string in kebab case.
  */
 export const toKebabCase = <T extends string>(value: T): KebabCase<T> =>
-  dasherize(value.toLowerCase()) as KebabCase<T>
+  transform(value, ['underscore', 'dasherize']) as KebabCase<T>

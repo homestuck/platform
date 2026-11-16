@@ -18,7 +18,8 @@
     "./components/admin": "./src/components/admin/index.ts",
     "./components/admin/client": "./src/components/admin/client/index.ts",
     "./components/*": "./src/components/*.tsx",
-    "./blocks/*": "./src/blocks/*.tsx"
+    "./blocks/*": "./src/blocks/*.tsx",
+    "./styles/*": "./src/styles/*"
   },
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
@@ -29,6 +30,8 @@
   },
   "dependencies": {
     "@homestuck/env": "workspace:^",
+    "@homestuck/styles": "workspace:^",
+    "@homestuck/ui": "workspace:^",
     "@homestuck/utils": "workspace:^",
     "@payloadcms/admin-bar": "catalog:payload",
     "@payloadcms/db-mongodb": "catalog:payload",

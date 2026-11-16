@@ -44,17 +44,22 @@ const overviewFieldsTab: UnnamedTab = {
   label: t('tabs:overview:label'),
 } as const
 
-const navigationFieldsTab: NamedTab = {
+const pagesFieldTab: UnnamedTab = {
   fields: [
     {
+      admin: {
+        defaultColumns: ['pageNumber', 'title', 'slug', 'publishedAt'],
+      },
       collection: 'story-pages',
+      defaultSort: ['-pageNumber'],
+      label: false,
       name: 'pages',
       on: 'story',
+      orderable: true,
       type: 'join',
     },
   ],
-  label: t('tabs:navigation:label'),
-  name: 'navigation',
+  label: t('tabs:pages:label'),
 } as const
 
 const metaFieldsTab: NamedTab = {
@@ -81,9 +86,7 @@ const sidebarFieldsGroup: UnnamedGroupField = {
     slugField(),
     publishedAtField(),
     {
-      admin: {
-        position: 'sidebar',
-      },
+      filterOptions: ({ id }) => ({ id: { not_equals: id } }),
       hasMany: false,
       name: 'parent',
       relationTo: 'stories',
@@ -106,7 +109,7 @@ export const Stories = {
   },
   fields: [
     {
-      tabs: [overviewFieldsTab, navigationFieldsTab, metaFieldsTab],
+      tabs: [overviewFieldsTab, pagesFieldTab, metaFieldsTab],
       type: 'tabs',
     },
     sidebarFieldsGroup,

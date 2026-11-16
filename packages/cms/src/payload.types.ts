@@ -192,7 +192,7 @@ export interface Config {
   };
   collectionsJoins: {
     stories: {
-      'navigation.pages': 'story-pages';
+      pages: 'story-pages';
     };
   };
   collectionsSelect: {
@@ -323,12 +323,10 @@ export interface Story {
   image?: (string | null) | Asset;
   title: string;
   description?: string | null;
-  navigation?: {
-    pages?: {
-      docs?: (string | StoryPage)[];
-      hasNextPage?: boolean;
-      totalDocs?: number;
-    };
+  pages?: {
+    docs?: (string | StoryPage)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
   };
   meta?: {
     title?: string | null;
@@ -434,6 +432,7 @@ export interface User {
  */
 export interface StoryPage {
   id: string;
+  '_story-pages_pages_order'?: string | null;
   layout?: {
     header?: RichTextBlock[] | null;
     content?: RichTextBlock[] | null;
@@ -1253,11 +1252,7 @@ export interface StoriesSelect<T extends boolean = true> {
   image?: T;
   title?: T;
   description?: T;
-  navigation?:
-    | T
-    | {
-        pages?: T;
-      };
+  pages?: T;
   meta?:
     | T
     | {
@@ -1278,6 +1273,7 @@ export interface StoriesSelect<T extends boolean = true> {
  * via the `definition` "story-pages_select".
  */
 export interface StoryPagesSelect<T extends boolean = true> {
+  '_story-pages_pages_order'?: T;
   layout?:
     | T
     | {

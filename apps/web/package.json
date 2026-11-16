@@ -23,6 +23,7 @@
   "dependencies": {
     "@homestuck/cms": "workspace:^",
     "@homestuck/env": "workspace:^",
+    "@homestuck/ui": "workspace:^",
     "@payloadcms/db-mongodb": "catalog:payload",
     "@payloadcms/graphql": "catalog:payload",
     "@payloadcms/next": "catalog:payload",

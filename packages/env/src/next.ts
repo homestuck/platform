@@ -9,11 +9,12 @@ export const env = createEnv({
   },
   clientPrefix: 'NEXT_PUBLIC_',
   emptyStringAsUndefined: true,
-  runtimeEnv: {
-    NEXT_PUBLIC_APP_URL: process.env.PUBLIC_URL,
+  runtimeEnvStrict: {
+    APP_URL: process.env.APP_URL,
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
   server: {
-    PUBLIC_URL: z.url(),
+    APP_URL: z.url(),
   },
   shared: {},
   skipValidation,

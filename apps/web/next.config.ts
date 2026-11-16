@@ -3,7 +3,7 @@ import type { NextConfig } from 'next'
 
 import { withPayload } from '@payloadcms/next/withPayload'
 
-import { env } from '@homestuck/env/payload'
+import { env } from '@homestuck/env/next'
 
 import { redirects } from './redirects'
 
@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   images: {
     qualities: [100],
-    remotePatterns: [env.NEXT_PUBLIC_PAYLOAD_URL].map((item) => {
+    remotePatterns: [env.NEXT_PUBLIC_APP_URL].map((item) => {
       const url = new URL(item)
       return {
         hostname: url.hostname,
