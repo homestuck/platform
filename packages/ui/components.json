@@ -1,9 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
   "aliases": {
-    "components": "@homestuck/ui/components",
+    "components": "@homestuck/ui",
     "hooks": "@homestuck/ui/hooks",
-    "ui": "@homestuck/ui/components",
+    "ui": "@homestuck/ui",
     "utils": "@homestuck/utils"
   },
   "rsc": true,

@@ -8,12 +8,14 @@
     "#blocks": "./src/blocks/blocks-renderer.tsx",
     "#blocks/*": "./src/blocks/*.ts",
     "#collections/*": "./src/collections/*.ts",
+    "#components/*": "./src/components/*.tsx",
     "#fields/*": "./src/fields/*/index.ts",
     "#globals/*": "./src/globals/*.ts",
     "#hooks/*": "./src/hooks/*.ts",
     "#payload.types": "./src/payload.types.ts",
     "#payload.config": "./src/payload.config.ts",
     "#i18n": "./src/i18n/index.ts",
+    "#i18n/*": "./src/i18n/*.ts",
     "#utils/*": "./src/utils/*.ts"
   },
   "exports": {
@@ -54,7 +56,8 @@
     "next": "catalog:",
     "payload": "catalog:payload",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:"
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",

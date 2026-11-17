@@ -1,16 +1,14 @@
-import type { ThemeToken } from '../types'
 import type { TextField, UnnamedGroupField } from 'payload'
 
+import * as CONSTANTS from '#collections/Themes/constants'
 import { colorField } from '#fields/color'
 import { t } from '#i18n'
 
-import * as CONSTANTS from '../constants'
-
-type Args = { defaultValues?: Record<ThemeToken, string> }
+type Args = { defaultValues?: Record<string, string> }
 
 export type ThemeModeField = (args?: Args) => UnnamedGroupField
 
-export const themeModeField: ThemeModeField = ({ defaultValues } = {}) => ({
+export const themeModeField: ThemeModeField = ({ defaultValues = {} } = {}) => ({
   admin: {
     hideGutter: true,
   },

@@ -63,7 +63,7 @@ type Props = {
 export default async function Page({ params: paramsPromise }: Props) {
   const params = await paramsPromise
 
-  const { slug: slugArray = [] } = params
+  const { slug: slugArray = ['home'] } = params
 
   const encodedSlug = slugArray.join('/')
 
@@ -71,5 +71,7 @@ export default async function Page({ params: paramsPromise }: Props) {
 
   const page = await getPageBySlug({ slug })
 
-  return <BlocksRenderer blocks={page?.layout ?? []} />
+  const blockData = page?.layout ?? []
+
+  return <BlocksRenderer blocks={blockData} />
 }

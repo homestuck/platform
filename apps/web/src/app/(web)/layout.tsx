@@ -2,6 +2,7 @@
 import { draftMode } from 'next/headers'
 // import { cache } from 'react'
 // import { getPayload } from 'payload'
+import { Suspense } from 'react'
 
 import { AdminBar } from '@homestuck/cms/components/admin-bar'
 
@@ -41,11 +42,13 @@ export default async function RootLayout({ children }: Props) {
       <body>
         <ThemeProvider attribute={'class'}>
           <SiteAppearance />
-          <AdminBar
-            adminBarProps={{
-              preview: isEnabled,
-            }}
-          />
+          <Suspense>
+            <AdminBar
+              adminBarProps={{
+                preview: isEnabled,
+              }}
+            />
+          </Suspense>
           <SiteHeader />
           <main
             className={

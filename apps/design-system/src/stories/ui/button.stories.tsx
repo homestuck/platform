@@ -1,7 +1,7 @@
 import { ArrowUpIcon, ArrowUpRightIcon, MailIcon } from 'lucide-react'
 
-import { Button } from '@homestuck/ui/components/button'
-import { Spinner as UISpinner } from '@homestuck/ui/components/spinner'
+import { Button } from '@homestuck/ui/button'
+import { Spinner as UISpinner } from '@homestuck/ui/spinner'
 
 import preview from '#sb/preview'
 
@@ -46,7 +46,7 @@ const meta = preview.meta({
           >Button</Button>
         `,
         import: `
-          import { Button } from '@homestuck/ui/components/button'
+          import { Button } from '@homestuck/ui/button'
            `,
       },
     },

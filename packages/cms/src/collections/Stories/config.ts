@@ -18,8 +18,6 @@ import { titleField } from '#fields/title'
 import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
 
-// import { STORIES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
-
 const overviewFieldsTab: UnnamedTab = {
   fields: [
     {
@@ -115,16 +113,6 @@ export const Stories = {
     },
     sidebarFieldsGroup,
   ],
-  // hierarchy: {
-  //   admin: {
-  //     components: {
-  //       Icon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
-  //       SmallIcon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
-  //     },
-  //     useHeaderButton: false,
-  //   },
-  //   parentFieldName: 'parent',
-  // },
   labels: {
     plural: t('collections:stories:labelPlural'),
     singular: t('collections:stories:labelSingular'),

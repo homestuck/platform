@@ -48,7 +48,7 @@ const sidebarFieldsGroup: UnnamedGroupField = {
           },
           hasMany: false,
           name: 'story',
-          relationTo: ['stories'],
+          relationTo: 'stories',
           required: true,
           type: 'relationship',
         } satisfies RelationshipField,

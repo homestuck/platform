@@ -2,7 +2,7 @@
 'use client'
 import type { SiteAppearance as SiteAppearanceData } from '#payload.types'
 
-import { StyleSheet } from '@homestuck/ui/components/style-sheet'
+import { StyleSheet } from '@homestuck/ui/style-sheet'
 import { toKebabCase } from '@homestuck/utils/toKebabCase'
 
 type SiteAppearanceProps = {

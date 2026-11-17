@@ -10,10 +10,10 @@
     "#ui/*": "./src/components/*.tsx"
   },
   "exports": {
-    "./components/*": "./src/components/*.tsx",
-    "./hooks/*": "./src/hooks/*.ts",
     "./providers/*": "./src/providers/*/index.tsx",
-    "./styles/globals.css": "./src/styles/globals.css"
+    "./hooks/*": "./src/hooks/*.ts",
+    "./styles/globals.css": "./src/styles/globals.css",
+    "./*": "./src/components/*.tsx"
   },
   "scripts": {
     "add": "pnpm dlx shadcn-ui add",

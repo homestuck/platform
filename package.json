@@ -33,7 +33,7 @@
     "@types/react-dom": "^19.3.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
     "eslint-plugin-regexp": "catalog:",
-    "lint-staged": "^17.6.0",
+    "lint-staged": "^17.6.1",
     "turbo": "^2.11.11",
     "typescript": "catalog:",
     "vite-plus": "catalog:"

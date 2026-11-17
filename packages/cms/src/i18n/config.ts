@@ -2,12 +2,13 @@ import type { CustomTranslationsObject } from './types'
 import type { I18nOptions } from '@payloadcms/translations'
 import type { LocalizationConfig } from 'payload'
 
-import { en } from '@payloadcms/translations/languages/en'
+import { en, enTranslations } from '@payloadcms/translations/languages/en'
+import { deepMerge } from 'payload'
 
 import enDict from './dictionaries/en.json'
 
 export const translations = {
-  en: enDict as CustomTranslationsObject,
+  en: deepMerge(enTranslations, enDict),
 } as const
 
 export const localization: LocalizationConfig = {

@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@homestuck/styles/tailwind/globals.css';
+@import '@homestuck/ui/styles/globals.css';
 @import '@homestuck/cms/styles/globals.css';
 
 @layer base {

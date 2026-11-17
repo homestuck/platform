@@ -7,6 +7,10 @@
     "form": {
       "labelPlural": "Forms",
       "labelSingular": "Form"
+    },
+    "navigationMenu": {
+      "labelPlural": "Navigation Menus",
+      "labelSingular": "Navigation Menu"
     }
   },
   "collections": {
@@ -222,9 +226,11 @@
       "label": "Site Configuration"
     },
     "site-footer": {
+      "description": "The bottom-most visible section of a webpage that acts as a navigation safety net and conversion anchor for users who reach the end of a scroll.",
       "label": "Site Footer"
     },
     "site-header": {
+      "description": "The top-most visible section of a webpage that remains consistent across your site to establish brand identity and guide user navigation.",
       "label": "Site Header"
     }
   },

@@ -1,7 +1,7 @@
 {
   "aliases": {
     "components": "#components",
-    "ui": "@homestuck/ui/components",
+    "ui": "@homestuck/ui",
     "utils": "#utils"
   }
 }

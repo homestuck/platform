@@ -13,14 +13,12 @@ export const Tags = {
     }),
     publishedAtField(),
   ],
-  hierarchy: {
-    parentFieldName: 'parent',
-  },
   labels: {
     plural: t('collections:tags:labelPlural'),
     singular: t('collections:tags:labelSingular'),
   },
   slug: 'tags',
+  tags: true,
   versions: {
     drafts: {
       schedulePublish: true,
