@@ -13,7 +13,7 @@ export const RichText = {
     richTextField({
       editorFeaturesOverrides: [
         BlocksFeature({
-          blocks: ['archive'],
+          blocks: [],
           inlineBlocks: [],
         }),
       ],

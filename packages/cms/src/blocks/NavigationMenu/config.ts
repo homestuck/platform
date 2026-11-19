@@ -5,7 +5,8 @@ import { t } from '#i18n'
 export const NavigationMenu = {
   fields: [
     {
-      blocks: ['archive'],
+      blocks: ['navigationMenuList'],
+      label: false,
       name: 'content',
       type: 'blocks',
     },

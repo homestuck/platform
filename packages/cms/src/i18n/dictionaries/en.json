@@ -11,6 +11,18 @@
     "navigationMenu": {
       "labelPlural": "Navigation Menus",
       "labelSingular": "Navigation Menu"
+    },
+    "navigationMenuDropdown": {
+      "labelPlural": "Navigation Menu Dropdowns",
+      "labelSingular": "Navigation Menu Dropdown"
+    },
+    "navigationMenuList": {
+      "labelPlural": "Navigation Menu Lists",
+      "labelSingular": "Navigation Menu List"
+    },
+    "navigationMenuLink": {
+      "labelPlural": "Navigation Menu Links",
+      "labelSingular": "Navigation Menu Link"
     }
   },
   "collections": {
@@ -60,6 +72,25 @@
     }
   },
   "fields": {
+    "alt": {
+      "label": "Alternate Text"
+    },
+    "color": {
+      "label": "Color"
+    },
+    "description": {
+      "label": "Description"
+    },
+    "parentType": {
+      "label": "Parent Collection Type(s)"
+    },
+    "publishedAt": {
+      "label": "Published At"
+    },
+    "slug": {
+      "description": "A unique, indexed, URL-friendly string that identifies a particular document, often used to construct the URL of a webpage.",
+      "label": "Slug"
+    },
     "theme": {
       "accent": {
         "description": "A highlight color for active, focused, or hover states.",
@@ -195,27 +226,11 @@
       "sidebarPrimaryForeground": { "description": "", "label": "Sidebar Primary Foreground" },
       "sidebarRing": { "description": "", "label": "Sidebar Ring" }
     },
-    "alt": {
-      "label": "Alternate Text"
-    },
-    "color": {
-      "label": "Color"
-    },
-    "description": {
-      "label": "Description"
-    },
-    "parentType": {
-      "label": "Parent Collection Type(s)"
-    },
-    "publishedAt": {
-      "label": "Published At"
-    },
-    "slug": {
-      "description": "A unique, indexed, URL-friendly string that identifies a particular document, often used to construct the URL of a webpage.",
-      "label": "Slug"
-    },
     "title": {
       "label": "Title"
+    },
+    "url": {
+      "label": "URL"
     }
   },
   "globals": {

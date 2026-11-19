@@ -52,12 +52,12 @@
     "@payloadcms/translations": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
     "cn": "catalog:",
-    "lucide-react": "catalog:",
-    "next": "catalog:",
+    "lucide-react": "catalog:react",
+    "next": "catalog:nextjs",
     "payload": "catalog:payload",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "react-hook-form": "catalog:"
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "react-hook-form": "catalog:react"
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
@@ -67,8 +67,8 @@
     "@payloadcms/db-mongodb": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
     "payload": "catalog:payload",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
   },
   "watch": {
     "generate:types": {

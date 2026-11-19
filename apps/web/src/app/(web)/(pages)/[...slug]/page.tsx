@@ -1,5 +1,5 @@
 import { draftMode } from 'next/headers'
-import { cache } from 'react'
+import { Suspense, cache } from 'react'
 
 import { getPayload } from 'payload'
 
@@ -73,5 +73,9 @@ export default async function Page({ params: paramsPromise }: Props) {
 
   const blockData = page?.layout ?? []
 
-  return <BlocksRenderer blocks={blockData} />
+  return (
+    <Suspense fallback={<></>}>
+      <BlocksRenderer blocks={blockData} />
+    </Suspense>
+  )
 }

@@ -147,17 +147,6 @@ export type LexicalNodes_7262A34B =
   | SerializedLineBreakNode
   | SerializedParagraphNode<LexicalNodes_7262A34B>
   | SerializedHeadingNode<LexicalNodes_7262A34B>;
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "LexicalNodes_C680EDD9".
- */
-export type LexicalNodes_C680EDD9 =
-  | SerializedTextNode
-  | SerializedTabNode
-  | SerializedLineBreakNode
-  | SerializedParagraphNode<LexicalNodes_C680EDD9>
-  | SerializedBlockNode<ArchiveBlock_90444DB9>
-  | SerializedHeadingNode<LexicalNodes_C680EDD9>;
 
 export interface Config {
   auth: {
@@ -167,6 +156,9 @@ export interface Config {
     archive: ArchiveBlock;
     formBlock: FormBlock;
     navigationMenu: NavigationMenuBlock;
+    navigationMenuDropdown: NavigationMenuDropdownBlock;
+    navigationMenuLink: NavigationMenuLinkBlock;
+    navigationMenuList: NavigationMenuListBlock;
     richText: RichTextBlock;
   };
   collections: {
@@ -473,7 +465,7 @@ export interface StoryPage {
  * via the `definition` "RichTextBlock".
  */
 export interface RichTextBlock {
-  richText?: LexicalRichText<LexicalNodes_C680EDD9> | null;
+  richText?: LexicalRichText<LexicalNodes_7262A34B> | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'richText';
@@ -484,10 +476,15 @@ export interface RichTextBlock {
  */
 export interface Page {
   id: string;
-  layout?: (ArchiveBlock | FormBlock)[] | null;
+  layout?: (RichTextBlock | FormBlock)[] | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+  };
   title: string;
   slug: string;
   publishedAt?: string | null;
+  url?: string | null;
   parent?: (string | null) | Page;
   createdBy?: {
     relationTo: 'users';
@@ -682,10 +679,49 @@ export interface Textarea {
  * via the `definition` "NavigationMenuBlock".
  */
 export interface NavigationMenuBlock {
-  content?: ArchiveBlock[] | null;
+  content?: NavigationMenuListBlock[] | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'navigationMenu';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NavigationMenuListBlock".
+ */
+export interface NavigationMenuListBlock {
+  items?: (NavigationMenuLinkBlock | NavigationMenuDropdownBlock)[] | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'navigationMenuList';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NavigationMenuLinkBlock".
+ */
+export interface NavigationMenuLinkBlock {
+  link: {
+    type: 'reference' | 'custom';
+    reference?: {
+      relationTo: 'pages';
+      value: string | Page;
+    } | null;
+    url?: string | null;
+    newTab?: boolean | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'navigationMenuLink';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NavigationMenuDropdownBlock".
+ */
+export interface NavigationMenuDropdownBlock {
+  trigger?: LexicalRichText<LexicalNodes_7262A34B> | null;
+  content?: NavigationMenuLinkBlock[] | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'navigationMenuDropdown';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1223,9 +1259,16 @@ export interface ContributorsSelect<T extends boolean = true> {
  */
 export interface PagesSelect<T extends boolean = true> {
   layout?: T | {};
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
   title?: T;
   slug?: T;
   publishedAt?: T;
+  url?: T;
   parent?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1763,7 +1806,7 @@ export interface SiteHeader {
  */
 export interface SiteFooter {
   id: string;
-  layout?: ArchiveBlock[] | null;
+  layout?: NavigationMenuBlock[] | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -2008,48 +2051,6 @@ export interface TaskSchedulePublish {
   output?: unknown;
 }
 /**
- * Multiple blocks resolve to the `ArchiveBlock` interface with different fields, so a content hash is appended to keep the generated types stable and unambiguous. Set a unique `interfaceName` on the block to choose the name yourself. See https://payloadcms.com/docs/typescript/generating-types#block-interface-name-collisions
- *
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "ArchiveBlock_90444DB9".
- */
-export interface ArchiveBlock_90444DB9 {
-  id: string;
-  blockType: 'archive';
-  /**
-   * The method to use to populate this Archive.
-   */
-  populateBy?: ('collection' | 'selection') | null;
-  /**
-   * The collection(s) documents to display in this Archive.
-   */
-  relationTo?: ('stories' | 'story-pages' | 'pages') | null;
-  /**
-   * How many documents to display in this Archive. (Set to 0 to display all documents.)
-   */
-  limit?: number | null;
-  /**
-   * Which documents to display in this Archive.
-   */
-  selectedDocs?:
-    | (
-        | {
-            relationTo: 'stories';
-            value: string | Story;
-          }
-        | {
-            relationTo: 'story-pages';
-            value: string | StoryPage;
-          }
-        | {
-            relationTo: 'pages';
-            value: string | Page;
-          }
-      )[]
-    | null;
-  blockName?: string | null;
-}
-/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "auth".
  */
@@ -2128,20 +2129,6 @@ export interface LexicalRichText<TNode> {
     version: number;
   };
 }
-
-export type SerializedBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
-  type: 'block';
-  format: LexicalElementFormat;
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-  fields: { id: string; blockName?: string | null } & Omit<TFields, 'id' | 'blockName'>;
-} : never;
-export type SerializedInlineBlockNode<TFields extends { blockType: string }> = TFields extends unknown ? {
-  type: 'inlineBlock';
-  /** @deprecated Ignored when loading. Typed as required only to match Lexical's types: rich text sent through the API, CLI or MCP may not contain it. */
-  version: number;
-  fields: { id: string } & Omit<TFields, 'id'>;
-} : never;
 
 
 declare module 'payload' {

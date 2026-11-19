@@ -1,6 +1,14 @@
 import type { BlockElement } from '#blocks/types'
 import type { NavigationMenuBlock } from '#payload.types'
 
-export const NavigationMenu: BlockElement<NavigationMenuBlock> = () => {
-  return <div></div>
+import * as UI from '@homestuck/ui/navigation-menu'
+
+import { BlocksRenderer } from '#blocks'
+
+export const NavigationMenu: BlockElement<NavigationMenuBlock> = ({ content }) => {
+  return content ? (
+    <UI.NavigationMenu>
+      <BlocksRenderer blocks={content} />
+    </UI.NavigationMenu>
+  ) : null
 }

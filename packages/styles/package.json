@@ -25,7 +25,10 @@
     "@homestuck/tokens": "workspace:^"
   },
   "devDependencies": {
-    "style-dictionary": "^5.8.0",
-    "style-dictionary-utils": "^6.0.1"
+    "style-dictionary": "catalog:",
+    "style-dictionary-utils": "catalog:"
+  },
+  "peerDependencies": {
+    "tailwindcss": "catalog:tailwindcss"
   }
 }

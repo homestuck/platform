@@ -16,7 +16,7 @@ export const SiteFooter = {
   },
   fields: [
     {
-      blocks: ['archive'],
+      blocks: ['navigationMenu'],
       name: 'layout',
       type: 'blocks',
     },

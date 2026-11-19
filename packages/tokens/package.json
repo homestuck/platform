@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
-    "@terrazzo/cli": "^2.10.0"
+    "@terrazzo/cli": "catalog:"
   }
 }

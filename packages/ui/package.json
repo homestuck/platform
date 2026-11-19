@@ -23,27 +23,27 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@base-ui/react": "^1.9.0",
+    "@base-ui/react": "catalog:react",
     "@homestuck/styles": "workspace:^",
     "@homestuck/utils": "workspace:^",
-    "class-variance-authority": "^0.7.1",
-    "cmdk": "^1.1.1",
+    "class-variance-authority": "catalog:",
+    "cmdk": "catalog:react",
     "cn": "catalog:",
-    "date-fns": "^4.4.0",
-    "lucide-react": "catalog:",
-    "next-themes": "^0.4.6",
-    "react": "catalog:",
-    "react-day-picker": "^10.0.2",
-    "react-dom": "catalog:",
-    "react-hook-form": "^7.92.0",
-    "sonner": "catalog:",
+    "date-fns": "catalog:",
+    "lucide-react": "catalog:react",
+    "next-themes": "catalog:nextjs",
+    "react": "catalog:react",
+    "react-day-picker": "catalog:react",
+    "react-dom": "catalog:react",
+    "react-hook-form": "catalog:react",
+    "sonner": "catalog:react",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
     "@homestuck/types": "workspace:^",
-    "next": "catalog:",
-    "tailwindcss": "catalog:",
-    "tw-animate-css": "catalog:"
+    "next": "catalog:nextjs",
+    "tailwindcss": "catalog:tailwindcss",
+    "tw-animate-css": "catalog:tailwindcss"
   }
 }

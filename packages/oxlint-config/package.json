@@ -13,6 +13,7 @@
     "@homestuck/tsconfig": "workspace:^",
     "@shadcn/lint": "catalog:",
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
-    "eslint-plugin-regexp": "catalog:"
+    "eslint-plugin-regexp": "catalog:",
+    "vite-plus": "catalog:vite"
   }
 }

@@ -1,25 +1,8 @@
-import type { Block, CollectionSlug, OptionObject } from 'payload'
+import type { Block } from 'payload'
 
 import { t } from '#i18n'
 
-const archiveRelationToOptions = [
-  {
-    label: t('collections:stories:labelPlural'),
-    value: 'stories',
-  },
-  {
-    label: t('collections:story-pages:labelPlural'),
-    value: 'story-pages',
-  },
-  {
-    label: t('collections:pages:labelPlural'),
-    value: 'pages',
-  },
-] as const satisfies OptionObject[]
-
-const archiveSelectedDocsRelationTo = archiveRelationToOptions.map(
-  (option) => option.value satisfies CollectionSlug,
-)
+import { ARCHIVE_REFERENCE_SLUGS, ARCHIVE_REFERENCES } from './constants'
 
 export const Archive = {
   fields: [
@@ -48,7 +31,7 @@ export const Archive = {
       },
       label: 'Collections to Show',
       name: 'relationTo',
-      options: archiveRelationToOptions,
+      options: ARCHIVE_REFERENCES,
       type: 'select',
     },
     {
@@ -72,7 +55,7 @@ export const Archive = {
       hasMany: true,
       label: 'Selection',
       name: 'selectedDocs',
-      relationTo: archiveSelectedDocsRelationTo,
+      relationTo: ARCHIVE_REFERENCE_SLUGS,
       type: 'relationship',
     },
   ],

@@ -1,18 +1,8 @@
-import type { BlockCatalog, BlockData, BlockElement } from './types'
+import type { BlockData, BlockElement } from './types'
 
 import React from 'react'
 
-import { Archive } from './Archive/Component'
-import { Form } from './Form/Component'
-import { NavigationMenu } from './NavigationMenu/Component'
-import { RichText } from './RichText/Component'
-
-const blockCatalog: BlockCatalog = {
-  archive: Archive,
-  formBlock: Form,
-  navigationMenu: NavigationMenu,
-  richText: RichText,
-}
+import { BLOCK_CATALOG } from './constants'
 
 export const BlocksRenderer: React.FC<{
   blocks?: BlockData[]
@@ -23,7 +13,7 @@ export const BlocksRenderer: React.FC<{
     <React.Fragment>
       {blocks.map((block, index) => {
         const { blockType } = block
-        const Block = blockCatalog[blockType] as BlockElement<BlockData<typeof blockType>>
+        const Block = BLOCK_CATALOG[blockType] as BlockElement<BlockData<typeof blockType>>
         return <Block {...block} key={index} />
       })}
     </React.Fragment>

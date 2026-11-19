@@ -1,9 +1,18 @@
-import type { CollectionConfig, RelationshipField, UnnamedGroupField } from 'payload'
+import type {
+  CollectionConfig,
+  NamedTab,
+  RelationshipField,
+  UnnamedGroupField,
+  UnnamedTab,
+} from 'payload'
+
+import { MetaDescriptionField, MetaTitleField, OverviewField } from '@payloadcms/plugin-seo/fields'
 
 import { everyoneAccess } from '#access/everyone'
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
+import { urlField } from '#fields/url'
 import { revalidateCollection } from '#hooks/revalidateCollection'
 import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
@@ -22,6 +31,7 @@ const sidebarFieldsGroup: UnnamedGroupField = {
     }),
     slugField(),
     publishedAtField(),
+    urlField(),
     {
       filterOptions: ({ id }) => ({ id: { not_equals: id } }),
       hasMany: false,
@@ -34,6 +44,33 @@ const sidebarFieldsGroup: UnnamedGroupField = {
   type: 'group',
 } as const
 
+const layoutFieldsTab = {
+  fields: [
+    {
+      blocks: ['richText', 'formBlock'],
+      name: 'layout',
+      type: 'blocks',
+    },
+  ],
+  label: t('tabs:layout:label'),
+} as const satisfies UnnamedTab
+
+const metaFieldsTab: NamedTab = {
+  fields: [
+    MetaTitleField({
+      hasGenerateFn: true,
+    }),
+    MetaDescriptionField({}),
+    OverviewField({
+      descriptionPath: 'meta.description',
+      // imagePath: 'meta.image',
+      titlePath: 'meta.title',
+    }),
+  ],
+  label: t('tabs:meta:label'),
+  name: 'meta',
+} as const
+
 export const Pages = {
   access: {
     read: everyoneAccess,
@@ -43,9 +80,8 @@ export const Pages = {
   },
   fields: [
     {
-      blocks: ['archive', 'formBlock'],
-      name: 'layout',
-      type: 'blocks',
+      tabs: [layoutFieldsTab, metaFieldsTab],
+      type: 'tabs',
     },
     sidebarFieldsGroup,
   ],

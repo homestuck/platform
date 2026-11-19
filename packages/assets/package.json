@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "@homestuck/types": "workspace:^",
-    "react": "catalog:"
+    "react": "catalog:react"
   }
 }

@@ -11,6 +11,6 @@
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
-    "vite-plus": "catalog:"
+    "vite-plus": "catalog:vite"
   }
 }

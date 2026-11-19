@@ -33,19 +33,19 @@
     "@payloadcms/plugin-seo": "catalog:payload",
     "@payloadcms/richtext-lexical": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
-    "@tailwindcss/turbopack": "catalog:",
+    "@tailwindcss/turbopack": "catalog:tailwindcss",
     "graphql": "catalog:",
-    "lucide-react": "catalog:",
-    "next": "catalog:",
+    "lucide-react": "catalog:react",
+    "next": "catalog:nextjs",
     "payload": "catalog:payload",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "react-hook-form": "catalog:",
-    "tailwindcss": "catalog:"
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "react-hook-form": "catalog:react",
+    "tailwindcss": "catalog:tailwindcss"
   },
   "devDependencies": {
     "@homestuck/tsconfig": "workspace:^",
     "@payloadcms/typescript-plugin": "catalog:payload",
-    "babel-plugin-react-compiler": "catalog:"
+    "babel-plugin-react-compiler": "catalog:react"
   }
 }
