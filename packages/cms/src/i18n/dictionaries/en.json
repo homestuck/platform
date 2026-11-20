@@ -78,6 +78,9 @@
     "color": {
       "label": "Color"
     },
+    "css": {
+      "label": "Custom CSS Styles"
+    },
     "description": {
       "label": "Description"
     },

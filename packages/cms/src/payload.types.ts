@@ -1789,6 +1789,7 @@ export interface SiteAppearance {
 export interface SiteHeader {
   id: string;
   layout?: NavigationMenuBlock[] | null;
+  css?: string | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -1877,6 +1878,7 @@ export interface SiteAppearanceSelect<T extends boolean = true> {
  */
 export interface SiteHeaderSelect<T extends boolean = true> {
   layout?: T | {};
+  css?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;

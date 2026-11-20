@@ -1,11 +1,32 @@
-import type { GlobalConfig } from 'payload'
+import type { GlobalConfig, UnnamedGroupField } from 'payload'
 
 import { authenticatedAccess } from '#access/authenticated'
 import { everyoneAccess } from '#access/everyone'
+import { cssField } from '#fields/css'
 import { revalidateGlobal } from '#hooks/revalidateGlobal'
 import { t } from '#i18n'
 
 import { SITE_HEADER_DESCRIPTION_COMPONENT_PATH } from './constants'
+
+const sidebarFieldsGroup: UnnamedGroupField = {
+  admin: {
+    position: 'sidebar',
+  },
+  fields: [
+    {
+      fields: [
+        cssField({
+          overrides: {
+            label: false,
+          },
+        }),
+      ],
+      label: t('fields:css:label'),
+      type: 'collapsible',
+    },
+  ],
+  type: 'group',
+} as const
 
 export const SiteHeader = {
   access: {
@@ -31,6 +52,7 @@ export const SiteHeader = {
       name: 'layout',
       type: 'blocks',
     },
+    sidebarFieldsGroup,
   ],
   hooks: {
     afterChange: [revalidateGlobal],
