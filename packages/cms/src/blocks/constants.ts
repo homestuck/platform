@@ -7,6 +7,7 @@ import { NavigationMenuDropdown as navigationMenuDropdown } from './NavigationMe
 import { NavigationMenuLink as navigationMenuLink } from './NavigationMenu/Link/Component'
 import { NavigationMenuList as navigationMenuList } from './NavigationMenu/List/Component'
 import { RichText as richText } from './RichText/Component'
+import { Script as script } from './Script/Component'
 
 export const BLOCK_CATALOG = {
   archive,
@@ -16,4 +17,5 @@ export const BLOCK_CATALOG = {
   navigationMenuLink,
   navigationMenuList,
   richText,
+  script,
 } as const satisfies BlockCatalog

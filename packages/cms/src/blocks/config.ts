@@ -7,6 +7,7 @@ import { NavigationMenuDropdown } from './NavigationMenu/Dropdown/config'
 import { NavigationMenuLink } from './NavigationMenu/Link/config'
 import { NavigationMenuList } from './NavigationMenu/List/config'
 import { RichText } from './RichText/config'
+import { Script } from './Script/config'
 
 export const blockConfigs = [
   Archive,
@@ -16,6 +17,7 @@ export const blockConfigs = [
   NavigationMenuLink,
   NavigationMenuList,
   RichText,
+  Script,
 ] as const satisfies Block[]
 
 export const blockSlugs = blockConfigs.map<BlockSlug>((block) => block.slug)

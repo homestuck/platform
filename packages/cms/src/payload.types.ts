@@ -160,6 +160,7 @@ export interface Config {
     navigationMenuLink: NavigationMenuLinkBlock;
     navigationMenuList: NavigationMenuListBlock;
     richText: RichTextBlock;
+    script: ScriptBlock;
   };
   collections: {
     assets: Asset;
@@ -172,6 +173,7 @@ export interface Config {
     'story-pages': StoryPage;
     tags: Tag;
     themes: Theme;
+    typesets: Typeset;
     users: User;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -199,6 +201,7 @@ export interface Config {
     'story-pages': StoryPagesSelect<false> | StoryPagesSelect<true>;
     tags: TagsSelect<false> | TagsSelect<true>;
     themes: ThemesSelect<false> | ThemesSelect<true>;
+    typesets: TypesetsSelect<false> | TypesetsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -215,15 +218,13 @@ export interface Config {
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | 'en-US' | 'en-US'[];
   globals: {
-    'site-configuration': SiteConfiguration;
-    'site-appearance': SiteAppearance;
+    'site-settings': SiteSettings;
     'site-header': SiteHeader;
     'site-footer': SiteFooter;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
-    'site-configuration': SiteConfigurationSelect<false> | SiteConfigurationSelect<true>;
-    'site-appearance': SiteAppearanceSelect<false> | SiteAppearanceSelect<true>;
+    'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     'site-header': SiteHeaderSelect<false> | SiteHeaderSelect<true>;
     'site-footer': SiteFooterSelect<false> | SiteFooterSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
@@ -349,14 +350,6 @@ export interface Asset {
   alt?: string | null;
   prefix?: string | null;
   _objectKey?: string | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -380,6 +373,116 @@ export interface Asset {
     _objectKey?: string | null;
     _stored?: boolean | null;
   };
+  focalX?: number | null;
+  focalY?: number | null;
+  variants?: {
+    '16x16'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    '32x32'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    '48x48'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'apple-touch-icon-180x180'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'android-chrome-192x192'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'android-chrome-512x512'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-pages".
+ */
+export interface StoryPage {
+  id: string;
+  '_story-pages_pages_order'?: string | null;
+  layout?: {
+    header?: RichTextBlock[] | null;
+    content?: RichTextBlock[] | null;
+    footer?: RichTextBlock[] | null;
+  };
+  navigation?: {};
+  title: string;
+  slug: string;
+  publishedAt?: string | null;
+  story: string | Story;
+  pageNumber: number;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "RichTextBlock".
+ */
+export interface RichTextBlock {
+  richText?: LexicalRichText<LexicalNodes_7262A34B> | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'richText';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -432,71 +535,25 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "story-pages".
- */
-export interface StoryPage {
-  id: string;
-  '_story-pages_pages_order'?: string | null;
-  layout?: {
-    header?: RichTextBlock[] | null;
-    content?: RichTextBlock[] | null;
-    footer?: RichTextBlock[] | null;
-  };
-  navigation?: {};
-  title: string;
-  slug: string;
-  publishedAt?: string | null;
-  story: string | Story;
-  pageNumber: number;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "RichTextBlock".
- */
-export interface RichTextBlock {
-  richText?: LexicalRichText<LexicalNodes_7262A34B> | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'richText';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
   id: string;
+  parent?: (string | null) | Page;
+  title: string;
+  slug: string;
+  publishedAt?: string | null;
+  url?: string | null;
   layout?: (RichTextBlock | FormBlock)[] | null;
   meta?: {
     title?: string | null;
     description?: string | null;
   };
-  title: string;
-  slug: string;
-  publishedAt?: string | null;
-  url?: string | null;
-  parent?: (string | null) | Page;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -725,20 +782,22 @@ export interface NavigationMenuDropdownBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ScriptBlock".
+ */
+export interface ScriptBlock {
+  code: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'script';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contributors".
  */
 export interface Contributor {
   id: string;
   displayName: string;
   user?: (string | null) | User;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -895,6 +954,34 @@ export interface Theme {
   } | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "typesets".
+ */
+export interface Typeset {
+  id: string;
+  fontHeading: string;
+  fontBody: string;
+  fontMono: string;
+  size: string;
+  leading: number;
+  flow: string;
+  cssStyles?: string | null;
+  title: string;
+  slug: string;
+  publishedAt?: string | null;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1144,6 +1231,10 @@ export interface PayloadLockedDocument {
         value: string | Theme;
       } | null)
     | ({
+        relationTo: 'typesets';
+        value: string | Typeset;
+      } | null)
+    | ({
         relationTo: 'users';
         value: string | User;
       } | null)
@@ -1213,8 +1304,6 @@ export interface AssetsSelect<T extends boolean = true> {
   alt?: T;
   prefix?: T;
   _objectKey?: T;
-  createdBy?: T;
-  updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1240,6 +1329,90 @@ export interface AssetsSelect<T extends boolean = true> {
         _objectKey?: T;
         _stored?: T;
       };
+  focalX?: T;
+  focalY?: T;
+  variants?:
+    | T
+    | {
+        '16x16'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+        '32x32'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+        '48x48'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+        'apple-touch-icon-180x180'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+        'android-chrome-192x192'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+        'android-chrome-512x512'?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+              prefix?: T;
+              _objectKey?: T;
+              _stored?: T;
+            };
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1248,8 +1421,6 @@ export interface AssetsSelect<T extends boolean = true> {
 export interface ContributorsSelect<T extends boolean = true> {
   displayName?: T;
   user?: T;
-  createdBy?: T;
-  updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1258,6 +1429,11 @@ export interface ContributorsSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  parent?: T;
+  title?: T;
+  slug?: T;
+  publishedAt?: T;
+  url?: T;
   layout?: T | {};
   meta?:
     | T
@@ -1265,16 +1441,11 @@ export interface PagesSelect<T extends boolean = true> {
         title?: T;
         description?: T;
       };
-  title?: T;
-  slug?: T;
-  publishedAt?: T;
-  url?: T;
-  parent?: T;
-  createdBy?: T;
-  updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+  _h_slugPath?: T;
+  _h_titlePath?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1444,6 +1615,27 @@ export interface ThemesSelect<T extends boolean = true> {
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "typesets_select".
+ */
+export interface TypesetsSelect<T extends boolean = true> {
+  fontHeading?: T;
+  fontBody?: T;
+  fontMono?: T;
+  size?: T;
+  leading?: T;
+  flow?: T;
+  cssStyles?: T;
+  title?: T;
+  slug?: T;
+  publishedAt?: T;
+  createdBy?: T;
+  updatedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1741,44 +1933,21 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-configuration".
+ * via the `definition` "site-settings".
  */
-export interface SiteConfiguration {
+export interface SiteSettings {
   id: string;
+  favicon?: (string | null) | Asset;
+  title: string;
+  description?: string | null;
+  appearance: {
+    theme: string | Theme;
+  };
   meta?: {
     title?: string | null;
     description?: string | null;
     image?: (string | null) | Asset;
   };
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt?: string | null;
-  createdAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-appearance".
- */
-export interface SiteAppearance {
-  id: string;
-  theme: {
-    defaultTheme: string | Theme;
-    userThemes?: (string | Theme)[] | null;
-  };
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1789,15 +1958,7 @@ export interface SiteAppearance {
 export interface SiteHeader {
   id: string;
   layout?: NavigationMenuBlock[] | null;
-  css?: string | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
+  inlineStyles?: unknown;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1808,14 +1969,6 @@ export interface SiteHeader {
 export interface SiteFooter {
   id: string;
   layout?: NavigationMenuBlock[] | null;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1839,9 +1992,17 @@ export interface PayloadJobsStat {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-configuration_select".
+ * via the `definition` "site-settings_select".
  */
-export interface SiteConfigurationSelect<T extends boolean = true> {
+export interface SiteSettingsSelect<T extends boolean = true> {
+  favicon?: T;
+  title?: T;
+  description?: T;
+  appearance?:
+    | T
+    | {
+        theme?: T;
+      };
   meta?:
     | T
     | {
@@ -1849,25 +2010,6 @@ export interface SiteConfigurationSelect<T extends boolean = true> {
         description?: T;
         image?: T;
       };
-  createdBy?: T;
-  updatedBy?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "site-appearance_select".
- */
-export interface SiteAppearanceSelect<T extends boolean = true> {
-  theme?:
-    | T
-    | {
-        defaultTheme?: T;
-        userThemes?: T;
-      };
-  createdBy?: T;
-  updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1878,9 +2020,7 @@ export interface SiteAppearanceSelect<T extends boolean = true> {
  */
 export interface SiteHeaderSelect<T extends boolean = true> {
   layout?: T | {};
-  css?: T;
-  createdBy?: T;
-  updatedBy?: T;
+  inlineStyles?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1891,8 +2031,6 @@ export interface SiteHeaderSelect<T extends boolean = true> {
  */
 export interface SiteFooterSelect<T extends boolean = true> {
   layout?: T | {};
-  createdBy?: T;
-  updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1945,6 +2083,7 @@ export interface CollectionQueryWidget {
       | 'story-pages'
       | 'tags'
       | 'themes'
+      | 'typesets'
       | 'users'
       | 'forms'
       | 'form-submissions'
@@ -1983,6 +2122,7 @@ export interface ActivityWidget {
           | 'story-pages'
           | 'tags'
           | 'themes'
+          | 'typesets'
           | 'users'
           | 'forms'
           | 'form-submissions'
@@ -2043,6 +2183,10 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'tags';
           value: string | Tag;
+        } | null)
+      | ({
+          relationTo: 'typesets';
+          value: string | Typeset;
         } | null);
     global?: string | null;
     user?: {

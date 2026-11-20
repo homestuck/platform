@@ -6,4 +6,4 @@ import { isGlobalAdmin } from './globalAdmin'
 export type PublishedDocumentAccess = Access<TypeWithID>
 
 export const publishedDocumentAccess: PublishedDocumentAccess = ({ req: { user } }) =>
-  isGlobalAdmin(user) ?? IS_PUBLISHED_DOCUMENT_QUERY
+  isGlobalAdmin(user) || IS_PUBLISHED_DOCUMENT_QUERY

@@ -15,6 +15,7 @@ export const Assets = {
     update: authenticatedAccess,
     validate: authenticatedAccess,
   },
+  authorship: false,
   fields: [
     {
       admin: {

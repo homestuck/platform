@@ -1,8 +1,8 @@
-// import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { draftMode } from 'next/headers'
-// import { cache } from 'react'
-// import { getPayload } from 'payload'
 import { Suspense } from 'react'
+
+import { getPayload } from 'payload'
 
 import { AdminBar } from '@homestuck/cms/components/admin-bar'
 
@@ -12,24 +12,25 @@ import { SiteFooter } from '@homestuck/cms/components/site-footer'
 import { SiteHeader } from '@homestuck/cms/components/site-header'
 import { ThemeProvider } from '@homestuck/ui/providers/ThemeProvider'
 
-// import configPromise from '#payload.config'
+import configPromise from '#payload.config'
 
-// const getSiteConfiguration = cache(async () => {
-//   const payload = await getPayload({ config: configPromise })
-//   const siteConfiguration = await payload.findGlobal({
-//     slug: 'site-configuration',
-//   })
-//   return siteConfiguration
-// })
+const getSiteSettings = async () => {
+  'use cache'
+  const payload = await getPayload({ config: configPromise })
+  const siteSettings = await payload.findGlobal({
+    slug: 'site-settings',
+  })
+  return siteSettings
+}
 
-// export async function generateMetadata(): Promise<Metadata> {
-//   const { meta } = await getSiteConfiguration()
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getSiteSettings()
 
-//   return {
-//     description: meta?.description ?? 'Example website placeholder description.',
-//     title: meta?.title ?? 'Website',
-//   }
-// }
+  return {
+    description: meta?.description ?? 'Example website placeholder description.',
+    title: meta?.title ?? 'Website',
+  }
+}
 
 type Props = {
   children: React.ReactNode
@@ -40,7 +41,7 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute={'class'}>
+        <ThemeProvider attribute={'class'} disableTransitionOnChange>
           <SiteAppearance />
           <Suspense>
             <AdminBar
@@ -62,3 +63,5 @@ export default async function RootLayout({ children }: Props) {
     </html>
   )
 }
+
+export const instant = false

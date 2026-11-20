@@ -32,7 +32,18 @@ const overviewFieldsTab: UnnamedTab = {
           type: 'upload',
         },
         {
-          fields: [titleField(), descriptionField()],
+          fields: [
+            titleField(),
+            descriptionField({
+              overrides: {
+                admin: {
+                  description: t('fields:description:description', {
+                    document: 'story',
+                  }),
+                },
+              },
+            }),
+          ],
           type: 'group',
         },
       ],

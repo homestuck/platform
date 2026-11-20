@@ -24,11 +24,6 @@ const sidebarFieldsGroup: UnnamedGroupField = {
     position: 'sidebar',
   },
   fields: [
-    titleField({
-      overrides: {
-        required: true,
-      },
-    }),
     slugField(),
     publishedAtField(),
     urlField(),
@@ -78,13 +73,25 @@ export const Pages = {
   admin: {
     useAsTitle: 'title',
   },
+  authorship: false,
   fields: [
+    titleField({
+      overrides: {
+        admin: {
+          position: 'sidebar',
+        },
+        required: true,
+      },
+    }),
+    sidebarFieldsGroup,
     {
       tabs: [layoutFieldsTab, metaFieldsTab],
       type: 'tabs',
     },
-    sidebarFieldsGroup,
   ],
+  hierarchy: {
+    parentFieldName: 'parent',
+  },
   hooks: {
     afterChange: [revalidateCollection],
   },

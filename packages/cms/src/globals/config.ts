@@ -1,13 +1,11 @@
 import type { GlobalConfig } from 'payload'
 
-import { SiteAppearance } from './SiteAppearance/config'
-import { SiteConfiguration } from './SiteConfiguration/config'
 import { SiteFooter } from './SiteFooter/config'
 import { SiteHeader } from './SiteHeader/config'
+import { SiteSettings } from './SiteSettings/config'
 
 export const globalConfigs = [
-  SiteConfiguration,
-  SiteAppearance,
+  SiteSettings,
   SiteHeader,
   SiteFooter,
 ] as const satisfies GlobalConfig[]

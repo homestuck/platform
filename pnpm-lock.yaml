@@ -295,6 +295,9 @@ catalogs:
     '@payloadcms/storage-s3':
       specifier: 4.0.0-beta.10
       version: 4.0.0-beta.10
+    '@payloadcms/transformer-sharp':
+      specifier: 4.0.0-beta.10
+      version: 4.0.0-beta.10
     '@payloadcms/translations':
       specifier: 4.0.0-beta.10
       version: 4.0.0-beta.10
@@ -576,6 +579,9 @@ importers:
       '@homestuck/env':
         specifier: workspace:^
         version: link:../../packages/env
+      '@homestuck/styles':
+        specifier: workspace:^
+        version: link:../../packages/styles
       '@homestuck/ui':
         specifier: workspace:^
         version: link:../../packages/ui
@@ -701,6 +707,9 @@ importers:
       '@payloadcms/storage-s3':
         specifier: catalog:payload
         version: 4.0.0-beta.10(@types/react@19.3.0)(monaco-editor@0.57.0)(payload@4.0.0-beta.10(graphql@16.15.0)(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+      '@payloadcms/transformer-sharp':
+        specifier: catalog:payload
+        version: 4.0.0-beta.10(@types/node@26.6.6)(payload@4.0.0-beta.10(graphql@16.15.0)(typescript@7.0.2))
       '@payloadcms/translations':
         specifier: catalog:payload
         version: 4.0.0-beta.10
@@ -3194,6 +3203,12 @@ packages:
 
   '@payloadcms/storage-s3@4.0.0-beta.10':
     resolution: {integrity: sha512-p9GHeE63VatEaCQyeaY+RByqUd/yj2+YTmN5waASRARl9eevYw1cnznfcoN9dUOoNXkIWSU1E0+f4llumE604g==}
+    engines: {node: ^24.22.3 || >=26.13.1}
+    peerDependencies:
+      payload: 4.0.0-beta.10
+
+  '@payloadcms/transformer-sharp@4.0.0-beta.10':
+    resolution: {integrity: sha512-qK8BZ7PKlhrh8jS34OLsrIYQa7470rDcz37ywRRa9vgCQKxqfadu9p/2Cqxxel7A/UClGRdOpdQ/wWs06Mqv4g==}
     engines: {node: ^24.22.3 || >=26.13.1}
     peerDependencies:
       payload: 4.0.0-beta.10
@@ -8166,8 +8181,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@img/colour@1.1.0':
-    optional: true
+  '@img/colour@1.1.0': {}
 
   '@img/sharp-darwin-arm64@0.35.5':
     optionalDependencies:
@@ -9452,6 +9466,13 @@ snapshots:
       - react-dom
       - supports-color
       - typescript
+
+  '@payloadcms/transformer-sharp@4.0.0-beta.10(@types/node@26.6.6)(payload@4.0.0-beta.10(graphql@16.15.0)(typescript@7.0.2))':
+    dependencies:
+      payload: 4.0.0-beta.10(graphql@16.15.0)(typescript@7.0.2)
+      sharp: 0.35.5(@types/node@26.6.6)
+    transitivePeerDependencies:
+      - '@types/node'
 
   '@payloadcms/translations@4.0.0-beta.10':
     dependencies:
@@ -13229,7 +13250,6 @@ snapshots:
       '@img/sharp-win32-ia32': 0.35.5
       '@img/sharp-win32-x64': 0.35.5
       '@types/node': 26.6.6
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:

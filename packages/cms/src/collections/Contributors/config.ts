@@ -15,6 +15,7 @@ export const Contributors = {
     update: authenticatedAccess,
     validate: authenticatedAccess,
   },
+  authorship: false,
   fields: [
     {
       name: 'displayName',

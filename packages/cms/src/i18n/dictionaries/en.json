@@ -23,6 +23,10 @@
     "navigationMenuLink": {
       "labelPlural": "Navigation Menu Links",
       "labelSingular": "Navigation Menu Link"
+    },
+    "script": {
+      "labelPlural": "Scripts",
+      "labelSingular": "Script"
     }
   },
   "collections": {
@@ -66,6 +70,10 @@
       "labelPlural": "Themes",
       "labelSingular": "Theme"
     },
+    "typesets": {
+      "labelPlural": "Typesets",
+      "labelSingular": "Typeset"
+    },
     "users": {
       "labelPlural": "Users",
       "labelSingular": "User"
@@ -78,11 +86,17 @@
     "color": {
       "label": "Color"
     },
-    "css": {
+    "cssStyles": {
+      "description": "A set of CSS rules that modify the visual presentation and layout appearance.",
       "label": "Custom CSS Styles"
     },
     "description": {
+      "description": "A short summary that describes the {{document}}.",
       "label": "Description"
+    },
+    "inlineStyles": {
+      "description": "A CSS properties object that modifies the visual presentation and layout appearance.",
+      "label": "Inline CSS Styles"
     },
     "parentType": {
       "label": "Parent Collection Type(s)"
@@ -250,14 +264,26 @@
     "site-header": {
       "description": "The top-most visible section of a webpage that remains consistent across your site to establish brand identity and guide user navigation.",
       "label": "Site Header"
+    },
+    "site-settings": {
+      "label": "Site Settings"
     }
   },
   "plugin-seo": {
     "imageDescription": "This should be an image that adheres to the Open Graph recommended 1.91:1 aspect ratio — ideally 1200×630 with the primary contents contained within the inner 1000×500."
   },
   "tabs": {
+    "appearance": {
+      "label": "🖼️ Appearance Settings"
+    },
+    "color": {
+      "label": "🎨 Colors"
+    },
     "darkMode": {
       "label": "🌙 Dark Mode"
+    },
+    "font": {
+      "label": "🗛 Fonts"
     },
     "layout": {
       "label": "📰 Layout"
@@ -278,7 +304,7 @@
       "label": "📖 Story Pages"
     },
     "theme": {
-      "label": "🖼️ Theme Settings"
+      "label": "🌗 Theme Settings"
     }
   }
 }

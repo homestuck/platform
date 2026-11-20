@@ -1,8 +1,12 @@
+import { BlocksRenderer } from '#blocks'
 import { getCachedGlobal } from '#utils/getGlobal'
 
-import { SiteHeaderClient } from './site-header.client'
-
 export async function SiteHeader() {
-  const siteHeader = await getCachedGlobal('site-header', 1)
-  return <SiteHeaderClient data={siteHeader} />
+  const { layout } = await getCachedGlobal('site-header', 1)
+  return (
+    <header
+      className={'group/header @container/header flex w-full flex-col items-center justify-center'}>
+      {layout ? <BlocksRenderer blocks={layout} /> : null}
+    </header>
+  )
 }

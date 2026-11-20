@@ -4,6 +4,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { sharpTransformer } from '@payloadcms/transformer-sharp'
 import { buildConfig, deepMerge } from 'payload'
 
 import { env as payloadEnv } from '@homestuck/env/payload'
@@ -41,11 +42,59 @@ export const payloadConfig = (overrides: Partial<Config> = {}) =>
         jobs,
         llmInstructions: false,
         localization,
-        plugins: plugins,
+        plugins,
         secret: payloadEnv.PAYLOAD_PRIVATE_SECRET,
         storage,
         typescript: {
           outputFile: path.resolve(dirname, 'payload.types.ts'),
+        },
+        upload: {
+          transformers: [
+            sharpTransformer({
+              collections: {
+                assets: {
+                  variants: [
+                    {
+                      height: 16,
+                      name: '16x16',
+                      position: 'centre',
+                      width: 16,
+                    },
+                    {
+                      height: 32,
+                      name: '32x32',
+                      position: 'centre',
+                      width: 32,
+                    },
+                    {
+                      height: 48,
+                      name: '48x48',
+                      position: 'centre',
+                      width: 48,
+                    },
+                    {
+                      height: 180,
+                      name: 'apple-touch-icon-180x180',
+                      position: 'centre',
+                      width: 180,
+                    },
+                    {
+                      height: 192,
+                      name: 'android-chrome-192x192',
+                      position: 'centre',
+                      width: 192,
+                    },
+                    {
+                      height: 512,
+                      name: 'android-chrome-512x512',
+                      position: 'centre',
+                      width: 512,
+                    },
+                  ],
+                },
+              },
+            }),
+          ],
         },
       } satisfies Config,
       overrides,

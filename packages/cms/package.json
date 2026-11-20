@@ -49,6 +49,7 @@
     "@payloadcms/plugin-seo": "catalog:payload",
     "@payloadcms/richtext-lexical": "catalog:payload",
     "@payloadcms/storage-s3": "catalog:payload",
+    "@payloadcms/transformer-sharp": "catalog:payload",
     "@payloadcms/translations": "catalog:payload",
     "@payloadcms/ui": "catalog:payload",
     "cn": "catalog:",

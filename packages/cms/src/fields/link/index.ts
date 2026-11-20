@@ -37,7 +37,7 @@ export const linkField: LinkField = ({ referenceTypes = [], overrides = {} } = {
                     ]
                   : []),
                 {
-                  label: 'Custom URL',
+                  label: 'External URL',
                   value: 'custom',
                 },
               ],

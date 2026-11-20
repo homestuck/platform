@@ -12,8 +12,9 @@ export const SiteFooter = {
     validate: authenticatedAccess,
   },
   admin: {
-    group: 'Site Settings',
+    group: 'Site Configuration',
   },
+  authorship: false,
   fields: [
     {
       blocks: ['navigationMenu'],

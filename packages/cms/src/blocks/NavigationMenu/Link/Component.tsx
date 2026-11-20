@@ -8,6 +8,6 @@ import { CMSLink } from '#components/cms-link'
 export const NavigationMenuLink: BlockElement<NavigationMenuLinkBlock> = ({ link }) => (
   <UI.NavigationMenuLink
     render={<CMSLink {...link} label={'Link!!'} />}
-    className={UI.navigationMenuTriggerStyle({ className: 'py-0' })}
+    className={UI.navigationMenuTriggerStyle({ className: 'py-0 underline h-auto' })}
   />
 )

@@ -2,7 +2,7 @@ import type { GlobalConfig, UnnamedGroupField } from 'payload'
 
 import { authenticatedAccess } from '#access/authenticated'
 import { everyoneAccess } from '#access/everyone'
-import { cssField } from '#fields/css'
+import { inlineStylesField } from '#fields/inlineStyles'
 import { revalidateGlobal } from '#hooks/revalidateGlobal'
 import { t } from '#i18n'
 
@@ -15,13 +15,13 @@ const sidebarFieldsGroup: UnnamedGroupField = {
   fields: [
     {
       fields: [
-        cssField({
+        inlineStylesField({
           overrides: {
             label: false,
           },
         }),
       ],
-      label: t('fields:css:label'),
+      label: t('fields:inlineStyles:label'),
       type: 'collapsible',
     },
   ],
@@ -44,8 +44,9 @@ export const SiteHeader = {
         path: SITE_HEADER_DESCRIPTION_COMPONENT_PATH,
       },
     },
-    group: 'Site Settings',
+    group: 'Site Configuration',
   },
+  authorship: false,
   fields: [
     {
       blocks: ['navigationMenu'],

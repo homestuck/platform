@@ -49,6 +49,7 @@ catalogs:
     '@payloadcms/plugin-search': 4.0.0-beta.10
     '@payloadcms/plugin-seo': 4.0.0-beta.10
     '@payloadcms/storage-s3': 4.0.0-beta.10
+    '@payloadcms/transformer-sharp': 4.0.0-beta.10
     '@payloadcms/translations': 4.0.0-beta.10
     '@payloadcms/typescript-plugin': 4.0.0-beta.10
     '@payloadcms/ui': 4.0.0-beta.10
@@ -245,7 +246,7 @@ minimumReleaseAgeExclude:
   - '@payloadcms/typescript-plugin@4.0.0-beta.10'
   - '@payloadcms/ui@4.0.0-beta.10'
   - payload@4.0.0-beta.10
-nodeVersion: '26.13.0'
+nodeVersion: '26.13.1'
 
 packages:
   - 'apps/*'

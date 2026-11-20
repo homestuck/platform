@@ -13,6 +13,9 @@ type Args = {
 export const descriptionField: DescriptionField = ({ overrides = {} } = {}) =>
   deepMerge<TextareaField>(
     {
+      admin: {
+        description: t('fields:description:description'),
+      },
       label: t('fields:description:label'),
       name: 'description',
       type: 'textarea',

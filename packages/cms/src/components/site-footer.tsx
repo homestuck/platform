@@ -1,8 +1,13 @@
+import { BlocksRenderer } from '#blocks'
 import { getCachedGlobal } from '#utils/getGlobal'
 
-import { SiteFooterClient } from './site-footer.client'
-
 export async function SiteFooter() {
-  const siteFooter = await getCachedGlobal('site-footer')
-  return <SiteFooterClient data={siteFooter} />
+  const { layout } = await getCachedGlobal('site-footer')
+  return (
+    <footer
+      className={'group/footer @container/footer flex w-full flex-col items-center justify-center'}>
+      {layout ? <BlocksRenderer blocks={layout} /> : null}
+      {'Footer'}
+    </footer>
+  )
 }
