@@ -9,7 +9,7 @@ export async function SiteAppearance() {
 
   if (!theme || typeof theme === 'string') return
 
-  const { lightMode = {}, darkMode = {} } = theme
+  const { lightMode, darkMode } = theme
   // oxlint-disable sort-keys
   const stylesheet = {
     ':root': Object.fromEntries(

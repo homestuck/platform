@@ -17,6 +17,8 @@ import { revalidateCollection } from '#hooks/revalidateCollection'
 import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
 
+import { PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
+
 // import { PAGES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
 
 const sidebarFieldsGroup: UnnamedGroupField = {
@@ -90,6 +92,11 @@ export const Pages = {
     },
   ],
   hierarchy: {
+    admin: {
+      components: {
+        Icon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
+      },
+    },
     parentFieldName: 'parent',
   },
   hooks: {

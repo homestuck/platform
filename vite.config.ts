@@ -15,7 +15,13 @@ export default defineConfig({
     overrides: [
       {
         files: ['packages/cms/src/**'],
+        jsPlugins: [{ name: 'payload', specifier: 'oxlint-plugin-payload' }],
         rules: {
+          'payload/no-find-without-depth': 'error',
+          'payload/no-find-without-select': 'error',
+          'payload/no-missing-override-access': 'error',
+          'payload/prefer-explicit-populate': 'error',
+          'payload/require-user-with-override-false': 'error',
           'unicorn/filename-case': [
             'error',
             {

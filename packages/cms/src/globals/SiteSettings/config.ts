@@ -11,11 +11,12 @@ import {
 import { authenticatedAccess } from '#access/authenticated'
 import { everyoneAccess } from '#access/everyone'
 import { descriptionField } from '#fields/description'
+import { themeField } from '#fields/theme'
 import { titleField } from '#fields/title'
 import { revalidateGlobal } from '#hooks/revalidateGlobal'
 import { t } from '#i18n'
 
-import { validateDefaultTheme } from './hooks/validateDefaultTheme'
+import { defaultTheme } from './defaults'
 
 const overviewFieldsTab: UnnamedTab = {
   fields: [
@@ -58,14 +59,11 @@ const appearanceFieldsTab: NamedTab = {
       tabs: [
         {
           fields: [
-            {
-              hasMany: false,
-              name: 'theme',
-              relationTo: 'themes',
+            themeField({
+              defaultValues: defaultTheme,
+              overrides: { label: false },
               required: true,
-              type: 'relationship',
-              validate: validateDefaultTheme,
-            },
+            }),
           ],
           label: t('tabs:theme:label'),
         },

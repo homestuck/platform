@@ -14,7 +14,10 @@ async function getGlobal<T extends Global>(slug: T, depth = 1): Promise<DataFrom
 
   const global = await payload.findGlobal({
     depth,
+    overrideAccess: false,
+    select: undefined,
     slug,
+    user: null,
   })
 
   return global

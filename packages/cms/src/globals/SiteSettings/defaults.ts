@@ -1,4 +1,4 @@
-import type { ThemeMode, ThemeToken } from './types'
+import type { ThemeMode, ThemeToken } from '#fields/theme/types'
 
 export const defaultTheme: Record<ThemeMode, Record<ThemeToken, string>> = {
   dark: {

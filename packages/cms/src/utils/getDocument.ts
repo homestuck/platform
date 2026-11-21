@@ -1,5 +1,5 @@
 import type { Config } from '#payload.types'
-import type { DataFromCollectionSlug } from 'payload'
+import type { DataFromCollectionSlug, TypedCollectionSelect } from 'payload'
 
 import { cacheTag } from 'next/cache'
 
@@ -7,21 +7,30 @@ import { getPayload } from 'payload'
 
 import configPromise from '#payload.config'
 
-type CollectionSlug = keyof Config['collections']
+type CollectionWithSlugField = Extract<
+  Config['collections'][keyof Config['collections']],
+  Record<'slug', unknown>
+>
 
-async function getDocumentBySlug<TSlug extends CollectionSlug = CollectionSlug>(
-  collection: TSlug,
-  slug: string,
-  depth = 1,
-): Promise<DataFromCollectionSlug<TSlug>> {
+type CollectionWithSlugFieldSlug = {
+  [K in keyof Config['collections']]: Config['collections'][K] extends CollectionWithSlugField
+    ? K
+    : never
+}[keyof Config['collections']]
+
+async function getDocumentBySlug<
+  TSlug extends CollectionWithSlugFieldSlug = CollectionWithSlugFieldSlug,
+>(collection: TSlug, slug: string, depth = 1): Promise<DataFromCollectionSlug<TSlug> | null> {
   const payload = await getPayload({ config: configPromise })
 
-  const {
-    docs: [doc],
-  } = await payload.find({
+  const { docs } = await payload.find<TSlug, TypedCollectionSelect[TSlug]>({
     collection,
     depth,
     limit: 1,
+    overrideAccess: false,
+    populate: undefined,
+    select: undefined,
+    user: null,
     where: {
       slug: {
         equals: slug,
@@ -29,10 +38,12 @@ async function getDocumentBySlug<TSlug extends CollectionSlug = CollectionSlug>(
     },
   })
 
-  return doc
+  return docs.length > 0 ? docs[0] : null
 }
 
-export const getCachedDocumentBySlug = async <TSlug extends CollectionSlug = CollectionSlug>(
+export const getCachedDocumentBySlug = async <
+  TSlug extends CollectionWithSlugFieldSlug = CollectionWithSlugFieldSlug,
+>(
   collection: TSlug,
   slug: string,
   depth?: number,

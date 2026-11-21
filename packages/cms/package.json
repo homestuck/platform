@@ -10,6 +10,7 @@
     "#collections/*": "./src/collections/*.ts",
     "#components/*": "./src/components/*.tsx",
     "#fields/*": "./src/fields/*/index.ts",
+    "#fields/*/types": "./src/fields/*/types.ts",
     "#globals/*": "./src/globals/*.ts",
     "#hooks/*": "./src/hooks/*.ts",
     "#payload.types": "./src/payload.types.ts",

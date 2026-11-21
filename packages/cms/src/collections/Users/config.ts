@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
+import { env as nodeEnv } from '@homestuck/env/node'
+
 import { t } from '#i18n'
 
 export const Users: CollectionConfig = {
@@ -16,7 +18,9 @@ export const Users: CollectionConfig = {
     group: 'Access Control',
     useAsTitle: 'displayName',
   },
-  auth: true,
+  auth: {
+    tokenExpiration: nodeEnv.NODE_ENV === 'development' ? 60 * 60 * 24 : 60 * 60 * 2,
+  },
   fields: [
     {
       name: 'displayName',

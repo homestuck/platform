@@ -1,49 +1,22 @@
-import type { CollectionConfig, NamedTab, UnnamedGroupField } from 'payload'
+import type {
+  CollectionConfig,
+  // UnnamedGroupField
+} from 'payload'
 
 import { authenticatedAccess } from '#access/authenticated'
 import { everyoneAccess } from '#access/everyone'
 import { slugField } from '#fields/slug'
+import { themeField } from '#fields/theme'
 import { titleField } from '#fields/title'
 import { t } from '#i18n'
 
-import { defaultTheme } from './defaults'
-import { themeModeField } from './fields/themeMode'
-import { generateHasAllThemeTokens } from './hooks/generateHasAllThemeTokens'
-
-const sidebarFieldsGroup: UnnamedGroupField = {
-  admin: {
-    position: 'sidebar',
-  },
-  fields: [
-    titleField(),
-    slugField(),
-    {
-      admin: {
-        hidden: true,
-      },
-      defaultValue: false,
-      hooks: {
-        afterRead: [generateHasAllThemeTokens],
-      },
-      name: 'hasAllThemeTokens',
-      type: 'checkbox',
-      virtual: true,
-    },
-  ],
-  type: 'group',
-} as const
-
-const lightModeFieldsTab: NamedTab = {
-  fields: [themeModeField({ defaultValues: defaultTheme.light })],
-  label: t('tabs:lightMode:label'),
-  name: 'lightMode',
-}
-
-const darkModeFieldsTab: NamedTab = {
-  fields: [themeModeField({ defaultValues: defaultTheme.dark })],
-  label: t('tabs:darkMode:label'),
-  name: 'darkMode',
-}
+// const sidebarFieldsGroup: UnnamedGroupField = {
+//   admin: {
+//     position: 'sidebar',
+//   },
+//   fields: [],
+//   type: 'group',
+// } as const
 
 export const Themes = {
   access: {
@@ -59,16 +32,16 @@ export const Themes = {
   },
   defaultPopulate: {
     darkMode: true,
-    hasAllThemeTokens: true,
     lightMode: true,
     slug: true,
   },
   fields: [
     {
-      tabs: [lightModeFieldsTab, darkModeFieldsTab],
-      type: 'tabs',
+      fields: [titleField(), slugField()],
+      type: 'row',
     },
-    sidebarFieldsGroup,
+    ...themeField().fields,
+    // sidebarFieldsGroup,
   ],
   labels: {
     plural: t('collections:themes:labelPlural'),

@@ -34,6 +34,7 @@
     "eslint-plugin-react-you-might-not-need-an-effect": "catalog:",
     "eslint-plugin-regexp": "catalog:",
     "lint-staged": "catalog:",
+    "oxlint-plugin-payload": "catalog:payload",
     "turbo": "catalog:",
     "typescript": "catalog:",
     "vite-plus": "catalog:vite"

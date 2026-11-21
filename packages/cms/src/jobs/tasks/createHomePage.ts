@@ -8,6 +8,7 @@ export const createHomePage = {
         slug: 'home',
         title: 'Home',
       },
+      overrideAccess: true,
     })
 
     return {

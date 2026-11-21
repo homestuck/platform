@@ -7,7 +7,9 @@ type PageProps = {
 }
 
 export async function Page({ slug }: PageProps) {
-  const { layout } = await getCachedDocumentBySlug('pages', slug)
+  const page = await getCachedDocumentBySlug('pages', slug)
 
-  return layout ? <BlocksRenderer blocks={layout} /> : null
+  const { layout = [] } = page ?? {}
+
+  return layout && layout.length > 0 ? <BlocksRenderer blocks={layout} /> : null
 }

@@ -889,6 +889,8 @@ export interface Tag {
  */
 export interface Theme {
   id: string;
+  title: string;
+  slug: string;
   lightMode?: {
     background?: string | null;
     foreground?: string | null;
@@ -941,9 +943,6 @@ export interface Theme {
     chart4?: string | null;
     chart5?: string | null;
   };
-  title: string;
-  slug: string;
-  hasAllThemeTokens?: boolean | null;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -1552,6 +1551,8 @@ export interface TagsSelect<T extends boolean = true> {
  * via the `definition` "themes_select".
  */
 export interface ThemesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
   lightMode?:
     | T
     | {
@@ -1608,9 +1609,6 @@ export interface ThemesSelect<T extends boolean = true> {
         chart4?: T;
         chart5?: T;
       };
-  title?: T;
-  slug?: T;
-  hasAllThemeTokens?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
@@ -1941,7 +1939,60 @@ export interface SiteSettings {
   title: string;
   description?: string | null;
   appearance: {
-    theme: string | Theme;
+    theme: {
+      lightMode: {
+        background: string;
+        foreground: string;
+        card: string;
+        cardForeground: string;
+        popover: string;
+        popoverForeground: string;
+        primary: string;
+        primaryForeground: string;
+        secondary: string;
+        secondaryForeground: string;
+        muted: string;
+        mutedForeground: string;
+        accent: string;
+        accentForeground: string;
+        destructive: string;
+        destructiveForeground: string;
+        border: string;
+        input: string;
+        ring: string;
+        chart1: string;
+        chart2: string;
+        chart3: string;
+        chart4: string;
+        chart5: string;
+      };
+      darkMode: {
+        background: string;
+        foreground: string;
+        card: string;
+        cardForeground: string;
+        popover: string;
+        popoverForeground: string;
+        primary: string;
+        primaryForeground: string;
+        secondary: string;
+        secondaryForeground: string;
+        muted: string;
+        mutedForeground: string;
+        accent: string;
+        accentForeground: string;
+        destructive: string;
+        destructiveForeground: string;
+        border: string;
+        input: string;
+        ring: string;
+        chart1: string;
+        chart2: string;
+        chart3: string;
+        chart4: string;
+        chart5: string;
+      };
+    };
   };
   meta?: {
     title?: string | null;
@@ -2001,7 +2052,66 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   appearance?:
     | T
     | {
-        theme?: T;
+        theme?:
+          | T
+          | {
+              lightMode?:
+                | T
+                | {
+                    background?: T;
+                    foreground?: T;
+                    card?: T;
+                    cardForeground?: T;
+                    popover?: T;
+                    popoverForeground?: T;
+                    primary?: T;
+                    primaryForeground?: T;
+                    secondary?: T;
+                    secondaryForeground?: T;
+                    muted?: T;
+                    mutedForeground?: T;
+                    accent?: T;
+                    accentForeground?: T;
+                    destructive?: T;
+                    destructiveForeground?: T;
+                    border?: T;
+                    input?: T;
+                    ring?: T;
+                    chart1?: T;
+                    chart2?: T;
+                    chart3?: T;
+                    chart4?: T;
+                    chart5?: T;
+                  };
+              darkMode?:
+                | T
+                | {
+                    background?: T;
+                    foreground?: T;
+                    card?: T;
+                    cardForeground?: T;
+                    popover?: T;
+                    popoverForeground?: T;
+                    primary?: T;
+                    primaryForeground?: T;
+                    secondary?: T;
+                    secondaryForeground?: T;
+                    muted?: T;
+                    mutedForeground?: T;
+                    accent?: T;
+                    accentForeground?: T;
+                    destructive?: T;
+                    destructiveForeground?: T;
+                    border?: T;
+                    input?: T;
+                    ring?: T;
+                    chart1?: T;
+                    chart2?: T;
+                    chart3?: T;
+                    chart4?: T;
+                    chart5?: T;
+                  };
+            };
       };
   meta?:
     | T
