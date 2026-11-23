@@ -1,12 +1,7 @@
-import type {
-  CollectionConfig,
-  NamedTab,
-  RelationshipField,
-  UnnamedGroupField,
-  UnnamedTab,
-} from 'payload'
+import type { CollectionConfig, NamedTab, UnnamedGroupField, UnnamedTab } from 'payload'
 
 import { MetaDescriptionField, MetaTitleField, OverviewField } from '@payloadcms/plugin-seo/fields'
+import { createFolderField } from 'payload'
 
 import { draftDocumentAccess } from '#access/draftDocument'
 import { everyoneAccess } from '#access/everyone'
@@ -15,8 +10,9 @@ import { descriptionField } from '#fields/description'
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
-import { validateIsNotSelf } from '#hooks/validateIsNotSelf'
 import { t } from '#i18n'
+
+import { STORIES_HIERARCHY_ICON_COMPONENT_PATH } from './constants'
 
 const overviewFieldsTab: UnnamedTab = {
   fields: [
@@ -33,7 +29,6 @@ const overviewFieldsTab: UnnamedTab = {
         },
         {
           fields: [
-            titleField(),
             descriptionField({
               overrides: {
                 admin: {
@@ -53,25 +48,6 @@ const overviewFieldsTab: UnnamedTab = {
   label: t('tabs:overview:label'),
 } as const
 
-const pagesFieldTab: UnnamedTab = {
-  fields: [
-    {
-      admin: {
-        allowCreate: true,
-        defaultColumns: ['pageNumber', 'title', 'slug', 'publishedAt'],
-      },
-      collection: 'story-pages',
-      defaultSort: ['-pageNumber'],
-      label: false,
-      name: 'pages',
-      on: 'story',
-      orderable: true,
-      type: 'join',
-    },
-  ],
-  label: t('tabs:pages:label'),
-} as const
-
 const metaFieldsTab: NamedTab = {
   fields: [
     MetaTitleField({
@@ -80,7 +56,6 @@ const metaFieldsTab: NamedTab = {
     MetaDescriptionField({}),
     OverviewField({
       descriptionPath: 'meta.description',
-      // imagePath: 'meta.image',
       titlePath: 'meta.title',
     }),
   ],
@@ -92,18 +67,7 @@ const sidebarFieldsGroup: UnnamedGroupField = {
   admin: {
     position: 'sidebar',
   },
-  fields: [
-    slugField(),
-    publishedAtField(),
-    {
-      filterOptions: ({ id }) => ({ id: { not_equals: id } }),
-      hasMany: false,
-      name: 'parent',
-      relationTo: 'stories',
-      type: 'relationship',
-      validate: validateIsNotSelf,
-    } as const satisfies RelationshipField,
-  ],
+  fields: [slugField(), publishedAtField(), createFolderField({ relationTo: 'stories' })],
   type: 'group',
 } as const
 
@@ -118,12 +82,25 @@ export const Stories = {
     useAsTitle: 'title',
   },
   fields: [
+    titleField(),
+    createFolderField({ relationTo: 'folders' }),
     {
-      tabs: [overviewFieldsTab, pagesFieldTab, metaFieldsTab],
+      tabs: [overviewFieldsTab, metaFieldsTab],
       type: 'tabs',
     },
     sidebarFieldsGroup,
   ],
+  hierarchy: {
+    admin: {
+      components: {
+        Icon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
+        SmallIcon: STORIES_HIERARCHY_ICON_COMPONENT_PATH,
+      },
+    },
+    allowHasMany: false,
+    collectionSpecific: true,
+    parentFieldName: 'parentStory',
+  },
   labels: {
     plural: t('collections:stories:labelPlural'),
     singular: t('collections:stories:labelSingular'),

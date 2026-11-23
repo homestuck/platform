@@ -34,13 +34,29 @@
       "labelPlural": "Assets",
       "labelSingular": "Asset"
     },
+    "audio": {
+      "labelPlural": "Audio",
+      "labelSingular": "Audio"
+    },
     "contributors": {
       "labelPlural": "Contributors",
       "labelSingular": "Contributor"
     },
+    "folders": {
+      "labelPlural": "Folders",
+      "labelSingular": "Folder"
+    },
+    "icons": {
+      "labelPlural": "Icons",
+      "labelSingular": "Icon"
+    },
     "pages": {
       "labelPlural": "Pages",
       "labelSingular": "Page"
+    },
+    "panels": {
+      "labelPlural": "Panels",
+      "labelSingular": "Panel"
     },
     "permissions": {
       "labelPlural": "Permissions",

@@ -1,12 +1,12 @@
 import type { CollectionConfig, UnnamedGroupField } from 'payload'
 
-import { slugify } from 'payload/shared'
-
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
 import { titleField } from '#fields/title'
 import { typesetField } from '#fields/typeset'
 import { t } from '#i18n'
+
+import { slugifyTypeset as slugify } from './utils/slugifyTypeset'
 
 const sidebarFieldsGroup: UnnamedGroupField = {
   admin: {
@@ -16,7 +16,7 @@ const sidebarFieldsGroup: UnnamedGroupField = {
     titleField(),
     slugField({
       overrides: {
-        slugify: ({ valueToSlugify }) => slugify(`typeset-${String(valueToSlugify)}`),
+        slugify,
       },
     }),
     publishedAtField(),

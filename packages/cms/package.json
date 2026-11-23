@@ -9,6 +9,7 @@
     "#blocks/*": "./src/blocks/*.ts",
     "#collections/*": "./src/collections/*.ts",
     "#components/*": "./src/components/*.tsx",
+    "#constants": "./src/constants/index.ts",
     "#fields/*": "./src/fields/*/index.ts",
     "#fields/*/types": "./src/fields/*/types.ts",
     "#globals/*": "./src/globals/*.ts",

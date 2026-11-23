@@ -52,7 +52,7 @@ export const payloadConfig = (overrides: Partial<Config> = {}) =>
           transformers: [
             sharpTransformer({
               collections: {
-                assets: {
+                icons: {
                   variants: [
                     {
                       height: 16,

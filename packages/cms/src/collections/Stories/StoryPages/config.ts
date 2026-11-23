@@ -1,10 +1,6 @@
-import type {
-  CollectionConfig,
-  NamedTab,
-  NumberField,
-  RelationshipField,
-  UnnamedGroupField,
-} from 'payload'
+import type { CollectionConfig, NamedTab, NumberField, UnnamedGroupField } from 'payload'
+
+import { createFolderField } from 'payload'
 
 import { publishedAtField } from '#fields/publishedAt'
 import { slugField } from '#fields/slug'
@@ -42,18 +38,6 @@ const sidebarFieldsGroup: UnnamedGroupField = {
       fields: [
         {
           admin: {
-            allowCreate: false,
-            allowEdit: false,
-            width: '60%',
-          },
-          hasMany: false,
-          name: 'story',
-          relationTo: 'stories',
-          required: true,
-          type: 'relationship',
-        } satisfies RelationshipField,
-        {
-          admin: {
             step: 1,
             width: '40%',
           },
@@ -75,12 +59,18 @@ export const StoryPages = {
     useAsTitle: 'title',
   },
   fields: [
+    createFolderField({
+      // admin: { allowCreate: false, allowEdit: false, width: '60%' },
+      relationTo: 'stories',
+      required: true,
+    }),
     {
       tabs: [layoutFieldsTab, navigationFieldsTab],
       type: 'tabs',
     },
     sidebarFieldsGroup,
   ],
+
   labels: {
     plural: t('collections:story-pages:labelPlural'),
     singular: t('collections:story-pages:labelSingular'),

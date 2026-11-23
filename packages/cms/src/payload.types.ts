@@ -164,8 +164,12 @@ export interface Config {
   };
   collections: {
     assets: Asset;
+    audio: Audio;
     contributors: Contributor;
+    folders: Folder;
+    icons: Icon;
     pages: Page;
+    panels: Panel;
     permissions: Permission;
     posts: Post;
     roles: Role;
@@ -185,15 +189,15 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {
-    stories: {
-      pages: 'story-pages';
-    };
-  };
+  collectionsJoins: {};
   collectionsSelect: {
     assets: AssetsSelect<false> | AssetsSelect<true>;
+    audio: AudioSelect<false> | AudioSelect<true>;
     contributors: ContributorsSelect<false> | ContributorsSelect<true>;
+    folders: FoldersSelect<false> | FoldersSelect<true>;
+    icons: IconsSelect<false> | IconsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    panels: PanelsSelect<false> | PanelsSelect<true>;
     permissions: PermissionsSelect<false> | PermissionsSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     roles: RolesSelect<false> | RolesSelect<true>;
@@ -314,21 +318,18 @@ export interface ArchiveBlock {
  */
 export interface Story {
   id: string;
-  image?: (string | null) | Asset;
+  parentStory?: (string | null) | Story;
   title: string;
+  parent?: (string | null) | Folder;
+  image?: (string | null) | Asset;
   description?: string | null;
-  pages?: {
-    docs?: (string | StoryPage)[];
-    hasNextPage?: boolean;
-    totalDocs?: number;
-  };
   meta?: {
     title?: string | null;
     description?: string | null;
   };
   slug: string;
   publishedAt?: string | null;
-  parent?: (string | null) | Story;
+  _h_stories?: (string | null) | Story;
   createdBy?: {
     relationTo: 'users';
     value: string | User;
@@ -340,6 +341,26 @@ export interface Story {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+  hierarchyType?: ('folders' | 'panels' | 'story-pages')[] | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "folders".
+ */
+export interface Folder {
+  id: string;
+  parent?: (string | null) | Folder;
+  name: string;
+  slug: string;
+  parentStory?: (string | null) | Story;
+  _h_folders?: (string | null) | Folder;
+  updatedAt: string;
+  createdAt: string;
+  _h_slugPath?: string | null;
+  _h_titlePath?: string | null;
+  hierarchyType?: ('assets' | 'audio' | 'icons' | 'stories')[] | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -347,7 +368,7 @@ export interface Story {
  */
 export interface Asset {
   id: string;
-  alt?: string | null;
+  parent?: (string | null) | Folder;
   prefix?: string | null;
   _objectKey?: string | null;
   updatedAt: string;
@@ -373,116 +394,6 @@ export interface Asset {
     _objectKey?: string | null;
     _stored?: boolean | null;
   };
-  focalX?: number | null;
-  focalY?: number | null;
-  variants?: {
-    '16x16'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-    '32x32'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-    '48x48'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-    'apple-touch-icon-180x180'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-    'android-chrome-192x192'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-    'android-chrome-512x512'?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-      prefix?: string | null;
-      _objectKey?: string | null;
-      _stored?: boolean | null;
-    };
-  };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "story-pages".
- */
-export interface StoryPage {
-  id: string;
-  '_story-pages_pages_order'?: string | null;
-  layout?: {
-    header?: RichTextBlock[] | null;
-    content?: RichTextBlock[] | null;
-    footer?: RichTextBlock[] | null;
-  };
-  navigation?: {};
-  title: string;
-  slug: string;
-  publishedAt?: string | null;
-  story: string | Story;
-  pageNumber: number;
-  createdBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedBy?: {
-    relationTo: 'users';
-    value: string | User;
-  } | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "RichTextBlock".
- */
-export interface RichTextBlock {
-  richText?: LexicalRichText<LexicalNodes_7262A34B> | null;
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'richText';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -532,6 +443,45 @@ export interface User {
     | null;
   password?: string | null;
   collection: 'users';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-pages".
+ */
+export interface StoryPage {
+  id: string;
+  parentStory: string | Story;
+  layout?: {
+    header?: RichTextBlock[] | null;
+    content?: RichTextBlock[] | null;
+    footer?: RichTextBlock[] | null;
+  };
+  navigation?: {};
+  title: string;
+  slug: string;
+  publishedAt?: string | null;
+  pageNumber: number;
+  createdBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedBy?: {
+    relationTo: 'users';
+    value: string | User;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "RichTextBlock".
+ */
+export interface RichTextBlock {
+  richText?: LexicalRichText<LexicalNodes_7262A34B> | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'richText';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -792,6 +742,37 @@ export interface ScriptBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "audio".
+ */
+export interface Audio {
+  id: string;
+  parent?: (string | null) | Folder;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  _stored?: boolean | null;
+  _transforms?: UploadTransforms;
+  original?: {
+    filename?: string | null;
+    url?: string | null;
+    mimeType?: string | null;
+    filesize?: number | null;
+    width?: number | null;
+    height?: number | null;
+    prefix?: string | null;
+    _objectKey?: string | null;
+    _stored?: boolean | null;
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contributors".
  */
 export interface Contributor {
@@ -800,6 +781,144 @@ export interface Contributor {
   user?: (string | null) | User;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "icons".
+ */
+export interface Icon {
+  id: string;
+  parent?: (string | null) | Folder;
+  prefix?: string | null;
+  _objectKey?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  _stored?: boolean | null;
+  _transforms?: UploadTransforms;
+  original?: {
+    filename?: string | null;
+    url?: string | null;
+    mimeType?: string | null;
+    filesize?: number | null;
+    width?: number | null;
+    height?: number | null;
+    prefix?: string | null;
+    _objectKey?: string | null;
+    _stored?: boolean | null;
+  };
+  focalX?: number | null;
+  focalY?: number | null;
+  variants?: {
+    '16x16'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    '32x32'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    '48x48'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'apple-touch-icon-180x180'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'android-chrome-192x192'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+    'android-chrome-512x512'?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+      prefix?: string | null;
+      _objectKey?: string | null;
+      _stored?: boolean | null;
+    };
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "panels".
+ */
+export interface Panel {
+  id: string;
+  alt: string;
+  parentStory: string | Story;
+  storySlug?: string | null;
+  prefix?: string | null;
+  _objectKey?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  _stored?: boolean | null;
+  _transforms?: UploadTransforms;
+  original?: {
+    filename?: string | null;
+    url?: string | null;
+    mimeType?: string | null;
+    filesize?: number | null;
+    width?: number | null;
+    height?: number | null;
+    prefix?: string | null;
+    _objectKey?: string | null;
+    _stored?: boolean | null;
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1194,12 +1313,28 @@ export interface PayloadLockedDocument {
         value: string | Asset;
       } | null)
     | ({
+        relationTo: 'audio';
+        value: string | Audio;
+      } | null)
+    | ({
         relationTo: 'contributors';
         value: string | Contributor;
       } | null)
     | ({
+        relationTo: 'folders';
+        value: string | Folder;
+      } | null)
+    | ({
+        relationTo: 'icons';
+        value: string | Icon;
+      } | null)
+    | ({
         relationTo: 'pages';
         value: string | Page;
+      } | null)
+    | ({
+        relationTo: 'panels';
+        value: string | Panel;
       } | null)
     | ({
         relationTo: 'permissions';
@@ -1300,7 +1435,99 @@ export interface PayloadMigration {
  * via the `definition` "assets_select".
  */
 export interface AssetsSelect<T extends boolean = true> {
-  alt?: T;
+  parent?: T;
+  prefix?: T;
+  _objectKey?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  _stored?: T;
+  _transforms?: T;
+  original?:
+    | T
+    | {
+        filename?: T;
+        url?: T;
+        mimeType?: T;
+        filesize?: T;
+        width?: T;
+        height?: T;
+        prefix?: T;
+        _objectKey?: T;
+        _stored?: T;
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "audio_select".
+ */
+export interface AudioSelect<T extends boolean = true> {
+  parent?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  _stored?: T;
+  _transforms?: T;
+  original?:
+    | T
+    | {
+        filename?: T;
+        url?: T;
+        mimeType?: T;
+        filesize?: T;
+        width?: T;
+        height?: T;
+        prefix?: T;
+        _objectKey?: T;
+        _stored?: T;
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contributors_select".
+ */
+export interface ContributorsSelect<T extends boolean = true> {
+  displayName?: T;
+  user?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "folders_select".
+ */
+export interface FoldersSelect<T extends boolean = true> {
+  parent?: T;
+  name?: T;
+  slug?: T;
+  parentStory?: T;
+  _h_folders?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _h_slugPath?: T;
+  _h_titlePath?: T;
+  hierarchyType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "icons_select".
+ */
+export interface IconsSelect<T extends boolean = true> {
+  parent?: T;
   prefix?: T;
   _objectKey?: T;
   updatedAt?: T;
@@ -1415,16 +1642,6 @@ export interface AssetsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "contributors_select".
- */
-export interface ContributorsSelect<T extends boolean = true> {
-  displayName?: T;
-  user?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
@@ -1445,6 +1662,42 @@ export interface PagesSelect<T extends boolean = true> {
   _status?: T;
   _h_slugPath?: T;
   _h_titlePath?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "panels_select".
+ */
+export interface PanelsSelect<T extends boolean = true> {
+  alt?: T;
+  parentStory?: T;
+  storySlug?: T;
+  prefix?: T;
+  _objectKey?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  _stored?: T;
+  _transforms?: T;
+  original?:
+    | T
+    | {
+        filename?: T;
+        url?: T;
+        mimeType?: T;
+        filesize?: T;
+        width?: T;
+        height?: T;
+        prefix?: T;
+        _objectKey?: T;
+        _stored?: T;
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1486,10 +1739,11 @@ export interface RolesSelect<T extends boolean = true> {
  * via the `definition` "stories_select".
  */
 export interface StoriesSelect<T extends boolean = true> {
-  image?: T;
+  parentStory?: T;
   title?: T;
+  parent?: T;
+  image?: T;
   description?: T;
-  pages?: T;
   meta?:
     | T
     | {
@@ -1498,19 +1752,22 @@ export interface StoriesSelect<T extends boolean = true> {
       };
   slug?: T;
   publishedAt?: T;
-  parent?: T;
+  _h_stories?: T;
   createdBy?: T;
   updatedBy?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+  _h_slugPath?: T;
+  _h_titlePath?: T;
+  hierarchyType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "story-pages_select".
  */
 export interface StoryPagesSelect<T extends boolean = true> {
-  '_story-pages_pages_order'?: T;
+  parentStory?: T;
   layout?:
     | T
     | {
@@ -1522,7 +1779,6 @@ export interface StoryPagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   publishedAt?: T;
-  story?: T;
   pageNumber?: T;
   createdBy?: T;
   updatedBy?: T;
@@ -1935,7 +2191,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface SiteSettings {
   id: string;
-  favicon?: (string | null) | Asset;
+  favicon?: (string | null) | Icon;
   title: string;
   description?: string | null;
   appearance: {
@@ -2184,8 +2440,12 @@ export interface CollectionQueryWidget {
     title?: string | null;
     relatedCollection:
       | 'assets'
+      | 'audio'
       | 'contributors'
+      | 'folders'
+      | 'icons'
       | 'pages'
+      | 'panels'
       | 'permissions'
       | 'posts'
       | 'roles'
@@ -2223,8 +2483,12 @@ export interface ActivityWidget {
     excludedCollections?:
       | (
           | 'assets'
+          | 'audio'
           | 'contributors'
+          | 'folders'
+          | 'icons'
           | 'pages'
+          | 'panels'
           | 'permissions'
           | 'posts'
           | 'roles'
@@ -2249,7 +2513,7 @@ export interface ActivityWidget {
  */
 export interface UploadDropzoneWidget {
   data?: {
-    excludedCollections?: 'assets'[] | null;
+    excludedCollections?: ('assets' | 'audio' | 'icons' | 'panels')[] | null;
   };
   width: 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full';
 }
@@ -2275,8 +2539,20 @@ export interface TaskSchedulePublish {
           value: string | Asset;
         } | null)
       | ({
+          relationTo: 'audio';
+          value: string | Audio;
+        } | null)
+      | ({
+          relationTo: 'icons';
+          value: string | Icon;
+        } | null)
+      | ({
           relationTo: 'pages';
           value: string | Page;
+        } | null)
+      | ({
+          relationTo: 'panels';
+          value: string | Panel;
         } | null)
       | ({
           relationTo: 'posts';

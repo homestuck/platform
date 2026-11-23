@@ -28,7 +28,7 @@ const overviewFieldsTab: UnnamedTab = {
           },
           hasMany: false,
           name: 'favicon',
-          relationTo: 'assets',
+          relationTo: 'icons',
           type: 'upload',
         },
         {
