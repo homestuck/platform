@@ -18,3 +18,7 @@ export const NavigationMenu = {
   },
   slug: 'navigationMenu',
 } as const satisfies Block
+
+export * from './Dropdown/config'
+export * from './Link/config'
+export * from './List/config'

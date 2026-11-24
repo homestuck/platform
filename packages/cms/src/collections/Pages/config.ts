@@ -95,9 +95,12 @@ export const Pages = {
     admin: {
       components: {
         Icon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
+        SmallIcon: PAGES_HIERARCHY_ICON_COMPONENT_PATH,
       },
     },
-    parentFieldName: 'parent',
+    allowHasMany: false,
+    parentFieldName: 'parentPage',
+    slugField: 'slug',
   },
   hooks: {
     afterChange: [revalidateCollection],

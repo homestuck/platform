@@ -3,6 +3,7 @@ import type { CollectionConfig, NamedTab, UnnamedGroupField, UnnamedTab } from '
 import { MetaDescriptionField, MetaTitleField, OverviewField } from '@payloadcms/plugin-seo/fields'
 import { createFolderField } from 'payload'
 
+import { authenticatedAccess } from '#access/authenticated'
 import { draftDocumentAccess } from '#access/draftDocument'
 import { everyoneAccess } from '#access/everyone'
 import { globalAdminAccess } from '#access/globalAdmin'
@@ -76,6 +77,7 @@ export const Stories = {
     create: draftDocumentAccess,
     delete: globalAdminAccess,
     read: everyoneAccess,
+    readVersions: authenticatedAccess,
     update: draftDocumentAccess,
   },
   admin: {
@@ -84,11 +86,11 @@ export const Stories = {
   fields: [
     titleField(),
     createFolderField({ relationTo: 'folders' }),
+    sidebarFieldsGroup,
     {
       tabs: [overviewFieldsTab, metaFieldsTab],
       type: 'tabs',
     },
-    sidebarFieldsGroup,
   ],
   hierarchy: {
     admin: {
@@ -100,6 +102,7 @@ export const Stories = {
     allowHasMany: false,
     collectionSpecific: true,
     parentFieldName: 'parentStory',
+    slugField: 'slug',
   },
   labels: {
     plural: t('collections:stories:labelPlural'),

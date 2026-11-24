@@ -8,6 +8,7 @@ import { NavigationMenuLink as navigationMenuLink } from './NavigationMenu/Link/
 import { NavigationMenuList as navigationMenuList } from './NavigationMenu/List/Component'
 import { RichText as richText } from './RichText/Component'
 import { Script as script } from './Script/Component'
+import { StoryPage as storyPageBlock } from './StoryPage/Component'
 
 export const BLOCK_CATALOG = {
   archive,
@@ -18,4 +19,5 @@ export const BLOCK_CATALOG = {
   navigationMenuList,
   richText,
   script,
+  storyPageBlock,
 } as const satisfies BlockCatalog

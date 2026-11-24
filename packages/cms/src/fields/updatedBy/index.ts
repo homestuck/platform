@@ -13,6 +13,7 @@ type Args = {
 export const updatedByField: UpdatedByField = ({ overrides = {} } = {}) =>
   deepMerge<PolymorphicRelationshipField>(
     createUpdatedByField({
+      authCollections: ['users'],
       overrides: {
         access: {
           read: globalAdminAccess,

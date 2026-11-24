@@ -2,12 +2,15 @@ import type { Block, BlockSlug } from 'payload'
 
 import { Archive } from './Archive/config'
 import { Form } from './Form/config'
-import { NavigationMenu } from './NavigationMenu/config'
-import { NavigationMenuDropdown } from './NavigationMenu/Dropdown/config'
-import { NavigationMenuLink } from './NavigationMenu/Link/config'
-import { NavigationMenuList } from './NavigationMenu/List/config'
+import {
+  NavigationMenu,
+  NavigationMenuDropdown,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from './NavigationMenu/config'
 import { RichText } from './RichText/config'
 import { Script } from './Script/config'
+import { StoryPage } from './StoryPage/config'
 
 export const blockConfigs = [
   Archive,
@@ -18,6 +21,7 @@ export const blockConfigs = [
   NavigationMenuList,
   RichText,
   Script,
+  StoryPage,
 ] as const satisfies Block[]
 
 export const blockSlugs = blockConfigs.map<BlockSlug>((block) => block.slug)
